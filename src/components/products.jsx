@@ -9,40 +9,38 @@ export default function Products() {
   }, []);
 
   return (
-    <div className="container mt-4">
-      <h1 className="text-center mb-4">Lista de Productos</h1>
-      <ul className="list-unstyled">
-        {products.map((product, index) => (
-          <li key={index} className="border p-3 mb-3">
-            <div className="row align-items-center flex-column flex-md-row text-center text-md-start">
-              {/* Imagen */}
-              <div className="col-md-3 mb-3 text-center">
-                <img
-                  src={product.Imagen} 
-                  alt={product.Descripcion}
-                  className="img-fluid rounded"
-                  style={{ maxWidth: "150px" }}
-                />
-                <h2 className="mt-2">{product.Color}</h2>
-              </div>
-
-              {/* Detalles */}
-              <div className="col-md-6">
-                <p><strong>Talla:</strong> {product.Talla} | <strong>Cantidad:</strong> {product.Cantidad} | <strong>Precio:</strong> ${product.Precio}</p>
-              </div>
-
-              {/* Botón */}
-              <div className="col-md-3 text-center">
-                <button className="btn btn-primary">Agregar al carrito</button>
-              </div>
+    <div className="container-fluid mt-4">
+    <h1 className="text-center mb-4">Lista de Productos</h1>
+    <ul className="list-unstyled">
+      {products.map((product, index) => (
+        <li key={index} className="border p-3 mb-3">
+          <div className="row align-items-center text-center text-md-start">
+            {/* Imagen */}
+            <div className="col-12 mb-3">
+              <img
+                src={product.Imagen}
+                alt={product.Descripcion}
+                className="img-fluid w-100"
+              />
             </div>
 
-            {/* Descripción */}
-            <p className="mt-2">{product.Descripcion}</p>
-            <hr />
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
+            {/* Detalles */}
+            <div className="col-12">
+              <div className="d-flex flex-column flex-md-row justify-content-center justify-content-md-start">
+                <p className="me-md-3"><strong>Talla:</strong> {product.Talla}</p>
+                <p className="me-md-3"><strong>Cantidad:</strong> {product.Cantidad}</p>
+                <p><strong>Precio:</strong> ${product.Precio}</p>
+              </div>
+              <p className="mt-2">{product.Descripcion}</p>
+            </div>
+
+            {/* Botón */}
+            <div className="col-12 text-center mt-3">
+              <button className="btn btn-primary">Agregar al carrito</button>
+            </div>
+          </div>
+        </li>
+      ))}
+    </ul>
+  </div>  );
 }
