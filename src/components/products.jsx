@@ -34,9 +34,12 @@ export default function Products() {
                 {/* Contenido */}
                 <div className="col-md-7">
                   <div className="card-body">
-                    <h5 className="card-title text-center text-md-start">
-                      {product.Descripcion}
+                  <h5 className="card-title text-center text-md-start">
+                      {product.IdProducto}
                     </h5>
+                    <h4 className="card-title text-center text-md-start">
+                      {product.Descripcion}
+                    </h4>
                     
                     <div className="d-flex flex-wrap justify-content-center justify-content-md-start gap-2 mb-3">
                       <span className="badge bg-secondary">Talla: {product.Talla}</span>
