@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import productosData from "../data/products10.json";
+import productosData from "../data/products_modified.json";
 
 export default function Products() {
   const [products, setProducts] = useState([]);
@@ -9,38 +9,48 @@ export default function Products() {
   }, []);
 
   return (
-    <div className="container-fluid mt-4">
-    <h1 className="text-center mb-4">Lista de Productos</h1>
-    <ul className="list-unstyled">
-      {products.map((product, index) => (
-        <li key={index} className="border p-3 mb-3">
-          <div className="row align-items-center text-center text-md-start">
-            {/* Imagen */}
-            <div className="col-12 mb-3">
-              <img
-                src={product.Imagen}
-                alt={product.Descripcion}
-                className="img-fluid w-100"
-              />
-            </div>
-
-            {/* Detalles */}
-            <div className="col-12">
-              <div className="d-flex flex-column flex-md-row justify-content-center justify-content-md-start">
-                <p className="me-md-3"><strong>Talla:</strong> {product.Talla}</p>
-                <p className="me-md-3"><strong>Cantidad:</strong> {product.Cantidad}</p>
-                <p><strong>Precio:</strong> ${product.Precio}</p>
+    <div className="container mt-4">
+      <h1 className="text-center mb-4">Lista de Productos</h1>
+      
+      <div className="row justify-content-center">
+        {products.map((product, index) => (
+          <div key={index} className="col-12 col-md-10 col-lg-6 mb-4">
+            <div className="card mx-auto" style={{maxWidth: '500px'}}>
+              <div className="row g-0">
+                {/* Imagen - Centrada en móvil */}
+                <div className="col-md-5 text-center">
+                  <img
+                    src={product.Imagen}
+                    alt={product.Descripcion}
+                    className="img-fluid p-2"
+                    style={{
+                      maxHeight: '180px',
+                      width: 'auto',
+                      objectFit: 'contain'
+                    }}
+                  />
+                </div>
+                
+                {/* Contenido */}
+                <div className="col-md-7">
+                  <div className="card-body">
+                    <h5 className="card-title text-center text-md-start">
+                      {product.Descripcion}
+                    </h5>
+                    
+                    <div className="d-flex flex-wrap justify-content-center justify-content-md-start gap-2 mb-3">
+                      <span className="badge bg-secondary">Talla: {product.Talla}</span>
+                      <span className="badge bg-secondary">Cantidad: {product.Cantidad}</span>
+                      <span className="badge bg-success">${product.Precio}</span>
+                    </div>
+                    
+                  </div>
+                </div>
               </div>
-              <p className="mt-2">{product.Descripcion}</p>
-            </div>
-
-            {/* Botón */}
-            <div className="col-12 text-center mt-3">
-              <button className="btn btn-primary">Agregar al carrito</button>
             </div>
           </div>
-        </li>
-      ))}
-    </ul>
-  </div>  );
+        ))}
+      </div>
+    </div>
+  );
 }
