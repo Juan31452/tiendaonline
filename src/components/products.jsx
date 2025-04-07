@@ -1,14 +1,27 @@
 import { useState, useEffect } from "react";
-import productosData from "../data/products_modified.json";
+import productos11 from "../data/products_modified11.json";
+import productos13 from "../data/products_modified13.json";
 
 export default function Products() {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    setProducts(productosData);
-  }, []);
-
-  return (
+    try {
+      // Combinar todos los productos
+      const allProducts = [...productos11, ...productos13];
+      
+      // Opcional: Filtrar productos únicos por algún ID
+      const uniqueProducts = allProducts.filter(
+        (product, index, self) => index === self.findIndex(
+          p => p.IdProducto === product.IdProducto
+        )
+      );
+      
+      setProducts(uniqueProducts);
+    } catch (error) {
+      console.error("Error al cargar productos:", error);
+    }
+  }, []);  return (
     <div className="container mt-4">
       <h1 className="text-center mb-4">Lista de Productos</h1>
       
