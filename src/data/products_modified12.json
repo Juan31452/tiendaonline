@@ -1,0 +1,123 @@
+[
+    {
+      "Descripcion": "Conjunto Casual de Camiseta y Pantalón de Color Sólido para Mujer - Cuello Redondo, Mezcla de Poliéster Elástico, Lavable a Máquina, Cuello Redondo",
+      "Cantidad": 1,
+      "Precio": 75000,
+      "Color": "Verde",
+      "Talla": "M",
+      "IdProducto": "12.1",
+      "Imagen": "/assets/Pedido12/img1.jpg",
+      "Categoria": "Mujer",
+      "Estado": "Disponible"
+    },
+    {
+      "Descripcion": "Conjunto de sudadera y pantalones cortos de cuello redondo casual para hombres, 100% poliéster, mar",
+      "Cantidad": 1,
+      "Precio": 38000,
+      "Color": "VerdeOscuro",
+      "Talla": "XL",
+      "IdProducto": "12.2",
+      "Imagen": "/assets/Pedido12/img2.jpg",
+      "Categoria": "Hombre",
+      "Estado": "Disponible"
+    },
+    {
+      "Descripcion": "2 piezas de reloj de cuarzo de acero inoxidable para hombre y juego de pulsera versátil",
+      "Cantidad": 1,
+      "Precio": 21000,
+      "Color": "Blanco",
+      "Talla": "0",
+      "IdProducto": "12.3",
+      "Imagen": "/assets/Pedido12/img3.jpg",
+      "Categoria": "Hombre",
+      "Estado": "Disponible"
+    },
+    {
+      "Descripcion": "Medias Opacas Negras para Mujeres - Medias Transparentes, Finas con Forro de Pelo Falso",
+      "Cantidad": 1,
+      "Precio": 17000,
+      "Color": "Café",
+      "Talla": "Talla U.",
+      "IdProducto": "12.4",
+      "Imagen": "/assets/Pedido12/img4.jpg",
+      "Categoria": "Mujer",
+      "Estado": "Disponible"
+    },
+    {
+      "Descripcion": "Medias Reductoras Sólidas, Pantimedias Elásticas Anti-enganches, Medias Y Lencería Para Mujeres",
+      "Cantidad": 1,
+      "Precio": 17000,
+      "Color": "Negro",
+      "Talla": "Talla U.",
+      "IdProducto": "12.5",
+      "Imagen": "/assets/Pedido12/img5.jpg",
+      "Categoria": "Mujer",
+      "Estado": "Disponible"
+    },
+    {
+      "Descripcion": "Leggings elásticos sólidos, pantimedias casuales de cintura alta y ligeras para otoño, medias",
+      "Cantidad": 1,
+      "Precio": 17000,
+      "Color": "Café",
+      "Talla": "Talla U.",
+      "IdProducto": "12.6",
+      "Imagen": "/assets/Pedido12/img6.jpg",
+      "Categoria": "Mujer",
+      "Estado": "Disponible"
+    },
+    {
+      "Descripcion": "Chaqueta elegante rosa para mujeres con botones dorados - Tela de punto de poliéster",
+      "Cantidad": 1,
+      "Precio": 33000,
+      "Color": "Rosado",
+      "Talla": "S",
+      "IdProducto": "12.7",
+      "Imagen": "/assets/Pedido12/img7.jpg",
+      "Categoria": "Mujer",
+      "Estado": "Disponible"
+    },
+    {
+      "Descripcion": "Chaqueta de Solapa Plisada Estilosa",
+      "Cantidad": 1,
+      "Precio": 25000,
+      "Color": "Rojo",
+      "Talla": "M",
+      "IdProducto": "12.8",
+      "Imagen": "/assets/Pedido12/img8.jpg",
+      "Categoria": "Mujer",
+      "Estado": "Disponible"
+    },
+    {
+      "Descripcion": "Camara de Seguridad Inteligente",
+      "Cantidad": 1,
+      "Precio": null,
+      "Color": "NO",
+      "Talla": null,
+      "IdProducto": "12.9",
+      "Imagen": "/assets/Pedido12/img9.jpg",
+      "Categoria": null,
+      "Estado": "Disponible"
+    },
+    {
+      "Descripcion": "Camiseta sin mangas con cuello de corbata",
+      "Cantidad": 1,
+      "Precio": 32000,
+      "Color": "Impresión",
+      "Talla": "S",
+      "IdProducto": "12.10",
+      "Imagen": "/assets/Pedido12/img10.jpg",
+      "Categoria": "Mujer",
+      "Estado": "Disponible"
+    },
+    {
+      "Descripcion": "Barra correctora de una pieza ideal para cicatricez",
+      "Cantidad": 1,
+      "Precio": 17000,
+      "Color": "Piel",
+      "Talla": "NO",
+      "IdProducto": "12.11",
+      "Imagen": "/assets/Pedido12/img11.jpg",
+      "Categoria": "Mujer",
+      "Estado": "Disponible"
+    }
+  ]
