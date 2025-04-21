@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import productos11 from "../data/products_modified11.json";
 import productos12 from "../data/products_modified12.json";
 import productos13 from "../data/products_modified13.json";
+import productos14 from "../data/products_modified14.json";
 import CategorySelector from './CategorySelector';
 import ModalDetalles from './ModalDetalles';
 
@@ -16,7 +17,7 @@ export default function Products() {
   useEffect(() => {
     try {
       setLoading(true);
-      const combinedProducts = [...productos11, ...productos12, ...productos13];
+      const combinedProducts = [...productos11, ...productos12, ...productos13, ...productos14];
       const uniqueProducts = Array.from(
         new Map(combinedProducts.map(product => [product.IdProducto, product])).values()
       );
