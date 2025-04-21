@@ -90,12 +90,12 @@
     {
       "Descripcion": "Camara de Seguridad Inteligente",
       "Cantidad": 1,
-      "Precio": null,
+      "Precio": 0,
       "Color": "NO",
       "Talla": null,
       "IdProducto": "12.9",
       "Imagen": "/assets/Pedido12/img9.jpg",
-      "Categoria": null,
+      "Categoria": "Tecnología",
       "Estado": "Disponible"
     },
     {

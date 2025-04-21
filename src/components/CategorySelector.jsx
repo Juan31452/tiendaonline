@@ -7,7 +7,8 @@ const CategorySelector = ({ onSelectCategory, activeCategory }) => {
     { id: 'hombre', name: 'Hombre' },
     { id: 'mujer', name: 'Mujer' },
     { id: 'nino', name: 'Niños' },
-    { id: 'tecnologia', name: 'Tecnología' }
+    { id: 'tecnologia', name: 'Tecnología' },
+    { id: 'variedades', name: 'Variedades' }
   ];
 
   return (

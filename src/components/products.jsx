@@ -53,6 +53,9 @@ export default function Products() {
       case 'tecnologia':
         setFilteredProducts(filterByKeywords(['tecnolog', 'electron', 'digital', 'smart']));
         break;
+      case 'variedades':
+          setFilteredProducts(filterByKeywords(['variedade', 'otros', 'variedad', 'general']));
+          break;    
       case 'todos':
       default:
         setFilteredProducts(allProducts);

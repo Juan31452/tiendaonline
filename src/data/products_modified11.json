@@ -7,7 +7,7 @@
     "Talla": "Sin talla",
     "IdProducto": "11.1",
     "Imagen": "/assets/Pedido11/img1.jpg",
-    "Categoria": "Sin categoría",
+    "Categoria": "Variedades",
     "Estado": "Disponible"
   },
   {
@@ -18,7 +18,7 @@
     "Talla": "Sin talla",
     "IdProducto": "11.2",
     "Imagen": "/assets/Pedido11/img2.jpg",
-    "Categoria": "Sin categoría",
+    "Categoria": "Variedades",
     "Estado": "Disponible"
   },
   {
@@ -128,7 +128,7 @@
     "Talla": "Talla única",
     "IdProducto": "11.12",
     "Imagen": "/assets/Pedido11/img12.jpg",
-    "Categoria": "Sin categoría",
+    "Categoria": "Variedades",
     "Estado": "Disponible"
   },
   {
@@ -143,14 +143,14 @@
     "Estado": "Disponible"
   },
   {
-    "Descripcion": "1 par de elegantes zapatos planos para mujer con adornos de cristal, parte superior de tela redonda sin cordones para todas las estaciones, suela sintética, plantilla y material interior hechos por el hombre.",
+    "Descripcion": "1 par de elegantes zapatos planos para mujer con adornos de cristal, parte superior de tela redonda sin cordones para todas las estaciones, suela sintética.",
     "Cantidad": 1,
     "Precio": 37000,
     "Color": "Tamaño de etiqueta: CN 40(CO 39)",
     "Talla": "Negro",
     "IdProducto": "11.14",
     "Imagen": "/assets/Pedido11/img14.jpg",
-    "Categoria": "Hombre",
+    "Categoria": "Mujer",
     "Estado": "Disponible"
   },
   {
@@ -205,7 +205,7 @@
     "Talla": "Sin talla",
     "IdProducto": "11.19",
     "Imagen": "/assets/Pedido11/img19.jpg",
-    "Categoria": "Sin categoría",
+    "Categoria": "Variedades",
     "Estado": "Disponible"
   },
   {
@@ -238,7 +238,7 @@
     "Talla": "30",
     "IdProducto": "11.22",
     "Imagen": "/assets/Pedido11/img22.jpg",
-    "Categoria": "Sin categoría",
+    "Categoria": "Variedades",
     "Estado": "Disponible"
   },
   {
