@@ -7,7 +7,7 @@
     "Talla": "Negro",
     "IdProducto": "14.1",
     "Imagen": "/assets/Pedido14/img1.jpg",
-    "Categoria": "Variedades",
+    "Categoria": "Hogar",
     "Estado": "Disponible"
   },
   {
@@ -18,7 +18,7 @@
     "Talla": "Sin talla",
     "IdProducto": "14.2",
     "Imagen": "/assets/Pedido14/img2.jpg",
-    "Categoria": "Variedades",
+    "Categoria": "Hogar",
     "Estado": "Disponible"
   },
   {
@@ -29,7 +29,7 @@
     "Talla": "Color 01",
     "IdProducto": "14.3",
     "Imagen": "/assets/Pedido14/img3.jpg",
-    "Categoria": "Variedades",
+    "Categoria": "Hogar",
     "Estado": "Disponible"
   },
   {
@@ -40,7 +40,7 @@
     "Talla": "Sin talla",
     "IdProducto": "14.4",
     "Imagen": "/assets/Pedido14/img4.jpg",
-    "Categoria": "Variedades",
+    "Categoria": "Hogar",
     "Estado": "Disponible"
   },
   {
@@ -51,7 +51,7 @@
     "Talla": "2 piezas",
     "IdProducto": "14.5",
     "Imagen": "/assets/Pedido14/img5.jpg",
-    "Categoria": "Variedades",
+    "Categoria": "Hogar",
     "Estado": "Disponible"
   }
 ]

@@ -56,7 +56,10 @@ export default function Products() {
         break;
       case 'variedades':
           setFilteredProducts(filterByKeywords(['variedade', 'otros', 'variedad', 'general']));
-          break;    
+          break;
+          case 'hogar':
+            setFilteredProducts(filterByKeywords(['hoga', 'casa', 'hogar', 'cocina', 'muebles']));
+            break;          
       case 'todos':
       default:
         setFilteredProducts(allProducts);
