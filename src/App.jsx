@@ -1,11 +1,11 @@
 import React from 'react';
-import Products from './components/products';
+import Products from './pages/products';
+import Menu from './components/Menu';
 
 function App() {
   return (
     <div>
-      <h1>Tienda Virtual</h1>
-      <Products />
+     <Menu />
     </div>
   );
 }

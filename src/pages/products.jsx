@@ -3,8 +3,8 @@ import productos11 from "../data/products_modified11.json";
 import productos12 from "../data/products_modified12.json";
 import productos13 from "../data/products_modified13.json";
 import productos14 from "../data/products_modified14.json";
-import CategorySelector from './CategorySelector';
-import ModalDetalles from './ModalDetalles';
+import CategorySelector from '../components/CategorySelector';
+import ModalDetalles from '../components/ModalDetalles';
 
 export default function Products() {
   const [allProducts, setAllProducts] = useState([]);

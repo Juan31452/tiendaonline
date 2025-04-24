@@ -32,10 +32,18 @@ const ModalDetalles = ({ product, show, onHide }) => {
             <h4 className="text-muted mb-3">{product.IdProducto}</h4>
             <h2 className="mb-4">{product.Descripcion}</h2>
             
-            <div className="mb-4">
-              <span className="badge bg-primary me-2 p-2">Talla: {product.Talla}</span>
-              <span className="badge bg-success p-2">Disponibles: {product.Cantidad}</span>
-            </div>
+            <div className="mb-4 d-flex flex-wrap gap-2">
+            <span className="badge bg-primary p-2">Talla: {product.Talla}</span>
+            <span className="badge bg-success p-2">Disponibles: {product.Cantidad}</span>
+            <span className={`badge p-2 ${
+              product.Estado === 'Disponible' ? 'bg-success' :
+              product.Estado === 'Separado' ? 'bg-danger bg-opacity-25 text-dark' :
+              'bg-warning bg-opacity-50'
+            }`}>
+              Estado: {product.Estado}
+            </span>
+          </div>
+
             
             <h3 className="text-primary mb-4">${product.Precio.toLocaleString()}</h3>
             
