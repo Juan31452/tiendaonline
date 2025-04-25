@@ -6,7 +6,15 @@ const ModalDetalles = ({ product, show, onHide }) => {
   if (!product) return null;
 
   return (
-    <Modal show={show} onHide={onHide} size="lg" centered>
+    <Modal 
+      show={show} 
+      onHide={onHide} 
+      size="lg" 
+      centered
+      style={{
+        boxShadow: product.Estado === 'Separado' ? '0 4px 8px rgba(0, 0, 0, 0.2)' : 'none'
+      }}
+    >
       <Modal.Header closeButton>
         <Modal.Title>Detalles del Producto</Modal.Title>
       </Modal.Header>
