@@ -99,8 +99,8 @@ export default function Products() {
           filteredProducts.map(product => (
             <div key={product.IdProducto} className="col-6 col-md-4 col-lg-3">
               <div
-                className="card h-100 hover-shadow"
-                onClick={() => handleCardClick(product)}
+                 className={`card h-100 hover-shadow ${product.Estado?.toLowerCase() === 'separado' ? 'border border-danger' : ''}`}
+                 onClick={() => handleCardClick(product)}
                 style={{ cursor: 'pointer' }}
               >
                 <div className="text-center bg-light p-2" style={{ minHeight: '150px' }}>
@@ -120,7 +120,7 @@ export default function Products() {
                   </h6>
                   <div className="d-flex justify-content-between align-items-center">
                     <span className="badge bg-secondary">
-                      {product.Categoria || 'General'}
+                    {product.Estado || 'Sin estado'}
                     </span>
                     <span className="text-success fw-bold">
                       ${product.Precio?.toLocaleString()}

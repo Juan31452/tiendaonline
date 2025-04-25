@@ -12,7 +12,7 @@ const ModalDetalles = ({ product, show, onHide }) => {
       size="lg" 
       centered
       style={{
-        boxShadow: product.Estado === 'Separado' ? '0 4px 8px rgba(0, 0, 0, 0.2)' : 'none'
+        boxShadow: product.Estado === 'Separado' ? '0 4px 8px rgba(219, 143, 143, 0.2)' : 'none'
       }}
     >
       <Modal.Header closeButton>
