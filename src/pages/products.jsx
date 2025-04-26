@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import productos10 from "../data/products_modified10.json";
 import productos11 from "../data/products_modified11.json";
 import productos12 from "../data/products_modified12.json";
 import productos13 from "../data/products_modified13.json";
@@ -17,7 +18,7 @@ export default function Products() {
   useEffect(() => {
     try {
       setLoading(true);
-      const combinedProducts = [...productos11, ...productos12, ...productos13, ...productos14];
+      const combinedProducts = [...productos10, ...productos11, ...productos12, ...productos13, ...productos14];
       const uniqueProducts = Array.from(
         new Map(combinedProducts.map(product => [product.IdProducto, product])).values()
       );
@@ -99,11 +100,17 @@ export default function Products() {
           filteredProducts.map(product => (
             <div key={product.IdProducto} className="col-6 col-md-4 col-lg-3">
               <div
-                 className={`card h-100 hover-shadow ${product.Estado?.toLowerCase() === 'separado' ? 'border border-danger' : ''}`}
-                 onClick={() => handleCardClick(product)}
+                className={`card h-100 hover-shadow ${
+                  product.Estado?.toLowerCase() === 'separado' 
+                    ? 'border border-danger' 
+                    : product.Estado?.toLowerCase() === 'vendido'
+                    ? 'border border-warning'
+                    : ''
+                }`}
+                onClick={() => handleCardClick(product)}
                 style={{ cursor: 'pointer' }}
               >
-                <div className="text-center bg-light p-2" style={{ minHeight: '150px' }}>
+    <div className="text-center bg-light p-2" style={{ minHeight: '150px' }}>
                   <img
                     src={product.Imagen}
                     alt={product.Descripcion}
