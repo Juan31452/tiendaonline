@@ -1,0 +1,57 @@
+[
+  {
+    "Descripcion": "Nuevo bolso de gran capacidad estilo cubo para otoño e invierno para mujer, estilo bandolera.",
+    "Cantidad": 1,
+    "Precio": 29000,
+    "Color": "Blanco crema",
+    "Talla": "Unica",
+    "IdProducto": "8.1",
+    "Imagen": "/assets/Pedido8/img1.jpg",
+    "Categoria": "Mujer",
+    "Estado": "Disponible"
+  },
+  {
+    "Descripcion": "Conjunto de 5 piezas para Mujer, Cintura Media, Diseño Floral Transparente, Lencería Sexy, Ropa Interior Transpirable,Precio Unidad",
+    "Cantidad": 5,
+    "Precio": 5000 ,
+    "Color": "Mezcla de color",
+    "Talla": "L",
+    "IdProducto": "8.2",
+    "Imagen": "/assets/Pedido8/img2.jpg",
+    "Categoria": "Mujer",
+    "Estado": "Disponible"
+  },
+  {
+    "Descripcion": "Conjunto de 4 braguitas de encaje floral sólido, sensuales, cómodas, transpirables y elásticas, ropa interior femenina y lencería,Precio Unidad",
+    "Cantidad": 4,
+    "Precio": 7000,
+    "Color": "Mezcla de color",
+    "Talla": "L",
+    "IdProducto": "8.3",
+    "Imagen": "/assets/Pedido8/img3.jpg",
+    "Categoria": "Mujer",
+    "Estado": "Disponible"
+  },
+  {
+    "Descripcion": "[Sudadera Cómoda para Todos los Días] Sujetador Bandeau Sin Tirantes para Mujer - Cierre Frontal Sexy, Sin Aros, Sin Relleno, Material de Viscosa Elástica, Perfecto para Fiestas y Uso Casual, Top de Vestido Sin Espalda | Detalles Fruncidos | Ropa Interior de Apoyo",
+    "Cantidad": 1,
+    "Precio": 22000,
+    "Color": "Negro",
+    "Talla": "L",
+    "IdProducto": "8.4",
+    "Imagen": "/assets/Pedido8/img4.jpg",
+    "Categoria": "Mujer",
+    "Estado": "Disponible"
+  },
+  {
+    "Descripcion": "Cajas de Almacenamiento de Ropa y Manta de Espiga con Asas - Bolsas Organizadoras Octogonales Versátiles para Dormitorio, Residencia Universitaria y Organización de Armarios, Almacenamiento Debajo de la Cama",
+    "Cantidad": 1,
+    "Precio": 0,
+    "Color": "Grande 180 Litros",
+    "Talla": "Sin talla",
+    "IdProducto": "8.5",
+    "Imagen": "/assets/Pedido8/img5.jpg",
+    "Categoria": "Variedades",
+    "Estado": "No se vende"
+  }
+]
