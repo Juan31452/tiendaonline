@@ -90,13 +90,13 @@
     {
       "Descripcion": "Camara de Seguridad Inteligente",
       "Cantidad": 1,
-      "Precio": 0,
+      "Precio": 23000,
       "Color": "NO",
       "Talla": null,
       "IdProducto": "12.9",
       "Imagen": "/assets/Pedido12/img9.jpg",
       "Categoria": "Tecnología",
-      "Estado": "Disponible"
+      "Estado": "Separado"
     },
     {
       "Descripcion": "Camiseta sin mangas con cuello de corbata",

@@ -1,0 +1,35 @@
+[
+  {
+    "Descripcion": "Mono Elegante de Rayas con Hombros Descubiertos para Mujeres - Pierna Ancha, Diseño Asimétrico, Rayas Verticales en Blanco y , Cintura con Lazo, Moda Primavera/Verano, Lavado a Mano o Limpieza en Seco, Conjunto de Verano | Moda con Hombros Descubiertos | Mono con Mangas y Rayas Fluyentes",
+    "Cantidad": 1,
+    "Precio": 54000,
+    "Color": "Mezcla de color",
+    "Talla": "M",
+    "IdProducto": "16.1",
+    "Imagen": "/assets/Pedido16/img1.jpg",
+    "Categoria": "Mujer",
+    "Estado": "Disponible"
+  },
+  {
+    "Descripcion": "Nueva Moda de Primavera y Verano Casual Vacacional Falda de Estampado Tropical",
+    "Cantidad": 1,
+    "Precio": 80000,
+    "Color": "Mezcla de color",
+    "Talla": "M",
+    "IdProducto": "16.2",
+    "Imagen": "/assets/Pedido16/img2.jpg",
+    "Categoria": "Sin categoría",
+    "Estado": "Disponible"
+  },
+  {
+    "Descripcion": "Sandalias de moda de color sólido para mujer, zapatos trenzados con correa de hebilla en el tobillo y suela blanda de plataforma, zapatos cómodos de tacón grueso.",
+    "Cantidad": 1,
+    "Precio": 69000,
+    "Color": "Tamaño de etiqueta: CN 42(CO 41)",
+    "Talla": "Blanco",
+    "IdProducto": "16.3",
+    "Imagen": "/assets/Pedido16/img3.jpg",
+    "Categoria": "Mujer",
+    "Estado": "Disponible"
+  }
+]

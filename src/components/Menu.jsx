@@ -3,7 +3,7 @@ import { Container } from 'react-bootstrap';
 import { Route, Routes } from 'react-router-dom';
 import Home from '../pages/home';
 import Products from '../pages/products';
-import CalzadoJM from '../pages/calzadojm';
+import Nuevo from '../pages/nuevo';
 import { PRIVATE1,PRIVATE2} from './Path';
 import Layaut from './Layout';
 
@@ -19,7 +19,7 @@ const Menu = () => {
       <Routes>
          <Route path="/" element={<Home />} />
          <Route path={PRIVATE1} element={<Products />} />
-         <Route path={PRIVATE2} element={<CalzadoJM />} />
+         <Route path={PRIVATE2} element={<Nuevo/>} />
       </Routes>
       </Container>
     );

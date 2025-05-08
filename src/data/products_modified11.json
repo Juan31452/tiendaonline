@@ -8,7 +8,7 @@
     "IdProducto": "11.1",
     "Imagen": "/assets/Pedido11/img1.jpg",
     "Categoria": "Variedades",
-    "Estado": "Disponible"
+    "Estado": "Separado"
   },
   {
     "Descripcion": "Soporte para Teléfono Móvil Serie Stitch, Soporte Multifuncional de PVC para Teléfono Móvil y Tableta, Fácil de Instalar, Adecuado para Escritorio de Dormitorio y Sala de Estar, Soporte Pequeño Portátil Creativo",
@@ -19,7 +19,7 @@
     "IdProducto": "11.2",
     "Imagen": "/assets/Pedido11/img2.jpg",
     "Categoria": "Variedades",
-    "Estado": "Disponible"
+    "Estado": "Separado"
   },
   {
     "Descripcion": "Vestido de mujer francés de vacaciones casual de color sólido con manga rizada y botones en la parte delantera",
@@ -41,7 +41,7 @@
     "IdProducto": "11.4",
     "Imagen": "/assets/Pedido11/img4.jpg",
     "Categoria": "Mujer",
-    "Estado": "Disponible"
+    "Estado": "Separado"
   },
   {
     "Descripcion": "Vestido Elegante de Pana con Detalle de Cremallera - Sin Mangas, de Longitud Media, Lavable a Máquina - Moda para Mujer",
@@ -52,7 +52,7 @@
     "IdProducto": "11.5",
     "Imagen": "/assets/Pedido11/img5.jpg",
     "Categoria": "Mujer",
-    "Estado": "Disponible"
+    "Estado": "Separado"
   },
   {
     "Descripcion": "Mujer elegante delgado cintura-reducción de la parte superior - Chic Negro con Bowknot y Embellishments Florales, Manga Corta, Cuello Redondo, Perfecto para Primavera / Verano, Chic Top | Ajuste Slim | Embellishments Decorativos",
@@ -63,7 +63,7 @@
     "IdProducto": "11.6",
     "Imagen": "/assets/Pedido11/img6.jpg",
     "Categoria": "Mujer",
-    "Estado": "Disponible"
+    "Estado": "Separado"
   },
   {
     "Descripcion": "Conjunto de pijama casual de piña y letras para mujer, top de cuello redondo de manga corta y pantalones cortos, ajuste relajado y cómodo",
@@ -140,7 +140,7 @@
     "IdProducto": "11.13",
     "Imagen": "/assets/Pedido11/img13.jpg",
     "Categoria": "Mujer",
-    "Estado": "Disponible"
+    "Estado": "Separado"
   },
   {
     "Descripcion": "1 par de elegantes zapatos planos para mujer con adornos de cristal, parte superior de tela redonda sin cordones para todas las estaciones, suela sintética.",
@@ -173,7 +173,7 @@
     "IdProducto": "11.16",
     "Imagen": "/assets/Pedido11/img16.jpg",
     "Categoria": "Mujer",
-    "Estado": "Disponible"
+    "Estado": "Separado"
   },
   {
     "Descripcion": "Sandalias de mujer para verano con lazo de rhinestones - Suela suave, punta redonda, tacón bajo, tela transpirable, elegancia casual, sandalias para damas",
@@ -206,7 +206,7 @@
     "IdProducto": "11.19",
     "Imagen": "/assets/Pedido11/img19.jpg",
     "Categoria": "Variedades",
-    "Estado": "Disponible"
+    "Estado": "Separado"
   },
   {
     "Descripcion": "1 Unidad, Llavero Con Letra Inicial Del Alfabeto, Bonito Llavero De Acrílico Con Forma De Mariposa, Colgante Para Bolso, Mochila, Coche, Regalo De Uso Diario Para Mujer",
@@ -250,6 +250,6 @@
     "IdProducto": "11.23",
     "Imagen": "/assets/Pedido11/img23.jpg",
     "Categoria": "Mujer",
-    "Estado": "Disponible"
+    "Estado": "Separado"
   }
 ]
