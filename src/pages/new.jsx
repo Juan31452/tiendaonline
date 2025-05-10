@@ -3,7 +3,7 @@ import { useProductLoader } from '../components/useProductLoader ';
 import CategorySelector from '../components/CategorySelector';
 import ModalDetalles from '../components/ModalDetalles';
 
-const Nuevo = () => {
+const New = () => {
     const [selectedCategory, setSelectedCategory] = useState('todos');
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [showModal, setShowModal] = useState(false);
@@ -156,4 +156,4 @@ const Nuevo = () => {
   );
 };
 
-export default Nuevo;
+export default New;

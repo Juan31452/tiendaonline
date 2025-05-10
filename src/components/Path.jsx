@@ -1,2 +1,2 @@
 export const PRIVATE1 = '/products';
-export const PRIVATE2 = '/nuevo';
+export const PRIVATE2 = '/new';
