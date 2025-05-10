@@ -52,7 +52,7 @@
     "IdProducto": "7.5",
     "Imagen": "/assets/Pedido7/img5.jpg",
     "Categoria": "Hombre",
-    "Estado": "Disponible"
+    "Estado": "Vendido"
   },
   {
     "Descripcion": "5 pares de calcetines deportivos unisex con patrón de alfabeto, tejido de malla transpirable, 100% poliéster, calcetines deportivos de corte bajo para hombres y mujeres. Precio Unidad $5.000",
@@ -195,7 +195,7 @@
     "IdProducto": "7.18",
     "Imagen": "/assets/Pedido7/img18.jpg",
     "Categoria": "Mujer",
-    "Estado": "Separado"
+    "Estado": "Vendido"
   },
   {
     "Descripcion": "Perfume árabe: Desert Mystique - Fragancia tropical de dátiles y dátiles - Eau de Toilette para mujer - Sin alcohol - 0.53 fl oz",
@@ -338,6 +338,6 @@
     "IdProducto": "7.31",
     "Imagen": "/assets/Pedido7/img31.jpg",
     "Categoria": "Tecnología",
-    "Estado": "Separado"
+    "Estado": "Vendido"
   }
 ]

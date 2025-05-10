@@ -96,7 +96,7 @@
       "IdProducto": "12.9",
       "Imagen": "/assets/Pedido12/img9.jpg",
       "Categoria": "Tecnología",
-      "Estado": "Separado"
+      "Estado": "Vendido"
     },
     {
       "Descripcion": "Camiseta sin mangas con cuello de corbata",
@@ -118,6 +118,6 @@
       "IdProducto": "12.11",
       "Imagen": "/assets/Pedido12/img11.jpg",
       "Categoria": "Mujer",
-      "Estado": "Disponible"
+      "Estado": "Vendido"
     }
   ]
