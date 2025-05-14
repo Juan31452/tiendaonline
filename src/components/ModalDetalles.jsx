@@ -1,6 +1,7 @@
 import React from 'react';
 import { Modal, Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import WhatsAppButton from '../components/WhatsAppButton ';
 
 const ModalDetalles = ({ product, show, onHide }) => {
   if (!product) return null;
@@ -60,10 +61,17 @@ const ModalDetalles = ({ product, show, onHide }) => {
         </div>
       </Modal.Body>
       <Modal.Footer>
-        <Button variant="outline-secondary" onClick={onHide}>
-          Cerrar
-        </Button>
-      </Modal.Footer>
+        <div className="d-flex flex-column flex-sm-row justify-content-between align-items-center w-100 gap-2">
+          <WhatsAppButton product={product} className="w-100 w-sm-auto" />
+          <Button 
+            variant="outline-secondary" 
+            onClick={onHide}
+            className="w-100 w-sm-auto"
+          >
+            Cerrar
+          </Button>
+        </div>
+</Modal.Footer>
     </Modal>
   );
 };

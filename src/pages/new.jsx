@@ -62,16 +62,6 @@ const New = () => {
     );
   }
 
-  if (loading) {
-    return (
-      <div className="text-center py-5">
-        <div className="spinner-border text-primary" role="status">
-          <span className="visually-hidden">Cargando...</span>
-        </div>
-      </div>
-    );
-  }
-
   return (
     <div className="container mt-4">
       {/* Subtítulo "Nuestros Productos" */}
@@ -87,7 +77,7 @@ const New = () => {
           activeCategory={selectedCategory}
         />
       </div>
-
+      
       <div className="row g-3">
         {filteredProducts.length > 0 ? (
           filteredProducts
