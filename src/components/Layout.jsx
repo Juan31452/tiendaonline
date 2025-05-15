@@ -3,14 +3,16 @@ import { Navbar, Nav, Container } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 const NavBar = () => {
+  const isLocalhost = window.location.hostname === 'localhost';
+
   return (
     <Navbar 
       collapseOnSelect 
       expand="lg" 
       bg="light" 
       variant="light"
-      fixed="top" // Esta propiedad hace que el navbar se fije en la parte superior
-      style={{  zIndex: 1030,boxShadow: '0 2px 4px rgba(0,0,0,0.1)' }} // Opcional: añade sombra para mejor visibilidad
+      fixed="top"
+      style={{ zIndex: 1030, boxShadow: '0 2px 4px rgba(0,0,0,0.1)' }}
     >
       <Container>
         <Navbar.Brand as={Link} to="/">TiendaOnline</Navbar.Brand>
@@ -18,7 +20,9 @@ const NavBar = () => {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link as={Link} to="/" eventKey="1">Home</Nav.Link>
-            <Nav.Link as={Link} to="/products" eventKey="2">Products</Nav.Link>
+            {isLocalhost && (
+              <Nav.Link as={Link} to="/products" eventKey="2">Products</Nav.Link>
+            )}
             <Nav.Link as={Link} to="/new" eventKey="3">New</Nav.Link>
           </Nav>
         </Navbar.Collapse>
