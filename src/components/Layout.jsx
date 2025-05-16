@@ -19,11 +19,11 @@ const NavBar = () => {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link as={Link} to="/" eventKey="1">Home</Nav.Link>
+            <Nav.Link as={Link} to="/" eventKey="1">Inicio</Nav.Link>
             {isLocalhost && (
-              <Nav.Link as={Link} to="/products" eventKey="2">Products</Nav.Link>
+              <Nav.Link as={Link} to="/products" eventKey="2">Productos</Nav.Link>
             )}
-            <Nav.Link as={Link} to="/new" eventKey="3">New</Nav.Link>
+            <Nav.Link as={Link} to="/new" eventKey="3">Nuevos</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
