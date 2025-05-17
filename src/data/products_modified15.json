@@ -41,7 +41,7 @@
     "IdProducto": "15.4",
     "Imagen": "/assets/Pedido15/img4.jpg",
     "Categoria": "Mujer",
-    "Estado": "Disponible"
+    "Estado": "Separado"
   },
   {
     "Descripcion": "Vestido de Pana Clásico Negro con Tirantes Blancos - Mini Casual en A con Detalle de Doble Botón, Elástico y Suave, No Transparente - Perfecto para Todas las Estaciones",
@@ -52,7 +52,7 @@
     "IdProducto": "15.5",
     "Imagen": "/assets/Pedido15/img5.jpg",
     "Categoria": "Mujer",
-    "Estado": "Disponible"
+    "Estado": "Separado"
   },
   {
     "Descripcion": "Decoración de Escritorio de la Natividad en Acrílico Hecha a Mano 2D - María, José y Jesús en el Pajar con Luz Cálida - Ideal para Hogar u Oficina",
@@ -74,6 +74,6 @@
     "IdProducto": "15.7",
     "Imagen": "/assets/Pedido15/img7.jpg",
     "Categoria": "Mujer",
-    "Estado": "Disponible"
+    "Estado": "Separado"
   }
 ]
