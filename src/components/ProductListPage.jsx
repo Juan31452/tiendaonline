@@ -17,7 +17,8 @@ const ProductListPage = ({
     setSelectedProduct(product);
     setShowModal(true);
   };
-
+   console.log('Filtered Products:', filteredProducts);
+        
   return (
     <div className="container mt-4">
       <h2 className="text-center mb-4">{title}</h2>
