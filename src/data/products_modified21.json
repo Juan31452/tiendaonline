@@ -1,0 +1,79 @@
+[
+  {
+    "Descripcion": "Pañuelo Triangular de Encaje Blanco Sólido para Mujer con Patrones Florales - Elegante y Perfecto para Bodas, Fiestas, Fotografía y Viajes | Ligero, Transpirable, Poliéster Lavable a Mano",
+    "Cantidad": 1,
+    "Precio": 0,
+    "Color": "Blanco",
+    "Talla": "Sin talla",
+    "IdProducto": "21.1",
+    "Imagen": "/assets/Pedido21/img1.jpg",
+    "Categoria": "Mujer",
+    "Estado": "Nuevo"
+  },
+  {
+    "Descripcion": "Camiseta Gráfica Rosa de Pantera para Mujeres - Camiseta Casual de Manga Corta con Cuello de Pico con Diseño de Gafas, Lavar a Máquina, Top para Toda la Temporada, Ropa Casual | Diseño Juguetón | Top Lavar a Máquina, Camisetas para Damas",
+    "Cantidad": 1,
+    "Precio": 0,
+    "Color": "Blanco",
+    "Talla": "L",
+    "IdProducto": "21.2",
+    "Imagen": "/assets/Pedido21/img2.jpg",
+    "Categoria": "Mujer",
+    "Estado": "Nuevo"
+  },
+  {
+    "Descripcion": "Camiseta Negra de Cuello Redondo con Estampado Geométrico para Mujer - Top Casual de Manga Corta con Gafas Rosadas y Gráfico de Bubble Tea, Tejido Ligero Lavable a Máquina para Atuendos de Primavera/Verano, Camisas de Damas, Diseño Divertido, Tela Duradera",
+    "Cantidad": 1,
+    "Precio": 0,
+    "Color": "Negro",
+    "Talla": "M",
+    "IdProducto": "21.3",
+    "Imagen": "/assets/Pedido21/img3.jpg",
+    "Categoria": "Mujer",
+    "Estado": "Nuevo"
+  },
+  {
+    "Descripcion": "Bufanda bohemia para mujer con estampado floral, chal liviano con encaje, accesorio elegante azul y blanco para uso casual/formal, pañuelo para el cabello, envoltura elegante, lavable a mano, verano",
+    "Cantidad": 1,
+    "Precio": 0,
+    "Color": "Rosa Oscura Rosa Oscura",
+    "Talla": "Sin talla",
+    "IdProducto": "21.4",
+    "Imagen": "/assets/Pedido21/img4.jpg",
+    "Categoria": "Mujer",
+    "Estado": "Nuevo"
+  },
+  {
+    "Descripcion": "Pañuelo Triangular de Encaje Floral para Mujer - Ligero, Transpirable, de Poliéster con Patrón Floral Rosa | Estilo Boho Versátil, Pañuelo para la Cabeza de Protección Solar para Todas las Estaciones, Bufanda para el Cabello",
+    "Cantidad": 1,
+    "Precio": 0,
+    "Color": "Oscuro",
+    "Talla": "Sin talla",
+    "IdProducto": "21.5",
+    "Imagen": "/assets/Pedido21/img5.jpg",
+    "Categoria": "Mujer",
+    "Estado": "Nuevo"
+  },
+  {
+    "Descripcion": "Vestido de manga larga con cuello redondo elegante - Tela de punto de poliéster 100% de color sólido para mujer, perfecto para primavera/otoño - Sin detalles de cinturón",
+    "Cantidad": 1,
+    "Precio": 0,
+    "Color": "Rojo vino",
+    "Talla": "S",
+    "IdProducto": "21.6",
+    "Imagen": "/assets/Pedido21/img6.jpg",
+    "Categoria": "Mujer",
+    "Estado": "Nuevo"
+  },
+  {
+    "Descripcion": "Conjunto elegante de blusa sin mangas y shorts blancos para mujer - Poliéster, ropa casual de primavera/verano con detalles de botones y bolsillos, atuendo casual|Blusa sin mangas|Tela de poliéster",
+    "Cantidad": 1,
+    "Precio": 0,
+    "Color": "Blanco",
+    "Talla": "M",
+    "IdProducto": "21.7",
+    "Imagen": "/assets/Pedido21/img7.jpg",
+    "Categoria": "Mujer",
+    "Estado": "Nuevo"
+  }
+]
