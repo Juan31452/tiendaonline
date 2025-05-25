@@ -2,56 +2,56 @@
   {
     "Descripcion": "Blazer Abierto Al Frente Unicolor, Casual De Manga Larga Con Botones Para El Trabajo Y La Oficina, Ropa De Mujer",
     "Cantidad": 1,
-    "Precio": 0,
+    "Precio": 45000,
     "Color": "Negro",
     "Talla": "S",
     "IdProducto": "19.1",
     "Imagen": "/assets/Pedido19/img1.jpg",
     "Categoria": "Mujer",
-    "Estado": "Nuevo"
+    "Estado": "Disponible"
   },
   {
     "Descripcion": "Conjunto deportivo con estampado de letras para otoño e invierno, sudadera de manga larga con cuello redondo y pantalones cortos elásticos con cordón, ropa de descanso para mujer.",
     "Cantidad": 1,
-    "Precio": 0,
+    "Precio": 68000,
     "Color": "Albaricoque",
     "Talla": "S",
     "IdProducto": "19.2",
     "Imagen": "/assets/Pedido19/img2.jpg",
     "Categoria": "Mujer",
-    "Estado": "Nuevo"
+    "Estado": "Disponible"
   },
   {
     "Descripcion": "Mono Verde Oliva para Mujer sin Mangas - Tirantes Ajustables, Bolsillos Laterales, Tejido Ligero y Transpirable, Lavable en Máquina para Uso Todo el Año",
     "Cantidad": 1,
-    "Precio": 0,
+    "Precio": 34000,
     "Color": "Verde claro",
     "Talla": "M",
     "IdProducto": "19.3",
     "Imagen": "/assets/Pedido19/img3.jpg",
     "Categoria": "Mujer",
-    "Estado": "Nuevo"
+    "Estado": "Disponible"
   },
   {
     "Descripcion": "9001 Conjunto de pantalones de vacaciones al aire libre estilo europeo y americano para deportes y ocio en casa",
     "Cantidad": 1,
-    "Precio": 0,
+    "Precio": 75000,
     "Color": "color rosa rojo",
     "Talla": "M",
     "IdProducto": "19.4",
     "Imagen": "/assets/Pedido19/img4.jpg",
     "Categoria": "Mujer",
-    "Estado": "Nuevo"
+    "Estado": "Disponible"
   },
   {
     "Descripcion": "Conjunto de Camisa con Botones y Bordado Redondo y Pantalones Cortos con Diseño de Bolsillo",
     "Cantidad": 1,
-    "Precio": 0,
+    "Precio": 70000,
     "Color": "Blanco",
     "Talla": "M",
     "IdProducto": "19.5",
     "Imagen": "/assets/Pedido19/img5.jpg",
     "Categoria": "Mujer",
-    "Estado": "Nuevo"
+    "Estado": "Disponible"
   }
 ]

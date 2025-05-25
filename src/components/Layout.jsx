@@ -21,9 +21,13 @@ const NavBar = () => {
           <Nav className="me-auto">
             <Nav.Link as={Link} to="/" eventKey="1">Inicio</Nav.Link>
             {isLocalhost && (
-              <Nav.Link as={Link} to="/products" eventKey="2">Productos</Nav.Link>
+              <>
+                <Nav.Link as={Link} to="/products" eventKey="2">Productos</Nav.Link>
+                <Nav.Link as={Link} to="/uploadimage" eventKey="3">Subir</Nav.Link>
+              </>
             )}
-            <Nav.Link as={Link} to="/new" eventKey="3">Nuevos</Nav.Link>
+  
+            <Nav.Link as={Link} to="/new" eventKey="4">Nuevos</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

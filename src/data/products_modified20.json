@@ -2,34 +2,34 @@
   {
     "Descripcion": "Chaqueta Cortavientos Reflectante Completa para Hombre de Alta Calidad y Ligera con Capucha y Cremallera para Senderismo, Ciclismo, Ropa Urbana Hip Hop - Ropa Casual Exterior Primavera Otoño, Equipo de Senderismo",
     "Cantidad": 1,
-    "Precio": 0,
+    "Precio": 58000,
     "Color": "gris",
     "Talla": "L",
     "IdProducto": "20.1",
     "Imagen": "/assets/Pedido20/img1.jpg",
     "Categoria": "Hombre",
-    "Estado": "Nuevo"
+    "Estado": "Disponible"
   },
   {
     "Descripcion": "Chaqueta Reflectante Ligera para Hombre con Bloques de Color para Primavera/Otoño - Poliéster, Cierre de Cremallera, Estilo Deportivo, Tejido No Elástico, Frontera Cruzada, Color Puro, Ciclismo al Aire Libre",
     "Cantidad": 1,
-    "Precio": 0,
+    "Precio": 58000,
     "Color": "gris",
     "Talla": "XXL",
     "IdProducto": "20.2",
     "Imagen": "/assets/Pedido20/img2.jpg",
     "Categoria": "Hombre",
-    "Estado": "Nuevo"
+    "Estado": "Disponible"
   },
   {
     "Descripcion": "Chaqueta con Capucha Reflectante y a Prueba de Viento para Hombre - Abrigo de Calle Elegante de Poliéster Blanco con Cremallera Frontal, Cuello Alto y Mangas Largas para Salidas Casuales y Actividades Nocturnas",
     "Cantidad": 1,
-    "Precio": 0,
+    "Precio": 58000,
     "Color": "gris",
     "Talla": "Asian XL",
     "IdProducto": "20.3",
     "Imagen": "/assets/Pedido20/img3.jpg",
     "Categoria": "Hombre",
-    "Estado": "Nuevo"
+    "Estado": "Disponible"
   }
 ]
