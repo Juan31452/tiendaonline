@@ -1,0 +1,101 @@
+[
+  {
+    "Descripcion": "Linterna LED [Confiable] Anyice - Súper Brillante, Iluminación de Larga Distancia, Recargable por USB, Antorcha Portátil para Acampar y Senderismo, Diseño Retráctil con Puerto de Carga Oculto, Esenciales para Acampar|Linterna Retráctil|Linterna Duradera, Linterna Recargable",
+    "Cantidad": 2,
+    "Precio": 18000,
+    "Color": "abdominales",
+    "Talla": "400mAh",
+    "IdProducto": "6.1",
+    "Imagen": "/assets/Pedido6/img1.jpg",
+    "Categoria": "Tecnología",
+    "Estado": "Disponible"
+  },
+  {
+    "Descripcion": "Botas de tobillo planas con hebilla retro para mujer, zapatos casuales de tela con tacón bajo y punta redonda, suela de TPR",
+    "Cantidad": 1,
+    "Precio": 87000,
+    "Color": "Tamaño de etiqueta: CN 41(CO 40)",
+    "Talla": "Marrón claro-1",
+    "IdProducto": "6.2",
+    "Imagen": "/assets/Pedido6/img2.jpg",
+    "Categoria": "Mujer",
+    "Estado": "Disponible"
+  },
+  {
+    "Descripcion": "Zapatos cómodos para correr para hombres para entrenamiento al aire libre, zapatillas duraderas antideslizantes para entrenamiento en el parque",
+    "Cantidad": 1,
+    "Precio": 82000,
+    "Color": "Azul",
+    "Talla": "CN 44(CO 42)",
+    "IdProducto": "6.3",
+    "Imagen": "/assets/Pedido6/img3.jpg",
+    "Categoria": "Hombre",
+    "Estado": "Vendido"
+  },
+  {
+    "Descripcion": "Zapatos de Cuña de Lino Bohemio para Mujer con Lazo – Patrón de Rayas Coloridas, Tejido Transpirable, Suela TPR Cómoda, Versátiles para Todas las Estaciones, Estilo Casual, Perfectos para Atuendo Casual, Cuñas para Todas las Estaciones | Zapatos con Patrón de Rayas | Textura Tejida",
+    "Cantidad": 1,
+    "Precio": 45000,
+    "Color": "Tamaño de etiqueta: CN 40(CO 38)",
+    "Talla": "【Rojo】",
+    "IdProducto": "6.4",
+    "Imagen": "/assets/Pedido6/img4.jpg",
+    "Categoria": "Mujer",
+    "Estado": "Disponible"
+  },
+  {
+    "Descripcion": "1 Par de Zapatillas Deportivas Informales para Mujer Rosa con Cordones, Zapatos Bajos de Puntera Redonda para Toda la Estación, Superficie Ligera, Parte Superior de Microfibra, Forro de Tela, Suela de Fílón, Plantilla de Tela - Estilo de Entrenamiento Retro a la Moda",
+    "Cantidad": 1,
+    "Precio": 85000,
+    "Color": "Tamaño de etiqueta: CN 39(CO 39)",
+    "Talla": "Negro",
+    "IdProducto": "6.5",
+    "Imagen": "/assets/Pedido6/img5.jpg",
+    "Categoria": "Mujer",
+    "Estado": "Separado"
+  },
+  {
+    "Descripcion": "Jeans Azules de Ajuste Delgado para Hombre - Versátiles para Casual, Trabajo y Citas de Negocios | Denim Elástico con Bolsillos Inclinados, Lavable a Máquina | Diseño Clásico para Todas las Estaciones",
+    "Cantidad": 1,
+    "Precio": 75000,
+    "Color": "Azul",
+    "Talla": "38",
+    "IdProducto": "6.6",
+    "Imagen": "/assets/Pedido6/img6.jpg",
+    "Categoria": "Hombre",
+    "Estado": "Disponible"
+  },
+  {
+    "Descripcion": "3pcs Calzoncillos Boxer de Color Sólido para Hombre, Tejido de Punto de Poliéster de Alta Elasticidad, Transpirables y Cómodos, Bañadores Elásticos de Secado Rápido para Todas las Estaciones, Ropa de Playa y Fitness, Ropa Interior de Fitness | Cintura Elegante | Tejido de Alta Elasticidad",
+    "Cantidad": 1,
+    "Precio": 12000,
+    "Color": "3 Piezas De Colores Mezclados A",
+    "Talla": "L",
+    "IdProducto": "6.7",
+    "Imagen": "/assets/Pedido6/img7.jpg",
+    "Categoria": "Hombre",
+    "Estado": "Vendido"
+  },
+  {
+    "Descripcion": "Zapatillas de entrenamiento para mujer, estilo Samba, suela suave, diseño Campus para todos los estilos",
+    "Cantidad": 1,
+    "Precio": 75000,
+    "Color": "Blanco",
+    "Talla": "CN 40(CO 39)",
+    "IdProducto": "6.8",
+    "Imagen": "/assets/Pedido6/img8.jpg",
+    "Categoria": "Mujer",
+    "Estado": "Vendido"
+  },
+  {
+    "Descripcion": "Zapatos deportivos transpirables tejidos de moda para hombre, cómodos zapatos con cordones antideslizantes de suela blanda para actividades al aire libre para Hombre.",
+    "Cantidad": 1,
+    "Precio": 55000,
+    "Color": "gris",
+    "Talla": "CN 40(CO 40)",
+    "IdProducto": "6.9",
+    "Imagen": "/assets/Pedido6/img9.jpg",
+    "Categoria": "Hombre",
+    "Estado": "Disponible"
+  }
+]

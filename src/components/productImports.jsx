@@ -1,4 +1,5 @@
 // src/data/imports/productImports.js
+import productos6 from "../data/products_modified6.json";
 import productos7 from "../data/products_modified7.json";
 import productos8 from "../data/products_modified8.json";
 import productos9 from "../data/products_modified9.json";
@@ -17,6 +18,7 @@ import productos21  from "../data/products_modified21.json";
 
 // Exporta como objeto nombrado
 export const productImports = {
+  productos6,
   productos7,
   productos8,
   productos9,
@@ -35,5 +37,5 @@ export const productImports = {
 };
 
 // O también puedes exportar individualmente si lo prefieres
-export { productos7,productos8, productos9, productos10, productos11, productos12, productos13, 
+export { productos6,productos7,productos8, productos9, productos10, productos11, productos12, productos13, 
          productos14, productos15, productos16,productos17,productos18,productos19,productos20,productos21 };
