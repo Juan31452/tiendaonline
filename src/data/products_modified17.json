@@ -8,7 +8,7 @@
     "IdProducto": "17.1",
     "Imagen": "/assets/Pedido17/img1.jpg",
     "Categoria": "Variedades",
-    "Estado": "Disponible"
+    "Estado": "Separado"
   },
   {
     "Descripcion": "Una elegante y sofisticada blusa sin mangas combinada con pantalones largos con bolsillos diagonales y detalles de botones.",
@@ -19,7 +19,7 @@
     "IdProducto": "17.2",
     "Imagen": "/assets/Pedido17/img2.jpg",
     "Categoria": "Mujer",
-    "Estado": "Disponible"
+    "Estado": "Separado"
   },
   {
     "Descripcion": "Conjunto de dos piezas de mujer sin mangas y pantalones de cintura alta - Azul Marino, Poliéster, Ropa casual para todas las estaciones con detalles de botón y bolsillo, Vestimenta casual | Conjunto de dos piezas elegante | Tela de poliéster",
