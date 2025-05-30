@@ -6,7 +6,7 @@
     "Color": "Tamaño de etiqueta: CN 37(CO 37)",
     "Talla": "Dorado",
     "IdProducto": "22.1",
-    "Imagen": "/assets/Pedido22/img1.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1748626164/pedido22/img1.webp",
     "Categoria": "Mujer",
     "Estado": "Nuevo"
   },
@@ -17,7 +17,7 @@
     "Color": "Tamaño de etiqueta: CN 41(CO 40)",
     "Talla": "Blanco",
     "IdProducto": "22.2",
-    "Imagen": "/assets/Pedido22/img2.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1748626164/pedido22/img2.webp",
     "Categoria": "Mujer",
     "Estado": "Nuevo"
   },
@@ -28,7 +28,7 @@
     "Color": "【Rojo】",
     "Talla": "CN 36(CO 35)",
     "IdProducto": "22.6",
-    "Imagen": "/assets/Pedido22/img6.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1748626164/pedido22/img6.webp",
     "Categoria": "Mujer",
     "Estado": "Nuevo"
   },
@@ -39,7 +39,7 @@
     "Color": "Tamaño de etiqueta: CN 37(CO 36)",
     "Talla": "Verde",
     "IdProducto": "22.8",
-    "Imagen": "/assets/Pedido22/img8.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1748626164/pedido22/img8.webp",
     "Categoria": "Mujer",
     "Estado": "Nuevo"
   },
@@ -50,7 +50,7 @@
     "Color": "gris amarillento",
     "Talla": "CN 37(CO 36)",
     "IdProducto": "22.9",
-    "Imagen": "/assets/Pedido22/img9.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1748626164/pedido22/img9.webp",
     "Categoria": "Mujer",
     "Estado": "Nuevo"
   },
@@ -61,7 +61,7 @@
     "Color": "añil oscuro",
     "Talla": "CN 41(CO 40)",
     "IdProducto": "22.10",
-    "Imagen": "/assets/Pedido22/img10.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1748626164/pedido22/img10.webp",
     "Categoria": "Hombre",
     "Estado": "Nuevo"
   },
@@ -72,7 +72,7 @@
     "Color": "Blanco+azul Claro",
     "Talla": "CN 42(CO 40)",
     "IdProducto": "22.11",
-    "Imagen": "/assets/Pedido22/img11.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1748626164/pedido22/img11.webp",
     "Categoria": "Sin categoría",
     "Estado": "Nuevo"
   },
@@ -83,7 +83,7 @@
     "Color": "Cielo azul",
     "Talla": "CN 40(CO 38)",
     "IdProducto": "22.12",
-    "Imagen": "/assets/Pedido22/img12.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1748626164/pedido22/img12.webp",
     "Categoria": "Hombre",
     "Estado": "Nuevo"
   },
@@ -96,6 +96,39 @@
     "IdProducto": "22.13",
     "Imagen": "/assets/Pedido22/img13.jpg",
     "Categoria": "Hombre",
+    "Estado": "Nuevo"
+  },
+  {
+    "Descripcion": "Pantalones de yoga de cintura alta para mujer, elásticos, transpirables y cómodos, perfectos para yoga, correr y ropa casual.",
+    "Cantidad": 1,
+    "Precio": 25000,
+    "Color": "Negro",
+    "Talla": "M",
+    "IdProducto": "22.14",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1748626164/pedido22/img14.webp",
+    "Categoria": "Mujer",
+    "Estado": "Nuevo"
+  },
+  {
+    "Descripcion": "Mallas de entrenamiento de cintura alta con estampado completo, mallas ajustadas elásticas informales para uso diario, ropa de mujer.",
+    "Cantidad": 1,
+    "Precio": 26000,
+    "Color": "Negro",
+    "Talla": "M",
+    "IdProducto": "22.15",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1748626164/pedido22/img15.webp",
+    "Categoria": "Mujer",
+    "Estado": "Nuevo"
+  },
+  {
+    "Descripcion": "Mallas Deportivas De Cintura Alta, Suaves Y Cómodas, Pantalones De Yoga Ajustados Con Estampado De Letras Para Correr Y Hacer Ejercicio",
+    "Cantidad": 1,
+    "Precio": 26000,
+    "Color": "añil oscuro",
+    "Talla": "M",
+    "IdProducto": "22.16",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1748626164/pedido22/img16.webp",
+    "Categoria": "Sin categoría",
     "Estado": "Nuevo"
   }
 ]
