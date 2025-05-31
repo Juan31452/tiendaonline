@@ -6,7 +6,7 @@
     "Color": "Blanco",
     "Talla": "Sin talla",
     "IdProducto": "21.1",
-    "Imagen": "/assets/Pedido21/img1.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1748718488/pedido21/img1.webp",
     "Categoria": "Mujer",
     "Estado": "Disponible"
   },
@@ -17,7 +17,7 @@
     "Color": "Blanco",
     "Talla": "L",
     "IdProducto": "21.2",
-    "Imagen": "/assets/Pedido21/img2.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1748718488/pedido21/img2.webp",
     "Categoria": "Mujer",
     "Estado": "Disponible"
   },
@@ -28,7 +28,7 @@
     "Color": "Negro",
     "Talla": "M",
     "IdProducto": "21.3",
-    "Imagen": "/assets/Pedido21/img3.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1748718488/pedido21/img3.webp",
     "Categoria": "Mujer",
     "Estado": "Disponible"
   },
@@ -39,7 +39,7 @@
     "Color": "Rosa Oscura Rosa Oscura",
     "Talla": "Sin talla",
     "IdProducto": "21.4",
-    "Imagen": "/assets/Pedido21/img4.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1748718489/pedido21/img4.webp",
     "Categoria": "Mujer",
     "Estado": "Disponible"
   },
@@ -50,7 +50,7 @@
     "Color": "Oscuro",
     "Talla": "Sin talla",
     "IdProducto": "21.5",
-    "Imagen": "/assets/Pedido21/img5.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1748718488/pedido21/img5.webp",
     "Categoria": "Mujer",
     "Estado": "Disponible"
   },
@@ -61,7 +61,7 @@
     "Color": "Rojo vino",
     "Talla": "S",
     "IdProducto": "21.6",
-    "Imagen": "/assets/Pedido21/img6.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1748718488/pedido21/img6.webp",
     "Categoria": "Mujer",
     "Estado": "Disponible"
   },
@@ -72,7 +72,7 @@
     "Color": "Blanco",
     "Talla": "M",
     "IdProducto": "21.7",
-    "Imagen": "/assets/Pedido21/img7.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1748718488/pedido21/img7.webp",
     "Categoria": "Mujer",
     "Estado": "Disponible"
   }

@@ -8,7 +8,7 @@
     "IdProducto": "22.1",
     "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1748626164/pedido22/img1.webp",
     "Categoria": "Mujer",
-    "Estado": "Nuevo"
+    "Estado": "Disponible"
   },
   {
   "Descripcion": "Zapatillas de mujer casual de punta redonda con cordones de tela superior de PVC suela transpirable para caminar para regreso a clases, casual, todas las estaciones",
@@ -19,7 +19,7 @@
     "IdProducto": "22.2",
     "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1748626164/pedido22/img2.webp",
     "Categoria": "Mujer",
-    "Estado": "Nuevo"
+    "Estado": "Disponible"
   },
   {
     "Descripcion": "Zapatillas Deportivas de Moda para Mujer con Diseño de Bloques de Color, Suela Ligera de EVA para Monopatín, Calzado Casual de Caña Baja para Todas las Estaciones con Cordones, Punta Llana y Plantilla de Tela",
@@ -30,18 +30,18 @@
     "IdProducto": "22.6",
     "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1748626164/pedido22/img6.webp",
     "Categoria": "Mujer",
-    "Estado": "Nuevo"
+    "Estado": "Disponible"
   },
   {
     "Descripcion": "Zapatos transpirables de verano para mujer, zapatillas informales de malla con suela blanda para correr.",
     "Cantidad": 1,
     "Precio": 70000,
     "Color": "Tamaño de etiqueta: CN 37(CO 36)",
-    "Talla": "Verde",
+    "Talla": " CN 37(CO 36)",
     "IdProducto": "22.8",
     "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1748626164/pedido22/img8.webp",
     "Categoria": "Mujer",
-    "Estado": "Nuevo"
+    "Estado": "Separado"
   },
   {
     "Descripcion": "Zapatillas de mujer casual de poca altura, zapatos transpirables y ligeros para todas las estaciones, punta redonda con cordones de microfibra, forro de tela, suela de PHYLON, plantilla de tela - Calzado deportivo versátil",
@@ -52,7 +52,7 @@
     "IdProducto": "22.9",
     "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1748626164/pedido22/img9.webp",
     "Categoria": "Mujer",
-    "Estado": "Nuevo"
+    "Estado": "Disponible"
   },
   {
     "Descripcion": "Zapatillas de Moda de Talla Grande para Hombre - Tejido Transpirable, Zapatos Cómodos para Correr con Plantilla EVA y Suela MD, Calzado Exterior para Todas las Estaciones en Gris/Blanco/Naranja",
@@ -63,7 +63,7 @@
     "IdProducto": "22.10",
     "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1748626164/pedido22/img10.webp",
     "Categoria": "Hombre",
-    "Estado": "Nuevo"
+    "Estado": "Disponible"
   },
   {
     "Descripcion": "Zapatillas de Entrenamiento Transpirables - Duraderas, Antideslizantes, Calzado Atlético Casual para Correr y Uso Diario",
@@ -74,7 +74,7 @@
     "IdProducto": "22.11",
     "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1748626164/pedido22/img11.webp",
     "Categoria": "Sin categoría",
-    "Estado": "Nuevo"
+    "Estado": "Separado"
   },
   {
     "Descripcion": "Zapatillas de Moda de Talla Grande para Hombre - Transpirables, Cómodas para Correr con Suela MD, Casuales",
@@ -85,7 +85,7 @@
     "IdProducto": "22.12",
     "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1748626164/pedido22/img12.webp",
     "Categoria": "Hombre",
-    "Estado": "Nuevo"
+    "Estado": "Separado"
   },
   {
     "Descripcion": "Zapatillas de Moda de Talla Grande para Hombre - Transpirables, Cómodas para Correr con Suela MD, Casuales",
@@ -94,9 +94,9 @@
     "Color": "color verde oscuro",
     "Talla": "CN 41(CO 39.5)",
     "IdProducto": "22.13",
-    "Imagen": "/assets/Pedido22/img13.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1748626164/pedido22/img13.webp",
     "Categoria": "Hombre",
-    "Estado": "Nuevo"
+    "Estado": "Disponible"
   },
   {
     "Descripcion": "Pantalones de yoga de cintura alta para mujer, elásticos, transpirables y cómodos, perfectos para yoga, correr y ropa casual.",
@@ -107,7 +107,7 @@
     "IdProducto": "22.14",
     "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1748626164/pedido22/img14.webp",
     "Categoria": "Mujer",
-    "Estado": "Nuevo"
+    "Estado": "Disponible"
   },
   {
     "Descripcion": "Mallas de entrenamiento de cintura alta con estampado completo, mallas ajustadas elásticas informales para uso diario, ropa de mujer.",
@@ -118,7 +118,7 @@
     "IdProducto": "22.15",
     "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1748626164/pedido22/img15.webp",
     "Categoria": "Mujer",
-    "Estado": "Nuevo"
+    "Estado": "Disponible"
   },
   {
     "Descripcion": "Mallas Deportivas De Cintura Alta, Suaves Y Cómodas, Pantalones De Yoga Ajustados Con Estampado De Letras Para Correr Y Hacer Ejercicio",
@@ -129,6 +129,6 @@
     "IdProducto": "22.16",
     "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1748626164/pedido22/img16.webp",
     "Categoria": "Sin categoría",
-    "Estado": "Nuevo"
+    "Estado": "Disponible"
   }
 ]
