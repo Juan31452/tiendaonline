@@ -1,0 +1,70 @@
+[
+  {
+    "Descripcion": "HelloKiss hidratante labio brillante Aceite , hidratante",
+    "Cantidad": 1,
+    "Precio": 0,
+    "Color": "Multicolor",
+    "Talla": "04 # color pomelo-Unitalla",
+    "IdProducto": "24.1",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1749114561/pedido24/img1.jpg",
+    "Categoria": "Mujer",
+    "Estado": "Nuevo"
+  },
+  {
+    "Descripcion": "Flirla Chaqueta de forro polar con cremallera de unicolor",
+    "Cantidad": 1,
+    "Precio": 0,
+    "Color": "Albaricoque",
+    "Talla": "M",
+    "IdProducto": "24.2",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1749114622/pedido24/img2.jpg",
+    "Categoria": "Mujer",
+    "Estado": "Nuevo"
+  },
+  {
+    "Descripcion": "Flirla Vestido mini casual con cuello polo, sencillo  y de moda, adecuado para el verano",
+    "Cantidad": 1,
+    "Precio": 0,
+    "Color": "Blanco",
+    "Talla": "S",
+    "IdProducto": "24.3",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1749115134/pedido24/img3.jpg",
+    "Categoria": "Mujer",
+    "Estado": "Nuevo"
+  },
+  {
+    "Descripcion": "SHEIN VCAY Vestido con estampado de plantas de cuello halter",
+    "Cantidad": 1,
+    "Precio": 0,
+    "Color": "Multicolor",
+    "Talla": "S",
+    "IdProducto": "24.4",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1749115297/pedido24/img4.jpg",
+    "Categoria": "Mujer",
+    "Estado": "Nuevo"
+  },
+  {
+    "Descripcion": "SHEIN VCAY Mono sin tirantes estampado floral para vacaciones",
+    "Cantidad": 1,
+    "Precio": 0,
+    "Color": "Multicolor",
+    "Talla": "M",
+    "IdProducto": "24.5",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1749115438/pedido24/img5.jpg",
+    "Categoria": "Mujer",
+    "Estado": "Nuevo"
+  },
+  {
+    "Descripcion": "SHEIN Sport Studio Short deportivo con insertos de malla y gráfico de letra para mujer, short de sudadera, short de gimnasio, short ciclista",
+    "Cantidad": 1,
+    "Precio": 0,
+    "Color": "Multicolor",
+    "Talla": "M",
+    "IdProducto": "24.6",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1749115632/pedido24/img6.jpg",
+    "Categoria": "Mujer",
+    "Estado": "Nuevo"
+  }
+  
+
+] 
