@@ -6,7 +6,7 @@
     "Color": "Multicolor",
     "Talla": "XS",
     "IdProducto": "4.1",
-    "Imagen": "/assets/Pedido4/img1.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1749315591/pedido4/img1.webp",
     "Categoria": "Mujer",
     "Estado": "Vendido"
   },
@@ -17,7 +17,7 @@
     "Color": "añil oscuro",
     "Talla": "36",
     "IdProducto": "4.2",
-    "Imagen": "/assets/Pedido4/img2.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1749315591/pedido4/img2.webp",
     "Categoria": "Hombre",
     "Estado": "Separado"
   },
@@ -28,7 +28,7 @@
     "Color": "Blanco",
     "Talla": "XL",
     "IdProducto": "4.3",
-    "Imagen": "/assets/Pedido4/img3.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1749315591/pedido4/img3.webp",
     "Categoria": "Hombre",
     "Estado": "Disponible"
   },
@@ -39,7 +39,7 @@
     "Color": "Blanco",
     "Talla": "L",
     "IdProducto": "4.4",
-    "Imagen": "/assets/Pedido4/img4.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1749315591/pedido4/img4.webp",
     "Categoria": "Hombre",
     "Estado": "Disponible"
   },
@@ -50,7 +50,7 @@
     "Color": "Verde malaquita",
     "Talla": "M",
     "IdProducto": "4.5",
-    "Imagen": "/assets/Pedido4/img5.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1749315591/pedido4/img5.webp",
     "Categoria": "Hombre",
     "Estado": "Vendido"
   },
@@ -61,7 +61,7 @@
     "Color": "Blanco",
     "Talla": "L",
     "IdProducto": "4.6",
-    "Imagen": "/assets/Pedido4/img6.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1749315591/pedido4/img6.webp",
     "Categoria": "Hombre",
     "Estado": "Disponible"
   },
@@ -72,7 +72,7 @@
     "Color": "rojo chino",
     "Talla": "XL",
     "IdProducto": "4.7",
-    "Imagen": "/assets/Pedido4/img7.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1749315591/pedido4/img7.webp",
     "Categoria": "Hombre",
     "Estado": "Vendido"
   },
@@ -83,7 +83,7 @@
     "Color": "3 Piezas De Colores Mezclados A",
     "Talla": "L",
     "IdProducto": "4.8",
-    "Imagen": "/assets/Pedido4/img8.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1749315591/pedido4/img8.webp",
     "Categoria": "Hombre",
     "Estado": "Separado"
   },
@@ -94,7 +94,7 @@
     "Color": "Rosa",
     "Talla": "XS",
     "IdProducto": "4.9",
-    "Imagen": "/assets/Pedido4/img9.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1749315592/pedido4/img9.webp",
     "Categoria": "Mujer",
     "Estado": "Vendido"
   },
@@ -105,7 +105,7 @@
     "Color": "Color rosa brillante",
     "Talla": "XL",
     "IdProducto": "4.10",
-    "Imagen": "/assets/Pedido4/img10.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1749315592/pedido4/img10.webp",
     "Categoria": "Hombre",
     "Estado": "Separado"
   },
@@ -116,7 +116,7 @@
     "Color": "Azul real",
     "Talla": "32",
     "IdProducto": "4.11",
-    "Imagen": "/assets/Pedido4/img11.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1749315591/pedido4/img11.webp",
     "Categoria": "Hombre",
     "Estado": "Separado"
   },
@@ -127,7 +127,7 @@
     "Color": "Azul real",
     "Talla": "36",
     "IdProducto": "4.12",
-    "Imagen": "/assets/Pedido4/img12.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1749315592/pedido4/img11.webp",
     "Categoria": "Hombre",
     "Estado": "Disponible"
   },
@@ -138,9 +138,9 @@
     "Color": "Blanco",
     "Talla": "XS",
     "IdProducto": "4.13",
-    "Imagen": "/assets/Pedido4/img13.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1749315593/pedido4/img12.webp",
     "Categoria": "Mujer",
-    "Estado": "Nuevo"
+    "Estado": "Vendido"
   },
   {
     "Descripcion": "Vaqueros Clásicos de Ajuste Regular para Hombre - Denim Azul Versátil con Detalles Cosidos, Ideales para Negocios y Uso Casual, Lavables a Máquina",
@@ -149,9 +149,9 @@
     "Color": "Azul",
     "Talla": "34",
     "IdProducto": "4.14",
-    "Imagen": "/assets/Pedido4/img14.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1749315593/pedido4/img13.webp",
     "Categoria": "Hombre",
-    "Estado": "Nuevo"
+    "Estado": "Disponible"
   },
   {
     "Descripcion": "Camiseta polo de manga corta para hombre",
@@ -160,9 +160,9 @@
     "Color": "Verde oscuro",
     "Talla": "L",
     "IdProducto": "4.15",
-    "Imagen": "/assets/Pedido4/img15.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1749315593/pedido4/img14.webp",
     "Categoria": "Hombre",
-    "Estado": "Nuevo"
+    "Estado": "Vendido"
   },
   {
     "Descripcion": "Camisa Casual para Hombre con Estampado Geométrico - Tejido Transpirable y Elástico para Golf y Tenis | Manga Corta de Verano, Top con Cuello y Botones",
@@ -171,9 +171,9 @@
     "Color": "Verdancia",
     "Talla": "XL",
     "IdProducto": "4.16",
-    "Imagen": "/assets/Pedido4/img16.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1749315593/pedido4/img15.webp",
     "Categoria": "Hombre",
-    "Estado": "Nuevo"
+    "Estado": "Separado"
   },
   {
     "Descripcion": "Camiseta Casual de Manga Corta para Hombre con Estampado de Letras 3D, Tejido de Mezcla de Poliéster Transpirable, Cuello Redondo, Ropa de Verano para Exteriores",
@@ -182,9 +182,9 @@
     "Color": "añil oscuro",
     "Talla": "XL",
     "IdProducto": "4.17",
-    "Imagen": "/assets/Pedido4/img17.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1749315593/pedido4/img16.webp",
     "Categoria": "Hombre",
-    "Estado": "Nuevo"
+    "Estado": "Disponible"
   },
   {
     "Descripcion": "Camiseta casual holgada para mujer, estampada, manga corta versátil para el verano.",
@@ -193,9 +193,9 @@
     "Color": "Blanco",
     "Talla": "S",
     "IdProducto": "4.18",
-    "Imagen": "/assets/Pedido4/img18.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1749315591/pedido4/img17.webp",
     "Categoria": "Mujer",
-    "Estado": "Nuevo"
+    "Estado": "Vendido"
   },
   {
     "Descripcion": "Camiseta de cuello redondo con estampado floral, elegante camiseta de manga larga para primavera y otoño, ropa de mujer",
@@ -204,9 +204,9 @@
     "Color": "Azul claro",
     "Talla": "S",
     "IdProducto": "4.19",
-    "Imagen": "/assets/Pedido4/img19.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1749315592/pedido4/img18.webp",
     "Categoria": "Mujer",
-    "Estado": "Nuevo"
+    "Estado": "Separado"
   },
   {
     "Descripcion": "Camiseta de cuello alto con bordado de ojales, elegante ribete de lechuga, botón trasero, manga de pierna de cordero, top ajustado para primavera y otoño, ropa de mujer.",
@@ -215,9 +215,9 @@
     "Color": "Blanco",
     "Talla": "S",
     "IdProducto": "4.20",
-    "Imagen": "/assets/Pedido4/img20.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1749315592/pedido4/img19.webp",
     "Categoria": "Mujer",
-    "Estado": "Nuevo"
+    "Estado": "Vendido"
   },
   {
     "Descripcion": "1pc Elegante Camiseta de Mujer Ajustada con Bordado, Top de Color Sólido de Manga Larga con Cuello Redondo de Punto de Poliéster para Otoño/Invierno",
@@ -226,9 +226,9 @@
     "Color": "Rosa",
     "Talla": "L",
     "IdProducto": "4.21",
-    "Imagen": "/assets/Pedido4/img21.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1749315592/pedido4/img20.webp",
     "Categoria": "Mujer",
-    "Estado": "Nuevo"
+    "Estado": "Disponible"
   },
   {
     "Descripcion": "500pcs/rollo 2.54cm Etiquetas Adhesivas Redondas de \"talla\" de Ropa para Scrapbooking y Venta al Por Menor",
@@ -237,9 +237,9 @@
     "Color": "1 pulgada",
     "Talla": "2,5 cm",
     "IdProducto": "4.22",
-    "Imagen": "/assets/Pedido4/img22.jpg",
-    "Categoria": "Sin categoría",
-    "Estado": "Nuevo"
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1749315592/pedido4/img21.webp",
+    "Categoria": "Variedades",
+    "Estado": "Disponible"
   },
   {
     "Descripcion": "1 Protector de Botella de Cambio de Marchas de Motocicleta de Goma Duradera - Antideslizante, Negro con Almohadilla de Agarre Texturizada y Correa de Hebilla Segura para un Control y Protección Mejorados",
@@ -248,9 +248,9 @@
     "Color": "Oscuro",
     "Talla": "Sin talla",
     "IdProducto": "4.23",
-    "Imagen": "/assets/Pedido4/img23.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1749315592/pedido4/img22.webp",
     "Categoria": "Sin categoría",
-    "Estado": "Nuevo"
+    "Estado": "Disponible"
   },
   {
     "Descripcion": "Pantalones Casuales Populares y Cómodos para Hombre con Bolsillos con Cremallera, Pantalones Deportivos Tejidos para Salir con Plantilla Plana",
@@ -259,8 +259,8 @@
     "Color": "gris",
     "Talla": "S",
     "IdProducto": "4.24",
-    "Imagen": "/assets/Pedido4/img24.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1749315592/pedido4/img23.webp",
     "Categoria": "Hombre",
-    "Estado": "Nuevo"
+    "Estado": "Separado"
   }
 ]
