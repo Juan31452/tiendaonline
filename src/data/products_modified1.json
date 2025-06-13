@@ -173,7 +173,7 @@
     "IdProducto": "1.16",
     "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1749745272/pedido1/img13.webp",
     "Categoria": "Hombre",
-    "Estado": "Nuevo"
+    "Estado": "Disponible"
   },
   {
     "Descripcion": "Camisa de verano con botones y cuello, ideal para deportes al aire libre como golf y tenis, con un diseño de bloques de color para hombres con estilo.",
@@ -209,7 +209,7 @@
     "Estado": "Disponible"
   },
   {
-    "Descripcion": "1 Juego De 24 Piezas, Uñas Postizas Doradas Brillantes Con Diseño De Pedrería, Uñas Postizas Cortas Cuadradas Con Acabado Brillante Para Mujeres Y Niñas Para Pascua",
+    "Descripcion": "1 Juego De 24 Piezas, Uñas Postizas Doradas Brillantes Con Diseño De Pedrería, Uñas Postizas Cortas Cuadradas Con Acabado Brillante Para Mujeres Para Pascua",
     "Cantidad": 1,
     "Precio": 12000,
     "Color": "JJ005",
@@ -220,7 +220,7 @@
     "Estado": "Disponible"
   },
   {
-    "Descripcion": "24pcs Uñas Postizas Cuadradas Elegantes en Rosa con Hoja Dorada y Detalles Bronceados - Uñas Falsas con Punta Francesa Brillante para Mujeres y Niñas, Perfectas para Otoño/Invierno, Precio Inidad 7000",
+    "Descripcion": "24pcs Uñas Postizas Cuadradas Elegantes en Rosa con Hoja Dorada y Detalles Bronceados - Uñas Falsas con Punta Francesa Brillante para Mujeres, Perfectas para Otoño/Invierno, Precio Inidad 7000",
     "Cantidad": 3,
     "Precio": 21000,
     "Color": "Policromo",
@@ -343,90 +343,90 @@
   {
     "Descripcion": "Collar con Colgante de Mariposa al Estilo Bohemio Tejido a Mano, Cadena Larga para Mujer Adecuada para Vacaciones y Vestimenta Casual",
     "Cantidad": 1,
-    "Precio": 0,
+    "Precio": 7500,
     "Color": "Marrón",
     "Talla": "Sin talla",
     "IdProducto": "1.32",
-    "Imagen": "/assets/Pedido1/img32.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1749826952/pedido1/img29.webp",
     "Categoria": "Mujer",
-    "Estado": "Nuevo"
+    "Estado": "Disponible"
   },
   {
     "Descripcion": "Pulsera De Margaritas Con Temperamento A La Moda, Pulsera De Cerámica Con Flores, Cuerda De Mano Dulce Para Parejas, Regalo Para Aniversario, 1 Ud.",
     "Cantidad": 1,
-    "Precio": 0,
+    "Precio": 6000,
     "Color": "Flor blanca",
     "Talla": "Sin talla",
     "IdProducto": "1.33",
-    "Imagen": "/assets/Pedido1/img33.jpg",
-    "Categoria": "Sin categoría",
-    "Estado": "Nuevo"
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1749826952/pedido1/img30.webp",
+    "Categoria": "Mujer",
+    "Estado": "Disponible"
   },
   {
-    "Descripcion": "1pc Pulsera De Cuerda En Capas, Colgante De Corazón De Margarita, Encantadora Cadena De Mano Accesorios De Mano Para Hombres Y Mujeres",
+    "Descripcion": "1pc Pulsera De Cuerda En Capas, Colgante De Corazón De Margarita, Encantadora Cadena De Mano Accesorios De Mano  Mujeres",
     "Cantidad": 1,
-    "Precio": 0,
+    "Precio": 7000,
     "Color": "Multicolor",
     "Talla": "Sin talla",
     "IdProducto": "1.34",
-    "Imagen": "/assets/Pedido1/img34.jpg",
-    "Categoria": "Hombre",
-    "Estado": "Nuevo"
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1749826952/pedido1/img31.webp",
+    "Categoria": "Mujer",
+    "Estado": "Disponible"
   },
   {
     "Descripcion": "Pantalones de pijama con estampado de osito y letras, con detalles de volantes, cintura elástica alta y shorts elásticos de tiro alto para mujer, ropa de dormir",
     "Cantidad": 1,
-    "Precio": 0,
+    "Precio": 19000,
     "Color": "Mezcla de color",
     "Talla": "S",
     "IdProducto": "1.35",
-    "Imagen": "/assets/Pedido1/img35.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1749826952/pedido1/img32.webp",
     "Categoria": "Mujer",
-    "Estado": "Nuevo"
+    "Estado": "Disponible"
   },
   {
     "Descripcion": "Pantalones de pijama con estampado de osito y letras, con detalles de volantes, cintura elástica alta y shorts elásticos de tiro alto para mujer, ropa de dormir",
     "Cantidad": 1,
-    "Precio": 0,
+    "Precio": 19000,
     "Color": "Mezcla de color",
     "Talla": "L",
     "IdProducto": "1.36",
-    "Imagen": "/assets/Pedido1/img36.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1749826952/pedido1/img32.webp",
     "Categoria": "Mujer",
-    "Estado": "Nuevo"
+    "Estado": "Vendido"
   },
   {
     "Descripcion": "Pantalones de pijama con estampado de osito y letras, con detalles de volantes, cintura elástica alta y shorts elásticos de tiro alto para mujer, ropa de dormir",
     "Cantidad": 1,
-    "Precio": 0,
+    "Precio": 19000,
     "Color": "Mezcla de color",
     "Talla": "M",
     "IdProducto": "1.37",
-    "Imagen": "/assets/Pedido1/img37.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1749826952/pedido1/img32.webp",
     "Categoria": "Mujer",
-    "Estado": "Nuevo"
+    "Estado": "Disponible"
   },
   {
     "Descripcion": "Camisón de dormir de encaje sexy para mujer - Mini vestido de tirantes de color liso con cuello en V",
     "Cantidad": 1,
-    "Precio": 0,
+    "Precio": 17000,
     "Color": "Color rosa",
     "Talla": "M",
     "IdProducto": "1.38",
-    "Imagen": "/assets/Pedido1/img38.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1749826952/pedido1/img33.webp",
     "Categoria": "Mujer",
-    "Estado": "Nuevo"
+    "Estado": "Vendido"
   },
   {
     "Descripcion": "Botón Detalle Pantalones Cortos De Cintura Alta, Elegantes Pantalones Cortos Ajustados Para Primavera Y Verano, Ropa De Mujer",
     "Cantidad": 1,
-    "Precio": 0,
+    "Precio": 34000,
     "Color": "Negro",
     "Talla": "M",
     "IdProducto": "1.39",
-    "Imagen": "/assets/Pedido1/img39.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1749826952/pedido1/img34.webp",
     "Categoria": "Mujer",
-    "Estado": "Nuevo"
+    "Estado": "Vendido"
   },
   {
     "Descripcion": "Botón Detalle Pantalones Cortos De Cintura Alta, Elegantes Pantalones Cortos Ajustados Para Primavera Y Verano, Ropa De Mujer",
@@ -435,42 +435,42 @@
     "Color": "Negro",
     "Talla": "L",
     "IdProducto": "1.40",
-    "Imagen": "/assets/Pedido1/img40.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1749826952/pedido1/img34.webp",
     "Categoria": "Mujer",
-    "Estado": "Nuevo"
+    "Estado": "Vendido"
   },
   {
     "Descripcion": "Shorts delanteros con botones de color liso Y2K, shorts de cintura alta de verano con cintura anudada, ropa de mujer",
     "Cantidad": 1,
-    "Precio": 0,
+    "Precio": 40000,
     "Color": "Negro",
     "Talla": "M",
     "IdProducto": "1.41",
-    "Imagen": "/assets/Pedido1/img41.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1749826953/pedido1/img35.webp",
     "Categoria": "Mujer",
-    "Estado": "Nuevo"
+    "Estado": "Disponible"
   },
   {
     "Descripcion": "1 pza Blusa Elegante de Poliéster para Mujer, Camiseta de Verano con Estampado de Corazones Estilo Francés con Lazo Delantero y Mangas de Mariposa con Volantes",
     "Cantidad": 1,
-    "Precio": 0,
+    "Precio": 33000,
     "Color": "Rosa",
     "Talla": "L",
     "IdProducto": "1.42",
-    "Imagen": "/assets/Pedido1/img42.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1749827817/pedido1/img36.webp",
     "Categoria": "Mujer",
-    "Estado": "Nuevo"
+    "Estado": "Vendido"
   },
   {
     "Descripcion": "1 pza Blusa Elegante de Poliéster para Mujer, Camiseta de Verano con Estampado de Corazones Estilo Francés con Lazo Delantero y Mangas de Mariposa con Volantes",
     "Cantidad": 1,
-    "Precio": 0,
+    "Precio": 33000,
     "Color": "Rosa",
     "Talla": "M",
     "IdProducto": "1.43",
-    "Imagen": "/assets/Pedido1/img43.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1749827817/pedido1/img36.webp",
     "Categoria": "Mujer",
-    "Estado": "Nuevo"
+    "Estado": "Disponible"
   },
   {
     "Descripcion": "Top Cami de Corset de Malla Transparente Sexy con Detalle de Encaje Bordado - Sin Mangas, Diseño Sin Espalda para Mujer",
@@ -486,101 +486,101 @@
   {
     "Descripcion": "Top Cami Elegante con Cuello en V y Estampado Floral para Mujer - Poliéster, Lavable a Máquina",
     "Cantidad": 1,
-    "Precio": 0,
+    "Precio": 23000,
     "Color": "Mezcla de color",
     "Talla": "M",
     "IdProducto": "1.45",
-    "Imagen": "/assets/Pedido1/img45.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1749827816/pedido1/img37.webp",
     "Categoria": "Mujer",
-    "Estado": "Nuevo"
+    "Estado": "Disponible"
   },
   {
     "Descripcion": "Blusa de tirantes estampada floral, Top estilo camiseta sin mangas para primavera y verano, Ropa de mujer",
     "Cantidad": 1,
-    "Precio": 0,
+    "Precio": 22000,
     "Color": "Mezcla de color",
     "Talla": "S",
     "IdProducto": "1.46",
-    "Imagen": "/assets/Pedido1/img46.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1749827816/pedido1/img38.webp",
     "Categoria": "Mujer",
-    "Estado": "Nuevo"
+    "Estado": "Vendido"
   },
   {
     "Descripcion": "Blusa estampada de flores con escote en V, Blusa elegante de mangas ondeadas para primavera y verano, Ropa de mujer",
     "Cantidad": 1,
-    "Precio": 0,
+    "Precio": 26000,
     "Color": "Multicolor",
     "Talla": "L",
     "IdProducto": "1.47",
-    "Imagen": "/assets/Pedido1/img47.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1749827817/pedido1/img39.webp",
     "Categoria": "Mujer",
-    "Estado": "Nuevo"
+    "Estado": "Vendido"
   },
   {
     "Descripcion": "Blusa estampada de flores con escote en V, Blusa elegante de mangas ondeadas para primavera y verano, Ropa de mujer",
     "Cantidad": 1,
-    "Precio": 0,
+    "Precio": 26000,
     "Color": "Multicolor",
     "Talla": "M",
     "IdProducto": "1.48",
-    "Imagen": "/assets/Pedido1/img48.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1749827817/pedido1/img39.webp",
     "Categoria": "Mujer",
-    "Estado": "Nuevo"
+    "Estado": "Separado"
   },
   {
     "Descripcion": "Top corto con encaje de contraste, top sexy ajustado sin mangas con abertura para primavera y verano, ropa de mujer.",
     "Cantidad": 1,
-    "Precio": 0,
+    "Precio": 18000,
     "Color": "Blanco",
     "Talla": "L",
     "IdProducto": "1.49",
-    "Imagen": "/assets/Pedido1/img49.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1749827817/pedido1/img40.webp",
     "Categoria": "Mujer",
-    "Estado": "Nuevo"
+    "Estado": "Separado"
   },
   {
     "Descripcion": "Top corto con encaje de contraste, top sexy ajustado sin mangas con abertura para primavera y verano, ropa de mujer.",
     "Cantidad": 1,
-    "Precio": 0,
+    "Precio": 18000,
     "Color": "Blanco",
     "Talla": "S",
     "IdProducto": "1.50",
-    "Imagen": "/assets/Pedido1/img50.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1749827817/pedido1/img40.webp",
     "Categoria": "Mujer",
-    "Estado": "Nuevo"
+    "Estado": "Vendido"
   },
   {
     "Descripcion": "Top corto con encaje de contraste, top sexy ajustado sin mangas con abertura para primavera y verano, ropa de mujer.",
     "Cantidad": 1,
-    "Precio": 0,
+    "Precio": 18000,
     "Color": "Blanco",
     "Talla": "M",
     "IdProducto": "1.51",
-    "Imagen": "/assets/Pedido1/img51.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1749827817/pedido1/img40.webp",
     "Categoria": "Mujer",
-    "Estado": "Nuevo"
+    "Estado": "Separado"
   },
   {
     "Descripcion": "Top Cami Con Estampado Floral, Top Casual Sin Mangas Con Cuello En V Y Encaje En Contraste, Ropa De Mujer",
     "Cantidad": 1,
-    "Precio": 0,
+    "Precio": 18000,
     "Color": "Blanco",
     "Talla": "M",
     "IdProducto": "1.52",
-    "Imagen": "/assets/Pedido1/img52.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1749827817/pedido1/img41.webp",
     "Categoria": "Mujer",
-    "Estado": "Nuevo"
+    "Estado": "Vendido"
   },
   {
     "Descripcion": "Tops de manga corta de poliéster con estampado de Paisley para mujer, camisa elegante sin mangas, moda primavera/verano, color sólido con patrón floral, estilo casual, tela tejida",
     "Cantidad": 1,
-    "Precio": 0,
+    "Precio": 24000,
     "Color": "【Rojo】",
     "Talla": "L",
     "IdProducto": "1.53",
-    "Imagen": "/assets/Pedido1/img53.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1749827817/pedido1/img42.webp",
     "Categoria": "Mujer",
-    "Estado": "Nuevo"
+    "Estado": "Disponible"
   },
   {
     "Descripcion": "Tops de manga corta de poliéster con estampado de Paisley para mujer, camisa elegante sin mangas, moda primavera/verano, color sólido con patrón floral, estilo casual, tela tejida",
@@ -589,9 +589,9 @@
     "Color": "【Rojo】",
     "Talla": "M",
     "IdProducto": "1.54",
-    "Imagen": "/assets/Pedido1/img54.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1749827817/pedido1/img42.webp",
     "Categoria": "Mujer",
-    "Estado": "Nuevo"
+    "Estado": "Vendido"
   },
   {
     "Descripcion": "Tops de manga corta de poliéster con estampado de Paisley para mujer, camisa elegante sin mangas, moda primavera/verano, color sólido con patrón floral, estilo casual, tela tejida",
@@ -600,107 +600,107 @@
     "Color": "【Rojo】",
     "Talla": "S",
     "IdProducto": "1.55",
-    "Imagen": "/assets/Pedido1/img55.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1749827817/pedido1/img42.webp",
     "Categoria": "Mujer",
-    "Estado": "Nuevo"
+    "Estado": "Vendido"
   },
   {
     "Descripcion": "Collar gótico, collar de encaje, lujo punk, estilo Y2K, cuerda de algodón, collar de moda para mujeres, ajustable, para uso diario y fiestas, perfecto para regalos festivos",
     "Cantidad": 1,
-    "Precio": 0,
+    "Precio": 6500,
     "Color": "Gran Mariposa Colgando De Perlas Negras",
     "Talla": "Sin talla",
     "IdProducto": "1.56",
-    "Imagen": "/assets/Pedido1/img56.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1749828800/pedido1/img44.webp",
     "Categoria": "Mujer",
-    "Estado": "Nuevo"
+    "Estado": "Disponible"
   },
   {
     "Descripcion": "Collar con colgante de mariposa retro, collar simple de moda, accesorios de collar de moda",
     "Cantidad": 1,
-    "Precio": 0,
+    "Precio": 6000,
     "Color": "mariposas",
     "Talla": "Sin talla",
     "IdProducto": "1.57",
-    "Imagen": "/assets/Pedido1/img57.jpg",
-    "Categoria": "Sin categoría",
-    "Estado": "Nuevo"
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1749828800/pedido1/img45.webp",
+    "Categoria": "Mujer",
+    "Estado": "Vendido"
   },
   {
-    "Descripcion": "4pcs Bragas de Encaje y Malla Sexy para Mujer - Cintura Baja, Mezcla de Nylon Transpirable, Lavables a Máquina",
+    "Descripcion": "4pcs Bragas de Encaje y Malla Sexy para Mujer - Cintura Baja, Mezcla de Nylon Transpirable, Lavables a Máquina, precio por unidad 6000 c/u",
     "Cantidad": 1,
-    "Precio": 0,
+    "Precio": 21000,
     "Color": "Juego de 4 piezas",
     "Talla": "M",
     "IdProducto": "1.58",
-    "Imagen": "/assets/Pedido1/img58.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1749828800/pedido1/img46.webp",
     "Categoria": "Mujer",
-    "Estado": "Nuevo"
+    "Estado": "Disponible"
   },
   {
-    "Descripcion": "4 Piezas Bragas Cortas De Encaje Floral, Bragas Suaves Y Cómodas Con Ribete Festoneado, Lencería Y Ropa Interior Para Mujer",
+    "Descripcion": "4 Piezas Bragas Cortas De Encaje Floral, Bragas Suaves Y Cómodas Con Ribete Festoneado, Lencería Y Ropa Interior Para Mujer, precio por unidad 5500 c/u",
     "Cantidad": 1,
-    "Precio": 0,
+    "Precio": 20000,
     "Color": "Color mezclado B",
     "Talla": "L",
     "IdProducto": "1.59",
-    "Imagen": "/assets/Pedido1/img59.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1749828800/pedido1/img47.webp",
     "Categoria": "Mujer",
-    "Estado": "Nuevo"
+    "Estado": "Vendido"
   },
   {
-    "Descripcion": "4 piezas de bragas semitransparentes de encaje sólido, bragas íntimas sexys, cómodas, transpirables y elásticas, lencería y ropa interior para mujer.",
+    "Descripcion": "4 piezas de bragas semitransparentes de encaje sólido, bragas íntimas sexys, cómodas, transpirables y elásticas, lencería y ropa interior para mujer, precio por unidad 5500 c/u",
     "Cantidad": 1,
-    "Precio": 0,
+    "Precio": 20000,
     "Color": "Mezcla de color",
     "Talla": "S",
     "IdProducto": "1.60",
-    "Imagen": "/assets/Pedido1/img60.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1749828800/pedido1/img48.webp",
     "Categoria": "Mujer",
     "Estado": "Nuevo"
   },
   {
-    "Descripcion": "7 piezas de tangas acanaladas sin costuras, íntimas elásticas transpirables cómodas y sexys, lencería y ropa interior para mujer para otoño e invierno",
+    "Descripcion": "7 piezas de tangas acanaladas sin costuras, íntimas elásticas transpirables cómodas y sexys, lencería y ropa interior para mujer para otoño e invierno, precio 5000 c/u",
     "Cantidad": 1,
-    "Precio": 0,
+    "Precio": 31000,
     "Color": "Mezcla de color",
     "Talla": "L",
     "IdProducto": "1.61",
-    "Imagen": "/assets/Pedido1/img61.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1749828801/pedido1/img49.webp",
     "Categoria": "Mujer",
-    "Estado": "Nuevo"
+    "Estado": "Disponible"
   },
   {
-    "Descripcion": "7 piezas de tangas acanaladas sin costuras, íntimas elásticas transpirables cómodas y sexys, lencería y ropa interior para mujer para otoño e invierno",
+    "Descripcion": "7 piezas de tangas acanaladas sin costuras, íntimas elásticas transpirables cómodas y sexys, lencería y ropa interior para mujer para otoño e invierno, precio 5000 c/u",
     "Cantidad": 1,
-    "Precio": 0,
+    "Precio": 31000,
     "Color": "Mezcla de color",
     "Talla": "S",
     "IdProducto": "1.62",
-    "Imagen": "/assets/Pedido1/img62.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1749828801/pedido1/img49.webp",
     "Categoria": "Mujer",
-    "Estado": "Nuevo"
+    "Estado": "Disponible"
   },
   {
-    "Descripcion": "7 piezas de tangas acanaladas sin costuras, íntimas elásticas transpirables cómodas y sexys, lencería y ropa interior para mujer para otoño e invierno",
+    "Descripcion": "7 piezas de tangas acanaladas sin costuras, íntimas elásticas transpirables cómodas y sexys, lencería y ropa interior para mujer para otoño e invierno, precio 5000 c/u",
     "Cantidad": 1,
-    "Precio": 0,
+    "Precio": 31000,
     "Color": "Mezcla de color",
     "Talla": "M",
     "IdProducto": "1.63",
-    "Imagen": "/assets/Pedido1/img63.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1749828801/pedido1/img49.webp",
     "Categoria": "Mujer",
-    "Estado": "Nuevo"
+    "Estado": "Disponible"
   },
   {
     "Descripcion": "Conjunto De Shorts Estilo Vacacional, Top De Tirantes De Cuello Cuadrado En Color Sólido Y Shorts De Cintura Paper Bag Con Estampado Floral, Ropa De Mujer",
     "Cantidad": 1,
-    "Precio": 0,
+    "Precio": 30000,
     "Color": "Mezcla de color",
     "Talla": "M",
     "IdProducto": "1.64",
-    "Imagen": "/assets/Pedido1/img64.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1749828801/pedido1/img50.webp",
     "Categoria": "Mujer",
-    "Estado": "Nuevo"
+    "Estado": "Vendido"
   }
 ]
