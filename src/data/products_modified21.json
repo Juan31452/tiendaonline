@@ -8,7 +8,7 @@
     "IdProducto": "21.1",
     "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1748718488/pedido21/img1.webp",
     "Categoria": "Mujer",
-    "Estado": "Disponible"
+    "Estado": "Vendido"
   },
   {
     "Descripcion": "Camiseta Gráfica Rosa de Pantera para Mujeres - Camiseta Casual de Manga Corta con Cuello de Pico con Diseño de Gafas, Lavar a Máquina, Top para Toda la Temporada, Ropa Casual | Diseño Juguetón | Top Lavar a Máquina, Camisetas para Damas",
@@ -41,7 +41,7 @@
     "IdProducto": "21.4",
     "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1748718489/pedido21/img4.webp",
     "Categoria": "Mujer",
-    "Estado": "Disponible"
+    "Estado": "Vendido"
   },
   {
     "Descripcion": "Pañuelo Triangular de Encaje Floral para Mujer - Ligero, Transpirable, de Poliéster con Patrón Floral Rosa | Estilo Boho Versátil, Pañuelo para la Cabeza de Protección Solar para Todas las Estaciones, Bufanda para el Cabello",
@@ -52,7 +52,7 @@
     "IdProducto": "21.5",
     "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1748718488/pedido21/img5.webp",
     "Categoria": "Mujer",
-    "Estado": "Disponible"
+    "Estado": "Vendido"
   },
   {
     "Descripcion": "Vestido de manga larga con cuello redondo elegante - Tela de punto de poliéster 100% de color sólido para mujer, perfecto para primavera/otoño - Sin detalles de cinturón",
@@ -63,7 +63,7 @@
     "IdProducto": "21.6",
     "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1748718488/pedido21/img6.webp",
     "Categoria": "Mujer",
-    "Estado": "Disponible"
+    "Estado": "Separado"
   },
   {
     "Descripcion": "Conjunto elegante de blusa sin mangas y shorts blancos para mujer - Poliéster, ropa casual de primavera/verano con detalles de botones y bolsillos, atuendo casual|Blusa sin mangas|Tela de poliéster",
@@ -74,6 +74,6 @@
     "IdProducto": "21.7",
     "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1748718488/pedido21/img7.webp",
     "Categoria": "Mujer",
-    "Estado": "Disponible"
+    "Estado": "Separado"
   }
 ]
