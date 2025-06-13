@@ -96,7 +96,7 @@
     "IdProducto": "2.9",
     "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1749657310/pedido2/img8.webp",
     "Categoria": "Mujer",
-    "Estado": "Disponible"
+    "Estado": "Separado"
   },
   {
     "Descripcion": "Camiseta con Estampado Floral y Cuello Alto, Top Casual de Manga Corta para Primavera y Verano, Ropa de Mujer",
@@ -107,7 +107,7 @@
     "IdProducto": "2.10",
     "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1749657310/pedido2/img8.webp",
     "Categoria": "Mujer",
-    "Estado": "Disponible"
+    "Estado": "Vendido"
   },
   {
     "Descripcion": "Camiseta con Estampado Floral y Cuello Alto, Top Casual de Manga Corta para Primavera y Verano, Ropa de Mujer",
