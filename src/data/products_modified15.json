@@ -52,7 +52,7 @@
     "IdProducto": "15.5",
     "Imagen": "/assets/Pedido15/img5.jpg",
     "Categoria": "Mujer",
-    "Estado": "Separado"
+    "Estado": "Vendido"
   },
   {
     "Descripcion": "Decoración de Escritorio de la Natividad en Acrílico Hecha a Mano 2D - María, José y Jesús en el Pajar con Luz Cálida - Ideal para Hogar u Oficina",
@@ -74,6 +74,6 @@
     "IdProducto": "15.7",
     "Imagen": "/assets/Pedido15/img7.jpg",
     "Categoria": "Mujer",
-    "Estado": "Separado"
+    "Estado": "Vendido"
   }
 ]
