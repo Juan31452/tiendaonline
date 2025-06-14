@@ -27,8 +27,15 @@ const ProductListPage = ({
         {title}
       </h2>
       <p className="text-center text-muted mb-4">
-        Total de productos: <strong>{filteredProducts?.length || 0}</strong>
-      </p>
+        Total de productos disponibles:{" "}
+        <strong>
+          {
+            filteredProducts.filter(
+              (product) => product.Estado?.toLowerCase() === 'disponible'
+            ).length
+          }
+        </strong>
+     </p>
 
       <div
         className="sticky-top bg-white pt-2 pb-3 z-index-1020"
