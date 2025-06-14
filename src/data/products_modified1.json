@@ -94,7 +94,7 @@
     "Color": "Mezcla de color",
     "Talla": "M",
     "IdProducto": "1.9",
-    "Imagen": "/https://res.cloudinary.com/dgplca5we/image/upload/v1749744967/pedido1/img8.webp",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1749744967/pedido1/img8.webp",
     "Categoria": "Hombre",
     "Estado": "Vendido"
   },
@@ -475,13 +475,13 @@
   {
     "Descripcion": "Top Cami de Corset de Malla Transparente Sexy con Detalle de Encaje Bordado - Sin Mangas, Diseño Sin Espalda para Mujer",
     "Cantidad": 1,
-    "Precio": 0,
+    "Precio": 23000,
     "Color": "Albaricoque",
     "Talla": "M",
     "IdProducto": "1.44",
-    "Imagen": "/assets/Pedido1/img44.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1749827816/pedido1/img37.webp",
     "Categoria": "Mujer",
-    "Estado": "Nuevo"
+    "Estado": "Vendido"
   },
   {
     "Descripcion": "Top Cami Elegante con Cuello en V y Estampado Floral para Mujer - Poliéster, Lavable a Máquina",
@@ -657,7 +657,7 @@
     "IdProducto": "1.60",
     "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1749828800/pedido1/img48.webp",
     "Categoria": "Mujer",
-    "Estado": "Nuevo"
+    "Estado": "Disponible"
   },
   {
     "Descripcion": "7 piezas de tangas acanaladas sin costuras, íntimas elásticas transpirables cómodas y sexys, lencería y ropa interior para mujer para otoño e invierno, precio 5000 c/u",
