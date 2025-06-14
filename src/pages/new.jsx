@@ -1,5 +1,6 @@
 import { useProductLoader } from '../components/useProductLoader '; 
 import ProductListPage from '../components/ProductListPage';
+import Footer from '../components/Footer';
 
 const New = () => {
   const { loading, allProducts, filteredProducts, setFilteredProducts } = useProductLoader();
@@ -16,6 +17,7 @@ const New = () => {
     .sort((a, b) => b.IdProducto - a.IdProducto); // Orden descendente
 
   return (
+  <div className="container mt-4" style={{ paddingTop: '10px' }}>
     <ProductListPage
       title="Nuevos Productos"
       allProducts={allProducts}
@@ -23,6 +25,8 @@ const New = () => {
       setFilteredProducts={setFilteredProducts}
       filterFn={filterFn}
     />
+    <Footer />
+  </div>  
   );
 };
 

@@ -1,5 +1,6 @@
 import { useProductLoader } from '../components/useProductLoader '; 
 import ProductListPage from '../components/ProductListPage';
+import Footer from '../components/Footer';
 
 const Home = () => {
 const { loading, allProducts, filteredProducts, setFilteredProducts } = useProductLoader();
@@ -10,6 +11,7 @@ const { loading, allProducts, filteredProducts, setFilteredProducts } = useProdu
     ['disponible'].includes(product.Estado?.toLowerCase());
 
   return (
+ <div className="container mt-4" style={{ paddingTop: '10px' }}> 
     <ProductListPage
       title="Nuestros Productos"
       allProducts={allProducts}
@@ -17,7 +19,10 @@ const { loading, allProducts, filteredProducts, setFilteredProducts } = useProdu
       setFilteredProducts={setFilteredProducts}
       filterFn={filterFn}
     />
+
+    <Footer />
+  </div>  
   );
-};
+}; 
 
 export default Home;
