@@ -17,6 +17,8 @@ const { loading, allProducts, filteredProducts, setFilteredProducts } = useProdu
       setFilteredProducts={setFilteredProducts}
       filterFn={filterFn}
     />
+
+    
  );
 };
 
