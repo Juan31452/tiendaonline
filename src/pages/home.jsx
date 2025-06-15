@@ -18,6 +18,7 @@ const { loading, allProducts, filteredProducts, setFilteredProducts } = useProdu
       filteredProducts={filteredProducts}
       setFilteredProducts={setFilteredProducts}
       filterFn={filterFn}
+      resumenEstados={['disponible']}
     />
 
     <Footer />

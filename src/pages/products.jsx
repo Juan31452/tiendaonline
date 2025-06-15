@@ -1,5 +1,6 @@
 import { useProductLoader } from '../components/useProductLoader '; 
 import ProductListPage from '../components/ProductListPage';
+import WhatsAppFloatingButton from '../components/WhatsAppFloatingButton';
 
 const Products= () => {
 const { loading, allProducts, filteredProducts, setFilteredProducts } = useProductLoader();
@@ -12,11 +13,13 @@ const { loading, allProducts, filteredProducts, setFilteredProducts } = useProdu
   return (
     <div>
       <ProductListPage
-        title="Nuestros Productos"
+        title="Productos Fuera de Stock"
         allProducts={allProducts}
         filteredProducts={filteredProducts}
         setFilteredProducts={setFilteredProducts}
         filterFn={filterFn}
+        resumenEstados={['separado', 'vendido']}
+
       />
 
       <WhatsAppFloatingButton 

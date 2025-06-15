@@ -3,13 +3,15 @@ import { useState } from 'react';
 import CategoryFilterController from './CategoryFilterController';
 import ModalDetalles from './ModalDetalles';
 import ProductCard from './ProductCard';
+import EstadoResumen from './EstadoResumen';
 
 const ProductListPage = ({ 
   title,
   allProducts,
   filteredProducts,
   setFilteredProducts,
-  filterFn 
+  filterFn,
+  resumenEstados = []
 }) => {
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [showModal, setShowModal] = useState(false);
@@ -26,16 +28,10 @@ const ProductListPage = ({
       <h2 className="text-center mb-2">
         {title}
       </h2>
-      <p className="text-center text-muted mb-4">
-        Total de productos disponibles:{" "}
-        <strong>
-          {
-            filteredProducts.filter(
-              (product) => product.Estado?.toLowerCase() === 'disponible'
-            ).length
-          }
-        </strong>
-     </p>
+      
+      {resumenEstados && resumenEstados.length > 0 && (
+      <EstadoResumen products={filteredProducts} estados={resumenEstados} />
+)}
 
       <div
         className="sticky-top bg-white pt-2 pb-3 z-index-1020"

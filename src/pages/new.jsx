@@ -24,6 +24,8 @@ const New = () => {
       filteredProducts={sortedFiltered} // Usamos el arreglo ordenado
       setFilteredProducts={setFilteredProducts}
       filterFn={filterFn}
+      resumenEstados={['nuevo']}
+
     />
     <Footer />
   </div>  
