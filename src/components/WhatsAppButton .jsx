@@ -4,7 +4,7 @@ import { FaWhatsapp } from 'react-icons/fa';
 const WhatsAppButton = ({ product, className = '' }) => {
   if (!product) return null;
 
-  const imageUrl = `${window.location.origin}/${product.Imagen.startsWith('/') ? product.Imagen.slice(1) : product.Imagen}`;
+  const imageUrl = `${product.Imagen.startsWith('/') ? product.Imagen.slice(1) : product.Imagen}`;
   const message = `¡Hola! Mira este producto:
 
 🛍️ *${product.Descripcion}*
