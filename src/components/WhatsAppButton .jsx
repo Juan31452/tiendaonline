@@ -12,7 +12,7 @@ const WhatsAppButton = ({ product, className = '' }) => {
 💲 Precio: $${product.Precio.toLocaleString()}
 
 📷 Imagen: ${imageUrl}
-🔗 Ver más: ${window.location.origin}/products/${product.IdProducto}
+
 `;
 
   const whatsappLink = `https://wa.me/?text=${encodeURIComponent(message)}`;
