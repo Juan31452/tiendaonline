@@ -10,15 +10,20 @@ const { loading, allProducts, filteredProducts, setFilteredProducts } = useProdu
     ['separado','vendido'].includes(product.Estado?.toLowerCase());
 
   return (
-    <ProductListPage
-      title="Nuestros Productos"
-      allProducts={allProducts}
-      filteredProducts={filteredProducts}
-      setFilteredProducts={setFilteredProducts}
-      filterFn={filterFn}
-    />
+    <div>
+      <ProductListPage
+        title="Nuestros Productos"
+        allProducts={allProducts}
+        filteredProducts={filteredProducts}
+        setFilteredProducts={setFilteredProducts}
+        filterFn={filterFn}
+      />
 
-    
+      <WhatsAppFloatingButton 
+          phone="34622229467" 
+          message="¡Hola! Estoy interesado en un producto de tu tienda." 
+        />
+    </div> 
  );
 };
 

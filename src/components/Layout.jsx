@@ -35,10 +35,7 @@ const NavBar = () => {
         </Container>
       </Navbar>
 
-      <WhatsAppFloatingButton 
-        phone="34622229467" 
-        message="¡Hola! Estoy interesado en un producto de tu tienda." 
-      />
+      
     </>
   );
 };
