@@ -4,17 +4,18 @@ import { FaWhatsapp } from 'react-icons/fa';
 const WhatsAppButton = ({ product, className = '' }) => {
   if (!product) return null;
 
-  const phoneNumber = '573001112233'; // Tu número de WhatsApp
-  const message = `¡Hola! Estoy interesado en este producto:
+  const imageUrl = `${window.location.origin}/${product.Imagen.startsWith('/') ? product.Imagen.slice(1) : product.Imagen}`;
+  const message = `¡Hola! Mira este producto:
 
-🔹 *${product.Descripcion}*
-🆔 ID: ${product.IdProducto}
+🛍️ *${product.Descripcion}*
 📏 Talla: ${product.Talla}
 💲 Precio: $${product.Precio.toLocaleString()}
 
-📷 Imagen: ${window.location.origin}/${product.Imagen}`;
+📷 Imagen: ${imageUrl}
+🔗 Ver más: ${window.location.origin}/products/${product.IdProducto}
+`;
 
-  const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+  const whatsappLink = `https://wa.me/?text=${encodeURIComponent(message)}`;
 
   return (
     <a
@@ -22,8 +23,9 @@ const WhatsAppButton = ({ product, className = '' }) => {
       target="_blank"
       rel="noopener noreferrer"
       className={`btn btn-success d-flex align-items-center gap-2 ${className}`}
+      style={{ backgroundColor: '#25D366', borderColor: '#25D366' }}
     >
-      <FaWhatsapp />
+      <FaWhatsapp size={20} />
       Compartir
     </a>
   );
