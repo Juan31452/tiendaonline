@@ -6,12 +6,12 @@ const WhatsAppButton = ({ product, className = '' }) => {
 
   const imageUrl = `${product.Imagen.startsWith('/') ? product.Imagen.slice(1) : product.Imagen}`;
   const message = `¡Hola! Mira este producto:
+    ID: ${product.IdProducto}
+    🛍️ *${product.Descripcion}*
+    📏 Talla: ${product.Talla}
+    💲 Precio: $${product.Precio.toLocaleString()}
 
-🛍️ *${product.Descripcion}*
-📏 Talla: ${product.Talla}
-💲 Precio: $${product.Precio.toLocaleString()}
-
-📷 Imagen: ${imageUrl}
+    📷 Imagen: ${imageUrl}
 
 `;
 

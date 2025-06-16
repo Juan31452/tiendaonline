@@ -19,7 +19,7 @@
     "IdProducto": "23.2",
     "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1748625213/pedido23/img2.webp",
     "Categoria": "Mujer",
-    "Estado": "Separado"
+    "Estado": "Vendido"
   },
   {
     "Descripcion": "Pantalones Cortos De Yoga 2 En 1 Para Mujer Con Tejido De Secado Rápido Y Bolsillos De Malla Para Entrenamientos Informales De Fitness Y Gimnasio",
@@ -140,7 +140,7 @@
     "IdProducto": "23.13",
     "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1748625213/pedido23/img13.webp",
     "Categoria": "Mujer",
-    "Estado": "Separado"
+    "Estado": "Vendido"
   },
   {
     "Descripcion": "Shorts de Moda para Mujer - Shorts Forrados con Forro Anti-Sombra",
