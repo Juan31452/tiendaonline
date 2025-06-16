@@ -6,7 +6,7 @@
     "Color": "G-611 Gris",
     "Talla": "CN 41(CO 40)",
     "IdProducto": "5.1",
-    "Imagen": "/assets/Pedido5/img1.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750099851/pedido5/img1.webp",
     "Categoria": "Mujer",
     "Estado": "Vendido"
   },
@@ -17,7 +17,7 @@
     "Color": "K83 Blanco Y Negro",
     "Talla": "CN 40(CO 39)",
     "IdProducto": "5.2",
-    "Imagen": "/assets/Pedido5/img2.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750099851/pedido5/img2.webp",
     "Categoria": "Mujer",
     "Estado": "Vendido"
   },
@@ -28,7 +28,7 @@
     "Color": "Tamaño de etiqueta: CN 45(CO 44)",
     "Talla": "añil oscuro",
     "IdProducto": "5.3",
-    "Imagen": "/assets/Pedido5/img3.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750099853/pedido5/img3.webp",
     "Categoria": "Hombre",
     "Estado": "Vendido"
   },
@@ -39,7 +39,7 @@
     "Color": "Tamaño de etiqueta: CN 41(CO 40.5)",
     "Talla": "Negro",
     "IdProducto": "5.4",
-    "Imagen": "/assets/Pedido5/img4.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750099852/pedido5/img4.webp",
     "Categoria": "Hombre",
     "Estado": "Disponible"
   },
@@ -50,7 +50,7 @@
     "Color": "Tamaño de etiqueta: CN 44(CO 44.5)",
     "Talla": "Negro",
     "IdProducto": "5.5",
-    "Imagen": "/assets/Pedido5/img5.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750099852/pedido5/img5.webp",
     "Categoria": "Hombre",
     "Estado": "Separado"
   },
@@ -61,7 +61,7 @@
     "Color": "Tamaño de etiqueta: CN 43(CO 43)",
     "Talla": "Negro",
     "IdProducto": "5.6",
-    "Imagen": "/assets/Pedido5/img6.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750099852/pedido5/img6.webp",
     "Categoria": "Hombre",
     "Estado": "Vendido"
   },
@@ -72,7 +72,7 @@
     "Color": "Tamaño de etiqueta: CN 45(CO 44.5)",
     "Talla": "Azul",
     "IdProducto": "5.7",
-    "Imagen": "/assets/Pedido5/img7.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750099851/pedido5/img7.webp",
     "Categoria": "Hombre",
     "Estado": "Vendido"
   },
@@ -83,7 +83,7 @@
     "Color": "Tamaño de etiqueta: CN 46(CO 44.5)",
     "Talla": "Blanco",
     "IdProducto": "5.8",
-    "Imagen": "/assets/Pedido5/img8.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750099851/pedido5/img8.webp",
     "Categoria": "Hombre",
     "Estado": "Vendido"
   },
@@ -94,7 +94,7 @@
     "Color": "blanco rojo",
     "Talla": "CN 42(CO 40)",
     "IdProducto": "5.9",
-    "Imagen": "/assets/Pedido5/img9.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750099852/pedido5/img9.webp",
     "Categoria": "Hombre",
     "Estado": "Disponible"
   },
@@ -105,7 +105,7 @@
     "Color": "Tamaño de etiqueta: CN 41(CO 41)",
     "Talla": "Negro",
     "IdProducto": "5.10",
-    "Imagen": "/assets/Pedido5/img10.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750099852/pedido5/img10.webp",
     "Categoria": "Hombre",
     "Estado": "Vendido"
   },
@@ -116,7 +116,7 @@
     "Color": "Tamaño de etiqueta: CN 40(CO 38)",
     "Talla": "Blanco",
     "IdProducto": "5.11",
-    "Imagen": "/assets/Pedido5/img11.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750099852/pedido5/img11.webp",
     "Categoria": "Mujer",
     "Estado": "Disponible"
   },
@@ -127,7 +127,7 @@
     "Color": "Tamaño de etiqueta: CN 41(CO 40.5)",
     "Talla": "Blanco",
     "IdProducto": "5.12",
-    "Imagen": "/assets/Pedido5/img12.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750099852/pedido5/img12.webp",
     "Categoria": "Hombre",
     "Estado": "Disponible"
   },
@@ -138,7 +138,7 @@
     "Color": "color esmeralda",
     "Talla": "CN 38(CO 37)",
     "IdProducto": "5.13",
-    "Imagen": "/assets/Pedido5/img13.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750099851/pedido5/img13.webp",
     "Categoria": "Mujer",
     "Estado": "Separado"
   },
@@ -149,7 +149,7 @@
     "Color": "color esmeralda",
     "Talla": "CN 37(CO 36)",
     "IdProducto": "5.14",
-    "Imagen": "/assets/Pedido5/img14.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750099851/pedido5/img14.webp",
     "Categoria": "Mujer",
     "Estado": "Disponible"
   },
@@ -160,7 +160,7 @@
     "Color": "K83 Blanco Y Negro",
     "Talla": "CN 40(CO 39)",
     "IdProducto": "5.2",
-    "Imagen": "/assets/Pedido5/img15.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750099852/pedido5/img15.webp",
     "Categoria": "Mujer",
     "Estado": "Vendido"
   },
@@ -171,7 +171,7 @@
     "Color": "Blanco",
     "Talla": "Sin talla",
     "IdProducto": "5.16",
-    "Imagen": "/assets/Pedido5/img16.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750100790/pedido5/img16.webp",
     "Categoria": "Tecnología",
     "Estado": "Vendido"
   },
@@ -182,7 +182,7 @@
     "Color": "color gris oscuro",
     "Talla": "CN 44(CO 43)",
     "IdProducto": "5.17",
-    "Imagen": "/assets/Pedido5/img17.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750100790/pedido5/img17.webp",
     "Categoria": "Hombre",
     "Estado": "Separado"
   },
@@ -193,7 +193,7 @@
     "Color": "Oscuro",
     "Talla": "Sin talla",
     "IdProducto": "5.18",
-    "Imagen": "/assets/Pedido5/img18.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750100791/pedido5/img18.webp",
     "Categoria": "Tecnología",
     "Estado": "Vendido"
   }
