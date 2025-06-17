@@ -19,7 +19,7 @@
     "IdProducto": "7.2",
     "Imagen": "/assets/Pedido7/img2.jpg",
     "Categoria": "Mujer",
-    "Estado": "Separado"
+    "Estado": "Vendido"
   },
   {
     "Descripcion": "4pcs Bragas Sin Costuras Sólidas, Elegantes, Cómodas, Transpirables y Elásticas, Lencería y Ropa Interior para Mujer,Precio Unidad $9.000",
@@ -217,7 +217,7 @@
     "IdProducto": "7.20",
     "Imagen": "/assets/Pedido7/img20.jpg",
     "Categoria": "Hombre",
-    "Estado": "Separado"
+    "Estado": "Vendido"
   },
   {
     "Descripcion": "Camiseta Elegante con Estampado de Panda y Cuello Redondo para Mujer - Manga Corta Casual, Poliéster Transpirable, Perfecta para Primavera y Verano",
