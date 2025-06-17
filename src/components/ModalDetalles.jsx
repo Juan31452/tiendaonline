@@ -21,7 +21,7 @@ const ModalDetalles = ({ product, show, onHide }) => {
       <Modal.Header closeButton>
         <Modal.Title>Detalles del Producto</Modal.Title>
       </Modal.Header>
-      <Modal.Body>
+      <Modal.Body className="py-1 px-2">
         <div className="row">
           <div className="col-md-6 text-center">
             <img
@@ -29,7 +29,7 @@ const ModalDetalles = ({ product, show, onHide }) => {
               alt={product.Descripcion}
               className="img-fluid rounded mb-3"
               style={{
-                maxHeight: '400px',
+                maxHeight: '350px',
                 width: 'auto',
                 objectFit: 'contain'
               }}
@@ -41,7 +41,7 @@ const ModalDetalles = ({ product, show, onHide }) => {
           </div>
           <div className="col-md-6">
             <h4 className="text-muted mb-3">{product.IdProducto}</h4>
-            <h2 className="mb-4">{product.Descripcion}</h2>
+            <h3 className="mb-4">{product.Descripcion}</h3>
 
             <div className="mb-4 d-flex flex-wrap gap-2">
               <span className="badge bg-primary p-2">Talla: {product.Talla}</span>
@@ -59,18 +59,14 @@ const ModalDetalles = ({ product, show, onHide }) => {
           </div>
         </div>
       </Modal.Body>
-      <Modal.Footer>
-        <div className="d-flex flex-column flex-sm-row justify-content-between align-items-center w-100 gap-2">
-           <WhatsAppButton product={product} className="w-100 w-sm-auto" />
-          <Button
-            variant="outline-secondary"
-            onClick={onHide}
-            className="w-100 w-sm-auto"
-          >
-            Cerrar
-          </Button>
-        </div>
-      </Modal.Footer>
+     <Modal.Footer className="py-1 px-2">
+      <div className="d-flex flex-row justify-content-end align-items-center w-100 gap-2">
+        <WhatsAppButton product={product} />
+        <Button variant="outline-secondary" onClick={onHide}>
+          Cerrar
+        </Button>
+      </div>
+</Modal.Footer>
     </Modal>
   );
 };

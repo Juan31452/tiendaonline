@@ -215,7 +215,7 @@
     "Color": "Mezcla de color",
     "Talla": "M",
     "IdProducto": "3.20",
-    "Imagen": "/https://res.cloudinary.com/dgplca5we/image/upload/v1749398888/pedido3/img19.webp",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1749398888/pedido3/img19.webp",
     "Categoria": "Mujer",
     "Estado": "Vendido"
   },

@@ -6,7 +6,7 @@
     "Color": "abdominales",
     "Talla": "400mAh",
     "IdProducto": "6.1",
-    "Imagen": "/assets/Pedido6/img1.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750179526/pedido6/img1.webp",
     "Categoria": "Tecnología",
     "Estado": "Disponible"
   },
@@ -17,7 +17,7 @@
     "Color": "Tamaño de etiqueta: CN 41(CO 40)",
     "Talla": "Marrón claro-1",
     "IdProducto": "6.2",
-    "Imagen": "/assets/Pedido6/img2.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750179526/pedido6/img2.webp",
     "Categoria": "Mujer",
     "Estado": "Disponible"
   },
@@ -28,7 +28,7 @@
     "Color": "Azul",
     "Talla": "CN 44(CO 42)",
     "IdProducto": "6.3",
-    "Imagen": "/assets/Pedido6/img3.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750179526/pedido6/img3.webp",
     "Categoria": "Hombre",
     "Estado": "Vendido"
   },
@@ -39,7 +39,7 @@
     "Color": "Tamaño de etiqueta: CN 40(CO 38)",
     "Talla": "【Rojo】",
     "IdProducto": "6.4",
-    "Imagen": "/assets/Pedido6/img4.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750179525/pedido6/img4.webp",
     "Categoria": "Mujer",
     "Estado": "Disponible"
   },
@@ -50,7 +50,7 @@
     "Color": "Tamaño de etiqueta: CN 39(CO 39)",
     "Talla": "Negro",
     "IdProducto": "6.5",
-    "Imagen": "/assets/Pedido6/img5.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750179525/pedido6/img5.webp",
     "Categoria": "Mujer",
     "Estado": "Separado"
   },
@@ -61,7 +61,7 @@
     "Color": "Azul",
     "Talla": "38",
     "IdProducto": "6.6",
-    "Imagen": "/assets/Pedido6/img6.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750179526/pedido6/img6.jpg",
     "Categoria": "Hombre",
     "Estado": "Disponible"
   },
@@ -72,7 +72,7 @@
     "Color": "3 Piezas De Colores Mezclados A",
     "Talla": "L",
     "IdProducto": "6.7",
-    "Imagen": "/assets/Pedido6/img7.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750179525/pedido6/img7.webp",
     "Categoria": "Hombre",
     "Estado": "Vendido"
   },
@@ -83,7 +83,7 @@
     "Color": "Blanco",
     "Talla": "CN 40(CO 39)",
     "IdProducto": "6.8",
-    "Imagen": "/assets/Pedido6/img8.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750179525/pedido6/img8.webp",
     "Categoria": "Mujer",
     "Estado": "Vendido"
   },
@@ -94,7 +94,7 @@
     "Color": "gris",
     "Talla": "CN 40(CO 40)",
     "IdProducto": "6.9",
-    "Imagen": "/assets/Pedido6/img9.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750179525/pedido6/img9.webp",
     "Categoria": "Hombre",
     "Estado": "Disponible"
   }
