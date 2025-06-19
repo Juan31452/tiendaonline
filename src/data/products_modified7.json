@@ -6,7 +6,7 @@
     "Color": "Rosa roja",
     "Talla": "L",
     "IdProducto": "7.1",
-    "Imagen": "/assets/Pedido7/img1.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750356071/pedido7/img1.webp",
     "Categoria": "Mujer",
     "Estado": "Disponible"
   },
@@ -17,7 +17,7 @@
     "Color": "Azul medio",
     "Talla": "L",
     "IdProducto": "7.2",
-    "Imagen": "/assets/Pedido7/img2.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750356070/pedido7/img2.webp",
     "Categoria": "Mujer",
     "Estado": "Vendido"
   },
@@ -27,7 +27,7 @@
     "Precio": 34000,
     "Color": "Mezcla de color",
     "Talla": "XL",
-    "Imagen": "/assets/Pedido7/img3.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750356070/pedido7/img3.webp",
     "IdProducto": "7.3",
     "Categoria": "Mujer",
     "Estado": "Vendido"
@@ -39,7 +39,7 @@
     "Color": "talla única",
     "Talla": "Paquete de 5 pares (sistema de colores)",
     "IdProducto": "7.4",
-    "Imagen": "/assets/Pedido7/img4.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750356070/pedido7/img4.webp",
     "Categoria": "Hombre",
     "Estado": "Disponible"
   },
@@ -50,7 +50,7 @@
     "Color": "talla única",
     "Talla": "Color mezclado 5 pares",
     "IdProducto": "7.5",
-    "Imagen": "/assets/Pedido7/img5.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750356070/pedido7/img5.webp",
     "Categoria": "Hombre",
     "Estado": "Vendido"
   },
@@ -61,7 +61,7 @@
     "Color": "talla única",
     "Talla": "Sin talla",
     "IdProducto": "7.6",
-    "Imagen": "/assets/Pedido7/img6.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750356070/pedido7/img6.webp",
     "Categoria": "Hombre",
     "Estado": "Disponible"
   },
@@ -72,7 +72,7 @@
     "Color": "Caqui",
     "Talla": "M",
     "IdProducto": "7.7",
-    "Imagen": "/assets/Pedido7/img7.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750356071/pedido7/img7.webp",
     "Categoria": "Mujer",
     "Estado": "Separado"
   },
@@ -83,8 +83,8 @@
     "Color": "Azul claro",
     "Talla": "M",
     "IdProducto": "7.8",
-    "Imagen": "/assets/Pedido7/img8.jpg",
-    "Categoria": "Sin categoría",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750356345/pedido7/img8.webp",
+    "Categoria": "Mujer",
     "Estado": "Disponible"
   },
   {
@@ -94,7 +94,7 @@
     "Color": "celeste",
     "Talla": "Sin talla",
     "IdProducto": "7.9",
-    "Imagen": "/assets/Pedido7/img9.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750356344/pedido7/img9.webp",
     "Categoria": "Variedades",
     "Estado": "Disponible"
   },
@@ -105,7 +105,7 @@
     "Color": "rosado",
     "Talla": "Sin talla",
     "IdProducto": "7.10",
-    "Imagen": "/assets/Pedido7/img10.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750356345/pedido7/img10.webp",
     "Categoria": "Mujer",
     "Estado": "Disponible"
   },
@@ -116,7 +116,7 @@
     "Color": "celeste",
     "Talla": "Sin talla",
     "IdProducto": "7.11",
-    "Imagen": "/assets/Pedido7/img11.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750356344/pedido7/img11.webp",
     "Categoria": "Hombre",
     "Estado": "Disponible"
   },
@@ -127,7 +127,7 @@
     "Color": "talla única",
     "Talla": "Rayas triples dobles",
     "IdProducto": "7.12",
-    "Imagen": "/assets/Pedido7/img12.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750356344/pedido7/img12.webp",
     "Categoria": "Hombre",
     "Estado": "Disponible"
   },
@@ -138,7 +138,7 @@
     "Color": "luz que acampa",
     "Talla": "Sin talla",
     "IdProducto": "7.13",
-    "Imagen": "/assets/Pedido7/img13.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750356344/pedido7/img13.webp",
     "Categoria": "Tecnología",
     "Estado": "Separado"
   },
@@ -149,7 +149,7 @@
     "Color": "T57",
     "Talla": "Sin talla",
     "IdProducto": "7.14",
-    "Imagen": "/assets/Pedido7/img14.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750356344/pedido7/img13.webp",
     "Categoria": "Tecnología",
     "Estado": "Vendido"
   },
@@ -160,7 +160,7 @@
     "Color": "Oscuro",
     "Talla": "Sin talla",
     "IdProducto": "7.15",
-    "Imagen": "/assets/Pedido7/img15.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750356344/pedido7/img13.webp",
     "Categoria": "Tecnología",
     "Estado": "Separado"
   },
@@ -171,7 +171,7 @@
     "Color": "Mezcla de color",
     "Talla": "Asian M",
     "IdProducto": "7.16",
-    "Imagen": "/assets/Pedido7/img16.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750356605/pedido7/img16.webp",
     "Categoria": "Mujer",
     "Estado": "Disponible"
   },
@@ -182,7 +182,7 @@
     "Color": "Mezcla de color",
     "Talla": "Asian XL",
     "IdProducto": "7.17",
-    "Imagen": "/assets/Pedido7/img17.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750356605/pedido7/img17.webp",
     "Categoria": "Mujer",
     "Estado": "Disponible"
   },
@@ -193,7 +193,7 @@
     "Color": "Mezcla de color",
     "Talla": "Asian M",
     "IdProducto": "7.18",
-    "Imagen": "/assets/Pedido7/img18.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750356605/pedido7/img18.webp",
     "Categoria": "Mujer",
     "Estado": "Vendido"
   },
@@ -204,7 +204,7 @@
     "Color": "F522",
     "Talla": "Sin talla",
     "IdProducto": "7.19",
-    "Imagen": "/assets/Pedido7/img19.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750356605/pedido7/img19.webp",
     "Categoria": "Mujer",
     "Estado": "No se vende"
   },
@@ -215,7 +215,7 @@
     "Color": "Albaricoque",
     "Talla": "XL",
     "IdProducto": "7.20",
-    "Imagen": "/assets/Pedido7/img20.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750356605/pedido7/img20.webp",
     "Categoria": "Hombre",
     "Estado": "Vendido"
   },
@@ -226,7 +226,7 @@
     "Color": "Cielo azul",
     "Talla": "L",
     "IdProducto": "7.21",
-    "Imagen": "/assets/Pedido7/img21.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750356605/pedido7/img21.webp",
     "Categoria": "Mujer",
     "Estado": "Disponible"
   },
@@ -237,7 +237,7 @@
     "Color": "Mezcla de color",
     "Talla": "XL",
     "IdProducto": "7.22",
-    "Imagen": "/assets/Pedido7/img22.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750356897/pedido7/img22.webp",
     "Categoria": "Hombre",
     "Estado": "Disponible"
   },
@@ -248,7 +248,7 @@
     "Color": "Blanco",
     "Talla": "XS",
     "IdProducto": "7.23",
-    "Imagen": "/assets/Pedido7/img23.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750356897/pedido7/img23.webp",
     "Categoria": "Mujer",
     "Estado": "Disponible"
   },
@@ -259,7 +259,7 @@
     "Color": "gris",
     "Talla": "Sin talla",
     "IdProducto": "7.24",
-    "Imagen": "/assets/Pedido7/img24.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750356898/pedido7/img24.webp",
     "Categoria": "Hombre",
     "Estado": "Separado"
   },
@@ -270,7 +270,7 @@
     "Color": "Mezcla de color",
     "Talla": "S",
     "IdProducto": "7.25",
-    "Imagen": "/assets/Pedido7/img25.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750356897/pedido7/img25.webp",
     "Categoria": "Mujer",
     "Estado": "Separado"
   },
@@ -281,7 +281,7 @@
     "Color": "Albaricoque",
     "Talla": "S",
     "IdProducto": "7.26",
-    "Imagen": "/assets/Pedido7/img26.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750356897/pedido7/img26.webp",
     "Categoria": "Mujer",
     "Estado": "Disponible"
   },
@@ -292,7 +292,7 @@
     "Color": "Negro",
     "Talla": "XS",
     "IdProducto": "7.27",
-    "Imagen": "/assets/Pedido7/img27.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750356898/pedido7/img27.webp",
     "Categoria": "Mujer",
     "Estado": "Separado"
   },
@@ -303,7 +303,7 @@
     "Color": "【Rojo】",
     "Talla": "XS",
     "IdProducto": "7.28",
-    "Imagen": "/assets/Pedido7/img28.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750356898/pedido7/img28.webp",
     "Categoria": "Mujer",
     "Estado": "Disponible"
   },
@@ -314,7 +314,7 @@
     "Color": "Azul claro",
     "Talla": "38",
     "IdProducto": "7.29",
-    "Imagen": "/assets/Pedido7/img29.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750357222/pedido7/img29.webp",
     "Categoria": "Hombre",
     "Estado": "Disponible"
   },
@@ -325,7 +325,7 @@
     "Color": " ",
     "Talla": "sin talla",
     "IdProducto": "7.30",
-    "Imagen": "/assets/Pedido7/img30.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750357222/pedido7/img30.webp",
     "Categoria": "Hombre",
     "Estado": "Variedades"
   },
@@ -336,7 +336,7 @@
     "Color": " ",
     "Talla": "38",
     "IdProducto": "7.31",
-    "Imagen": "/assets/Pedido7/img31.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750357222/pedido7/img31.webp",
     "Categoria": "Tecnología",
     "Estado": "Vendido"
   }

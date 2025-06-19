@@ -6,7 +6,7 @@
     "Color": "Blanco crema",
     "Talla": "Unica",
     "IdProducto": "8.1",
-    "Imagen": "/assets/Pedido8/img1.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750357884/pedido8/img1.webp",
     "Categoria": "Mujer",
     "Estado": "Disponible"
   },
@@ -17,7 +17,7 @@
     "Color": "Mezcla de color",
     "Talla": "L",
     "IdProducto": "8.2",
-    "Imagen": "/assets/Pedido8/img2.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750357884/pedido8/img2.webp",
     "Categoria": "Mujer",
     "Estado": "Disponible"
   },
@@ -28,7 +28,7 @@
     "Color": "Mezcla de color",
     "Talla": "L",
     "IdProducto": "8.3",
-    "Imagen": "/assets/Pedido8/img3.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750357884/pedido8/img3.webp",
     "Categoria": "Mujer",
     "Estado": "Disponible"
   },
@@ -39,7 +39,7 @@
     "Color": "Negro",
     "Talla": "L",
     "IdProducto": "8.4",
-    "Imagen": "/assets/Pedido8/img4.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750357884/pedido8/img4.webp",
     "Categoria": "Mujer",
     "Estado": "Disponible"
   },
@@ -50,7 +50,7 @@
     "Color": "Grande 180 Litros",
     "Talla": "Sin talla",
     "IdProducto": "8.5",
-    "Imagen": "/assets/Pedido8/img5.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750357885/pedido8/img5.webp",
     "Categoria": "Variedades",
     "Estado": "No se vende"
   }
