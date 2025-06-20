@@ -1,7 +1,8 @@
 import React from 'react';
 import { Modal, Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import WhatsAppButton from './WhatsAppButton ';
+import WhatsAppButton from './WhatsAppButton';
+import ButtonClose from './ButtonClose';
 
 const ModalDetalles = ({ product, show, onHide }) => {
   if (!product) return null;
@@ -34,6 +35,7 @@ const ModalDetalles = ({ product, show, onHide }) => {
                 objectFit: 'contain'
               }}
               onError={(e) => {
+                e.target.onerror = null;
                 e.target.src = 'https://via.placeholder.com/400x400?text=Imagen+no+disponible';
                 e.target.alt = 'Imagen no disponible';
               }}
@@ -55,18 +57,20 @@ const ModalDetalles = ({ product, show, onHide }) => {
               </span>
             </div>
 
-            <h3 className="text-primary mb-4">${product.Precio.toLocaleString()}</h3>
+            <h3 className="text-primary mb-4">
+              {typeof product.Precio === 'number'
+                ? `$${product.Precio.toLocaleString()}`
+                : 'Precio no disponible'}
+            </h3>
           </div>
         </div>
       </Modal.Body>
-     <Modal.Footer className="py-1 px-2">
-      <div className="d-flex flex-row justify-content-end align-items-center w-100 gap-2">
-        <WhatsAppButton product={product} />
-        <Button variant="outline-secondary" onClick={onHide}>
-          Cerrar
-        </Button>
-      </div>
-</Modal.Footer>
+      <Modal.Footer className="py-1 px-2">
+        <div className="d-flex flex-row justify-content-end align-items-center w-100 gap-2">
+          <WhatsAppButton product={product} />
+          <ButtonClose onClick={onHide} />
+        </div>
+      </Modal.Footer>
     </Modal>
   );
 };

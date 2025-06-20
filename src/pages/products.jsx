@@ -1,4 +1,4 @@
-import { useProductLoader } from '../components/useProductLoader '; 
+import useProductLoader from '../components/useProductLoader';
 import ProductListPage from '../components/ProductListPage';
 import WhatsAppFloatingButton from '../components/WhatsAppFloatingButton';
 

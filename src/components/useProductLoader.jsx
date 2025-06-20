@@ -1,8 +1,8 @@
-// src/hooks/useProductLoader.js
+// src/components/useProductLoader.js
 import { useState, useEffect } from 'react';
-import { productImports } from '../components/productImports'; 
+import { productImports } from './productImports'; 
 
-export const useProductLoader = () => {
+const useProductLoader = () => {
   const [loading, setLoading] = useState(false);
   const [allProducts, setAllProducts] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
@@ -42,3 +42,6 @@ export const useProductLoader = () => {
     setFilteredProducts // Para permitir filtrados adicionales
   };
 };
+
+
+export default useProductLoader;
