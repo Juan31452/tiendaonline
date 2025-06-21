@@ -1,0 +1,46 @@
+import React from 'react';
+
+const Pagination = ({ currentPage, totalPages, onPageChange }) => {
+  if (totalPages <= 1) return null;
+
+  const handleClick = (page) => {
+    if (page >= 1 && page <= totalPages) {
+      onPageChange(page);
+    }
+  };
+
+  return (
+    <div className="d-flex justify-content-center align-items-center gap-2 my-4 flex-wrap">
+      <button
+        className="btn btn-outline-secondary btn-sm"
+        onClick={() => handleClick(currentPage - 1)}
+        disabled={currentPage === 1}
+      >
+        ← Anterior
+      </button>
+
+      {[...Array(totalPages)].map((_, index) => {
+        const page = index + 1;
+        return (
+          <button
+            key={page}
+            className={`btn btn-sm ${currentPage === page ? 'btn-primary' : 'btn-outline-primary'}`}
+            onClick={() => handleClick(page)}
+          >
+            {page}
+          </button>
+        );
+      })}
+
+      <button
+        className="btn btn-outline-secondary btn-sm"
+        onClick={() => handleClick(currentPage + 1)}
+        disabled={currentPage === totalPages}
+      >
+        Siguiente →
+      </button>
+    </div>
+  );
+};
+
+export default Pagination;

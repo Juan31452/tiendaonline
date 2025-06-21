@@ -1,5 +1,5 @@
-import useProductLoader from '../components/useProductLoader';
-import ProductListPage from '../components/ProductListPage';
+import useProductLoader from '../hooks/useProductLoader';
+import ProductListPage from './ProductListPage';
 import Footer from '../components/Footer';
 
 const New = () => {

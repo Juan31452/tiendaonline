@@ -1,6 +1,6 @@
-// src/components/useProductLoader.js
+// src/hooks/useProductLoader.js
 import { useState, useEffect } from 'react';
-import { productImports } from './productImports'; 
+import { productImports } from '../data/productImports'; 
 
 const useProductLoader = () => {
   const [loading, setLoading] = useState(false);

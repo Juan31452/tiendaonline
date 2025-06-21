@@ -1,5 +1,5 @@
-import useProductLoader from '../components/useProductLoader';
-import ProductListPage from '../components/ProductListPage';
+import useProductLoader from '../hooks/useProductLoader';
+import ProductListPage from './ProductListPage';
 import WhatsAppFloatingButton from '../components/WhatsAppFloatingButton';
 
 const Products= () => {

@@ -1,5 +1,4 @@
-import React from 'react';
-import { Modal, Button } from 'react-bootstrap';
+import { Modal } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import WhatsAppButton from './WhatsAppButton';
 import ButtonClose from './ButtonClose';

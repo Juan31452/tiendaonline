@@ -14,6 +14,8 @@ const CategoryFilterController = ({ allProducts, setFilteredProducts }) => {
   };
 
   const handleSelectCategory = (categoryId) => {
+    if (categoryId === selectedCategory) return; // No hacer nada si la categoría ya está seleccionada
+    // Actualizar la categoría seleccionada
     setSelectedCategory(categoryId);
 
     switch (categoryId) {
