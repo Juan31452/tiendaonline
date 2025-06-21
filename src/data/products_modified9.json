@@ -6,7 +6,7 @@
     "Color": "Tipo A",
     "Talla": "1 PC",
     "IdProducto": "9.1",
-    "Imagen": "/assets/Pedido9/img1.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750524039/pedido9/img1.webp",
     "Categoria": "Hogar",
     "Estado": "Vendido"
   },
@@ -17,7 +17,7 @@
     "Color": "30 piezas",
     "Talla": "Sin talla",
     "IdProducto": "9.2",
-    "Imagen": "/assets/Pedido9/img2.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750524039/pedido9/img2.webp",
     "Categoria": "Variedades",
     "Estado": "No Venta"
   },
@@ -28,7 +28,7 @@
     "Color": "1 PC",
     "Talla": "Unidad",
     "IdProducto": "9.3",
-    "Imagen": "/assets/Pedido9/img3.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750524039/pedido9/img3.webp",
     "Categoria": "Variedades",
     "Estado": "Disponible"
   },
@@ -39,7 +39,7 @@
     "Color": "Oscuro",
     "Talla": "Unidad",
     "IdProducto": "9.4",
-    "Imagen": "/assets/Pedido9/img4.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750524039/pedido9/img4.webp",
     "Categoria": "Tecnología",
     "Estado": "Disponible"
   },
@@ -50,7 +50,7 @@
     "Color": "4 piezas blancas de alta calidad",
     "Talla": "Unidad",
     "IdProducto": "9.5",
-    "Imagen": "/assets/Pedido9/img5.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750524039/pedido9/img5.webp",
     "Categoria": "Sin categoría",
     "Estado": "Disponible"
   },
@@ -61,7 +61,7 @@
     "Color": "Blanco",
     "Talla": "50cm*66cm",
     "IdProducto": "9.6",
-    "Imagen": "/assets/Pedido9/img6.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750524039/pedido9/img6.webp",
     "Categoria": "Hogar",
     "Estado": "Disponible"
   },
@@ -72,7 +72,7 @@
     "Color": "blanco",
     "Talla": "1 PC",
     "IdProducto": "9.7",
-    "Imagen": "/assets/Pedido9/img7.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750524039/pedido9/img7.webp",
     "Categoria": "Hogar",
     "Estado": "Separado"
   },
@@ -83,7 +83,7 @@
     "Color": "Mezcla de color",
     "Talla": "11-12Y",
     "IdProducto": "9.8",
-    "Imagen": "/assets/Pedido9/img8.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750524040/pedido9/img8.webp",
     "Categoria": "Niño",
     "Estado": "Separado"
   },
@@ -94,7 +94,7 @@
     "Color": "Blanco",
     "Talla": "Mosquitera Doble [longitud 200cm Ancho 180cm Altura 165cm]",
     "IdProducto": "9.9",
-    "Imagen": "/assets/Pedido9/img9.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750524040/pedido9/img9.webp",
     "Categoria": "Hogar",
     "Estado": "Separado"
   },
@@ -105,7 +105,7 @@
     "Color": "Blanco",
     "Talla": "Mosquitera Doble [longitud 195cm Ancho 150cm Altura 165cm]",
     "IdProducto": "9.10",
-    "Imagen": "/assets/Pedido9/img10.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750524039/pedido9/img10.webp",
     "Categoria": "Hogar",
     "Estado": "Disponible"
   },
@@ -116,8 +116,8 @@
     "Color": "Blanco",
     "Talla": "Mosquitera Individual [longitud 190cm Ancho 90cm Altura 145cm]",
     "IdProducto": "9.11",
-    "Imagen": "/assets/Pedido9/img11.jpg",
-    "Categoria": "Sin categoría",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750524040/pedido9/img11.webp",
+    "Categoria": "Hogar",
     "Estado": "Vendido"
   },
   {
@@ -127,7 +127,7 @@
     "Color": "Negro",
     "Talla": "L (adecuado Para 55-65 Litros)",
     "IdProducto": "9.12",
-    "Imagen": "/assets/Pedido9/img12.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750524040/pedido9/img12.webp",
     "Categoria": "Variedades",
     "Estado": "Disponible"
   },
@@ -138,7 +138,7 @@
     "Color": "Negro",
     "Talla": "M (apto Para 40-50 Litros)",
     "IdProducto": "9.13",
-    "Imagen": "/assets/Pedido9/img13.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750524040/pedido9/img13.webp",
     "Categoria": "Variedades",
     "Estado": "Disponible"
   },
@@ -149,7 +149,7 @@
     "Color": "Tamaño de etiqueta: CN 34(EU 35)",
     "Talla": "naranja blanco y negro",
     "IdProducto": "9.14",
-    "Imagen": "/assets/Pedido9/img14.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750524040/pedido9/img14.webp",
     "Categoria": "Niño",
     "Estado": "Disponible"
   },
@@ -160,7 +160,7 @@
     "Color": "Mezcla de color",
     "Talla": "11-12Y",
     "IdProducto": "9.15",
-    "Imagen": "/assets/Pedido9/img15.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750524040/pedido9/img15.webp",
     "Categoria": "Niño",
     "Estado": "Separado"
   }
