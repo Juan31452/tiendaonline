@@ -63,7 +63,7 @@
     "IdProducto": "1.6",
     "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1749744166/pedido1/img5.webp",
     "Categoria": "Mujer",
-    "Estado": "Disponible"
+    "Estado": "Separado"
   },
   {
     "Descripcion": "Conjunto de ropa de dormir sexy para mujer, vestido de encaje con cuello en V profundo y braguita, lencería y ropa interior sexy para mujer.",
@@ -404,7 +404,7 @@
     "IdProducto": "1.37",
     "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1749826952/pedido1/img32.webp",
     "Categoria": "Mujer",
-    "Estado": "Disponible"
+    "Estado": "Separado"
   },
   {
     "Descripcion": "Camisón de dormir de encaje sexy para mujer - Mini vestido de tirantes de color liso con cuello en V",

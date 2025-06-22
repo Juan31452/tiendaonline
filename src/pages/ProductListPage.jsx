@@ -17,7 +17,7 @@ const ProductListPage = ({
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [showModal, setShowModal] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 20; // Cambia este valor según tus necesidades
+  const itemsPerPage = 30; // Cambia este valor según tus necesidades
  
   const handleCardClick = (product) => {
     setSelectedProduct(product);
