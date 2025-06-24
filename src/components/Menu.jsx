@@ -4,7 +4,7 @@ import { Route, Routes } from 'react-router-dom';
 import Home from '../pages/home';
 import Products from '../pages/products';
 import Mynew from '../pages/new';
-import Uploadimage from '../pages/ImageUploader';
+import Uploadimage from '../utils/ImageUploader';
 import UploadJson from '../utils/UploadJson';
 import { PRIVATE1,PRIVATE2,PRIVATE3,PRIVATE4} from './Path';
 import Layaut from './Layout';

@@ -26,8 +26,8 @@ const NavBar = () => {
               {isLocalhost && (
                 <>
                   <Nav.Link as={Link} to="/products" eventKey="2">Productos</Nav.Link>
-                  <Nav.Link as={Link} to="/uploadimage" eventKey="3">Subir</Nav.Link>
-                  <Nav.Link as={Link} to="/uploadjson" eventKey="5">Subir JSON</Nav.Link>
+                  <Nav.Link as={Link} to="/uploadimage" eventKey="3">Nuevas Imagens</Nav.Link>
+                  <Nav.Link as={Link} to="/uploadjson" eventKey="5">Nuevos JSON</Nav.Link>
                 </>
               )}
               <Nav.Link as={Link} to="/new" eventKey="4">Nuevos</Nav.Link>

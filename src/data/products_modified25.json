@@ -141,5 +141,16 @@
     "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1749732996/pedido25/img13.webp",
     "Categoria": "Variedades",
     "Estado": "Nuevo"
+  },
+  {
+    "Descripcion": "1pc Soporte de pared para cámara ABS - Soporte de cámara de seguridad sin adhesivo para vigilancia doméstica",
+    "Cantidad": 1,
+    "Precio": 10000,
+    "Color": "Transparente",
+    "Talla": "Sin talla",
+    "IdProducto": "25.14",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750788714/pedido25/img14.jpg",
+    "Categoria": "Variedades",
+    "Estado": "Nuevo"
   }
 ]
