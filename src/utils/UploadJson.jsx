@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 
 const CargarJsonDesdeArchivos = () => {
   const [files, setFiles] = useState([]);
@@ -36,18 +37,20 @@ const CargarJsonDesdeArchivos = () => {
 
   const enviarProductos = async () => {
     try {
-      const res = await fetch('http://localhost:3000/api/productos/from-client', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(productos)
-      });
+    const { data } = await axios.post(
+      'http://localhost:4000/api/productos/crear-multiples',
+      productos,                            // payload
+      { headers: { 'Content-Type': 'application/json' } }
+    );
 
-      const data = await res.json();
-      setMensaje(data.mensaje || 'Productos insertados correctamente');
-    } catch (error) {
-      console.error('❌ Error al enviar:', error);
-      setMensaje('Error al insertar productos');
-    }
+    setMensaje(data.mensaje || 'Productos insertados correctamente');
+  } catch (error) {
+    console.error('❌ Error al enviar:', error);
+    const msg = error.response?.data?.error || 'Error al insertar productos';
+    setMensaje(msg);
+  }
+  setFiles([]); // Limpiar archivos después de enviar
+  setProductos([]); // Limpiar productos después de enviar
   };
 
   return (
