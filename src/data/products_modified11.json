@@ -6,7 +6,7 @@
     "Color": "Colgante de Collar Redondo - 1 pieza",
     "Talla": "Sin talla",
     "IdProducto": "11.1",
-    "Imagen": "/assets/Pedido11/img1.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750871235/pedido11/img1.webp",
     "Categoria": "Variedades",
     "Estado": "Separado"
   },
@@ -17,7 +17,7 @@
     "Color": "estilo dos",
     "Talla": "Sin talla",
     "IdProducto": "11.2",
-    "Imagen": "/assets/Pedido11/img2.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750871235/pedido11/img2.webp",
     "Categoria": "Variedades",
     "Estado": "Vendido"
   },
@@ -28,7 +28,7 @@
     "Color": "añil oscuro",
     "Talla": "M",
     "IdProducto": "11.3",
-    "Imagen": "/assets/Pedido11/img3.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750871236/pedido11/img3.jpg",
     "Categoria": "Mujer",
     "Estado": "Disponible"
   },
@@ -39,7 +39,7 @@
     "Color": "Multicolor",
     "Talla": "M",
     "IdProducto": "11.4",
-    "Imagen": "/assets/Pedido11/img4.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750871236/pedido11/img4.jpg",
     "Categoria": "Mujer",
     "Estado": "Separado"
   },
@@ -50,7 +50,7 @@
     "Color": "Verde oscuro",
     "Talla": "M",
     "IdProducto": "11.5",
-    "Imagen": "/assets/Pedido11/img5.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750871236/pedido11/img5.jpg",
     "Categoria": "Mujer",
     "Estado": "Separado"
   },
@@ -61,7 +61,7 @@
     "Color": "Negro",
     "Talla": "M",
     "IdProducto": "11.6",
-    "Imagen": "/assets/Pedido11/img6.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750871237/pedido11/img6.jpg",
     "Categoria": "Mujer",
     "Estado": "Separado"
   },
@@ -72,7 +72,7 @@
     "Color": "Caqui",
     "Talla": "M",
     "IdProducto": "11.7",
-    "Imagen": "/assets/Pedido11/img7.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750871237/pedido11/img7.jpg",
     "Categoria": "Mujer",
     "Estado": "Vendido"
   },
@@ -83,7 +83,7 @@
     "Color": "Mezcla de color",
     "Talla": "M",
     "IdProducto": "11.8",
-    "Imagen": "/assets/Pedido11/img8.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750871237/pedido11/img8.webp",
     "Categoria": "Mujer",
     "Estado": "Vendido"
   },
@@ -94,7 +94,7 @@
     "Color": "3 Piezas De Colores Mezclados A",
     "Talla": "M",
     "IdProducto": "11.9",
-    "Imagen": "/assets/Pedido11/img9.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750871237/pedido11/img9.webp",
     "Categoria": "Hombre",
     "Estado": "Disponible"
   },
@@ -105,7 +105,7 @@
     "Color": "4 Piezas De Colores Mezclados A",
     "Talla": "M",
     "IdProducto": "11.10",
-    "Imagen": "/assets/Pedido11/img10.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750871237/pedido11/img10.webp",
     "Categoria": "Hombre",
     "Estado": "Disponible"
   },
@@ -116,7 +116,7 @@
     "Color": "Blanco",
     "Talla": "S",
     "IdProducto": "11.11",
-    "Imagen": "/assets/Pedido11/img11.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750871237/pedido11/img11.jpg",
     "Categoria": "Mujer",
     "Estado": "Separado"
   },
@@ -127,7 +127,7 @@
     "Color": "Blanco",
     "Talla": "Talla única",
     "IdProducto": "11.12",
-    "Imagen": "/assets/Pedido11/img12.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750871238/pedido11/img12.webp",
     "Categoria": "Variedades",
     "Estado": "Disponible"
   },
@@ -138,7 +138,7 @@
     "Color": "Albaricoque",
     "Talla": "XS",
     "IdProducto": "11.13",
-    "Imagen": "/assets/Pedido11/img13.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750871238/pedido11/img13.webp",
     "Categoria": "Mujer",
     "Estado": "Separado"
   },
@@ -149,7 +149,7 @@
     "Color": "Tamaño de etiqueta: CN 40(CO 39)",
     "Talla": "Negro",
     "IdProducto": "11.14",
-    "Imagen": "/assets/Pedido11/img14.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750871236/pedido11/img14.webp",
     "Categoria": "Mujer",
     "Estado": "Disponible"
   },
@@ -160,7 +160,7 @@
     "Color": "Azul real",
     "Talla": "CN 35(CO 33)",
     "IdProducto": "11.15",
-    "Imagen": "/assets/Pedido11/img15.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750871237/pedido11/img15.webp",
     "Categoria": "Mujer",
     "Estado": "Vendido"
   },
@@ -171,7 +171,7 @@
     "Color": "Negro",
     "Talla": "S",
     "IdProducto": "11.16",
-    "Imagen": "/assets/Pedido11/img16.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750871236/pedido11/img16.jpg",
     "Categoria": "Mujer",
     "Estado": "Separado"
   },
@@ -182,7 +182,7 @@
     "Color": "Negro",
     "Talla": "CN 40(CO 38)",
     "IdProducto": "11.17",
-    "Imagen": "/assets/Pedido11/img17.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750871236/pedido11/img17.webp",
     "Categoria": "Mujer",
     "Estado": "Disponible"
   },
@@ -193,7 +193,7 @@
     "Color": "Policromo",
     "Talla": "Sin talla",
     "IdProducto": "11.18",
-    "Imagen": "/assets/Pedido11/img18.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750871237/pedido11/img18.webp",
     "Categoria": "Mujer",
     "Estado": "Vendido"
   },
@@ -204,7 +204,7 @@
     "Color": "【plateado】",
     "Talla": "Sin talla",
     "IdProducto": "11.19",
-    "Imagen": "/assets/Pedido11/img19.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750871238/pedido11/img19.webp",
     "Categoria": "Variedades",
     "Estado": "Vendido"
   },
@@ -215,7 +215,7 @@
     "Color": "R",
     "Talla": "Sin talla",
     "IdProducto": "11.20",
-    "Imagen": "/assets/Pedido11/img20.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750871238/pedido11/img20.webp",
     "Categoria": "Mujer",
     "Estado": "Vendido"
   },
@@ -226,7 +226,7 @@
     "Color": "L",
     "Talla": "Sin talla",
     "IdProducto": "11.21",
-    "Imagen": "/assets/Pedido11/img21.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750871238/pedido11/img21.webp",
     "Categoria": "Mujer",
     "Estado": "Vendido"
   },
@@ -237,7 +237,7 @@
     "Color": "M",
     "Talla": "30",
     "IdProducto": "11.22",
-    "Imagen": "/assets/Pedido11/img22.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750871238/pedido11/img22.webp",
     "Categoria": "Variedades",
     "Estado": "Disponible"
   },
@@ -248,7 +248,7 @@
     "Color": "Negro",
     "Talla": "L",
     "IdProducto": "11.23",
-    "Imagen": "/assets/Pedido11/img23.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750871238/pedido11/img23.webp",
     "Categoria": "Mujer",
     "Estado": "Separado"
   }
