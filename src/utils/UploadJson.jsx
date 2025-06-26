@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import ApiRoutes from '../api/ApiRoute';
 
 const CargarJsonDesdeArchivos = () => {
   const [files, setFiles] = useState([]);
   const [productos, setProductos] = useState([]);
   const [mensaje, setMensaje] = useState('');
+ const [loading, setLoading] = useState(false);          // ← ① estado loading
 
   const handleFileChange = async (e) => {
     const selectedFiles = Array.from(e.target.files);
@@ -36,13 +38,16 @@ const CargarJsonDesdeArchivos = () => {
   };
 
   const enviarProductos = async () => {
+    setLoading(true);                                     // ← ② activa loading
+    setMensaje('');
+
     try {
     const { data } = await axios.post(
-      'http://localhost:4000/api/productos/crear-multiples',
+      ApiRoutes.listproductsLocal, // Cambia a ApiRoutes.listproductsLocal si es necesario ',
       productos,                            // payload
       { headers: { 'Content-Type': 'application/json' } }
     );
-
+    console.log('✅ OK:', data);
     setMensaje(data.mensaje || 'Productos insertados correctamente');
   } catch (error) {
     console.error('❌ Error al enviar:', error);
@@ -97,12 +102,15 @@ const CargarJsonDesdeArchivos = () => {
           </table>
 
           <button onClick={enviarProductos} style={{ marginTop: '20px', padding: '10px 20px' }}>
-            Enviar al backend
+            {loading ? 'Enviando…' : 'Enviar al backend'}   {/* ← ⑤ texto dinámico */}
           </button>
         </>
       )}
-
-      {mensaje && <p style={{ marginTop: '10px', color: 'green' }}>{mensaje}</p>}
+      {loading }      {/* ← ⑥ mensaje opcional */}
+      {mensaje && !loading && (
+        <p style={{ marginTop: '10px', color: 'green' }}>{mensaje}</p>
+      )}
+      
     </div>
   );
 };
