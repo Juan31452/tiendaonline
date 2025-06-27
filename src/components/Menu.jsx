@@ -6,7 +6,8 @@ import Products from '../pages/products';
 import Mynew from '../pages/new';
 import Uploadimage from '../utils/ImageUploader';
 import UploadJson from '../utils/UploadJson';
-import { PRIVATE1,PRIVATE2,PRIVATE3,PRIVATE4} from './Path';
+import ListProducts from '../utils/ListProducts';
+import { PRIVATE1,PRIVATE2,PRIVATE3,PRIVATE4,PRIVATE5} from './Path';
 import Layaut from './Layout';
 
 
@@ -24,6 +25,7 @@ const Menu = () => {
          <Route path={PRIVATE2} element={<Mynew/>} />
           <Route path={PRIVATE3} element={<Uploadimage />} />
           <Route path={PRIVATE4} element={<UploadJson />} />
+          <Route path={PRIVATE5} element={<ListProducts />} />
 
       </Routes>
       </Container>

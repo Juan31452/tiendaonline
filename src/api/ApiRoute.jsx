@@ -5,8 +5,10 @@ const { APIHOSTRemote, APIHOSTLocal } = Rutas; // Extrae APIHOSTRemote fuera del
 
 const ApiRoutes = {
   
-   listproductsRemote: `${APIHOSTRemote}/api/productos/crear-multiples`,
-   listproductsLocal: `${APIHOSTLocal}/api/productos/crear-multiples`,
+   NewsProductsRemote: `${APIHOSTRemote}/api/productos/crear-multiples`,
+   listproductsRemote: `${APIHOSTRemote}/api/productos`,
+   NewsProductsLocal: `${APIHOSTLocal}/api/productos/crear-multiples`,
+   listproductsLocal: `${APIHOSTLocal}/api/productos`,
 
    // Puedes agregar más rutas según las necesidades de tu aplicación
 };
