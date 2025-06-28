@@ -5,59 +5,66 @@ import ApiRoutes from '../api/ApiRoute';
 
 const ListProducts = () => {
   const [productos, setProductos] = useState([]);
+  const [pagination, setPagination] = useState({ totalPages: 1, totalItems: 0 });
+  const [page, setPage] = useState(1);          // ← página actual
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
 
-  // Función reutilizable para pedir datos via axios
-  const fetchProductos = useCallback(async () => {
+  /** GET con page param -------------------------------------- */
+  const fetchProductos = useCallback(async (pagina = 1) => {
     setLoading(true);
     setError('');
 
     try {
-      // 👇 Todo con axios
       const { data } = await axios.get(ApiRoutes.listproductsRemote, {
-        headers: { 'Accept': 'application/json' },
-        // Si necesitas token:
-        // headers: { 'Authorization': `Bearer ${token}` }
+        params : { page: pagina },               // 👈 asume `?page=N`
+        headers: { Accept: 'application/json' },
       });
 
-      // Asume que `data` ES el array de productos
-      setProductos(data);
-      console.log('✅ Productos obtenidos:', data);
+      // Normaliza (como antes)
+      const rows =
+        Array.isArray(data?.productos) ? data.productos
+        : Array.isArray(data)          ? data
+        : [];
+
+      setProductos(rows);
+      setPagination(data.pagination ?? { totalPages: 1, totalItems: rows.length });
+      setPage(pagina);
     } catch (err) {
-      console.error('❌ Error al obtener productos:', err);
-      const msg =
-        err.response?.data?.error || 'No se pudieron cargar los productos';
-      setError(msg);
+      console.error('❌ GET productos:', err);
+      setError(err.response?.data?.error || 'No se pudieron cargar los productos');
     } finally {
       setLoading(false);
     }
   }, []);
 
-  // Carga inicial
-  useEffect(() => {
-    fetchProductos();
-  }, [fetchProductos]);
+  /** Carga inicial ------------------------------------------- */
+  useEffect(() => { fetchProductos(1); }, [fetchProductos]);
 
+  /* Handlers de paginado ------------------------------------- */
+  const nextPage     = () => page < pagination.totalPages && fetchProductos(page + 1);
+  const previousPage = () => page > 1 && fetchProductos(page - 1);
+
+  /* Render --------------------------------------------------- */
   return (
-    <div style={{ padding: '20px' }}>
-      <h2>Lista completa de productos</h2>
+    <div style={{ padding: 50 }}>
+      <h2>Lista de productos (página {page} / {pagination.totalPages})</h2>
 
       {loading && <p>Cargando… ⏳</p>}
-      {error && !loading && (
-        <p style={{ color: 'crimson' }}>{error}</p>
-      )}
+      {error   && <p style={{ color: 'crimson' }}>{error}</p>}
 
       <ProductosTable productos={productos} />
 
-      {/* Botón para volver a llamar a axios */}
-      <button
-        onClick={fetchProductos}
-        style={{ marginTop: '20px', padding: '8px 16px' }}
-        disabled={loading}
-      >
-        🔄 {loading ? 'Actualizando…' : 'Recargar con axios'}
-      </button>
+      {/* Navegación */}
+      <div style={{ marginTop: 20, display: 'flex', gap: 10 }}>
+        <button onClick={previousPage} disabled={loading || page === 1}>⬅︎ Anterior</button>
+        <button onClick={nextPage}     disabled={loading || page === pagination.totalPages}>Siguiente ➡︎</button>
+        <button onClick={() => fetchProductos(page)} disabled={loading}>🔄 Refrescar</button>
+      </div>
+
+      <p style={{ marginTop: 10 }}>
+        Mostrando {productos.length} de {pagination.totalItems} productos
+      </p>
     </div>
   );
 };
