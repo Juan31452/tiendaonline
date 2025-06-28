@@ -61,7 +61,7 @@ const ProductListPage = ({
         />
       )}
 
-      <div className="sticky-top bg-white pt-2 pb-3 z-index-1020" style={{ top: '0' }}>
+      <div className="sticky-top bg-transparent pt-2 pb-3 z-index-1020" style={{ top: 0 }}>
         <CategoryFilterController
           allProducts={allProducts}
           setFilteredProducts={setFilteredProducts}

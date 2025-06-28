@@ -11,7 +11,7 @@ const { loading, allProducts, filteredProducts, setFilteredProducts } = useProdu
     ['disponible'].includes(product.Estado?.toLowerCase());
 
   return (
- <div className="container mt-4" style={{ paddingTop: '10px' }}> 
+ <div className="container pt-3 " style={{ paddingTop: '4px' }}> 
     <ProductListPage
       title="Nuestros Productos"
       allProducts={allProducts}
