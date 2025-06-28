@@ -12,9 +12,10 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
   return (
     <div className="d-flex justify-content-center align-items-center gap-2 my-4 flex-wrap">
       <button
-        className="btn btn-outline-secondary btn-sm"
+        className="btn btn-outline-light btn-sm"
         onClick={() => handleClick(currentPage - 1)}
         disabled={currentPage === 1}
+      
       >
         ← Anterior
       </button>
@@ -33,7 +34,7 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
       })}
 
       <button
-        className="btn btn-outline-secondary btn-sm"
+        className="btn btn-outline-light btn-sm"
         onClick={() => handleClick(currentPage + 1)}
         disabled={currentPage === totalPages}
       >
