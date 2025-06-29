@@ -2,22 +2,26 @@
 import React, { useState, useEffect } from 'react';
 import CategorySelector from './CategorySelector';
 
-const CategoryFilterController = ({ allProducts, setFilteredProducts }) => {
+/**
+ * Filtra productos por categoría (palabras clave) y avisa al padre
+ * cuál es la categoría seleccionada.
+ */
+const CategoryFilterController = ({
+  allProducts,
+  setFilteredProducts,
+  onCategoryChange,          // ✅ nuevo callback opcional
+}) => {
   const [selectedCategory, setSelectedCategory] = useState('todos');
 
-  const filterByKeywords = (keywords) => {
-    return allProducts.filter(product => {
-      const cat = product.Categoria?.toLowerCase() || '';
+  // ------------ helpers ------------
+  const filterByKeywords = (keywords) =>
+    allProducts.filter((product) => {
+      const cat  = product.Categoria?.toLowerCase()   || '';
       const desc = product.Descripcion?.toLowerCase() || '';
-      return keywords.some(keyword => cat.includes(keyword) || desc.includes(keyword));
+      return keywords.some((kw) => cat.includes(kw) || desc.includes(kw));
     });
-  };
 
-  const handleSelectCategory = (categoryId) => {
-    if (categoryId === selectedCategory) return; // No hacer nada si la categoría ya está seleccionada
-    // Actualizar la categoría seleccionada
-    setSelectedCategory(categoryId);
-
+  const applyFilter = (categoryId) => {
     switch (categoryId) {
       case 'hombre':
         setFilteredProducts(filterByKeywords(['hombre', 'masculino', 'caballero']));
@@ -32,7 +36,7 @@ const CategoryFilterController = ({ allProducts, setFilteredProducts }) => {
         setFilteredProducts(filterByKeywords(['tecnolog', 'electron', 'digital', 'smart']));
         break;
       case 'variedades':
-        setFilteredProducts(filterByKeywords(['variedade', 'otros', 'variedad', 'general']));
+        setFilteredProducts(filterByKeywords(['variedade', 'variedad', 'otros', 'general']));
         break;
       case 'hogar':
         setFilteredProducts(filterByKeywords(['hoga', 'casa', 'hogar', 'cocina', 'muebles']));
@@ -43,15 +47,25 @@ const CategoryFilterController = ({ allProducts, setFilteredProducts }) => {
     }
   };
 
-  // Opcional: aplicar filtro inicial si ya hay productos cargados
+  // ------------ manejador principal ------------
+  const handleSelectCategory = (categoryId) => {
+    if (categoryId === selectedCategory) return;          // ya está activa
+    setSelectedCategory(categoryId);
+    applyFilter(categoryId);
+    onCategoryChange?.(categoryId);                       // ✅ avisa al padre
+  };
+
+  // ------------ efecto inicial ------------
   useEffect(() => {
     if (allProducts.length > 0) {
-      handleSelectCategory(selectedCategory);
+      applyFilter(selectedCategory);                      // filtro inicial
+      onCategoryChange?.(selectedCategory);               // avisa al padre
     }
-  }, []);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [allProducts]);
 
   return (
-    <CategorySelector 
+    <CategorySelector
       activeCategory={selectedCategory}
       onSelectCategory={handleSelectCategory}
     />

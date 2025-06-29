@@ -18,7 +18,9 @@ const ProductListPage = ({
   const [showModal, setShowModal] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 32; // Cambia este valor según tus necesidades
- 
+ /* estado existente… */
+  const [selectedCategory, setSelectedCategory] = useState('todos');
+
   const handleCardClick = (product) => {
     setSelectedProduct(product);
     setShowModal(true);
@@ -40,31 +42,25 @@ const ProductListPage = ({
     (currentPage - 1) * itemsPerPage,
     currentPage * itemsPerPage
   );
+ // Decide qué lista usa el resumen: global o filtrada
+  const resumenProducts =
+    selectedCategory === 'todos' ? allProducts : filteredProducts;
 
   return (
     <div className="container mt-4" style={{ paddingTop: '80px' }}>
       <h2 className="text-center mb-2">{title}</h2>
 
-      {resumenEstados && resumenEstados.length > 0 && (
-        <EstadoResumen
-          products={allProducts}
-          estados={resumenEstados}
-          onEstadoClick={(estado) => {
-            if (estado === 'todos') {
-              setFilteredProducts(allProducts);
-            } else {
-              setFilteredProducts(
-                allProducts.filter(p => p.Estado?.toLowerCase() === estado.toLowerCase())
-              );
-            }
-          }}
-        />
-      )}
+      <EstadoResumen
+        products={resumenProducts}   // ✅ cuenta por estado según categoría
+        estados={resumenEstados}
+        
+      />
 
       <div className="sticky-top bg-transparent pt-2 pb-3 z-index-1020" style={{ top: 0 }}>
         <CategoryFilterController
           allProducts={allProducts}
           setFilteredProducts={setFilteredProducts}
+          onCategoryChange={setSelectedCategory}  // ✅ recibe la categoría
         />
       </div>
 
