@@ -145,7 +145,7 @@
   {
     "Descripcion": "Vaqueros Clásicos de Ajuste Regular para Hombre - Denim Azul Versátil con Detalles Cosidos, Ideales para Negocios y Uso Casual, Lavables a Máquina",
     "Cantidad": 1,
-    "Precio": 0,
+    "Precio": 85000,
     "Color": "Azul",
     "Talla": "34",
     "IdProducto": "4.14",
@@ -178,7 +178,7 @@
   {
     "Descripcion": "Camiseta Casual de Manga Corta para Hombre con Estampado de Letras 3D, Tejido de Mezcla de Poliéster Transpirable, Cuello Redondo, Ropa de Verano para Exteriores",
     "Cantidad": 1,
-    "Precio": 0,
+    "Precio": 39000,
     "Color": "añil oscuro",
     "Talla": "XL",
     "IdProducto": "4.17",
@@ -189,7 +189,7 @@
   {
     "Descripcion": "Camiseta casual holgada para mujer, estampada, manga corta versátil para el verano.",
     "Cantidad": 1,
-    "Precio": 0,
+    "Precio": 28000,
     "Color": "Blanco",
     "Talla": "S",
     "IdProducto": "4.18",
@@ -200,7 +200,7 @@
   {
     "Descripcion": "Camiseta de cuello redondo con estampado floral, elegante camiseta de manga larga para primavera y otoño, ropa de mujer",
     "Cantidad": 1,
-    "Precio": 0,
+    "Precio": 32000,
     "Color": "Azul claro",
     "Talla": "S",
     "IdProducto": "4.19",
@@ -211,7 +211,7 @@
   {
     "Descripcion": "Camiseta de cuello alto con bordado de ojales, elegante ribete de lechuga, botón trasero, manga de pierna de cordero, top ajustado para primavera y otoño, ropa de mujer.",
     "Cantidad": 1,
-    "Precio": 0,
+    "Precio": 28000,
     "Color": "Blanco",
     "Talla": "S",
     "IdProducto": "4.20",
@@ -222,7 +222,7 @@
   {
     "Descripcion": "1pc Elegante Camiseta de Mujer Ajustada con Bordado, Top de Color Sólido de Manga Larga con Cuello Redondo de Punto de Poliéster para Otoño/Invierno",
     "Cantidad": 1,
-    "Precio": 0,
+    "Precio": 28000,
     "Color": "Rosa",
     "Talla": "L",
     "IdProducto": "4.21",
@@ -239,12 +239,12 @@
     "IdProducto": "4.22",
     "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1749315592/pedido4/img21.webp",
     "Categoria": "Variedades",
-    "Estado": "Disponible"
+    "Estado": "no se vende"
   },
   {
     "Descripcion": "1 Protector de Botella de Cambio de Marchas de Motocicleta de Goma Duradera - Antideslizante, Negro con Almohadilla de Agarre Texturizada y Correa de Hebilla Segura para un Control y Protección Mejorados",
     "Cantidad": 1,
-    "Precio": 0,
+    "Precio": 12000,
     "Color": "Oscuro",
     "Talla": "Sin talla",
     "IdProducto": "4.23",
@@ -255,7 +255,7 @@
   {
     "Descripcion": "Pantalones Casuales Populares y Cómodos para Hombre con Bolsillos con Cremallera, Pantalones Deportivos Tejidos para Salir con Plantilla Plana",
     "Cantidad": 1,
-    "Precio": 0,
+    "Precio": 30000,
     "Color": "gris",
     "Talla": "S",
     "IdProducto": "4.24",

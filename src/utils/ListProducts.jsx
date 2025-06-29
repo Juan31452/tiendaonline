@@ -2,6 +2,8 @@ import { useEffect, useState, useCallback } from 'react';
 import axios from 'axios';
 import ProductosTable from '../components/ProductosTable';
 import ApiRoutes from '../api/ApiRoute';
+import BuscarPorIdproducto from './BuscarporIdproducto';
+import toArray from './toArray'; // Normaliza la respuesta a un array
 
 const ListProducts = () => {
   const [productos, setProductos] = useState([]);
@@ -21,15 +23,9 @@ const ListProducts = () => {
         headers: { Accept: 'application/json' },
       });
 
-      // Normaliza (como antes)
-      const rows =
-        Array.isArray(data?.productos) ? data.productos
-        : Array.isArray(data)          ? data
-        : [];
-
-      setProductos(rows);
-      setPagination(data.pagination ?? { totalPages: 1, totalItems: rows.length });
-      setPage(pagina);
+       setProductos(toArray(data));                // ← aquí
+       setPagination(data.pagination ?? { totalPages: 1, totalItems: data.length });
+       setPage(pagina);
     } catch (err) {
       console.error('❌ GET productos:', err);
       setError(err.response?.data?.error || 'No se pudieron cargar los productos');
@@ -52,7 +48,10 @@ const ListProducts = () => {
 
       {loading && <p>Cargando… ⏳</p>}
       {error   && <p style={{ color: 'crimson' }}>{error}</p>}
+    
+      <BuscarPorIdproducto /> {/* Componente para buscar por ID */}
 
+      {/* Tabla de productos */}
       <ProductosTable productos={productos} />
 
       {/* Navegación */}

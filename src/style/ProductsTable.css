@@ -1,0 +1,38 @@
+/* ProductsTable.css */
+.tabla-wrapper {
+  overflow-x: auto;          /* scroll horizontal en pantallas pequeñas */
+}
+
+.tabla-productos {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  color:  #000
+}
+
+/* ── Encabezados ─────────────────────────────────────────── */
+.tabla-productos thead th {
+  position: sticky;          /* se queda pegado al hacer scroll */
+  top: 0;
+  background: rgba(0, 0, 0, 0.35); /* translucido: deja ver tu gradiente ⬇ */
+  backdrop-filter: blur(4px);      /* difumina lo de atrás */
+  padding: 0.75rem 0.5rem;
+  text-align: left;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.25);
+}
+
+/* ── Celdas ──────────────────────────────────────────────── */
+.tabla-productos td {
+  padding: 0.65rem 0.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  white-space: nowrap;       /* evita que “explote” en columnas largas */
+}
+
+/* ── Zebra + hover ───────────────────────────────────────── */
+.tabla-productos tbody tr:nth-child(odd) {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.tabla-productos tbody tr:hover {
+  background: rgba(70, 47, 122, 0.1);
+}
