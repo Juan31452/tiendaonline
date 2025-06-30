@@ -8,7 +8,7 @@
     "IdProducto": "26.1",
     "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750194739/pedido26/img1.webp",
     "Categoria": "Mujer",
-    "Estado": "Nuevo"
+    "Estado": "Disponible"
   },
   {
     "Descripcion": "Zapatillas Blancas Transpirables de Talla Grande para Mujer - Suela Suave, Parte Superior de Punto, Zapatos Casuales para Caminar, Fáciles de Poner, Tallas 6-10",
@@ -19,7 +19,7 @@
     "IdProducto": "26.2",
     "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750194739/pedido26/img2.webp",
     "Categoria": "Mujer",
-    "Estado": "Nuevo"
+    "Estado": "Separado"
   },
   {
     "Descripcion": "1pc Cartera de diseño Mickey Mouse y Minnie Mouse con cierre de doble cremallera - Organizador de monedas multifuncional, bolso de viaje y escuela, regalo perfecto para familiares y profesores, cartera escolar | Diseño juguetón | Cierre de cremallera duradero, cartera con orejas de ratón",
@@ -30,7 +30,7 @@
     "IdProducto": "26.3",
     "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750194739/pedido26/img3.webp",
     "Categoria": "Variedades",
-    "Estado": "Nuevo"
+    "Estado": "Disponible"
   },
   {
     "Descripcion": "Barra de mascarilla de arcilla de centella, suave y delicada, hidratación en tono beige claro, cuidado diario para todo tipo de piel beige claro",
@@ -41,7 +41,7 @@
     "IdProducto": "26.4",
     "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750194739/pedido26/img4.webp",
     "Categoria": "Variedades",
-    "Estado": "Nuevo"
+    "Estado": "Disponible"
   },
   {
     "Descripcion": "1 Libro de Pedidos, Libro de Facturas de Dos Partes sin Papel de Carbón para Pequeñas Empresas, Copia de Carbón de Pedido, Libreta de Facturas, Libreta de Recibos de 50 Páginas",
@@ -52,7 +52,7 @@
     "IdProducto": "26.5",
     "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750194739/pedido26/img5.webp",
     "Categoria": "Variedades",
-    "Estado": "Nuevo"
+    "Estado": "no se vende"
   },
   {
     "Descripcion": "Maskara de Pelo de Colágeno y Queratina y Aceite de Colágeno para el Cabello - Juego Hidratante Adecuado para Tipos de Cabello Normales, Ideal para Longitudes Medianas, Pelos Teñidos y con Rizos, Puntas Abiertas, Enredados, Regalo Perfecto para Todas las Ocasiones",
@@ -63,7 +63,7 @@
     "IdProducto": "26.6",
     "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750194739/pedido26/img6.webp",
     "Categoria": "Variedades",
-    "Estado": "Nuevo"
+    "Estado": "Disponible"
   },
   {
     "Descripcion": "Máscara de colágeno para el cabello y aceite de nuez marroquí - Hidrata profundamente todos los tipos de cabello, incluye máscara de 100ml y aceite de 50ml. Incluye cepillo para champú.",
@@ -74,7 +74,7 @@
     "IdProducto": "26.7",
     "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750194740/pedido26/img7.webp",
     "Categoria": "Variedades",
-    "Estado": "Nuevo"
+    "Estado": "Disponible"
   },
   {
     "Descripcion": "Bata de Forro Polar Coral con Estampado de Fresas para Mujer - Gruesa, Cálida, Pijama y Bata de Baño con Capucha, Regalo Perfecto para Navidad, Cumpleaños, Día de la Madre, Día del Padre, San Valentín - Lavable a Máquina",
@@ -85,7 +85,7 @@
     "IdProducto": "26.8",
     "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750194740/pedido26/img8.webp",
     "Categoria": "Mujer",
-    "Estado": "Nuevo"
+    "Estado": "Disponible"
   },
   {
     "Descripcion": "Camiseta Ultra-Corta Estilo Y2K para Mujer con Gráfico de Conejito y Corazón - Tejido Suave Azul Claro, Lavable a Máquina, Top Casual Cómodo, Camisetas Cortas Lindas y Elegantes",
@@ -96,7 +96,7 @@
     "IdProducto": "26.9",
     "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750194740/pedido26/img9.webp",
     "Categoria": "Mujer",
-    "Estado": "Nuevo"
+    "Estado": "Disponible"
   },
   {
     "Descripcion": "3 piezas de conjunto de diadema de esponja de nube de fresa linda y pulseras de peluche - Tela de terciopelo suave, ajustable, absorbente, banda elástica para mascarillas faciales y aplicación de cuidado de la piel, tamaños impactantes | Colores pastel juguetones | Textura de tejido, diademas lindas",
@@ -107,7 +107,7 @@
     "IdProducto": "26.10",
     "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750194740/pedido26/img10.webp",
     "Categoria": "Variedades",
-    "Estado": "Nuevo"
+    "Estado": "Disponible"
   },
   {
     "Descripcion": "Zapatillas Casuales Ligeras y Transpirables para Mujer - Zapatos de Skate Bajos con Cordones y Suela Suave Antideslizante, Diseño Rosa y Blanco, Cómodas para Usar en Todas las Estaciones",
@@ -118,6 +118,6 @@
     "IdProducto": "26.11",
     "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750194740/pedido26/img11.webp",
     "Categoria": "Mujer",
-    "Estado": "Nuevo"
+    "Estado": "Disponible"
   }
 ]
