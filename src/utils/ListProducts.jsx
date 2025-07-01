@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import ProductosTable from '../components/ProductosTable';
 import useListProducts from '../hooks/useListProducts';
+import BuscarPorIdproducto from './BuscarPorIdproducto';
 
 const ListProducts = () => {
   const [page, setPage] = useState(1);
@@ -27,6 +28,8 @@ const ListProducts = () => {
 
       {loading && <p>Cargando… ⏳</p>}
       {error   && <p style={{ color: 'crimson' }}>{error}</p>}
+
+      <BuscarPorIdproducto /> {/* Componente para buscar por ID */}
 
       <ProductosTable productos={productos} />
 

@@ -52,7 +52,7 @@
     "IdProducto": "13.5",
     "Imagen": "/assets/Pedido13/img5.jpg",
     "Categoria": "Niño",
-    "Estado": "Separado"
+    "Estado": "Disponible"
   },
   {
     "Descripcion": "Conjunto de manga larga y pantalones de cuello redondo de rayas de bloque de color para mujeres, tejido de poliéster elástico, ajuste regular, longitud de manga regular, sin cremallera, atuendo casual de otoño/invierno",
@@ -184,6 +184,6 @@
     "IdProducto": "13.17",
     "Imagen": "/assets/Pedido13/img17.jpg",
     "Categoria": "Mujer",
-    "Estado": "Disponible"
+    "Estado": "Vendido"
   }
 ]
