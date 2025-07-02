@@ -6,7 +6,7 @@
     "Color": "Mezcla de color",
     "Talla": "160",
     "IdProducto": "13.1",
-    "Imagen": "/assets/Pedido13/img1.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1751453693/pedido13/img1.jpg",
     "Categoria": "Niño",
     "Estado": "Disponible"
   },
@@ -17,7 +17,7 @@
     "Color": "Mezcla de color",
     "Talla": "13-14Y",
     "IdProducto": "13.2",
-    "Imagen": "/assets/Pedido13/img2.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1751453692/pedido13/img2.jpg",
     "Categoria": "Niño",
     "Estado": "Separado"
   },
@@ -28,7 +28,7 @@
     "Color": "Mezcla de color",
     "Talla": "13-14Y",
     "IdProducto": "13.3",
-    "Imagen": "/assets/Pedido13/img3.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1751453693/pedido13/img3.jpg",
     "Categoria": "Niño",
     "Estado": "Separado"
   },
@@ -39,7 +39,7 @@
     "Color": "Negro",
     "Talla": "XS",
     "IdProducto": "13.4",
-    "Imagen": "/assets/Pedido13/img4.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1751453692/pedido13/img4.webp",
     "Categoria": "Hombre",
     "Estado": "Disponible"
   },
@@ -50,7 +50,7 @@
     "Color": "Verde",
     "Talla": "160",
     "IdProducto": "13.5",
-    "Imagen": "/assets/Pedido13/img5.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1751453692/pedido13/img5.webp",
     "Categoria": "Niño",
     "Estado": "Disponible"
   },
@@ -61,7 +61,7 @@
     "Color": "Negro",
     "Talla": "M",
     "IdProducto": "13.6",
-    "Imagen": "/assets/Pedido13/img6.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1751453692/pedido13/img6.jpg",
     "Categoria": "Mujer",
     "Estado": "Disponible"
   },
@@ -72,7 +72,7 @@
     "Color": "Albaricoque",
     "Talla": "M",
     "IdProducto": "13.7",
-    "Imagen": "/assets/Pedido13/img7.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1751453692/pedido13/img7.jpg",
     "Categoria": "Mujer",
     "Estado": "Disponible"
   },
@@ -83,7 +83,7 @@
     "Color": "Blanco",
     "Talla": "Asian M",
     "IdProducto": "13.8",
-    "Imagen": "/assets/Pedido13/img8.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1751453693/pedido13/img8.webp",
     "Categoria": "Mujer",
     "Estado": "Disponible"
   },
@@ -94,7 +94,7 @@
     "Color": "Negro",
     "Talla": "L",
     "IdProducto": "13.9",
-    "Imagen": "/assets/Pedido13/img9.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1751453693/pedido13/img9.webp",
     "Categoria": "Hombre",
     "Estado": "Separado"
   },
@@ -105,7 +105,7 @@
     "Color": "Blanco",
     "Talla": "Asian M",
     "IdProducto": "13.10",
-    "Imagen": "/assets/Pedido13/img10.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1751453693/pedido13/img10.jpg",
     "Categoria": "Mujer",
     "Estado": "Disponible"
   },
@@ -116,7 +116,7 @@
     "Color": "Verde",
     "Talla": "Asian M",
     "IdProducto": "13.11",
-    "Imagen": "/assets/Pedido13/img11.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1751453693/pedido13/img11.webp",
     "Categoria": "Mujer",
     "Estado": "Separado"
   },
@@ -127,7 +127,7 @@
     "Color": "Mezcla de color",
     "Talla": "M",
     "IdProducto": "13.12",
-    "Imagen": "/assets/Pedido13/img12.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1751453694/pedido13/img12.webp",
     "Categoria": "Mujer",
     "Estado": "Separado"
   },
@@ -138,7 +138,7 @@
     "Color": "Verde claro",
     "Talla": "S",
     "IdProducto": "13.13",
-    "Imagen": "/assets/Pedido13/img13.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1751453692/pedido13/img13.webp",
     "Categoria": "Mujer",
     "Estado": "Vendido"
   },
@@ -149,7 +149,7 @@
     "Color": "Blanco",
     "Talla": "Asian L",
     "IdProducto": "13.14",
-    "Imagen": "/assets/Pedido13/img14.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1751453692/pedido13/img14.webp",
     "Categoria": "Mujer",
     "Estado": "Disponible"
   },
@@ -160,7 +160,7 @@
     "Color": "Negro",
     "Talla": "L",
     "IdProducto": "13.15",
-    "Imagen": "/assets/Pedido13/img15.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1751453692/pedido13/img15.webp",
     "Categoria": "Mujer",
     "Estado": "Vendido"
   },
@@ -171,7 +171,7 @@
     "Color": "Negro",
     "Talla": "M",
     "IdProducto": "13.16",
-    "Imagen": "/assets/Pedido13/img16.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1751453692/pedido13/img16.webp",
     "Categoria": "Mujer",
     "Estado": "Vendido"
   },
@@ -182,7 +182,7 @@
     "Color": "Mezcla de color",
     "Talla": "L",
     "IdProducto": "13.17",
-    "Imagen": "/assets/Pedido13/img17.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1751453692/pedido13/img17.jpg",
     "Categoria": "Mujer",
     "Estado": "Vendido"
   }
