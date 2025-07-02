@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import ProductosTable from '../components/ProductosTable';
 import useListProducts from '../hooks/useListProducts';
-import BuscarPorIdproducto from './BuscarPorIdproducto';
+import BuscarPorIdproducto from './BuscarporIdproducto';
 import Loading from '../components/Loading';
 
 const ListProducts = () => {
