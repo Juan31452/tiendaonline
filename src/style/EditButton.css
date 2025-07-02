@@ -1,0 +1,27 @@
+.edit-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  background-color: #4f46e5;   /* indigo‑600 */
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.edit-button:hover {
+  background-color: #4338ca;   /* indigo‑700 */
+}
+
+.edit-button:active {
+  background-color: #3730a3;   /* indigo‑800 */
+}
+
+.edit-icon {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}

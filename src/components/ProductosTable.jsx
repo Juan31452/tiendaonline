@@ -1,5 +1,5 @@
-import React from 'react';
 import '../style/ProductsTable.css';
+import EditButton from './Buttons/EditButton';
 
 /** -----------------------------------------------------------
  * Utilidad para formatear fechas ISO → "26/06/2025 21:56"

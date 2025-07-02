@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import ProductosTable from '../components/ProductosTable';
 import useListProducts from '../hooks/useListProducts';
 import BuscarPorIdproducto from './BuscarPorIdproducto';
+import Loading from '../components/Loading';
 
 const ListProducts = () => {
   const [page, setPage] = useState(1);
@@ -26,7 +27,7 @@ const ListProducts = () => {
     <div style={{ padding: 20 }}>
       <h2>Productos — página {page}/{pagination.totalPages}</h2>
 
-      {loading && <p>Cargando… ⏳</p>}
+      {loading && <Loading text="Cargando productos" fullScreen={false} />}
       {error   && <p style={{ color: 'crimson' }}>{error}</p>}
 
       <BuscarPorIdproducto /> {/* Componente para buscar por ID */}
