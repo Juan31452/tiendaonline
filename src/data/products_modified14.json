@@ -6,7 +6,7 @@
     "Color": "A-900",
     "Talla": "Negro",
     "IdProducto": "14.1",
-    "Imagen": "/assets/Pedido14/img1.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1751479146/pedido14/img1.webp",
     "Categoria": "Hogar",
     "Estado": "Separado"
   },
@@ -17,7 +17,7 @@
     "Color": "750g",
     "Talla": "Sin talla",
     "IdProducto": "14.2",
-    "Imagen": "/assets/Pedido14/img2.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1751479146/pedido14/img2.webp",
     "Categoria": "Hogar",
     "Estado": "Separado"
   },
@@ -28,7 +28,7 @@
     "Color": "Blanco",
     "Talla": "Color 01",
     "IdProducto": "14.3",
-    "Imagen": "/assets/Pedido14/img3.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1751479146/pedido14/img3.webp",
     "Categoria": "Hogar",
     "Estado": "Disponible"
   },
@@ -39,7 +39,7 @@
     "Color": "Amarillo",
     "Talla": "Sin talla",
     "IdProducto": "14.4",
-    "Imagen": "/assets/Pedido14/img4.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1751479146/pedido14/img4.webp",
     "Categoria": "Hogar",
     "Estado": "Separado"
   },
@@ -50,7 +50,7 @@
     "Color": "Azul",
     "Talla": "2 piezas",
     "IdProducto": "14.5",
-    "Imagen": "/assets/Pedido14/img5.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1751479146/pedido14/img5.webp",
     "Categoria": "Hogar",
     "Estado": "Disponible"
   }

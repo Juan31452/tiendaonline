@@ -25,7 +25,7 @@ const normalizarProductos = (input) => {
   return []; // no hay nada que mostrar
 };
 
-const ProductosTable = ({ productos }) => {
+const ProductosTable = ({ productos, onEdit }) => {
   const rows = normalizarProductos(productos);
 
   // DEBUG opcional
@@ -71,6 +71,7 @@ const ProductosTable = ({ productos }) => {
               <td>{p.Estado}</td>
               <td>{formatearFecha(p.createdAt)}</td>
               <td>{formatearFecha(p.updatedAt)}</td>
+              <EditButton onClick={() => onEdit && onEdit(p)}  />
             </tr>
           ))}
         </tbody>

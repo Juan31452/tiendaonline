@@ -1,6 +1,6 @@
 // components/CategoryFilterController.jsx
 import React, { useState, useEffect } from 'react';
-import CategorySelector from './CategorySelector';
+import CategorySelector from './Buttons/CategorySelector';
 
 /**
  * Filtra productos por categoría (palabras clave) y avisa al padre

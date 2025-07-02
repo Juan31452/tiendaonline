@@ -1,6 +1,6 @@
 // components/CategorySelector.jsx
 import React from 'react';
-import { categories } from '../constants/categories'; // Importa las categorías desde un archivo separado
+import { categories } from '../../constants/categories'; // Importa las categorías desde un archivo separado
 
 const CategorySelector = ({ onSelectCategory, activeCategory }) => {
   return (

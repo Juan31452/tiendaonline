@@ -10,6 +10,7 @@ const ApiRoutes = {
    NewsProductsLocal: `${APIHOSTLocal}/api/productos/crear-multiples`,
    listproductsLocal: `${APIHOSTLocal}/api/productos`,
    BuscarporId : `${APIHOSTRemote}/api/productos`,
+   EditarProducto: `${APIHOSTRemote}/api/productos`, 
 
    // Puedes agregar más rutas según las necesidades de tu aplicación
 };

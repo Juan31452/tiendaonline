@@ -1,6 +1,6 @@
 import useProductLoader from '../hooks/useProductLoader';
 import ProductListPage from './ProductListPage';
-import WhatsAppFloatingButton from '../components/WhatsAppFloatingButton';
+import WhatsAppFloatingButton from '../components/Buttons/WhatsAppFloatingButton';
 
 const Products= () => {
 const { loading, allProducts, filteredProducts, setFilteredProducts } = useProductLoader();

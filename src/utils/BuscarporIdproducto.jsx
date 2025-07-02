@@ -2,7 +2,7 @@ import { useState } from 'react';
 import axios from 'axios';
 import ApiRoutes from '../api/ApiRoute';
 import toArray from '../utils/toArray';
-import ModalDetalles from '../components/ModalDetalles';
+import ModalDetalles from '../components/Modals/ModalDetalles';
 
 const BuscarPorIdproducto = () => {
   const [id, setId]             = useState('');

@@ -1,48 +1,83 @@
 import { useEffect, useState } from 'react';
-import ProductosTable from '../components/ProductosTable';
+import ProductosTable          from '../components/ProductosTable';
+import BuscarPorIdproducto     from '../utils/BuscarporIdproducto';
+import Loading                 from '../components/Loading';
+import PaginationControls      from '../components/Buttons/PaginationControls';
 import useListProducts from '../hooks/useListProducts';
-import BuscarPorIdproducto from './BuscarporIdproducto';
-import Loading from '../components/Loading';
+import useEditProduct  from '../hooks/useEditProduct';
+import EditProductModal from '../components/Modals/EditProductModal';
 
+// Importamos los hooks personalizados para listar y editar productos
 const ListProducts = () => {
+  /* ---------- paginación ---------- */
   const [page, setPage] = useState(1);
 
-  /* Hook personalizado para cargar productos */
-  // Este hook maneja la lógica de paginación y estado de carga
-  const { productos, pagination, loading, error, fetchPage } =
-    useListProducts();
+  const {
+    productos,
+    pagination,
+    loading: loadingList,
+    error,
+    fetchPage,
+  } = useListProducts();
 
-  /* Carga inicial */
+  /* ---------- edición ---------- */
+  const {
+    productSel,
+    showModal,
+    loading: saving,
+    error: saveError,
+    openModal,
+    closeModal,
+    saveChanges,
+  } = useEditProduct();
+
+  /* carga inicial */
   useEffect(() => {
     fetchPage(1);
   }, [fetchPage]);
 
-  /* Navegación */
-  const next  = () => page < pagination.totalPages && (fetchPage(page + 1), setPage(page + 1));
-  const prev  = () => page > 1 && (fetchPage(page - 1), setPage(page - 1));
-  const refresh = () => fetchPage(page);
+  /* -------- handlers de paginación -------- */
+  const prev     = () => page > 1 && (fetchPage(page - 1), setPage(page - 1));
+  const next     = () => page < pagination.totalPages && (fetchPage(page + 1), setPage(page + 1));
+  const first    = () => page !== 1 && (fetchPage(1), setPage(1));
+  const last     = () => page !== pagination.totalPages &&
+                        (fetchPage(pagination.totalPages), setPage(pagination.totalPages));
+  const refresh  = () => fetchPage(page);
 
-  /* UI */
+  /* -------- UI -------- */
   return (
     <div style={{ padding: 20 }}>
       <h2>Productos — página {page}/{pagination.totalPages}</h2>
 
-      {loading && <Loading text="Cargando productos" fullScreen={false} />}
-      {error   && <p style={{ color: 'crimson' }}>{error}</p>}
+      {loadingList && <Loading text="Cargando productos" />}
+      {saving      && <Loading text="Guardando cambios" fullScreen />}
+      {error      &&  <p style={{ color: 'crimson' }}>{error}</p>}
+      {saveError  &&  <p style={{ color: 'crimson' }}>{saveError}</p>}
 
-      <BuscarPorIdproducto /> {/* Componente para buscar por ID */}
+      <BuscarPorIdproducto />
 
-      <ProductosTable productos={productos} />
+      <ProductosTable productos={productos} onEdit={openModal} />
 
-      <div style={{ marginTop: 20, display: 'flex', gap: 10 }}>
-        <button onClick={prev}    disabled={loading || page === 1}>⬅︎ Anterior</button>
-        <button onClick={next}    disabled={loading || page === pagination.totalPages}>Siguiente ➡︎</button>
-        <button onClick={refresh} disabled={loading}>🔄 Refrescar</button>
-      </div>
+      <EditProductModal
+        show={showModal}
+        product={productSel}
+        onHide={closeModal}
+        onSave={(upd) => saveChanges(upd, refresh)}
+      />
 
-      <p style={{ marginTop: 10 }}>
-        Mostrando {productos.length} / {pagination.totalItems} productos
-      </p>
+      {/* 👉 Nuevo componente paginador con Inicio y Final */}
+      <PaginationControls
+        page={page}
+        totalPages={pagination.totalPages}
+        loading={loadingList}
+        onFirst={first}
+        onPrev={prev}
+        onNext={next}
+        onLast={last}
+        onRefresh={refresh}
+        currentCount={productos.length}
+        totalCount={pagination.totalItems}
+      />
     </div>
   );
 };

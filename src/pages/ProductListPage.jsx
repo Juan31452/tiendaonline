@@ -1,7 +1,7 @@
 // components/ProductListPage.jsx
 import { useState, useEffect } from 'react';
 import CategoryFilterController from '../components/CategoryFilterController';
-import ModalDetalles from '../components/ModalDetalles';
+import ModalDetalles from '../components/Modals/ModalDetalles';
 import ProductCard from '../components/ProductCard';
 import EstadoResumen from '../components/EstadoResumen';
 import Pagination from '../components/Pagination';
