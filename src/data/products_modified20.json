@@ -6,7 +6,7 @@
     "Color": "gris",
     "Talla": "L",
     "IdProducto": "20.1",
-    "Imagen": "/assets/Pedido20/img1.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1751832682/pedido20/img1.webp",
     "Categoria": "Hombre",
     "Estado": "Separado"
   },
@@ -17,7 +17,7 @@
     "Color": "gris",
     "Talla": "XXL",
     "IdProducto": "20.2",
-    "Imagen": "/assets/Pedido20/img2.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1751832682/pedido20/img2.webp",
     "Categoria": "Hombre",
     "Estado": "Separado"
   },
@@ -28,7 +28,7 @@
     "Color": "gris",
     "Talla": "Asian XL",
     "IdProducto": "20.3",
-    "Imagen": "/assets/Pedido20/img3.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1751832682/pedido20/img3.webp",
     "Categoria": "Hombre",
     "Estado": "Disponible"
   }

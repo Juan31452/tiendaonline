@@ -6,7 +6,7 @@
     "Color": "Negro",
     "Talla": "S",
     "IdProducto": "19.1",
-    "Imagen": "/assets/Pedido19/img1.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1751832506/pedido19/img1.webp",
     "Categoria": "Mujer",
     "Estado": "Disponible"
   },
@@ -17,7 +17,7 @@
     "Color": "Albaricoque",
     "Talla": "S",
     "IdProducto": "19.2",
-    "Imagen": "/assets/Pedido19/img2.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1751832506/pedido19/img2.webp",
     "Categoria": "Mujer",
     "Estado": "Separado"
   },
@@ -28,7 +28,7 @@
     "Color": "Verde claro",
     "Talla": "M",
     "IdProducto": "19.3",
-    "Imagen": "/assets/Pedido19/img3.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1751832506/pedido19/img3.webp",
     "Categoria": "Mujer",
     "Estado": "Vendido"
   },
@@ -39,7 +39,7 @@
     "Color": "color rosa rojo",
     "Talla": "M",
     "IdProducto": "19.4",
-    "Imagen": "/assets/Pedido19/img4.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1751832506/pedido19/img4.webp",
     "Categoria": "Mujer",
     "Estado": "Vendido"  
   },
@@ -50,7 +50,7 @@
     "Color": "Blanco",
     "Talla": "M",
     "IdProducto": "19.5",
-    "Imagen": "/assets/Pedido19/img5.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1751832506/pedido19/img5.webp",
     "Categoria": "Mujer",
     "Estado": "Vendido"
   }

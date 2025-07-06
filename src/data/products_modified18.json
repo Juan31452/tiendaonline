@@ -6,7 +6,7 @@
     "Color": "Azul moreno+gris+azul claro",
     "Talla": "13-14Y",
     "IdProducto": "18.1",
-    "Imagen": "/assets/Pedido18/img1.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1751832102/pedido18/img1.webp",
     "Categoria": "Niño",
     "Estado": "Disponible"
   },
@@ -17,7 +17,7 @@
     "Color": "Negro",
     "Talla": "CN 42(CO 40)",
     "IdProducto": "18.2",
-    "Imagen": "/assets/Pedido18/img2.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1751832102/pedido18/img2.webp",
     "Categoria": "Hombre",
     "Estado": "Separado"
   },
@@ -28,7 +28,7 @@
     "Color": "Negro",
     "Talla": "14Y",
     "IdProducto": "18.3",
-    "Imagen": "/assets/Pedido18/img3.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1751832102/pedido18/img3.jpg",
     "Categoria": "Niño",
     "Estado": "Disponible"
   },
@@ -39,7 +39,7 @@
     "Color": "Mezcla de color",
     "Talla": "13-14Y",
     "IdProducto": "18.4",
-    "Imagen": "/assets/Pedido18/img4.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1751832102/pedido18/img4.jpg",
     "Categoria": "Niño",
     "Estado": "Separado"
   },
@@ -50,7 +50,7 @@
     "Color": "rosa polvorienta",
     "Talla": "M",
     "IdProducto": "18.5",
-    "Imagen": "/assets/Pedido18/img5.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1751832103/pedido18/img5.jpg",
     "Categoria": "Mujer",
     "Estado": "Separado"
   },
@@ -61,7 +61,7 @@
     "Color": "Negro+Verde Militar+Caqui",
     "Talla": "13-14Y",
     "IdProducto": "18.6",
-    "Imagen": "/assets/Pedido18/img6.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1751832103/pedido18/img6.webp",
     "Categoria": "Niño",
     "Estado": "Separado"
   },
@@ -72,7 +72,7 @@
     "Color": "Azul",
     "Talla": "160",
     "IdProducto": "18.7",
-    "Imagen": "/assets/Pedido18/img7.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1751832103/pedido18/img7.webp",
     "Categoria": "Niño",
     "Estado": "Disponible"
   },
@@ -83,7 +83,7 @@
     "Color": "añil oscuro",
     "Talla": "170",
     "IdProducto": "18.8",
-    "Imagen": "/assets/Pedido18/img8.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1751832103/pedido18/img8.webp",
     "Categoria": "Niño",
     "Estado": "Separado"
   },
@@ -94,7 +94,7 @@
     "Color": "Blanco",
     "Talla": "170",
     "IdProducto": "18.9",
-    "Imagen": "/assets/Pedido18/img9.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1751832103/pedido18/img9.webp",
     "Categoria": "Niño",
     "Estado": "Disponible"
   },
@@ -105,7 +105,7 @@
     "Color": "Blanco",
     "Talla": "13-14Y",
     "IdProducto": "18.10",
-    "Imagen": "/assets/Pedido18/img10.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1751832103/pedido18/img10.webp",
     "Categoria": "Niño",
     "Estado": "Separado"
   },
@@ -116,7 +116,7 @@
     "Color": "Negro",
     "Talla": "13-14Y",
     "IdProducto": "18.11",
-    "Imagen": "/assets/Pedido18/img11.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1751832103/pedido18/img11.jpg",
     "Categoria": "Niño",
     "Estado": "Disponible"
   },
@@ -127,7 +127,7 @@
     "Color": "Frijol Verde",
     "Talla": "13-14Y",
     "IdProducto": "18.12",
-    "Imagen": "/assets/Pedido18/img12.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1751832103/pedido18/img12.webp",
     "Categoria": "Niño",
     "Estado": "Disponible"
   },
@@ -138,7 +138,7 @@
     "Color": "gris azul",
     "Talla": "13-14Y",
     "IdProducto": "18.13",
-    "Imagen": "/assets/Pedido18/img13.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1751832103/pedido18/img13.webp",
     "Categoria": "Niño",
     "Estado": "Separado"
   },
@@ -149,7 +149,7 @@
     "Color": "Blanco",
     "Talla": "170",
     "IdProducto": "18.14",
-    "Imagen": "/assets/Pedido18/img14.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1751832104/pedido18/img14.webp",
     "Categoria": "Niño",
     "Estado": "Separado"
   },
@@ -160,7 +160,7 @@
     "Color": "Albaricoque",
     "Talla": "170",
     "IdProducto": "18.15",
-    "Imagen": "/assets/Pedido18/img15.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1751832102/pedido18/img15.webp",
     "Categoria": "Niño",
     "Estado": "Separado"
   }
