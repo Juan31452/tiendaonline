@@ -6,7 +6,7 @@
     "Color": "Caqui",
     "Talla": "L",
     "IdProducto": "15.1",
-    "Imagen": "/assets/Pedido15/img1.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1751826438/pedido15/img1.webp",
     "Categoria": "Mujer",
     "Estado": "Disponible"
   },
@@ -17,9 +17,9 @@
     "Color": "Caqui",
     "Talla": "CN 42(CO 41)",
     "IdProducto": "15.2",
-    "Imagen": "/assets/Pedido15/img2.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1751826438/pedido15/img2.webp",
     "Categoria": "Mujer",
-    "Estado": "Separado"
+    "Estado": "Vendido"
   },
   {
     "Descripcion": "Sandalias Blancas de Plataforma para Mujer con Correas Cruzadas Ajustables - Tacón Cuña Grueso y Amortiguado, Parte Superior de Tejido Transpirable y Suela Antideslizante de TPU para la Playa, Uso Casual, Verano, Sandalias Versátiles al Aire Libre | Sandalias con Correas Cruzadas | Sandalias con Correa Ajustable",
@@ -28,7 +28,7 @@
     "Color": "Blanco",
     "Talla": "CN 42(CO 41)",
     "IdProducto": "15.3",
-    "Imagen": "/assets/Pedido15/img3.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1751826438/pedido15/img3.webp",
     "Categoria": "Mujer",
     "Estado": "Disponible"
   },
@@ -39,7 +39,7 @@
     "Color": "Blanco",
     "Talla": "M",
     "IdProducto": "15.4",
-    "Imagen": "/assets/Pedido15/img4.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1751826438/pedido15/img4.webp",
     "Categoria": "Mujer",
     "Estado": "Separado"
   },
@@ -50,7 +50,7 @@
     "Color": "Negro",
     "Talla": "M",
     "IdProducto": "15.5",
-    "Imagen": "/assets/Pedido15/img5.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1751826439/pedido15/img5.webp",
     "Categoria": "Mujer",
     "Estado": "Vendido"
   },
@@ -61,7 +61,7 @@
     "Color": "18*18 cm",
     "Talla": "7.08*7.08 pulgadas",
     "IdProducto": "15.6",
-    "Imagen": "/assets/Pedido15/img6.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1751826438/pedido15/img6.webp",
     "Categoria": "Hogar",
     "Estado": "Vendido"
   },
@@ -72,7 +72,7 @@
     "Color": "Beige claro",
     "Talla": "S",
     "IdProducto": "15.7",
-    "Imagen": "/assets/Pedido15/img7.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1751826438/pedido15/img7.webp",
     "Categoria": "Mujer",
     "Estado": "Vendido"
   }

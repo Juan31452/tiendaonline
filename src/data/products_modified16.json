@@ -6,7 +6,7 @@
     "Color": "Mezcla de color",
     "Talla": "M",
     "IdProducto": "16.1",
-    "Imagen": "/assets/Pedido16/img1.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1751826749/pedido16/img1.webp",
     "Categoria": "Mujer",
     "Estado": "Disponible"
   },
@@ -17,7 +17,7 @@
     "Color": "Mezcla de color",
     "Talla": "M",
     "IdProducto": "16.2",
-    "Imagen": "/assets/Pedido16/img2.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1751826749/pedido16/img2.jpg",
     "Categoria": "Sin categoría",
     "Estado": "Disponible"
   },
@@ -28,7 +28,7 @@
     "Color": "Tamaño de etiqueta: CN 42(CO 41)",
     "Talla": "Blanco",
     "IdProducto": "16.3",
-    "Imagen": "/assets/Pedido16/img3.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1751826749/pedido16/img3.webp",
     "Categoria": "Mujer",
     "Estado": "Separado"
   }

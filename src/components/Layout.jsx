@@ -18,7 +18,7 @@ const NavBar = () => {
         style={{ zIndex: 1030, boxShadow: '0 2px 4px rgba(0,0,0,0.1)' }}
       >
         <Container>
-          <Navbar.Brand as={Link} to="/">TiendaOnline</Navbar.Brand>
+          <Navbar.Brand as={Link} to="/">Variedades JM</Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto">
