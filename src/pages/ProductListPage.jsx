@@ -56,6 +56,12 @@ const ProductListPage = ({
         
       />
 
+      <Pagination
+        currentPage={currentPage}
+        totalPages={totalPages}
+        onPageChange={handlePageChange}
+      />
+
       <div className="sticky-top bg-transparent pt-2 pb-3 z-index-1020" style={{ top: 0 }}>
         <CategoryFilterController
           allProducts={allProducts}
