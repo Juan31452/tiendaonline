@@ -8,7 +8,7 @@
     "IdProducto": "27.1",
     "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750264151/pedido27/img1.webp",
     "Categoria": "Mujer",
-    "Estado": "Nuevo"
+    "Estado": "Disponible"
   },
   {
     "Descripcion": "Broche de mariposa con patrón, hebilla desmontable elástica para jeans, puños, cuellos y ropa, botón desmontable multifuncional sin costura, ajustador de cintura de jeans para reducir talla",
@@ -19,7 +19,7 @@
     "IdProducto": "27.2",
     "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750264151/pedido27/img2.webp",
     "Categoria": "Variedades",
-    "Estado": "Nuevo"
+    "Estado": "Disponible"
   },
   {
     "Descripcion": "Pasta limpiadora para zapatos blancos, removedor de manchas y blanqueador para cuero sintético, interior de auto, sofá de cuero sintético genuino y bolsos de mujer, limpiador multiusos con esponja",
@@ -30,7 +30,7 @@
     "IdProducto": "27.3",
     "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750264151/pedido27/img3.webp",
     "Categoria": "Mujer",
-    "Estado": "Nuevo"
+    "Estado": "Disponible"
   },
   {
     "Descripcion": "Bolso bandolera acolchado para mujer con correa ajustable y cierre de bloqueo giratorio - Elegante bolso de hombro de color sólido con hardware dorado, negro/rojo/rosado/marrón/blanco, versátil para ocasiones informales y formales, bolso bandolera, textura acolchada",
@@ -41,7 +41,7 @@
     "IdProducto": "27.4",
     "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750264151/pedido27/img4.webp",
     "Categoria": "Mujer",
-    "Estado": "Nuevo"
+    "Estado": "Disponible"
   },
   {
     "Descripcion": "1 pieza de limpiador de zapatos de terciopelo con borrador de goma - Eliminador de manchas no eléctrico para zapatillas, ropa, vidrio, paredes, suelos y muebles - Herramienta de limpieza seca multifuncional para el cuidado suave de tejidos, limpieza de zapatos | Borrador de textura de terciopelo | Herramienta de limpieza duradera, esenciales para el cuidado de zapatos",
@@ -52,7 +52,7 @@
     "IdProducto": "27.5",
     "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750264151/pedido27/img5.webp",
     "Categoria": "Variedades",
-    "Estado": "Nuevo"
+    "Estado": "Disponible"
   },
   {
     "Descripcion": "Adhesivo sellador transparente impermeable, agente de impermeabilización ultra invisible para cocina, jardín, techo y pared, recubrimiento adhesivo contra filtraciones",
@@ -63,7 +63,7 @@
     "IdProducto": "27.6",
     "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750264151/pedido27/img6.webp",
     "Categoria": "Variedades",
-    "Estado": "Nuevo"
+    "Estado": "Disponible"
   },
   {
     "Descripcion": "Lápiz de pruebas de billetes - Tinta negra, herramienta de autenticación de moneda para billetes reales y falsos, no necesita batería, tinta de verificación manual única, lápiz de autenticación de dinero | Diseño de tinta único | Cuerpo de plástico duradero, lápiz de pruebas de dinero",
@@ -74,7 +74,7 @@
     "IdProducto": "27.7",
     "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750264151/pedido27/img7.webp",
     "Categoria": "Variedades",
-    "Estado": "Nuevo"
+    "Estado": "Disponible"
   },
   {
     "Descripcion": "Tenis elegantes para mujer de caña baja con cordones, cubierta sintética en blanco y azul claro, suela de goma, forro de tela transpirable, versátiles para todas las estaciones, calzado casual cómodo",
@@ -85,6 +85,6 @@
     "IdProducto": "27.8",
     "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750264151/pedido27/img8.webp",
     "Categoria": "Mujer",
-    "Estado": "Nuevo"
+    "Estado": "Disponible"
   }
 ]

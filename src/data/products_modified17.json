@@ -6,7 +6,7 @@
     "Color": "1,5 Cm De Ancho (60 M)",
     "Talla": "Sin talla",
     "IdProducto": "17.1",
-    "Imagen": "/assets/Pedido17/img1.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1751827543/pedido17/img1.webp",
     "Categoria": "Variedades",
     "Estado": "Separado"
   },
@@ -17,7 +17,7 @@
     "Color": "Rosa Pálido",
     "Talla": "S",
     "IdProducto": "17.2",
-    "Imagen": "/assets/Pedido17/img2.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1751827544/pedido17/img2.jpg",
     "Categoria": "Mujer",
     "Estado": "Vendido"
   },
@@ -28,7 +28,7 @@
     "Color": "añil oscuro",
     "Talla": "XS",
     "IdProducto": "17.3",
-    "Imagen": "/assets/Pedido17/img3.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1751827544/pedido17/img3.jpg",
     "Categoria": "Mujer",
     "Estado": "Vendido"
   },
@@ -39,7 +39,7 @@
     "Color": "Negro",
     "Talla": "Talla única",
     "IdProducto": "17.4",
-    "Imagen": "/assets/Pedido17/img4.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1751827543/pedido17/img4.webp",
     "Categoria": "Mujer",
     "Estado": "Disponible"
   },
@@ -50,7 +50,7 @@
     "Color": "6 piezas",
     "Talla": "Sin talla",
     "IdProducto": "17.5",
-    "Imagen": "/assets/Pedido17/img5.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1751827544/pedido17/img5.webp",
     "Categoria": "Mujer",
     "Estado": "Disponible"
   },
@@ -61,7 +61,7 @@
     "Color": "Color #02",
     "Talla": "Sin talla",
     "IdProducto": "17.6",
-    "Imagen": "/assets/Pedido17/img6.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1751827543/pedido17/img6.webp",
     "Categoria": "Sin categoría",
     "Estado": "Separado"
   },
@@ -72,7 +72,7 @@
     "Color": "【plateado】",
     "Talla": "Sin talla",
     "IdProducto": "17.7",
-    "Imagen": "/assets/Pedido17/img7.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1751827543/pedido17/img7.webp",
     "Categoria": "Hombre",
     "Estado": "Vendido"
   },
@@ -83,7 +83,7 @@
     "Color": "V664 Pulsera Rosa + Flor Rosa",
     "Talla": "Sin talla",
     "IdProducto": "17.8",
-    "Imagen": "/assets/Pedido17/img8.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1751827544/pedido17/img8.webp",
     "Categoria": "Mujer",
     "Estado": "Disponible"
   },
@@ -94,7 +94,7 @@
     "Color": "LT-A",
     "Talla": "Sin talla",
     "IdProducto": "17.9",
-    "Imagen": "/assets/Pedido17/img9.jpg",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1751827544/pedido17/img9.webp",
     "Categoria": "Mujer",
     "Estado": "Disponible"
   }
