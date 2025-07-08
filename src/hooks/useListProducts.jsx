@@ -1,4 +1,4 @@
-// src/hooks/useProductosPaginated.js
+// src/hooks/useListProducts.js
 import { useState, useCallback } from 'react';
 import axios from 'axios';
 import ApiRoutes from '../api/ApiRoute';

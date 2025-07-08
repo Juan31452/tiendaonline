@@ -18,3 +18,4 @@ const EstadoResumen = ({ products, estados = [] }) => {
 };
 
 export default EstadoResumen;
+

@@ -29,6 +29,7 @@ import productos27  from "./products_modified27.json";
 import productos28  from "./products_modified28.json";
 import productos29  from "./products_modified29.json";
 
+
 // Exporta como objeto nombrado
 export const productImports = {
   productos1,
@@ -61,6 +62,7 @@ export const productImports = {
   productos28,
   productos29
 
+  
 };
 
 // O también puedes exportar individualmente si lo prefieres

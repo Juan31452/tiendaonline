@@ -29,6 +29,7 @@ const NavBar = () => {
                   <Nav.Link as={Link} to="/uploadimage" eventKey="3">Nuevas Imagens</Nav.Link>
                   <Nav.Link as={Link} to="/uploadjson" eventKey="5">Nuevos JSON</Nav.Link>
                   <Nav.Link as={Link} to="/listproducts" eventKey="6">Listar Productos</Nav.Link>
+                  <Nav.Link as={Link} to="/verproductos" eventKey="7">Backend</Nav.Link>
                 </>
               )}
               <Nav.Link as={Link} to="/new" eventKey="4">Nuevos</Nav.Link>

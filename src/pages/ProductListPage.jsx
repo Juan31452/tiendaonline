@@ -14,6 +14,8 @@ const ProductListPage = ({
   filterFn,
   resumenEstados = []
 }) => {
+
+  
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [showModal, setShowModal] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
