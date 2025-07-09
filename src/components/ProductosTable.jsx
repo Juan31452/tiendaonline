@@ -71,7 +71,7 @@ const ProductosTable = ({ productos, onEdit }) => {
               <td>{p.Estado}</td>
               <td>{formatearFecha(p.createdAt)}</td>
               <td>{formatearFecha(p.updatedAt)}</td>
-              <EditButton onClick={() => onEdit && onEdit(p)}  />
+              <td><EditButton onClick={() => onEdit && onEdit(p)}  /></td>
             </tr>
           ))}
         </tbody>

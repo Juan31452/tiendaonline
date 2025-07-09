@@ -2,9 +2,13 @@ import { Modal } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import WhatsAppButton from '../Buttons/WhatsAppButton';
 import ButtonClose from '../Buttons/ButtonClose';
+import EditButton from '../Buttons/EditButton';
 
 const ModalDetalles = ({ product, show, onHide }) => {
   if (!product) return null;
+
+  // ✅ Detectar entorno local (vite) o usa process.env.NODE_ENV === 'development'
+  const isLocalhost = import.meta.env.DEV;
 
   return (
     <Modal
@@ -64,11 +68,23 @@ const ModalDetalles = ({ product, show, onHide }) => {
           </div>
         </div>
       </Modal.Body>
+
+      {/* Footer con botón de WhatsApp y cerrar*/}
       <Modal.Footer className="py-1 px-2">
+
         <div className="d-flex flex-row justify-content-end align-items-center w-100 gap-2">
           <WhatsAppButton product={product} />
+          
+          {isLocalhost && (
+          <EditButton
+            onClick={() => console.log('Editar producto:', product)}
+          />
+          )}
+          
           <ButtonClose onClick={onHide} />
+          
         </div>
+
       </Modal.Footer>
     </Modal>
   );
