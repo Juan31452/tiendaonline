@@ -7,8 +7,7 @@ import EditButton from '../Buttons/EditButton';
 const ModalDetalles = ({ product, show, onHide }) => {
   if (!product) return null;
 
-  // ✅ Detectar entorno local (vite) o usa process.env.NODE_ENV === 'development'
-  const isLocalhost = import.meta.env.DEV;
+ 
 
   return (
     <Modal
@@ -75,12 +74,8 @@ const ModalDetalles = ({ product, show, onHide }) => {
         <div className="d-flex flex-row justify-content-end align-items-center w-100 gap-2">
           <WhatsAppButton product={product} />
           
-          {isLocalhost && (
-          <EditButton
-            onClick={() => console.log('Editar producto:', product)}
-          />
-          )}
           
+
           <ButtonClose onClick={onHide} />
           
         </div>
