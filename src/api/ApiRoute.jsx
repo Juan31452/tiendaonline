@@ -11,6 +11,7 @@ const ApiRoutes = {
    listproductsLocal: `${APIHOSTLocal}/api/productos`,
    BuscarporId : `${APIHOSTRemote}/api/productos`,
    EditarProducto: `${APIHOSTRemote}/api/productos`, 
+   ConsultaCategoria: `${APIHOSTRemote}/api/productos?categoria=`,
 
    // Puedes agregar más rutas según las necesidades de tu aplicación
 };

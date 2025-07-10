@@ -1,68 +1,76 @@
-// components/CategoryFilterController.jsx
-import React, { useState, useEffect } from 'react';
+// src/components/CategoryFilterController.jsx
+import React, {
+  useState,
+  useEffect,
+  useCallback,
+} from 'react';
 import CategorySelector from './Buttons/CategorySelector';
 
-/**
- * Filtra productos por categoría (palabras clave) y avisa al padre
- * cuál es la categoría seleccionada.
- */
+/** Diccionario de categorías → palabras clave */
+const KEYWORDS = {
+  hombre:     ['hombre', 'masculino', 'caballero'],
+  mujer:      ['mujer', 'femenino', 'dama'],
+  nino:       ['niño', 'nino', 'niña', 'nina', 'infantil'],
+  tecnologia: ['tecnolog', 'electron', 'digital', 'smart'],
+  variedades: ['variedade', 'variedad', 'otros', 'general'],
+  hogar:      ['hogar', 'casa', 'cocina', 'muebles'],
+  todos:      [], // se gestiona aparte
+};
+
+/** Normaliza tildes y lowercase */
+const normalize = (str = '') =>
+  str
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '');
+
 const CategoryFilterController = ({
   allProducts,
   setFilteredProducts,
-  onCategoryChange,          // ✅ nuevo callback opcional
+  onCategoryChange,
 }) => {
   const [selectedCategory, setSelectedCategory] = useState('todos');
 
-  // ------------ helpers ------------
-  const filterByKeywords = (keywords) =>
-    allProducts.filter((product) => {
-      const cat  = product.Categoria?.toLowerCase()   || '';
-      const desc = product.Descripcion?.toLowerCase() || '';
-      return keywords.some((kw) => cat.includes(kw) || desc.includes(kw));
-    });
+  /* ---------- helpers ---------- */
+  const filterByKeywords = useCallback(
+    (keywords) =>
+      allProducts.filter((p) => {
+        const cat = normalize(p.Categoria);
+        const desc = normalize(p.Descripcion);
+        return keywords.some((kw) => cat.includes(kw) || desc.includes(kw));
+      }),
+    [allProducts]
+  );
 
-  const applyFilter = (categoryId) => {
-    switch (categoryId) {
-      case 'hombre':
-        setFilteredProducts(filterByKeywords(['hombre', 'masculino', 'caballero']));
-        break;
-      case 'mujer':
-        setFilteredProducts(filterByKeywords(['mujer', 'femenino', 'dama']));
-        break;
-      case 'nino':
-        setFilteredProducts(filterByKeywords(['niño', 'nino', 'niña', 'nina', 'infantil']));
-        break;
-      case 'tecnologia':
-        setFilteredProducts(filterByKeywords(['tecnolog', 'electron', 'digital', 'smart']));
-        break;
-      case 'variedades':
-        setFilteredProducts(filterByKeywords(['variedade', 'variedad', 'otros', 'general']));
-        break;
-      case 'hogar':
-        setFilteredProducts(filterByKeywords(['hoga', 'casa', 'hogar', 'cocina', 'muebles']));
-        break;
-      case 'todos':
-      default:
+  const applyFilter = useCallback(
+    (cat) => {
+      if (cat === 'todos') {
         setFilteredProducts(allProducts);
-    }
-  };
+      } else {
+        setFilteredProducts(filterByKeywords(KEYWORDS[cat] || []));
+      }
+    },
+    [allProducts, filterByKeywords, setFilteredProducts]
+  );
 
-  // ------------ manejador principal ------------
-  const handleSelectCategory = (categoryId) => {
-    if (categoryId === selectedCategory) return;          // ya está activa
-    setSelectedCategory(categoryId);
-    applyFilter(categoryId);
-    onCategoryChange?.(categoryId);                       // ✅ avisa al padre
-  };
+  /* ---------- handler ---------- */
+  const handleSelectCategory = useCallback(
+    (cat) => {
+      if (cat === selectedCategory) return; // ya activa
+      setSelectedCategory(cat);
+      applyFilter(cat);
+      onCategoryChange?.(cat);
+    },
+    [selectedCategory, applyFilter, onCategoryChange]
+  );
 
-  // ------------ efecto inicial ------------
+  /* ---------- efecto inicial y cada vez que cambien productos ---------- */
   useEffect(() => {
-    if (allProducts.length > 0) {
-      applyFilter(selectedCategory);                      // filtro inicial
-      onCategoryChange?.(selectedCategory);               // avisa al padre
+    if (allProducts.length) {
+      applyFilter(selectedCategory);
+      onCategoryChange?.(selectedCategory);
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [allProducts]);
+  }, [allProducts, selectedCategory, applyFilter, onCategoryChange]);
 
   return (
     <CategorySelector

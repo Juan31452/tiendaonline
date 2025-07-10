@@ -6,7 +6,7 @@ const EstadoResumen = ({ products, estados = [] }) => {
     ).length;
 
   return (
-    <div className="text-center text-muted mb-4">
+    <div  className="d-flex justify-content-center flex-wrap gap-3 text-muted mb-4">
       {estados.map((estado) => (
         <p className="mb-1" key={estado}>
           {estado.charAt(0).toUpperCase() + estado.slice(1)}:{' '}

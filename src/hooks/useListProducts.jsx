@@ -4,24 +4,27 @@ import axios from 'axios';
 import ApiRoutes from '../api/ApiRoute';
 import toArray from '../utils/toArray';
 
-const useListProducts= () => {
-  const [productos, setProductos]   = useState([]);
+const useListProducts = () => {
+  const [productos, setProductos] = useState([]);
   const [pagination, setPagination] = useState({ totalPages: 1, totalItems: 0 });
-  const [loading, setLoading]       = useState(false);
-  const [error, setError]           = useState('');
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState('');
 
-  /** Pide una página y rellena el estado */
-  const fetchPage = useCallback(async (pagina = 1) => {
+  const fetchPage = useCallback(async (pagina = 1, categoria = '', estado = '') => {
     setLoading(true);
     setError('');
 
     try {
       const { data } = await axios.get(ApiRoutes.listproductsRemote, {
-        params : { page: pagina },
+        params: { 
+          categoria,
+          estado,
+          page: pagina,
+        },
         headers: { Accept: 'application/json' },
       });
 
-      setProductos(toArray(data)); // <- siempre array
+      setProductos(toArray(data));
       setPagination(
         data.pagination ?? { totalPages: 1, totalItems: data.length }
       );
@@ -34,6 +37,7 @@ const useListProducts= () => {
   }, []);
 
   return { productos, pagination, loading, error, fetchPage };
-}
-
+};
+// Este hook permite listar productos con paginación y filtros opcionales
+// Puedes usarlo en cualquier componente que necesite mostrar una lista de productos
 export default useListProducts;
