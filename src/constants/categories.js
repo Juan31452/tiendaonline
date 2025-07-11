@@ -1,9 +1,9 @@
 export const categories = [
-  { id: '', name: 'Todos' }, // '' = sin filtro
-  { id: 'Hombre', name: 'Hombre' },
-  { id: 'Mujer', name: 'Mujer' },
-  { id: 'Nino', name: 'Niños' },
-  { id: 'Tecnologia', name: 'Tecnología' },
-  { id: 'Variedades', name: 'Variedades' },
-  { id: 'Hogar', name: 'Hogar' }
+   { id: 'hombre', name: 'Hombre' },
+  { id: 'mujer', name: 'Mujer' },
+  { id: 'nino', name: 'Niños' },
+  { id: 'tecnologia', name: 'Tecnología' },
+  { id: 'hogar', name: 'Hogar' },
+  { id: 'variedades', name: 'Variedades' },
+  { id: 'todos', name: 'Todas' },
 ];

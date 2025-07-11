@@ -59,27 +59,42 @@ const ProductosTable = ({ productos, onEdit }) => {
           {rows.map((p, idx) => (
             <tr key={p.IdProducto ?? p._id ?? idx}>
               <td>{p.IdProducto}</td>
-              <td className="text-truncate" style={{ maxWidth: 200 }}>
-                {p.Descripcion}
+
+              <TdTruncado value={p.Descripcion} maxWidth={200} />
+              <TdTruncado value={p.Imagen} maxWidth={100} />
+              <td>${p.Precio?.toLocaleString() ?? '—'}</td>
+
+              <TdTruncado value={p.Color} maxWidth={100} />
+              <TdTruncado value={p.Talla} maxWidth={100} />
+              
+              <td>{p.Categoria ?? '—'}</td>
+              <td>{p.Cantidad ?? 0}</td>
+              <td>{p.Estado ?? '—'}</td>
+
+              <TdTruncado value={formatearFecha(p.createdAt)} maxWidth={100} />
+              <TdTruncado value={formatearFecha(p.updatedAt)} maxWidth={100} />
+
+              <td>
+                <EditButton onClick={() => onEdit?.(p)} />
               </td>
-              <td className="text-truncate" style={{ maxWidth: 200 }}>{p.Imagen}</td>
-              <td>${p.Precio?.toLocaleString()}</td>
-              <td>{p.Color}</td>
-              <td>{p.Talla}</td>
-              <td>{p.Categoria}</td>
-              <td>{p.Cantidad}</td>
-              <td>{p.Estado}</td>
-              <td>{formatearFecha(p.createdAt)}</td>
-              <td>{formatearFecha(p.updatedAt)}</td>
-              <td><EditButton onClick={() => onEdit && onEdit(p)}  /></td>
             </tr>
           ))}
-        </tbody>
+       </tbody>
       </table>
     </div>
   </>
 );
 };
+
+const TdTruncado = ({ value, maxWidth = 100 }) => (
+  <td
+    className="text-truncate"
+    style={{ maxWidth }}
+    title={value ?? ''}
+  >
+    {value ?? '—'}
+  </td>
+);
 
 export default ProductosTable;
 

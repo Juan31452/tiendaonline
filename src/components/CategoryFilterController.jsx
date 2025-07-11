@@ -1,76 +1,77 @@
-// src/components/CategoryFilterController.jsx
-import React, {
-  useState,
-  useEffect,
-  useCallback,
-} from 'react';
+// components/CategoryFilterController.jsx
+import React, { useState, useEffect } from 'react';
 import CategorySelector from './Buttons/CategorySelector';
 
-/** Diccionario de categorías → palabras clave */
-const KEYWORDS = {
-  hombre:     ['hombre', 'masculino', 'caballero'],
-  mujer:      ['mujer', 'femenino', 'dama'],
-  nino:       ['niño', 'nino', 'niña', 'nina', 'infantil'],
-  tecnologia: ['tecnolog', 'electron', 'digital', 'smart'],
-  variedades: ['variedade', 'variedad', 'otros', 'general'],
-  hogar:      ['hogar', 'casa', 'cocina', 'muebles'],
-  todos:      [], // se gestiona aparte
-};
-
-/** Normaliza tildes y lowercase */
-const normalize = (str = '') =>
-  str
-    .toLowerCase()
-    .normalize('NFD')
-    .replace(/[\u0300-\u036f]/g, '');
-
+/**
+ * Filtra productos por categoría (palabras clave) y avisa al padre
+ * cuál es la categoría seleccionada.
+ */
 const CategoryFilterController = ({
   allProducts,
   setFilteredProducts,
-  onCategoryChange,
+  onCategoryChange, // ✅ opcional: el padre se entera del cambio
 }) => {
   const [selectedCategory, setSelectedCategory] = useState('todos');
 
-  /* ---------- helpers ---------- */
-  const filterByKeywords = useCallback(
-    (keywords) =>
-      allProducts.filter((p) => {
-        const cat = normalize(p.Categoria);
-        const desc = normalize(p.Descripcion);
-        return keywords.some((kw) => cat.includes(kw) || desc.includes(kw));
-      }),
-    [allProducts]
-  );
+  // ------------ helpers ------------
+  const filterByKeywords = (keywords) =>
+    allProducts.filter((product) => {
+      const cat  = product.Categoria?.toLowerCase()   || '';
+      const desc = product.Descripcion?.toLowerCase() || '';
+      return keywords.some((kw) => cat.includes(kw) || desc.includes(kw));
+    });
 
-  const applyFilter = useCallback(
-    (cat) => {
-      if (cat === 'todos') {
+  const applyFilter = (categoryId) => {
+    switch (categoryId) {
+      case 'hombre':
+        setFilteredProducts(filterByKeywords(['hombre', 'masculino', 'caballero']));
+        break;
+      case 'mujer':
+        setFilteredProducts(filterByKeywords(['mujer', 'femenino', 'dama']));
+        break;
+      case 'nino':
+        setFilteredProducts(filterByKeywords(['niño', 'nino', 'niña', 'nina', 'infantil']));
+        break;
+      case 'tecnologia':
+        setFilteredProducts(filterByKeywords(['tecnolog', 'electron', 'digital', 'smart']));
+        break;
+      case 'variedades':
+        setFilteredProducts(filterByKeywords(['variedade', 'variedad', 'otros', 'general']));
+        break;
+      case 'hogar':
+        setFilteredProducts(filterByKeywords(['hoga', 'casa', 'hogar', 'cocina', 'muebles']));
+        break;
+      case 'todos':
+      default:
         setFilteredProducts(allProducts);
-      } else {
-        setFilteredProducts(filterByKeywords(KEYWORDS[cat] || []));
-      }
-    },
-    [allProducts, filterByKeywords, setFilteredProducts]
-  );
-
-  /* ---------- handler ---------- */
-  const handleSelectCategory = useCallback(
-    (cat) => {
-      if (cat === selectedCategory) return; // ya activa
-      setSelectedCategory(cat);
-      applyFilter(cat);
-      onCategoryChange?.(cat);
-    },
-    [selectedCategory, applyFilter, onCategoryChange]
-  );
-
-  /* ---------- efecto inicial y cada vez que cambien productos ---------- */
-  useEffect(() => {
-    if (allProducts.length) {
-      applyFilter(selectedCategory);
-      onCategoryChange?.(selectedCategory);
     }
-  }, [allProducts, selectedCategory, applyFilter, onCategoryChange]);
+  };
+
+  // ------------ manejador principal ------------
+  const handleSelectCategory = (categoryId) => {
+    if (categoryId === selectedCategory) return; // Ya está activa
+    setSelectedCategory(categoryId);
+    applyFilter(categoryId);
+    onCategoryChange?.(categoryId);
+  };
+
+  // ------------ efecto inicial ------------
+  useEffect(() => {
+    if (allProducts.length > 0) {
+    console.log('🧃 Productos recibidos en CategoryFilterController:', allProducts.length);
+    console.table(
+      allProducts.map(p => ({
+        Id: p.IdProducto,
+        Categoria: p.Categoria,
+        Descripcion: p.Descripcion?.slice(0, 50), // cortamos por si es muy larga
+      }))
+    );
+
+    applyFilter(selectedCategory); // filtro inicial
+    onCategoryChange?.(selectedCategory);
+  }
+}, [allProducts]);
+  // ------------ renderizado ------------
 
   return (
     <CategorySelector
