@@ -66,9 +66,9 @@
     "Estado": "Disponible"
   },
   {
-    "Descripcion": "Conjunto de 5 piezas de calzoncillos ajustados y cómodos para hombres - transpirables, elásticos, secado rápido, cintura elástica, boxers largos para ejercicio en primavera, deportes y uso diario - suaves, ligeros y absorbentes de humedad,Precio por unidad $13.000",
+    "Descripcion": "Conjunto de 4 piezas de calzoncillos ajustados y cómodos para hombres - transpirables, elásticos, secado rápido, cintura elástica, boxers largos para ejercicio en primavera, deportes y uso diario - suaves, ligeros y absorbentes de humedad,Precio por unidad $13.000",
     "Cantidad": 4,
-    "Precio": 39000,
+    "Precio": 37000,
     "Color": "Rosado",
     "Talla": "M",
     "IdProducto": "30.6",
@@ -79,7 +79,7 @@
   {
     "Descripcion": "Conjunto de 4 piezas de calzoncillos ajustados y cómodos para hombres - transpirables, elásticos, secado rápido, cintura elástica, boxers largos para ejercicio en primavera, deportes y uso diario - suaves, ligeros y absorbentes de humedad,Precio por unidad $7.000",
     "Cantidad": 4,
-    "Precio": 28000,
+    "Precio": 26000,
     "Color": "Multicolor",
     "Talla": "L",
     "IdProducto": "30.7",
@@ -97,6 +97,93 @@
     "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1752323978/pedido30/Img8.webp",
     "Categoria": "Mujer",
     "Estado": "Disponible"
+  },
+  {
+    "Descripcion": "Sujetador Bandeau Sin Tirantes Negro con Cierre de Gancho y Ojo Frontal - Lencería Sexy para Mujeres, Estilo Push-Up, Mezcla de Poliéster y Elastano, Solo Lavado a Mano, Sin Aros, Tejido Suave, Perfecto para Ocasiones Casuales o Formales, Lencería Casual | Sujetador Bandeau Sexy | Tejido de Elastano",
+    "Cantidad": 1,
+    "Precio": 18000,
+    "Color": "Negro",
+    "Talla": "M-L",
+    "IdProducto": "30.9",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1752343949/pedido30/img9.webp",
+    "Categoria": "Mujer",
+    "Estado": "Disponible"
+  },
+  {
+    "Descripcion": "Calzoncillos Transpirables y Cómodos para Hombre 3pcs con Cinturilla de Letras a la Moda, Ideales para Deportes y Uso Casual, Ropa Interior Triangular, Montar Diariamente, Fitness, Regalo de Vacaciones,precio unidad $7.000",
+    "Cantidad": 1,
+    "Precio": 19000,
+    "Color": "Multicolor",
+    "Talla": "L",
+    "IdProducto": "30.10",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1752344433/pedido30/img10.jpg",
+    "Categoria": "Hombre",
+    "Estado": "Disponible"
+  },
+  {
+    "Descripcion": "EasyFave Sujetador de punto con diseño simple de corazón y letra para mujer",
+    "Cantidad": 1,
+    "Precio": 13000,
+    "Color": "Negro",
+    "Talla": "L",
+    "IdProducto": "30.11",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1752344922/pedido30/img11.jpg",
+    "Categoria": "Mujer",
+    "Estado": "Disponible"
+  },
+  {
+    "Descripcion": "4-Pack Bragas Sexy Sin Costuras para Mujeres, con Spandex, Encaje Transpirable, Cintura Alta, Comodidad Deportiva, Ropa Interior Invisible, Tela de Punto de 120gsm, Colores Variados,precio por unidad $5.000",
+    "Cantidad": 4,
+    "Precio": 18000,
+    "Color": "Variado",
+    "Talla": "M",
+    "IdProducto": "30.12",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1752345204/pedido30/img12.webp",
+    "Categoria": "Mujer",
+    "Estado": "Disponible"
+  },
+  {
+    "Descripcion": "Conjunto de lencería acanalada elegante para mujer, estilo americano informal cómodo, conjunto de 2 piezas de sujetador y braga, burdeos, tejido transpirable, tirantes ajustables, ajuste elástico.",
+    "Cantidad": 1,
+    "Precio": 20000,
+    "Color": "Morado",
+    "Talla": "L",
+    "IdProducto": "30.13",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1752345830/pedido30/img13.webp",
+    "Categoria": "Mujer",
+    "Estado": "Disponible"
+  },
+  {
+    "Descripcion": "4 bragas de encaje floral sin costuras, sexy, cómodas, transpirables, elásticas, bragas íntimas, lencería y ropa interior para mujer, precio por unidad $7.000",
+    "Cantidad": 4,
+    "Precio": 25000,
+    "Color": "Multicolor",
+    "Talla": "XL",
+    "IdProducto": "30.14",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1752346165/pedido30/img14.webp",
+    "Categoria": "Mujer",
+    "Estado": "Disponible"
+  },
+  {
+    "Descripcion": "Falda con ribete de volantes sólido sin costuras, cómoda y deportiva, enagua transpirable, ropa interior y moldeadora para mujer",
+    "Cantidad": 1,
+    "Precio": 21000,
+    "Color": "Beige claro",
+    "Talla": "M",
+    "IdProducto": "30.15",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1752346321/pedido30/img15.webp",
+    "Categoria": "Mujer",
+    "Estado": "Disponible"
+  },
+  {
+    "Descripcion": "Falda de Mujer Elegante y Cómoda con Detalle de Encaje Contraste, Color Sólido Ajustado a la Perfección Largo Medio Muslo Vestido Interior para Mujer Adulta, Ropa Versátil|Falda Ajustada Elegante|Coser Intrincado",
+    "Cantidad": 1,
+    "Precio": 20000,
+    "Color": "Blanco",
+    "Talla": "M",
+    "IdProducto": "30.16",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1752346615/pedido30/img16.webp",
+    "Categoria": "Mujer",
+    "Estado": "Disponible"
   }
-
 ]
