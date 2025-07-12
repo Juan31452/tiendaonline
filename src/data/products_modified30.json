@@ -89,8 +89,8 @@
   },
   {
     "Descripcion": "5 bragas de encaje floral sin costuras, sexy, cómodas, transpirables, elásticas, bragas íntimas, lencería y ropa interior para mujer,Precio por unidad $6.500",
-    "Cantidad": 4,
-    "Precio": 25000,
+    "Cantidad": 5,
+    "Precio": 31000,
     "Color": "Multicolor",
     "Talla": "L",
     "IdProducto": "30.8",
@@ -154,9 +154,9 @@
     "Estado": "Disponible"
   },
   {
-    "Descripcion": "4 bragas de encaje floral sin costuras, sexy, cómodas, transpirables, elásticas, bragas íntimas, lencería y ropa interior para mujer, precio por unidad $7.000",
-    "Cantidad": 4,
-    "Precio": 25000,
+    "Descripcion": "3 bragas de encaje floral sin costuras, sexy, cómodas, transpirables, elásticas, bragas íntimas, lencería y ropa interior para mujer, precio por unidad $6.500",
+    "Cantidad": 3,
+    "Precio": 18000,
     "Color": "Multicolor",
     "Talla": "XL",
     "IdProducto": "30.14",
@@ -185,5 +185,72 @@
     "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1752346615/pedido30/img16.webp",
     "Categoria": "Mujer",
     "Estado": "Disponible"
+  },
+  {
+    "Descripcion": "Conjunto de 2 piezas de brasier sin aro informal con estampado de leopardo para damas",
+    "Cantidad": 1,
+    "Precio": 23000,
+    "Color": "Poligromo",
+    "Talla": "L",
+    "IdProducto": "30.17",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1752347440/pedido30/img17.jpg",
+    "Categoria": "Mujer",
+    "Estado": "Disponible"
+  },
+  {
+    "Descripcion": "5 piezas Bragas bikini de encaje sexy para mujer, ropa interior transpirable cómoda de cintura V en múltiples colores,precio por unidad $6.500",
+    "Cantidad": 5,
+    "Precio": 31000,
+    "Color": "Variado",
+    "Talla": "L",
+    "IdProducto": "30.18",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1752348155/pedido30/img18.jpg",
+    "Categoria": "Mujer",
+    "Estado": "Disponible"
+  },
+  {
+    "Descripcion": "3 Pares de Calcetines de Mujer Transpirables de Malla, Poliéster 98% Elastano 2% Tejido de Punto, Color Sólido, Moda Casual, Absorbentes de Sudor, Calcetines Cortos de Primavera/Verano, Lavar a Mano/Limpiar en Seco, Peso 290g/m²,precio por unidad $5.000",
+    "Cantidad": 3,
+    "Precio": 15000,
+    "Color": "Variado",
+    "Talla": "talla única",
+    "IdProducto": "30.19",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1752353106/pedido30/img19.webp",
+    "Categoria": "Mujer",
+    "Estado": "Disponible"
+  },
+  {
+    "Descripcion": "3 pieza de ropa interior larga y cómoda para hombres - transpirable, elástica, de secado rápido, cintura elástica, deporte y ocio, correr, boxeador de fitness - suave y ligera,precio por unidad $13.000",
+    "Cantidad": 3,
+    "Precio": 39000,
+    "Color": "Negro",
+    "Talla": "M",
+    "IdProducto": "30.20",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1752353106/pedido30/Img20.webp",
+    "Categoria": "Mujer",
+    "Estado": "Disponible"
+  },
+  {
+    "Descripcion": "4 bragas de encaje floral sin costuras, sexy, cómodas, transpirables, elásticas, bragas íntimas, lencería y ropa interior para mujer,precio por unidad $6.500",
+    "Cantidad": 4,
+    "Precio": 24500,
+    "Color": "Multicolor",
+    "Talla": "M",
+    "IdProducto": "30.21",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1752353106/pedido30/img21.webp",
+    "Categoria": "Mujer",
+    "Estado": "Disponible"
+  },
+  {
+    "Descripcion": "5 bragas sin costuras con estampado integral, bragas íntimas elásticas, cómodas y transpirables, lencería y ropa interior para mujer,precio por unidad $6.500",
+    "Cantidad": 5,
+    "Precio": 31000,
+    "Color": "Mezcla de color",
+    "Talla": "XL",
+    "IdProducto": "30.22",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1752353106/pedido30/img22.webp",
+    "Categoria": "Mujer",
+    "Estado": "Disponible"
   }
+
 ]
