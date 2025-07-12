@@ -140,7 +140,7 @@
     "IdProducto": "2.13",
     "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1749657310/pedido2/img9.webp",
     "Categoria": "Mujer",
-    "Estado": "Vendido"
+    "Estado": "Separado"
   },
   {
     "Descripcion": "Camiseta Elegante con Estampado Floral [Elección Popular] - Mezcla de Poliéster y Elastano, Cuello Redondo, Lavable a Máquina, Estampado de Flores",
@@ -151,7 +151,7 @@
     "IdProducto": "2.14",
     "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1749657310/pedido2/img9.webp",
     "Categoria": "Mujer",
-    "Estado": "Disponible"
+    "Estado": "Vendido"
   },
   {
     "Descripcion": "Camisa Casual Estampada de Manga Larga para Mujer - Poliéster, Lavable a Máquina, Tejido No Elástico",
