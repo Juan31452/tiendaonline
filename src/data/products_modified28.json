@@ -8,7 +8,7 @@
     "IdProducto": "28.1",
     "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750967199/pedido28/img1.webp",
     "Categoria": "Niño",
-    "Estado": "Nuevo"
+    "Estado": "Disponible"
   },
   {
     "Descripcion": "Juego de 2 pinzas para el cabello estilo punk Y2K, forma de gota hueca con lentejuelas, horquillas brillantes de plástico para mujeres y adolescentes, regalo de accesorios para el cabello llamativos para fiestas de cumpleaños",
@@ -19,7 +19,7 @@
     "IdProducto": "28.2",
     "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750967199/pedido28/img2.webp",
     "Categoria": "Mujer",
-    "Estado": "Nuevo"
+    "Estado": "Disponible"
   },
   {
     "Descripcion": "1pc Cable de carga extendido duradero para cámaras de seguridad y CCTV, 1m-14m USB-A a Micro-USB Cordón de alimentación, tensión de funcionamiento de 5V, no requiere batería",
@@ -30,7 +30,7 @@
     "IdProducto": "28.3",
     "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750967199/pedido28/img3.webp",
     "Categoria": "Tecnología",
-    "Estado": "Nuevo"
+    "Estado": "Disponible"
   },
   {
     "Descripcion": "Herramienta removedora de pasadores de reloj URTUE Mini, liberación rápida ajustable, metal y plástico, para todas las estaciones, no necesita electricidad, negra",
@@ -41,7 +41,7 @@
     "IdProducto": "28.4",
     "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750967199/pedido28/img4.webp",
     "Categoria": "Variedades",
-    "Estado": "Nuevo"
+    "Estado": "Disponible"
   },
   {
     "Descripcion": "Alicates multifunción de precisión de 2mm para relojes, cinturones, cordones de zapato y sandalias - Herramienta de fabricación de acero al carbono duradera",
@@ -52,7 +52,7 @@
     "IdProducto": "28.5",
     "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750967199/pedido28/img5.webp",
     "Categoria": "Variedades",
-    "Estado": "Nuevo"
+    "Estado": "Disponible"
   },
   {
     "Descripcion": "4 Piezas de Horquillas Elegantes con Forma de Corazón Brillante y Pedrería para Flequillo en Colores Mixtos.Precio U. $2500 c/u",
@@ -63,7 +63,7 @@
     "IdProducto": "28.6",
     "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750967199/pedido28/img6.webp",
     "Categoria": "Variedades",
-    "Estado": "Nuevo"
+    "Estado": "Disponible"
   },
   {
     "Descripcion": "Pinza para el cabello con pedrería y perlas falsas estilo Y2K, pinza para cola de caballo alta, accesorio para el cabello en metal dorado",
@@ -74,6 +74,6 @@
     "IdProducto": "28.7",
     "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750967199/pedido28/img7.webp",
     "Categoria": "Variedades",
-    "Estado": "Nuevo"
+    "Estado": "Disponible"
   }
 ]
