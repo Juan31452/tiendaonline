@@ -8,6 +8,7 @@ import ProductCard from '../components/ProductCard';
 import EditProductModal from '../components/Modals/EditProductModal';
 import Category from '../components/Buttons/Category';
 import RadioOptionsHorizontal from '../components/Buttons/RadioOptionsHorizontal';
+import Loading                from '../components/Loading';
 
 const ESTADOS = ['disponible', 'separado', 'vendido', 'no se vende'];
 
@@ -32,7 +33,7 @@ const ProductListView = () => {
   useEffect(() => {
     const categoriaParam = selectedCategory || '';
     const estadoParam = productState.charAt(0).toUpperCase() + productState.slice(1); // capitaliza
-
+    
   fetchPage(currentPage, categoriaParam, estadoParam);
 }, [currentPage, selectedCategory, productState, fetchPage]);
 
@@ -45,7 +46,8 @@ const ProductListView = () => {
     openModal(product);
   };
 
-  if (loading) return <p>Cargando…</p>;
+  if (loading) return <Loading fullScreen />;
+
   if (error) return <p>❌ Error: {error}</p>;
 
   return (

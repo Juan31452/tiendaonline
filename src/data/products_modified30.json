@@ -64,7 +64,39 @@
     "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1752303555/pedido30/Img5.webp",
     "Categoria": "Mujer",
     "Estado": "Disponible"
+  },
+  {
+    "Descripcion": "Conjunto de 5 piezas de calzoncillos ajustados y cómodos para hombres - transpirables, elásticos, secado rápido, cintura elástica, boxers largos para ejercicio en primavera, deportes y uso diario - suaves, ligeros y absorbentes de humedad,Precio por unidad $13.000",
+    "Cantidad": 4,
+    "Precio": 39000,
+    "Color": "Rosado",
+    "Talla": "M",
+    "IdProducto": "30.6",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1752316081/pedido30/Img6.webp",
+    "Categoria": "Hombre",
+    "Estado": "Disponible"
+  },
+  {
+    "Descripcion": "Conjunto de 4 piezas de calzoncillos ajustados y cómodos para hombres - transpirables, elásticos, secado rápido, cintura elástica, boxers largos para ejercicio en primavera, deportes y uso diario - suaves, ligeros y absorbentes de humedad,Precio por unidad $7.000",
+    "Cantidad": 4,
+    "Precio": 28000,
+    "Color": "Multicolor",
+    "Talla": "L",
+    "IdProducto": "30.7",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1752317607/pedido30/Img7.jpg",
+    "Categoria": "Hombre",
+    "Estado": "Disponible"
+  },
+  {
+    "Descripcion": "5 bragas de encaje floral sin costuras, sexy, cómodas, transpirables, elásticas, bragas íntimas, lencería y ropa interior para mujer,Precio por unidad $6.500",
+    "Cantidad": 4,
+    "Precio": 25000,
+    "Color": "Multicolor",
+    "Talla": "L",
+    "IdProducto": "30.8",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1752323978/pedido30/Img8.webp",
+    "Categoria": "Mujer",
+    "Estado": "Disponible"
   }
-
 
 ]
