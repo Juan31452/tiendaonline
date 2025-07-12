@@ -46,9 +46,9 @@ const ListProducts = () => {
 
   /* -------- UI -------- */
   return (
-    <div style={{ padding: 20 }}>
+    <div style={{ padding: 80 }}>
       <h2>Productos — página {page}/{pagination.totalPages}</h2>
-
+       
       {loadingList && <Loading text="Cargando productos" />}
       {saving      && <Loading text="Guardando cambios" fullScreen />}
       {error      &&  <p style={{ color: 'crimson' }}>{error}</p>}

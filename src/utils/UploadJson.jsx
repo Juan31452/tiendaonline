@@ -2,12 +2,14 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import ApiRoutes from '../api/ApiRoute';
 import ProductosTable from '../components/ProductosTable';
+import ModalMensaje from '../components/Modals/ModalMensaje';
 
 const CargarJsonDesdeArchivos = () => {
   const [files, setFiles] = useState([]);
   const [productos, setProductos] = useState([]);
   const [mensaje, setMensaje] = useState('');
   const [loading, setLoading] = useState(false);          // ← ① estado loading
+  const [mostrarModal, setMostrarModal] = useState(false);
 
   const handleFileChange = async (e) => {
     const selectedFiles = Array.from(e.target.files);
@@ -39,25 +41,42 @@ const CargarJsonDesdeArchivos = () => {
   };
 
   const enviarProductos = async () => {
-    setLoading(true);                                     // ← ② activa loading
-    setMensaje('');
+  if (productos.length === 0) {
+    setMensaje('No hay productos para enviar');
+    return;
+  }
 
-    try {
+  setLoading(true);
+  setMensaje('');
+
+  try {
+    console.log('📦 Productos a enviar:', productos);
+
     const { data } = await axios.post(
-      ApiRoutes.NewsProductsRemote, // Cambia a ApiRoutes.listproductsLocal si es necesario ',
-      productos,                            // payload
-      { headers: { 'Content-Type': 'application/json' } }
+      ApiRoutes.NewsProductsRemote,
+      productos, // 👈 ENVÍA ARRAY DIRECTO
+      {
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      }
     );
+
     console.log('✅ OK:', data);
     setMensaje(data.mensaje || 'Productos insertados correctamente');
+    setMostrarModal(true); // 🎉 mostrar modal
+    //setFiles([]);
+    //setProductos([]);
   } catch (error) {
     console.error('❌ Error al enviar:', error);
-    const msg = error.response?.data?.error || 'Error al insertar productos';
+    setMostrarModal(true); // 🎉 mostrar modal
+    const msg =
+      error.response?.data?.error || 'Error al insertar productos';
     setMensaje(msg);
   }
-  setFiles([]); // Limpiar archivos después de enviar
-  setProductos([]); // Limpiar productos después de enviar
-  };
+
+  setLoading(false);
+};
 
   return (
 <div style={{ padding: '20px' }}>
@@ -84,8 +103,11 @@ const CargarJsonDesdeArchivos = () => {
 
       {loading && <p style={{ marginTop: '10px' }}>Procesando… 🚀</p>}
 
-      {mensaje && !loading && (
-        <p style={{ marginTop: '10px', color: 'green' }}>{mensaje}</p>
+      {mostrarModal && (
+        <ModalMensaje
+          mensaje={mensaje}
+          onClose={() => setMostrarModal(false)}
+        />
       )}
     </div>
   );
