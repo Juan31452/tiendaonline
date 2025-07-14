@@ -1,9 +1,9 @@
 export const categories = [
-   { id: 'hombre', name: 'Hombre' },
-  { id: 'mujer', name: 'Mujer' },
-  { id: 'nino', name: 'Niños' },
-  { id: 'tecnologia', name: 'Tecnología' },
-  { id: 'hogar', name: 'Hogar' },
-  { id: 'variedades', name: 'Variedades' },
+  { id: 'Hombre', name: 'Hombre' },
+  { id: 'Mujer', name: 'Mujer' },
+  { id: 'Niños', name: 'Niños' },
+  { id: 'Tecnología', name: 'Tecnología' },
+  { id: 'Hogar', name: 'Hogar' },
+  { id: 'Variedades', name: 'Variedades' },
   { id: 'todos', name: 'Todas' },
 ];

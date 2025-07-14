@@ -1,13 +1,18 @@
 import PropTypes from 'prop-types';
+import { useEffect } from 'react';
 import { categories } from '../../constants/categories';
+//import { useEffect } from 'react';
 
 const Category = ({ activeCategory, onSelect, products = [] }) => {
-  console.log('Products:', products);
-  // Filtra los productos por categoría y estado
   const countByCategoryAndState = (categoryId, state) =>
     products.filter(
       (p) => p.category === categoryId && p.state?.toLowerCase() === state.toLowerCase()
     ).length;
+
+  useEffect(() => {
+    console.log(">>> products dentro de Category", products);
+    console.log("Categoría activa", activeCategory);
+  }, [products]);
 
   return (
     <div className="d-flex overflow-auto gap-2 py-1">

@@ -1,6 +1,6 @@
 export const productStates  = [
-    { value: 'disponible', label: 'Disponible' },
-    { value: 'separado', label: 'Separado' },
-    { value: 'vendido', label: 'Vendido' },
-    { value: 'nuevo', label: 'Nuevo' },
+    { value: 'Disponible', label: 'Disponible' },
+    { value: 'Separado', label: 'Separado' },
+    { value: 'Vendido', label: 'Vendido' },
+    { value: 'Nuevo', label: 'Nuevo' },
 ];

@@ -1,125 +1,114 @@
-import { useEffect, useState } from 'react';
-import useListProducts from '../hooks/useListProducts';
-import useEditProduct from '../hooks/useEditProduct';
-
-import Pagination from '../components/Pagination';
-import EstadoResumen from '../components/EstadoResumen';
-import ProductCard from '../components/ProductCard';
-import EditProductModal from '../components/Modals/EditProductModal';
+import { useState, useEffect } from 'react';
+import useConsultas from '../hooks/useConsultas';
 import Category from '../components/Buttons/Category';
-import RadioOptionsHorizontal from '../components/Buttons/RadioOptionsHorizontal';
-import Loading                from '../components/Loading';
-
-const ESTADOS = ['disponible', 'separado', 'vendido', 'no se vende'];
+import ProductCard from '../components/ProductCard';
+import Loading from '../components/Loading';
+import PaginationControls from '../components/Buttons/PaginationControls';
+import EditProductModal from '../components/Modals/EditProductModal';
+import RadioOptionsHorizontal from '../components/Buttons/RadioOptionsHorizontal'; // 👈 importado
 
 const ProductListView = () => {
-  const { productos, pagination, loading, error, fetchPage } = useListProducts();
-
-  const [currentPage, setCurrentPage] = useState(1);
-  const [selectedCategory, setSelectedCategory] = useState('');
-  const [productState, setProductState] = useState('disponible');
+  const [activeCategory, setActiveCategory] = useState('todos');
+  const [activeEstado, setActiveEstado] = useState('');
+  const [selectedProduct, setSelectedProduct] = useState(null);
+  const [showEditModal, setShowEditModal] = useState(false);
 
   const {
-    productSel,
-    showModal: showEditModal,
-    loading: saving,
-    error: saveError,
-    openModal,
-    closeModal,
-    saveChanges,
-  } = useEditProduct();
+    productos,
+    pagination,
+    loading,
+    error,
+    fetchPage
+  } = useConsultas();
 
-  // 👇 Fetch dinámico según filtros
+  // Ejecutar cada vez que cambie categoría o estado
   useEffect(() => {
-    const categoriaParam = selectedCategory || '';
-    const estadoParam = productState.charAt(0).toUpperCase() + productState.slice(1); // capitaliza
-    
-  fetchPage(currentPage, categoriaParam, estadoParam);
-}, [currentPage, selectedCategory, productState, fetchPage]);
+    fetchPage(1, 100, activeCategory, activeEstado);
+  }, [activeCategory, activeEstado]);
 
-  const handleCategorySelect = (categoryId) => {
-    setSelectedCategory(categoryId);
-    setCurrentPage(1);
+  const handleCategoryChange = (newCategory) => {
+    setActiveCategory(newCategory);
+  };
+
+  const handleEstadoChange = (estado) => {
+    setActiveEstado(estado);
   };
 
   const handleCardClick = (product) => {
-    openModal(product);
+    console.log('Ver producto', product);
   };
 
-  if (loading) return <Loading fullScreen />;
+  const openModal = (product) => {
+    setSelectedProduct(product);
+    setShowEditModal(true);
+  };
 
-  if (error) return <p>❌ Error: {error}</p>;
+  const closeModal = () => {
+    setSelectedProduct(null);
+    setShowEditModal(false);
+  };
 
   return (
-    <div className="container mt-4" style={{ paddingTop: '80px' }}>
-      <h2 className="text-center mb-2">Lista de Productos</h2>
+    <div className="container mt-3">
+      <h2>Lista de Productos</h2>
 
-      {/* Filtros activos */}
-      <p className="text-muted mb-2 text-center">
-        Filtro: <strong>{selectedCategory || 'Todas'}</strong> | Estado:{' '}
-        <strong>{productState}</strong>
-      </p>
-
-      {/* Estado */}
-      <RadioOptionsHorizontal
-        onChange={(value) => {
-          setProductState(value);
-          setCurrentPage(1);
-        }}
-        defaultValue={productState}
+      {/* Filtro por categoría */}
+      <Category
+        activeCategory={activeCategory}
+        onSelect={handleCategoryChange}
+        products={productos}
       />
 
-      {/* Categoría */}
-      <div className="mb-3">
-        <Category
-          activeCategory={selectedCategory}
-          onSelect={handleCategorySelect}
-          products={productos} // <=== aquí pasamos los productos filtrados
+      {/* Filtro por estado horizontal */}
+      <div className="my-3">
+        <RadioOptionsHorizontal
+          activeStatus={activeEstado}
+          onChange={handleEstadoChange}
         />
       </div>
 
-      {/* Paginación */}
-      <Pagination
-        currentPage={currentPage}
-        totalPages={pagination.totalPages}
-        onPageChange={setCurrentPage}
-      />
+      {loading && <Loading fullScreen={false} />}
+      {error && <p className="text-danger">{error}</p>}
 
-      {/* Resumen de estados */}
-      <EstadoResumen products={productos} estados={ESTADOS} />
+      {!loading && !error && (
+        <>
+          {/* Grilla de productos */}
+          <div className="row g-2">
+            {productos.map((p) => (
+              <ProductCard
+                key={p._id || p.IdProducto}
+                product={p}
+                onClick={() => handleCardClick(p)}
+                onEdit={() => openModal(p)}
+              />
+            ))}
+          </div>
 
-      {/* Productos */}
-      <div className="row g-2">
-        {productos.map((p) => (
-          <ProductCard
-            key={p._id || p.IdProducto}
-            product={p}
-            onClick={() => handleCardClick(p)}
-            onEdit={() => openModal(p)}
+          {/* Controles de paginación */}
+          <PaginationControls
+            pagination={pagination}
+            onPageChange={(newPage) =>
+              fetchPage(newPage, 100, activeCategory, activeEstado)
+            }
           />
-        ))}
-      </div>
-
-      {/* Paginación inferior */}
-      <Pagination
-        currentPage={currentPage}
-        totalPages={pagination.totalPages}
-        onPageChange={setCurrentPage}
-      />
+        </>
+      )}
 
       {/* Modal de edición */}
       <EditProductModal
         show={showEditModal}
         onHide={closeModal}
-        product={productSel}
-        onSave={(updated) => saveChanges(updated, () => fetchPage(currentPage, selectedCategory, productState))}
-        saving={saving}
-        error={saveError}
+        product={selectedProduct}
+        onSave={() => {
+          closeModal();
+          fetchPage(1, 100, activeCategory, activeEstado);
+        }}
       />
     </div>
   );
 };
 
 export default ProductListView;
+
 // Este componente lista productos con paginación, filtros por categoría y estado, y permite editar productos.
 // Utiliza hooks personalizados para manejar la lógica de negocio y componentes reutilizables para la UI
