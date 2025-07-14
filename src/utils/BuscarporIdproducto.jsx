@@ -1,43 +1,20 @@
 import { useState } from 'react';
-import axios from 'axios';
-import ApiRoutes from '../api/ApiRoute';
-import toArray from '../utils/toArray';
-import ModalDetalles from '../components/Modals/ModalDetalles';
+import useBuscarProductoPorId from '../hooks/useBuscarProductoPorId';
+import EditProductModal from '../components/Modals/EditProductModal';
 
 const BuscarPorIdproducto = () => {
-  const [id, setId]             = useState('');
-  const [resultado, setResultado] = useState(null);   // ← objeto o null
-  const [loading, setLoading]   = useState(false);
-  const [error, setError]       = useState('');
-  const [showModal, setShowModal] = useState(false);
+  const [id, setId] = useState('');
 
-  const handleBuscar = async () => {
-    if (!id.trim()) return;
+  const {
+    resultado,
+    loading,
+    error,
+    showModal,
+    buscarProducto,
+    cerrarModal,
+  } = useBuscarProductoPorId();
 
-    setLoading(true);
-    setError('');
-    setResultado(null);
-
-    try {
-      const { data } = await axios.get(`${ApiRoutes.BuscarporId}/${id.trim()}`);
-
-      const arr = toArray(data);        // → siempre array
-      const obj = arr[0] ?? null;       // primer elemento o null
-
-      if (obj) {
-        setResultado(obj);
-        setShowModal(true);             // 👈 abre modal
-        console.log('✅ Producto encontrado:', obj);
-      } else {
-        setError('Producto no encontrado');
-      }
-    } catch (err) {
-      console.error('❌ Buscar por ID:', err);
-      setError(err.response?.data?.error || 'Producto no encontrado');
-    } finally {
-      setLoading(false);
-    }
-  };
+  const handleBuscar = () => buscarProducto(id);
 
   return (
     <div style={{ marginBottom: 30 }}>
@@ -56,13 +33,17 @@ const BuscarPorIdproducto = () => {
 
       {error && <p style={{ color: 'crimson', marginTop: 10 }}>{error}</p>}
 
-      {/* Modal solo si hay producto */}
       {resultado && (
-        <ModalDetalles
-          product={resultado}           // objeto único
+        <EditProductModal
+          product={resultado}       // ← producto a editar
           show={showModal}
-          onHide={() => setShowModal(false)}
-        />
+          onHide={cerrarModal}
+          onSave={(updatedProduct) => {
+            // Aquí decides qué hacer con los datos guardados (ej: update UI o reenviar al backend)
+            console.log('💾 Producto actualizado:', updatedProduct);
+            cerrarModal(); // cierras el modal después de guardar
+    }}
+  />
       )}
     </div>
   );

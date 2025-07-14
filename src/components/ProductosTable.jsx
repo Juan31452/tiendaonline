@@ -25,7 +25,7 @@ const normalizarProductos = (input) => {
   return []; // no hay nada que mostrar
 };
 
-const ProductosTable = ({ productos, onEdit }) => {
+const ProductosTable = ({ productos,  onEdit}) => {
   const rows = normalizarProductos(productos);
 
   // DEBUG opcional

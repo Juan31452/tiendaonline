@@ -4,7 +4,10 @@ import WhatsAppButton from '../Buttons/WhatsAppButton';
 import ButtonClose from '../Buttons/ButtonClose';
 import EditButton from '../Buttons/EditButton';
 
-const ModalDetalles = ({ product, show, onHide }) => {
+const ModalDetalles = ({ product, show, onHide}) => {
+  
+  //const isLocalhost = window.location.hostname === 'localhost';
+
   if (!product) return null;
 
  
@@ -74,9 +77,9 @@ const ModalDetalles = ({ product, show, onHide }) => {
         <div className="d-flex flex-row justify-content-end align-items-center w-100 gap-2">
           <WhatsAppButton product={product} />
           
+         {/*<EditButton onClick={() => onEdit?.(product)} /> */
           
-
-          <ButtonClose onClick={onHide} />
+         <ButtonClose onClick={onHide} />} 
           
         </div>
 

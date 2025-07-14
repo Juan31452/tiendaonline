@@ -54,7 +54,7 @@ const ListProducts = () => {
       {error      &&  <p style={{ color: 'crimson' }}>{error}</p>}
       {saveError  &&  <p style={{ color: 'crimson' }}>{saveError}</p>}
 
-      <BuscarPorIdproducto />
+      <BuscarPorIdproducto  />
 
       <ProductosTable productos={productos} onEdit={openModal} />
 
