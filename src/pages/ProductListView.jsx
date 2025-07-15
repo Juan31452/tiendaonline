@@ -9,7 +9,7 @@ import RadioOptionsHorizontal from '../components/Buttons/RadioOptionsHorizontal
 
 const ProductListView = () => {
   const [activeCategory, setActiveCategory] = useState('todos');
-  const [activeEstado, setActiveEstado] = useState('');
+  const [activeEstado, setActiveEstado] = useState('Disponible');
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [showEditModal, setShowEditModal] = useState(false);
 
@@ -49,8 +49,9 @@ const ProductListView = () => {
   };
 
   return (
-    <div className="container mt-3">
-      <h2>Lista de Productos</h2>
+     <div className="container mt-4" style={{ paddingTop: '80px' }}>
+      <h2 className="text-center mb-2">Lista de Productos</h2>
+
 
       {/* Filtro por categoría */}
       <Category

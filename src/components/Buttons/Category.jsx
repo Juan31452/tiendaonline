@@ -5,21 +5,29 @@ import { categories } from '../../constants/categories';
 
 const Category = ({ activeCategory, onSelect, products = [] }) => {
   const countByCategoryAndState = (categoryId, state) =>
-    products.filter(
-      (p) => p.category === categoryId && p.state?.toLowerCase() === state.toLowerCase()
-    ).length;
+  products.filter(
+    (p) =>
+      p.Categoria?.toString().trim().toLowerCase() === categoryId.toString().trim().toLowerCase() &&
+      p.Estado?.toString().trim().toLowerCase() === state.toString().trim().toLowerCase()
+  ).length;
+
 
   useEffect(() => {
     console.log(">>> products dentro de Category", products);
-    console.log("Categoría activa", activeCategory);
+    //console.table(products);
+    //console.log("Categoría activa", activeCategory);
+    //console.log("Ejemplo de producto:", products[0]);
   }, [products]);
+
+
 
   return (
     <div className="d-flex overflow-auto gap-2 py-1">
       {categories.map(({ id, name }) => {
         const availableCount = countByCategoryAndState(id, 'Disponible');
         const soldCount = countByCategoryAndState(id, 'Vendido');
-
+        console.log("Disponible", availableCount);
+        console.log("Vendido", soldCount);
         return (
           <button
             key={id}

@@ -2,11 +2,11 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { productStates } from '../../constants/states';
+import '../../style/RadioOptionsHorizontal.css'; // Importamos estilos
 
 const RadioOptionsHorizontal = ({ onChange, defaultValue = '', activeStatus }) => {
   const [selectedOption, setSelectedOption] = useState(defaultValue);
 
-  // Sincronizar con el valor activo externo
   useEffect(() => {
     if (activeStatus !== undefined && activeStatus !== selectedOption) {
       setSelectedOption(activeStatus);
@@ -22,17 +22,17 @@ const RadioOptionsHorizontal = ({ onChange, defaultValue = '', activeStatus }) =
   };
 
   return (
-    <div style={{ display: 'flex', gap: '16px', alignItems: 'center' }}>
+    <div className="radio-options-container">
       {productStates.map((option) => (
-        <label key={option.value} style={{ display: 'flex', alignItems: 'center', cursor: 'pointer' }}>
+        <label key={option.value} className={`radio-option ${selectedOption === option.value ? 'selected' : ''}`}>
           <input
             type="radio"
             value={option.value}
             checked={selectedOption === option.value}
             onChange={handleOptionChange}
-            style={{ marginRight: '8px', cursor: 'pointer' }}
           />
-          {option.label}
+          <span className="custom-radio" />
+          <span className="radio-label">{option.label}</span>
         </label>
       ))}
     </div>
@@ -42,7 +42,7 @@ const RadioOptionsHorizontal = ({ onChange, defaultValue = '', activeStatus }) =
 RadioOptionsHorizontal.propTypes = {
   onChange: PropTypes.func,
   defaultValue: PropTypes.string,
-  activeStatus: PropTypes.string
+  activeStatus: PropTypes.string,
 };
 
 export default RadioOptionsHorizontal;
