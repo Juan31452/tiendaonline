@@ -13,10 +13,10 @@ const Category = ({ activeCategory, onSelect, products = [] }) => {
 
 
   useEffect(() => {
-    console.log(">>> products dentro de Category", products);
+    //console.log(">>> products dentro de Category", products);
     //console.table(products);
-    //console.log("Categoría activa", activeCategory);
-    //console.log("Ejemplo de producto:", products[0]);
+    console.log("Categoría activa", activeCategory);
+    console.log("Ejemplo de producto:", products[0]);
   }, [products]);
 
 
