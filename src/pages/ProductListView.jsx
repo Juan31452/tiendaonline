@@ -110,6 +110,3 @@ const ProductListView = () => {
 };
 
 export default ProductListView;
-
-// Este componente lista productos con paginación, filtros por categoría y estado, y permite editar productos.
-// Utiliza hooks personalizados para manejar la lógica de negocio y componentes reutilizables para la UI

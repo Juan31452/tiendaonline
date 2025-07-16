@@ -60,19 +60,19 @@ const ProductosTable = ({ productos,  onEdit}) => {
             <tr key={p.IdProducto ?? p._id ?? idx}>
               <td>{p.IdProducto}</td>
 
-              <TdTruncado value={p.Descripcion} maxWidth={200} />
+              <TdTruncado value={p.Descripcion} maxWidth={180} />
               <TdTruncado value={p.Imagen} maxWidth={100} />
               <td>${p.Precio?.toLocaleString() ?? '—'}</td>
 
-              <TdTruncado value={p.Color} maxWidth={100} />
-              <TdTruncado value={p.Talla} maxWidth={100} />
+              <TdTruncado value={p.Color} maxWidth={90} />
+              <TdTruncado value={p.Talla} maxWidth={50} />
               
               <td>{p.Categoria ?? '—'}</td>
               <td>{p.Cantidad ?? 0}</td>
               <td>{p.Estado ?? '—'}</td>
 
-              <TdTruncado value={formatearFecha(p.createdAt)} maxWidth={100} />
-              <TdTruncado value={formatearFecha(p.updatedAt)} maxWidth={100} />
+              <TdTruncado value={formatearFecha(p.createdAt)} maxWidth={95} />
+              <TdTruncado value={formatearFecha(p.updatedAt)} maxWidth={90} />
 
               <td>
                 <EditButton onClick={() => onEdit?.(p)} />
