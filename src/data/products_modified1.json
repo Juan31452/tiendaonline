@@ -233,13 +233,13 @@
   {
     "Descripcion": "Collar de gargantilla de moda para mujer, 1 pieza, collar gótico punk con borlas de encaje negro, aleación con revestimiento UV, para todas las estaciones, para uso diario y de fiesta.",
     "Cantidad": 1,
-    "Precio": 6500,
+    "Precio": 5000,
     "Color": "Negro",
     "Talla": "Sin talla",
     "IdProducto": "1.22",
     "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1749748444/pedido1/img19.webp",
     "Categoria": "Mujer",
-    "Estado": "Disponible"
+    "Estado": "Ofertas"
   },
   {
     "Descripcion": "Pendientes de Gota con Hoja de Inspiración Vintage y Perla Falsa para Mujer - Aleación de Zinc con Pasadores de Cobre, Perfectos para Atuendo Casual",
@@ -319,15 +319,15 @@
     "Estado": "Vendido"
   },
   {
-    "Descripcion": "Conjunto de 3 Collares Boho-Chic con Borlas y Detalles de Estrás - Aleación de Zinc, Versátil para Atuendo Casual o Vacaciones. Precio Unidad 5500",
-    "Cantidad": 1,
-    "Precio": 27500,
+    "Descripcion": "Conjunto de 3 Collares Boho-Chic con Borlas y Detalles de Estrás - Aleación de Zinc, Versátil para Atuendo Casual o Vacaciones. Precio Unidad $4.500",
+    "Cantidad": 3,
+    "Precio": 13500,
     "Color": "Policromo",
     "Talla": "Sin talla",
     "IdProducto": "1.30",
     "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1749749069/pedido1/img27.webp",
     "Categoria": "Mujer",
-    "Estado": "Disponible"
+    "Estado": "Ofertas"
   },
   {
     "Descripcion": "Glamour Diario, Pendientes Elegantes con Lazo de Estrás y Borla, Joyería de Cristal de Circonita Brillante para Mujeres, Accesorio de Moda",
@@ -343,24 +343,24 @@
   {
     "Descripcion": "Collar con Colgante de Mariposa al Estilo Bohemio Tejido a Mano, Cadena Larga para Mujer Adecuada para Vacaciones y Vestimenta Casual",
     "Cantidad": 1,
-    "Precio": 7500,
+    "Precio": 5000,
     "Color": "Marrón",
     "Talla": "Sin talla",
     "IdProducto": "1.32",
     "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1749826952/pedido1/img29.webp",
     "Categoria": "Mujer",
-    "Estado": "Disponible"
+    "Estado": "Ofertas"
   },
   {
     "Descripcion": "Pulsera De Margaritas Con Temperamento A La Moda, Pulsera De Cerámica Con Flores, Cuerda De Mano Dulce Para Parejas, Regalo Para Aniversario, 1 Ud.",
     "Cantidad": 1,
-    "Precio": 6000,
+    "Precio": 5000,
     "Color": "Flor blanca",
     "Talla": "Sin talla",
     "IdProducto": "1.33",
     "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1749826952/pedido1/img30.webp",
     "Categoria": "Mujer",
-    "Estado": "Disponible"
+    "Estado": "Ofertas"
   },
   {
     "Descripcion": "1pc Pulsera De Cuerda En Capas, Colgante De Corazón De Margarita, Encantadora Cadena De Mano Accesorios De Mano  Mujeres",
@@ -371,7 +371,7 @@
     "IdProducto": "1.34",
     "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1749826952/pedido1/img31.webp",
     "Categoria": "Mujer",
-    "Estado": "Disponible"
+    "Estado": "Separado"
   },
   {
     "Descripcion": "Pantalones de pijama con estampado de osito y letras, con detalles de volantes, cintura elástica alta y shorts elásticos de tiro alto para mujer, ropa de dormir",

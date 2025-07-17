@@ -7,7 +7,6 @@ const useBuscarProductoPorId = () => {
   const [resultado, setResultado] = useState(null);
   const [loading, setLoading]     = useState(false);
   const [error, setError]         = useState('');
-  const [showModal, setShowModal] = useState(false);
 
   const buscarProducto = async (id) => {
     if (!id.trim()) return;
@@ -23,8 +22,6 @@ const useBuscarProductoPorId = () => {
 
       if (obj) {
         setResultado(obj);
-        setShowModal(true);
-        console.log('✅ Producto encontrado:', obj);
       } else {
         setError('Producto no encontrado');
       }
@@ -40,9 +37,8 @@ const useBuscarProductoPorId = () => {
     resultado,
     loading,
     error,
-    showModal,
     buscarProducto,
-    cerrarModal: () => setShowModal(false),
+    resetResultado: () => setResultado(null),
   };
 };
 

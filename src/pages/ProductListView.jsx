@@ -14,7 +14,8 @@ const ProductListView = () => {
   const [activeEstado, setActiveEstado] = useState('Disponible');
  /* ---------- paginación ---------- */
   const [page, setPage] = useState(1);
- /* Consultas */
+
+  /* Consultas */
   const {
     productos,
     pagination,

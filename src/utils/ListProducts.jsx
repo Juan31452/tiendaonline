@@ -53,8 +53,10 @@ const ListProducts = () => {
       {saving      && <Loading text="Guardando cambios" fullScreen />}
       {error      &&  <p style={{ color: 'crimson' }}>{error}</p>}
       {saveError  &&  <p style={{ color: 'crimson' }}>{saveError}</p>}
+      
+      <BuscarPorIdproducto refresh={refresh} />
 
-      <BuscarPorIdproducto  />
+      {/* Tabla de productos */}
 
       <ProductosTable productos={productos} onEdit={openModal} />
 
