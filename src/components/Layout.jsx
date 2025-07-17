@@ -25,14 +25,15 @@ const NavBar = () => {
               <Nav.Link as={Link} to="/" eventKey="1">Inicio</Nav.Link>
               {isLocalhost && (
                 <>
-                  <Nav.Link as={Link} to="/products" eventKey="2">Productos</Nav.Link>
-                  <Nav.Link as={Link} to="/uploadimage" eventKey="3">Nuevas Imagens</Nav.Link>
-                  <Nav.Link as={Link} to="/uploadjson" eventKey="5">Nuevos JSON</Nav.Link>
-                  <Nav.Link as={Link} to="/listproducts" eventKey="6">Listar Productos</Nav.Link>
-                  <Nav.Link as={Link} to="/verproductos" eventKey="7">Backend</Nav.Link>
+                  <Nav.Link as={Link} to="/products" eventKey="4">Productos</Nav.Link>
+                  <Nav.Link as={Link} to="/uploadimage" eventKey="5">Nuevas Imagens</Nav.Link>
+                  <Nav.Link as={Link} to="/uploadjson" eventKey="6">Nuevos JSON</Nav.Link>
+                  <Nav.Link as={Link} to="/listproducts" eventKey="7">Listar Productos</Nav.Link>
+                  <Nav.Link as={Link} to="/verproductos" eventKey="8">Backend</Nav.Link>
                 </>
               )}
-              <Nav.Link as={Link} to="/new" eventKey="4">Nuevos</Nav.Link>
+              <Nav.Link as={Link} to="/offers" eventKey="2">Ofertas</Nav.Link>
+              <Nav.Link as={Link} to="/new" eventKey="3">Nuevos</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>

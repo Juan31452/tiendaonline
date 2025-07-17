@@ -3,4 +3,6 @@ export const productStates  = [
     { value: 'Separado', label: 'Separado' },
     { value: 'Vendido', label: 'Vendido' },
     { value: 'Nuevo', label: 'Nuevo' },
+    { value: 'Oferta', label: 'Oferta' },
+    
 ];
