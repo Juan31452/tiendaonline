@@ -155,6 +155,7 @@ const EditProductModal = ({ show, onHide, product, onSave }) => {
                   <option value="Disponible">Disponible</option>
                   <option value="Vendido">Vendido</option>
                   <option value="Separado">Separado</option>
+                  <option value="Oferta">Oferta</option>
                   {/* añade más estados si los usas */}
                 </Form.Select>
               </Form.Group>

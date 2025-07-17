@@ -79,13 +79,13 @@
   {
     "Descripcion": "1 Conjunto Elegante de Dos Piezas para Mujer - Top de Poliéster con Hombros Descubiertos y Detalle de Lazo y Pantalones Anchos de Color Liso, Conjunto Tejido para Todas las Estaciones",
     "Cantidad": 1,
-    "Precio": 110000,
+    "Precio": 90000,
     "Color": "Albaricoque",
     "Talla": "L",
     "IdProducto": "1.8",
     "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1749744167/pedido1/img7.webp",
     "Categoria": "Mujer",
-    "Estado": "Disponible"
+    "Estado": "Ofertas"
   },
   {
     "Descripcion": "Camiseta de Hombre con Gráfico de Gaviota - Casual y Elegante, Tee Oversize con Diseño de Bloques de Color, Poliéster Transpirable, Lavable a Máquina - Perfecta para el Streetwear de Verano",
@@ -200,35 +200,35 @@
   {
     "Descripcion": "24 Piezas de Pegatinas de Uñas con Forma Cuadrada Corta y Patrón de Flores Moradas Brillantes - Formas de Uñas Florales Francesas de Moda para Dedos con Acabado Brillante - Pegatinas de Arte de Uñas Adhesivas Fáciles de Aplicar para una Manicura Rápida",
     "Cantidad": 1,
-    "Precio": 10000,
+    "Precio": 6500,
     "Color": "Flores Francesas",
     "Talla": "Sin talla",
     "IdProducto": "1.19",
     "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1749748444/pedido1/img16.webp",
     "Categoria": "Sin categoría",
-    "Estado": "Disponible"
+    "Estado": "Ofertas"
   },
   {
     "Descripcion": "1 Juego De 24 Piezas, Uñas Postizas Doradas Brillantes Con Diseño De Pedrería, Uñas Postizas Cortas Cuadradas Con Acabado Brillante Para Mujeres Para Pascua",
     "Cantidad": 1,
-    "Precio": 12000,
+    "Precio": 8000,
     "Color": "JJ005",
     "Talla": "Sin talla",
     "IdProducto": "1.20",
     "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1749748444/pedido1/img17.webp",
     "Categoria": "Mujer",
-    "Estado": "Disponible"
+    "Estado": "Ofertas"
   },
   {
-    "Descripcion": "24pcs Uñas Postizas Cuadradas Elegantes en Rosa con Hoja Dorada y Detalles Bronceados - Uñas Falsas con Punta Francesa Brillante para Mujeres, Perfectas para Otoño/Invierno, Precio Inidad 7000",
+    "Descripcion": "24pcs Uñas Postizas Cuadradas Elegantes en Rosa con Hoja Dorada y Detalles Bronceados - Uñas Falsas con Punta Francesa Brillante para Mujeres, Perfectas para Otoño/Invierno, Precio Inidad $6.500",
     "Cantidad": 3,
-    "Precio": 21000,
+    "Precio": 19500,
     "Color": "Policromo",
     "Talla": "Sin talla",
     "IdProducto": "1.21",
     "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1749748444/pedido1/img18.webp",
     "Categoria": "Mujer",
-    "Estado": "Disponible"
+    "Estado": "Ofertas"
   },
   {
     "Descripcion": "Collar de gargantilla de moda para mujer, 1 pieza, collar gótico punk con borlas de encaje negro, aleación con revestimiento UV, para todas las estaciones, para uso diario y de fiesta.",

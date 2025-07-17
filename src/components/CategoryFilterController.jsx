@@ -23,25 +23,25 @@ const CategoryFilterController = ({
 
   const applyFilter = (categoryId) => {
     switch (categoryId) {
-      case 'hombre':
+      case 'Hombre':
         setFilteredProducts(filterByKeywords(['hombre', 'masculino', 'caballero']));
         break;
-      case 'mujer':
+      case 'Mujer':
         setFilteredProducts(filterByKeywords(['mujer', 'femenino', 'dama']));
         break;
-      case 'nino':
+      case 'Nino':
         setFilteredProducts(filterByKeywords(['niño', 'nino', 'niña', 'nina', 'infantil']));
         break;
-      case 'tecnologia':
+      case 'Tecnologia':
         setFilteredProducts(filterByKeywords(['tecnolog', 'electron', 'digital', 'smart']));
         break;
-      case 'variedades':
+      case 'Variedades':
         setFilteredProducts(filterByKeywords(['variedade', 'variedad', 'otros', 'general']));
         break;
-      case 'hogar':
+      case 'Hogar':
         setFilteredProducts(filterByKeywords(['hoga', 'casa', 'hogar', 'cocina', 'muebles']));
         break;
-      case 'todos':
+      case 'Todos':
       default:
         setFilteredProducts(allProducts);
     }

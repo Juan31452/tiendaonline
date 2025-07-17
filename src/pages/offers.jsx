@@ -7,7 +7,7 @@ const Offers = () => {
 
   if (loading) return <div className="text-center py-5">Cargando productos...</div>;
 
-  // Filtro personalizado para productos nuevos
+  // Filtro personalizado para productos de oferta
   const filterFn = (product) =>
     ['ofertas'].includes(product.Estado?.toLowerCase());
 
@@ -19,7 +19,7 @@ const Offers = () => {
     return (
         <div className="container mt-4" style={{ paddingTop: '10px' }}>
         <ProductListPage
-        title="Nuevos Productos"
+        title="Ofertas Especiales"
         allProducts={allProducts}
         filteredProducts={sortedFiltered} // Usamos el arreglo ordenado
         setFilteredProducts={setFilteredProducts}
