@@ -12,9 +12,16 @@ const WhatsAppButton = ({ product, className = '' }) => {
   // ✅ Precio con separador latino
   const precio = Number(product.Precio ?? 0).toLocaleString('es-ES');
 
+  // ✅ Truncar descripción si es demasiado larga
+  const MAX_DESC_LENGTH = 50;
+  const descripcionCorta =
+    product.Descripcion?.length > MAX_DESC_LENGTH
+      ? product.Descripcion.slice(0, MAX_DESC_LENGTH) + '...'
+      : product.Descripcion;
+
   const message = `¡Hola! Mira este producto:
 ID: ${product.IdProducto}
-🛍️ *${product.Descripcion}*
+🛍️ *${descripcionCorta}*
 📏 Talla: ${product.Talla}
 💲 Precio: $${precio}
 
@@ -22,10 +29,8 @@ ID: ${product.IdProducto}
 
   const waLink = `https://wa.me/?text=${encodeURIComponent(message)}`;
 
- 
   return (
-    <>
-      <a
+     <a
         href={waLink}
         target="_blank"
         rel="noopener noreferrer"
@@ -33,11 +38,8 @@ ID: ${product.IdProducto}
       >
         <FaWhatsapp />
         Enviar por WhatsApp
-      </a>
+    </a>
 
-      
-     
-    </>
   );
 };
 
