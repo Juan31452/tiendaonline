@@ -376,13 +376,13 @@
   {
     "Descripcion": "Pantalones de pijama con estampado de osito y letras, con detalles de volantes, cintura elástica alta y shorts elásticos de tiro alto para mujer, ropa de dormir",
     "Cantidad": 1,
-    "Precio": 19000,
+    "Precio": 16000,
     "Color": "Mezcla de color",
     "Talla": "S",
     "IdProducto": "1.35",
     "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1749826952/pedido1/img32.webp",
     "Categoria": "Mujer",
-    "Estado": "Disponible"
+    "Estado": "Ofertas"
   },
   {
     "Descripcion": "Pantalones de pijama con estampado de osito y letras, con detalles de volantes, cintura elástica alta y shorts elásticos de tiro alto para mujer, ropa de dormir",
@@ -442,13 +442,13 @@
   {
     "Descripcion": "Shorts delanteros con botones de color liso Y2K, shorts de cintura alta de verano con cintura anudada, ropa de mujer",
     "Cantidad": 1,
-    "Precio": 40000,
+    "Precio": 35000,
     "Color": "Negro",
     "Talla": "M",
     "IdProducto": "1.41",
     "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1749826953/pedido1/img35.webp",
     "Categoria": "Mujer",
-    "Estado": "Disponible"
+    "Estado": "Ofertas"
   },
   {
     "Descripcion": "1 pza Blusa Elegante de Poliéster para Mujer, Camiseta de Verano con Estampado de Corazones Estilo Francés con Lazo Delantero y Mangas de Mariposa con Volantes",
@@ -635,7 +635,7 @@
     "IdProducto": "1.58",
     "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1749828800/pedido1/img46.webp",
     "Categoria": "Mujer",
-    "Estado": "Disponible"
+    "Estado": "Separado"
   },
   {
     "Descripcion": "4 Piezas Bragas Cortas De Encaje Floral, Bragas Suaves Y Cómodas Con Ribete Festoneado, Lencería Y Ropa Interior Para Mujer, precio por unidad 5500 c/u",
@@ -657,7 +657,7 @@
     "IdProducto": "1.60",
     "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1749828800/pedido1/img48.webp",
     "Categoria": "Mujer",
-    "Estado": "Disponible"
+    "Estado": "Vendido"
   },
   {
     "Descripcion": "7 piezas de tangas acanaladas sin costuras, íntimas elásticas transpirables cómodas y sexys, lencería y ropa interior para mujer para otoño e invierno, precio 5000 c/u",
