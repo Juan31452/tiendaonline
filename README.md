@@ -2,6 +2,12 @@
 
 Este proyecto es una tienda online construida con React (frontend) y Node.js/MongoDB (backend). Permite listar, buscar, editar y ver detalles de productos.
 
+Primera Fase : se construyo solo el Front , donde los datos vienen de un archivo json, esta fase actualmente sigue vigente , pero los componentes mas adelante seran obsoletos.
+
+Segunda Fase : aqui se esta implementado el backend tambien en una fase temprana , donde esta creada para ingreso ,edicion y visualizacion de productos, se sigue actualizando componentes.
+
+Tercera fase : Se crearan usuarios en Backend y seguridad con token
+
 ## Estructura principal
 
 - **src/components/**: Componentes reutilizables (botones, tablas, modales, etc).
