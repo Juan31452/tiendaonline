@@ -6,11 +6,16 @@ import PaginationControls      from '../components/Buttons/PaginationControls';
 import useListProducts from '../hooks/useListProducts';
 import useEditProduct  from '../hooks/useEditProduct';
 import EditProductModal from '../components/Modals/EditProductModal';
+import ModalDetalles from '../components/Modals/ModalDetalles';
 
 // Importamos los hooks personalizados para listar y editar productos
 const ListProducts = () => {
   /* ---------- paginación ---------- */
   const [page, setPage] = useState(1);
+
+// Estado para el detalle del producto
+  const [productoDetalle, setProductoDetalle] = useState(null);
+  const [showDetalle, setShowDetalle] = useState(false);
 
   const {
     productos,
@@ -35,7 +40,15 @@ const ListProducts = () => {
   useEffect(() => {
     fetchPage(1);
   }, [fetchPage]);
-
+  // Ejecutar cada vez que cambie la página
+  const handleView = (producto) => {
+  setProductoDetalle(producto);
+  setShowDetalle(true);
+};
+const handleCloseDetalle = () => {
+  setShowDetalle(false);
+  setProductoDetalle(null);
+};
   /* -------- handlers de paginación -------- */
   const prev     = () => page > 1 && (fetchPage(page - 1), setPage(page - 1));
   const next     = () => page < pagination.totalPages && (fetchPage(page + 1), setPage(page + 1));
@@ -57,9 +70,9 @@ const ListProducts = () => {
       <BuscarPorIdproducto refresh={refresh} />
 
       {/* Tabla de productos */}
+      <ProductosTable productos={productos} onEdit={openModal} onView={handleView} />
 
-      <ProductosTable productos={productos} onEdit={openModal} />
-
+      {/* Modal de edición de producto */}
       <EditProductModal
         show={showModal}
         product={productSel}
@@ -67,6 +80,14 @@ const ListProducts = () => {
         onSave={(upd) => saveChanges(upd, refresh)}
       />
 
+      {/* Modal de detalles del producto */}
+      {/* Si no hay producto seleccionado, no renderiza nada */}
+       <ModalDetalles
+        product={productoDetalle}
+        show={showDetalle}
+        onHide={handleCloseDetalle}
+      />
+      {/* Paginación */}
       {/* 👉 Nuevo componente paginador con Inicio y Final */}
       <PaginationControls
         page={page}

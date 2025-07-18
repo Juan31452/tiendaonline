@@ -2,7 +2,7 @@ import { Modal } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import WhatsAppButton from '../Buttons/WhatsAppButton';
 import ButtonClose from '../Buttons/ButtonClose';
-import EditButton from '../Buttons/EditButton';
+
 
 const ModalDetalles = ({ product, show, onHide}) => {
   

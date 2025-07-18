@@ -25,7 +25,11 @@ const normalizarProductos = (input) => {
   return []; // no hay nada que mostrar
 };
 
-const ProductosTable = ({ productos,  onEdit}) => {
+const ProductosTable = ({ productos,  onEdit,  onView}) => {
+
+  
+  // Normalizar productos a un array
+  // Esto permite que el componente funcione con diferentes formatos de entrada
   const rows = normalizarProductos(productos);
 
   // DEBUG opcional
@@ -43,7 +47,6 @@ const ProductosTable = ({ productos,  onEdit}) => {
           <tr>
             <th>IdProducto</th>
             <th>Descripción</th>
-            <th>Imagen</th>
             <th>Precio</th>
             <th>Color</th>
             <th>Talla</th>
@@ -61,7 +64,7 @@ const ProductosTable = ({ productos,  onEdit}) => {
               <td>{p.IdProducto}</td>
 
               <TdTruncado value={p.Descripcion} maxWidth={180} />
-              <TdTruncado value={p.Imagen} maxWidth={100} />
+              {/* Formatear precio con coma y signo de peso */}
               <td>${p.Precio?.toLocaleString() ?? '—'}</td>
 
               <TdTruncado value={p.Color} maxWidth={90} />
@@ -75,7 +78,12 @@ const ProductosTable = ({ productos,  onEdit}) => {
               <TdTruncado value={formatearFecha(p.updatedAt)} maxWidth={90} />
 
               <td>
-                <EditButton onClick={() => onEdit?.(p)} />
+                <EditButton onClick={() => onEdit?.(p)} label="Editar" />
+                <EditButton
+                  onClick={() => onView?.(p)}
+                  label="Ver"
+                  style={{ marginLeft: 8 }}
+                 /> 
               </td>
             </tr>
           ))}
