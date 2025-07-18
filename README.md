@@ -1,12 +1,48 @@
-# React + Vite
+# Tienda Online MERN
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto es una tienda online construida con React (frontend) y Node.js/MongoDB (backend). Permite listar, buscar, editar y ver detalles de productos.
 
-Currently, two official plugins are available:
+## Estructura principal
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **src/components/**: Componentes reutilizables (botones, tablas, modales, etc).
+- **src/pages/**: Vistas principales de la aplicación.
+- **src/utils/**: Utilidades y componentes auxiliares.
+- **src/hooks/**: Hooks personalizados para lógica de negocio.
 
-## Expanding the ESLint configuration
+## Funcionalidades
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Listado de productos** con paginación.
+- **Búsqueda** por ID de producto.
+- **Edición** de productos mediante modal.
+- **Visualización de detalles** de producto en un modal.
+- **Botón de WhatsApp** para contacto rápido.
+- **Paginación** con controles de navegación.
+
+## Componentes destacados
+
+- `ProductosTable`: Muestra los productos en una tabla con botones de editar y ver.
+- `EditProductModal`: Modal para editar productos.
+- `ModalDetalles`: Modal para ver detalles de un producto.
+- `PaginationControls`: Navegación entre páginas.
+- `EditButton`: Botón reutilizable para acciones.
+
+## Cómo ejecutar
+
+1. Clona el repositorio.
+2. Instala dependencias:
+   ```bash
+   npm install
+   ```
+3. Inicia la app:
+   ```bash
+   npm start
+   ```
+
+## Personalización
+
+Puedes modificar los componentes en `src/components` y las vistas en `src/pages` para adaptar la tienda a tus necesidades.
+
+---
+
+**Autor:** [Juan Carlos Salazar]  
+**Licencia:** MIT
