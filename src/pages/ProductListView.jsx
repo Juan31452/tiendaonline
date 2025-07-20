@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import useConsultas from '../hooks/useConsultas';
 import useEditProduct  from '../hooks/useEditProduct';
+import useEstadisticasProductos from '../hooks/useEstadisticasProductos';
 
 import Category from '../components/Buttons/Category';
 import ProductCard from '../components/ProductCard';
@@ -8,10 +9,14 @@ import Loading from '../components/Loading';
 import PaginationControls from '../components/Buttons/PaginationControls';
 import EditProductModal from '../components/Modals/EditProductModal';
 import RadioOptionsHorizontal from '../components/Buttons/RadioOptionsHorizontal'; // 👈 importado
+import EstadisticasProductos from '../components/EstadisticasProductos';
 
 const ProductListView = () => {
   const [activeCategory, setActiveCategory] = useState('todos');
   const [activeEstado, setActiveEstado] = useState('Disponible');
+  // Hook para obtener estadísticas de productos
+  const { estadisticas, loading: loadingEstadisticas, error: errorEstadisticas } = useEstadisticasProductos();
+
  /* ---------- paginación ---------- */
   const [page, setPage] = useState(1);
 
@@ -66,6 +71,8 @@ const ProductListView = () => {
      <div className="container mt-4" style={{ paddingTop: '80px' }}>
       <h2 className="text-center mb-2">Lista de Productos</h2>
       
+      
+
       {loadingList && <Loading text="Cargando productos" />}
       {saving      && <Loading text="Guardando cambios" fullScreen />}
       {error      &&  <p style={{ color: 'crimson' }}>{error}</p>}
@@ -85,6 +92,14 @@ const ProductListView = () => {
           onChange={handleEstadoChange}
         />
       </div>
+
+      {/* Estadísticas de productos */}
+      <EstadisticasProductos
+        estadisticas={estadisticas}
+        loading={loadingEstadisticas}
+        error={errorEstadisticas}
+        activeCategory={activeCategory}
+      />
       
           {/* Grilla de productos */}
           <div className="row g-2">

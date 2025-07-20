@@ -12,7 +12,7 @@ const ApiRoutes = {
    BuscarporId : `${APIHOSTRemote}/api/productos`,
    EditarProducto: `${APIHOSTRemote}/api/productos`, 
    ConsultaCategoria: `${APIHOSTRemote}/api/productos`,
-
+   EstadisticasProductos: `${APIHOSTRemote}/api/productos/estadisticas`,
    // Puedes agregar más rutas según las necesidades de tu aplicación
 };
  
