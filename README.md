@@ -19,7 +19,7 @@ Tercera fase : Se crearan usuarios en Backend y seguridad con token
 
 - **Listado de productos** con paginación.
 - **Búsqueda** por ID de producto.
-- **Edición** de productos mediante modal.
+- **Estadísticas de producto** para visualizar métricas relevantes.
 - **Visualización de detalles** de producto en un modal.
 - **Botón de WhatsApp** para contacto rápido.
 - **Paginación** con controles de navegación.
