@@ -2,7 +2,7 @@
   {
     "Descripcion": "Sujetadores push-up con relleno sin costuras, sujetadores inalámbricos para mujeres, soporte ligero para el pecho, lencería para mujer",
     "Cantidad": 1,
-    "Precio": 0,
+    "Precio": 25000,
     "Color": "Gris Claro",
     "Talla": "S",
     "IdProducto": "32.1",
@@ -13,7 +13,7 @@
   {
     "Descripcion": "Sujetadores push-up con relleno sin costuras, sujetadores inalámbricos para mujeres, soporte ligero para el pecho, lencería para mujer",
     "Cantidad": 1,
-    "Precio": 0,
+    "Precio": 25000,
     "Color": "Gris Claro",
     "Talla": "L",
     "IdProducto": "32.2",
@@ -24,7 +24,7 @@
   {
     "Descripcion": "Sostén sujetador de apoyo para el pecho, suave y sin costuras, sujetador ligero para mujer. Sujetador push-up que levanta y da forma al busto.",
     "Cantidad": 1,
-    "Precio": 0,
+    "Precio": 25000,
     "Color": "Negro",
     "Talla": "M",
     "IdProducto": "32.3",
@@ -35,7 +35,7 @@
   {
     "Descripcion": "Sujetador ligero de soporte para el pecho, sujetador con soporte suave y sin costuras, sujetador ligero para mujeres, sujetador push-up, sujetador moldeador de pechos.",
     "Cantidad": 1,
-    "Precio": 0,
+    "Precio": 25000,
     "Color": "Verde",
     "Talla": "XL",
     "IdProducto": "32.4",
@@ -46,7 +46,7 @@
 {
     "Descripcion": "SHEIN Sport Studio Camiseta deportiva de manga larga minimalista de color sólido, sin costuras/con agujero para el pulgar.",
     "Cantidad": 1,
-    "Precio": 0,
+    "Precio": 23000,
     "Color": "Blanco",
     "Talla": "M",
     "IdProducto": "32.5",
@@ -55,9 +55,9 @@
     "Estado": "Nuevo"
 },
 {
-    "Descripcion": "Set de 4 pantalones cortos de seguridad sin costuras para mujer, ropa interior cómoda.",
+    "Descripcion": "Set de 4 pantalones cortos de seguridad sin costuras para mujer, ropa interior cómoda,Precio Unidad $11.000.",
     "Cantidad": 1,
-    "Precio": 0,
+    "Precio": 40000,
     "Color": "Multicolor",
     "Talla": "L",
     "IdProducto": "32.6",
@@ -66,9 +66,9 @@
     "Estado": "Nuevo"
 },
 {
-    "Descripcion": "Set de 4 pantalones cortos de seguridad sin costuras para mujer, ropa interior cómoda.",
+    "Descripcion": "Set de 4 pantalones cortos de seguridad sin costuras para mujer, ropa interior cómoda,Precio Unidad $11.000.",
     "Cantidad": 1,
-    "Precio": 0,
+    "Precio": 40000,
     "Color": "Multicolor",
     "Talla": "M",
     "IdProducto": "32.7",
