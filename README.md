@@ -25,7 +25,18 @@ Tercera fase : Se crearan usuarios en Backend y seguridad con token
 - **Paginación** con controles de navegación.
 
 ## Componentes destacados
+### Backend
 
+El backend está desarrollado con Node.js, Express y MongoDB. Expone una API RESTful para gestionar productos y proximamente usuarios.
+
+- `routes/productos.js`: Rutas para operaciones CRUD de productos.
+- `routes/usuarios.js`: Rutas para registro y autenticación de usuarios.
+- `models/Producto.js`: Modelo Mongoose para productos.
+- `models/Usuario.js`: Modelo Mongoose para usuarios.
+- `middleware/auth.js`: Middleware para autenticación con JWT.
+- `controllers/`: Lógica de negocio para productos y usuarios.
+
+Incluye validación de datos, manejo de errores y proximamente autenticación basada en tokens JWT.
 - `ProductosTable`: Muestra los productos en una tabla con botones de editar y ver.
 - `EditProductModal`: Modal para editar productos.
 - `ModalDetalles`: Modal para ver detalles de un producto.
