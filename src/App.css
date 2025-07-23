@@ -2,21 +2,20 @@
   box-sizing: border-box;
 }
 
-html,body {
- margin: 0;
+html, body {
+  margin: 0;
   padding: 0;
-   height: 100%;
-  min-height: 100%;                 /* cubre toda la ventana */
+  min-height: 100vh; /* ✅ que ocupe al menos toda la pantalla */
   background: linear-gradient(135deg, #a1a49c 0%, #9fc77a 50%, #d3da95 100%);
-  /*     ↑↑   135° queda más suave que “bottom right”
-         ↑    mueve los stops para evitar cambios bruscos           */
-  background-attachment: fixed;     /* evita que se “deslice” al hacer scroll */
+  background-attachment: fixed;
   background-repeat: no-repeat;
-  background-size: cover;           /* rellena sin repetir */
+  background-size: cover;
   color: #fff;
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 16px;
+  padding-bottom: 60px; /* ✅ deja espacio para el nav fijo abajo */
 }
+
 
 img {
   display: block;      /* quita espacio bajo la imagen */
@@ -91,5 +90,19 @@ npm in#root {
 .whatsapp-float-button:hover {
   background-color: #1ebe5b;
   color: white;
+}
+
+/* Si el menú va abajo en móviles */
+@media (max-width: 767px) {
+  .main-content {
+    padding-bottom: 60px;
+  }
+}
+
+/* Si el menú va arriba en escritorio */
+@media (min-width: 768px) {
+  .main-content {
+    padding-top: 60px;
+  }
 }
 

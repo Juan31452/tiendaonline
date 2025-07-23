@@ -5,6 +5,7 @@ import ModalDetalles from '../components/Modals/ModalDetalles';
 import ProductCard from '../components/ProductCard';
 import EstadoResumen from '../components/EstadoResumen';
 import Pagination from '../components/Pagination';
+import MobileBottomNav from '../components/Buttons/MobileBottomNav';  
 
 const ProductListPage = ({ 
   title,
@@ -103,6 +104,8 @@ const ProductListPage = ({
           onHide={() => setShowModal(false)}
         />
       )}
+      <MobileBottomNav /> {/* Añadido el componente de navegación móvil */}
+      
     </div>
   );
 };

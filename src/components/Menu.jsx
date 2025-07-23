@@ -9,9 +9,9 @@ import Uploadimage from '../utils/ImageUploader';
 import UploadJson from '../utils/UploadJson';
 import ListProducts from '../utils/ListProducts';
 import ProductsListView from '../pages/ProductListView';
+import Login from '../pages/Login';
 
-
-import { PRIVATE1,PRIVATE2,PRIVATE3,PRIVATE4,PRIVATE5,PRIVATE6,PUBLIC3} from './Path';
+import { PRIVATE1,PRIVATE2,PRIVATE3,PRIVATE4,PRIVATE5,PRIVATE6,PUBLIC1, PUBLIC3} from './Path';
 import Layaut from './Layout';
 
 
@@ -31,6 +31,7 @@ const Menu = () => {
           <Route path={PRIVATE4} element={<UploadJson />} />
           <Route path={PRIVATE5} element={<ListProducts />} />
           <Route path={PRIVATE6} element={< ProductsListView />} />
+          <Route path={PUBLIC1} element={< Login/>} />
           <Route path={PUBLIC3} element={<Offers />} />
       </Routes>
       </Container>
