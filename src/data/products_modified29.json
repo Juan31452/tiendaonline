@@ -8,7 +8,7 @@
     "IdProducto": "29.1",
     "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1751612438/pedido29/img1.webp",
     "Categoria": "Mujer",
-    "Estado": "Nuevo"
+    "Estado": "Disponible"
   },
   {
     "Descripcion": "Conjunto de pijama de mujer con estampado floral y tirantes de spaghetti",
@@ -19,7 +19,7 @@
     "IdProducto": "29.2",
     "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1751612438/pedido29/img2.webp",
     "Categoria": "Mujer",
-    "Estado": "Nuevo"
+    "Estado": "Disponible"
   },
   {
     "Descripcion": "Conjunto de camiseta sin mangas y pantalones cortos con estampado de dibujos animados para mujer, conjunto de pijama de punto sexy, ropa de dormir para adultos, poliéster, todas las estaciones, ropa casual para el hogar.",
@@ -30,7 +30,7 @@
     "IdProducto": "29.3",
     "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1751612438/pedido29/img3.webp",
     "Categoria": "Mujer",
-    "Estado": "Nuevo"
+    "Estado": "Disponible"
   },
   {
     "Descripcion": "Conjunto de pijama sin mangas para mujer, estampado de amor, temporada global",
@@ -41,7 +41,7 @@
     "IdProducto": "29.4",
     "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1751612438/pedido29/img4.webp",
     "Categoria": "Mujer",
-    "Estado": "Nuevo"
+    "Estado": "Disponible"
   },
   {
     "Descripcion": "Estante de zapatos de acero inoxidable, colgador de zapatos, para secar zapatos, gancho multifuncional simple y a prueba de viento, estante de zapatos de acero inoxidable, colgador de zapatos, gancho multifuncional para uso exterior, estante de zapatos multifuncional, colgador de zapatos, artefacto de gancho de acero inoxidable, 2/3/4/6/7 estantes de zapatos,Precio U. $4000 c/u ",
@@ -52,7 +52,7 @@
     "IdProducto": "29.5",
     "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1751612439/pedido29/img5.webp",
     "Categoria": "Variedades",
-    "Estado": "Nuevo"
+    "Estado": "Disponible"
   },
   {
     "Descripcion": "Trstray 7en Banana Balm - Crema nutricional y hidratante para la piel seca, áspera y quebradiza | Bálsamo hidratante sin perfume, para todos los tipos de piel, bálsamo hidratante | Bálsamo de extracto de plátano | Bálsamo sin perfume",
@@ -63,7 +63,7 @@
     "IdProducto": "29.6",
     "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1751612439/pedido29/img6.webp",
     "Categoria": "Variedades",
-    "Estado": "Nuevo"
+    "Estado": "Disponible"
   },
   {
     "Descripcion": "Crema facial hidratante y deslumbrante V7 con efecto tonificante instantáneo, complejo de siete vitaminas - Fórmula hidratante y suavizante para todos los tipos de piel clara beige, hipoalergénica, fácil de absorber, producto de cuidado de la piel natural, cuidado de la piel beige claro, diseño compacto, gel de aloe vera.",
@@ -74,7 +74,7 @@
     "IdProducto": "29.7",
     "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1751612439/pedido29/img7.webp",
     "Categoria": "Variedades",
-    "Estado": "Nuevo"
+    "Estado": "Disponible"
   },
   {
     "Descripcion": "1 Unidad, Paño Protector Para Planchar, Almohadilla Para Planchar Resistente Al Calor: Protege La Ropa Y La Tabla De Planchar Con Una Almohadilla Para Planchar A Vapor De Tela De Malla",
@@ -85,7 +85,7 @@
     "IdProducto": "29.8",
     "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1751612438/pedido29/img8.webp",
     "Categoria": "Variedades",
-    "Estado": "Nuevo"
+    "Estado": "Disponible"
   },
   {
     "Descripcion": "Zapatillas Transpirables para Mujer, Zapatillas Sin Cordones, Tejido de Punto Transpirable, Suela Suave de PHYLON, Zapatos Planos Blancos Casuales, Fáciles de Poner, Tallas 5-11",
@@ -96,6 +96,6 @@
     "IdProducto": "29.9",
     "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1751612438/pedido29/img9.webp",
     "Categoria": "Mujer",
-    "Estado": "Nuevo"
+    "Estado": "Disponible"
   }
 ]

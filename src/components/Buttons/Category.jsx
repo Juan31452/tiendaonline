@@ -1,9 +1,8 @@
 import PropTypes from 'prop-types';
-//import { useEffect } from 'react';
 import { categories } from '../../constants/categories';
-//import { useEffect } from 'react';
 
-const Category = ({ activeCategory, onSelect, products = [] }) => {
+
+const Category = ({ activeCategory, onSelect }) => {
   
   
   return (
