@@ -69,14 +69,15 @@ const ModalDetalles = ({ product, show, onHide}) => {
               </h3>
           </div>
 
-          <div className="d-flex flex-row justify-content-end align-items-center w-100 gap-2">
-          <WhatsAppButton product={product} />
-          
-           {/*<EditButton onClick={() => onEdit?.(product)} /> */
-          
-          <ButtonClose onClick={onHide} />} 
-          
-        </div>
+          <div className="d-flex flex-row justify-content-end align-items-center w-100 gap-2 mt-n2">
+            <div className="p-1">
+              <WhatsAppButton product={product} />
+            </div>
+            <div className="p-1">
+              <ButtonClose onClick={onHide} />
+            </div>
+          </div>
+
 
         </div>
       </Modal.Body>
