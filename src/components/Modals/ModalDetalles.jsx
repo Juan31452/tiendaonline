@@ -68,8 +68,9 @@ const ModalDetalles = ({ product, show, onHide}) => {
                 : 'Precio no disponible'}
               </h3>
           </div>
+        </div>
 
-          <div className="d-flex flex-row justify-content-end align-items-center w-100 gap-2 mt-n2">
+        <div className="d-flex flex-row justify-content-end align-items-center w-100 gap-2 mt-n2">
             <div className="btn-custom-padding">
               <WhatsAppButton product={product} />
             </div>
@@ -77,9 +78,7 @@ const ModalDetalles = ({ product, show, onHide}) => {
               <ButtonClose onClick={onHide} />
             </div>
           </div>
-
-
-        </div>
+          
       </Modal.Body>
 
       {/* Footer con botón de WhatsApp y cerrar*/}
