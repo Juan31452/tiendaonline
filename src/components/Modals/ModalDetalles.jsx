@@ -27,7 +27,7 @@ const ModalDetalles = ({ product, show, onHide}) => {
       <Modal.Header closeButton>
         <Modal.Title>Detalles del Producto</Modal.Title>
       </Modal.Header>
-      <Modal.Body className="py-1 px-2">
+      <Modal.Body className="py-1 px-2 pb-5">
         <div className="row">
           <div className="col-md-6 text-center">
             <img
