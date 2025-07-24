@@ -24,4 +24,8 @@
   width: 16px;
   height: 16px;
   flex-shrink: 0;
+
+  .btn-custom-padding {
+  padding: 8px 12px;
+}
 }

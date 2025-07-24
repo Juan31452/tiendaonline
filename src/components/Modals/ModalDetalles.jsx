@@ -2,7 +2,7 @@ import { Modal } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import WhatsAppButton from '../Buttons/WhatsAppButton';
 import ButtonClose from '../Buttons/ButtonClose';
-
+import '../../style/EditButton.css'; // estilos para el botón 
 
 const ModalDetalles = ({ product, show, onHide}) => {
   
@@ -70,10 +70,10 @@ const ModalDetalles = ({ product, show, onHide}) => {
           </div>
 
           <div className="d-flex flex-row justify-content-end align-items-center w-100 gap-2 mt-n2">
-            <div className="p-2">
+            <div className="btn-custom-padding">
               <WhatsAppButton product={product} />
             </div>
-            <div className="p-2">
+            <div className="btn-custom-padding">
               <ButtonClose onClick={onHide} />
             </div>
           </div>
