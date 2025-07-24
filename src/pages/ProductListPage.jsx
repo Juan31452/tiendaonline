@@ -104,6 +104,7 @@ const ProductListPage = ({
           onHide={() => setShowModal(false)}
         />
       )}
+      
       <MobileBottomNav /> {/* Añadido el componente de navegación móvil */}
       
     </div>

@@ -68,13 +68,8 @@ const ModalDetalles = ({ product, show, onHide}) => {
                 : 'Precio no disponible'}
             </h3>
           </div>
-        </div>
-      </Modal.Body>
 
-      {/* Footer con botón de WhatsApp y cerrar*/}
-      <Modal.Footer className="py-1 px-2">
-
-        <div className="d-flex flex-row justify-content-end align-items-center w-100 gap-2">
+          <div className="d-flex flex-row justify-content-end align-items-center w-100 gap-2">
           <WhatsAppButton product={product} />
           
          {/*<EditButton onClick={() => onEdit?.(product)} /> */
@@ -83,6 +78,13 @@ const ModalDetalles = ({ product, show, onHide}) => {
           
         </div>
 
+        </div>
+      </Modal.Body>
+
+      {/* Footer con botón de WhatsApp y cerrar*/}
+      <Modal.Footer className="py-1 px-2">
+
+        
       </Modal.Footer>
     </Modal>
   );

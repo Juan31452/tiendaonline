@@ -126,10 +126,10 @@
     "Precio": 20000,
     "Color": "Amarillo claro",
     "Talla": "M",
-    "IdProducto": "10.12",
+    "IdProducto": "10.11",
     "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750789146/pedido10/img12.webp",
     "Categoria": "Mujer",
-    "Estado": "Separado"
+    "Estado": "Vendido"
   },
   {
     "Descripcion": "Pantalones cortos casuales de color sólido para mujer, 97% poliéster 3% spandex, tejido, moda primavera/verano/otoño, diseño de cintura con nudo",
