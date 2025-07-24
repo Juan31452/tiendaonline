@@ -70,10 +70,10 @@ const ModalDetalles = ({ product, show, onHide}) => {
           </div>
 
           <div className="d-flex flex-row justify-content-end align-items-center w-100 gap-2 mt-n2">
-            <div className="p-1">
+            <div className="p-2">
               <WhatsAppButton product={product} />
             </div>
-            <div className="p-1">
+            <div className="p-2">
               <ButtonClose onClick={onHide} />
             </div>
           </div>
