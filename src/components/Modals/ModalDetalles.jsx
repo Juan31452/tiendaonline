@@ -48,9 +48,9 @@ const ModalDetalles = ({ product, show, onHide}) => {
           </div>
           <div className="col-md-6">
             <h4 className="text-muted mb-3">{product.IdProducto}</h4>
-            <h3 className="mb-4">{product.Descripcion}</h3>
+            <h3 className="mb-2">{product.Descripcion}</h3>
 
-            <div className="mb-4 d-flex flex-wrap gap-2">
+            <div className="mb-2 d-flex flex-wrap gap-2">
               <span className="badge bg-primary p-2">Talla: {product.Talla}</span>
               <span className="badge bg-success p-2">Disponibles: {product.Cantidad}</span>
               <span className={`badge p-2 ${
@@ -78,7 +78,7 @@ const ModalDetalles = ({ product, show, onHide}) => {
               <ButtonClose onClick={onHide} />
             </div>
           </div>
-          
+
       </Modal.Body>
 
       {/* Footer con botón de WhatsApp y cerrar*/}
