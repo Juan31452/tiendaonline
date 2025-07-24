@@ -62,19 +62,19 @@ const ModalDetalles = ({ product, show, onHide}) => {
               </span>
             </div>
 
-            <h3 className="text-primary mb-4">
-              {typeof product.Precio === 'number'
+             <h3 className="text-primary mb-2">
+               {typeof product.Precio === 'number'
                 ? `$${product.Precio.toLocaleString()}`
                 : 'Precio no disponible'}
-            </h3>
+              </h3>
           </div>
 
           <div className="d-flex flex-row justify-content-end align-items-center w-100 gap-2">
           <WhatsAppButton product={product} />
           
-         {/*<EditButton onClick={() => onEdit?.(product)} /> */
+           {/*<EditButton onClick={() => onEdit?.(product)} /> */
           
-         <ButtonClose onClick={onHide} />} 
+          <ButtonClose onClick={onHide} />} 
           
         </div>
 
