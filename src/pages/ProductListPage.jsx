@@ -1,5 +1,5 @@
 // components/ProductListPage.jsx
-import React from 'react';
+import React, { useCallback, useMemo } from 'react';
 import { useState } from 'react';
 import useProductPagination from '../hooks/useProductPagination';
 import CategoryFilterController from '../components/CategoryFilterController';
@@ -32,10 +32,10 @@ const ProductListPage = ({
     totalPages
   } = useProductPagination(filteredProducts, itemsPerPage, filterFn);
 
-  const handleCardClick = (product) => {
+  const handleCardClick = useCallback((product) => {
     setSelectedProduct(product);
     setShowModal(true);
-  };
+ }, []);
 
   const handlePageChange = (pageNum) => {
     setCurrentPage(pageNum);
@@ -48,8 +48,9 @@ const ProductListPage = ({
     onPageChange: handlePageChange,
   };
 
-  const resumenProducts =
-    selectedCategory === 'todos' ? allProducts : filteredProducts;
+  const resumenProducts = useMemo(() => {
+   return selectedCategory === 'todos' ? allProducts : filteredProducts;
+  }, [selectedCategory, allProducts, filteredProducts]);
 
   return (
     <div className="container mt-4" style={{ paddingTop: '80px' }}>
