@@ -1,5 +1,7 @@
 // components/ProductCard.jsx
-const ProductCard = ({ product, onClick }) => {
+import React from 'react';
+
+const ProductCard = React.memo(({ product, onClick }) => {
   const handleImageError = (e) =>
     (e.target.src =
       'https://via.placeholder.com/150?text=Imagen+no+disponible');
@@ -47,7 +49,12 @@ const ProductCard = ({ product, onClick }) => {
       </div>
     </div>
   );
-};
+}, areEqual);
+
+// 📌 Comparación personalizada para evitar renders innecesarios
+function areEqual(prevProps, nextProps) {
+  return prevProps.product === nextProps.product;
+}
 
 export default ProductCard;
 // Este componente muestra una tarjeta de producto con imagen, descripción, estado y precio.

@@ -1,11 +1,15 @@
 // components/ProductListPage.jsx
-import { useState, useEffect } from 'react';
+import React from 'react';
+import { useState } from 'react';
+import useProductPagination from '../hooks/useProductPagination';
 import CategoryFilterController from '../components/CategoryFilterController';
 import ModalDetalles from '../components/Modals/ModalDetalles';
-import ProductCard from '../components/ProductCard';
+//import ProductCard  from '../components/ProductCard';
+import ProductGrid from '../components/ProductGrid';
 import EstadoResumen from '../components/EstadoResumen';
 import Pagination from '../components/Pagination';
 import MobileBottomNav from '../components/Buttons/MobileBottomNav';  
+
 
 const ProductListPage = ({ 
   title,
@@ -15,14 +19,18 @@ const ProductListPage = ({
   filterFn,
   resumenEstados = []
 }) => {
-
-  
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [showModal, setShowModal] = useState(false);
-  const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 32; // Cambia este valor según tus necesidades
- /* estado existente… */
+  //const [currentPage, setCurrentPage] = useState(1);
   const [selectedCategory, setSelectedCategory] = useState('todos');
+  const itemsPerPage = 32;
+  
+  const {
+    currentPage,
+    setCurrentPage,
+    paginatedProducts,
+    totalPages
+  } = useProductPagination(filteredProducts, itemsPerPage, filterFn);
 
   const handleCardClick = (product) => {
     setSelectedProduct(product);
@@ -34,18 +42,12 @@ const ProductListPage = ({
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  // Resetear página al cambiar productos
-  useEffect(() => {
-    setCurrentPage(1);
-  }, [filteredProducts]);
+  const paginationProps = {
+    currentPage,
+    totalPages,
+    onPageChange: handlePageChange,
+  };
 
-  const filtered = filteredProducts.filter(filterFn);
-  const totalPages = Math.ceil(filtered.length / itemsPerPage);
-  const paginatedProducts = filtered.slice(
-    (currentPage - 1) * itemsPerPage,
-    currentPage * itemsPerPage
-  );
- // Decide qué lista usa el resumen: global o filtrada
   const resumenProducts =
     selectedCategory === 'todos' ? allProducts : filteredProducts;
 
@@ -54,9 +56,8 @@ const ProductListPage = ({
       <h2 className="text-center mb-2">{title}</h2>
 
       <EstadoResumen
-        products={resumenProducts}   // ✅ cuenta por estado según categoría
+        products={resumenProducts}
         estados={resumenEstados}
-        
       />
 
       <Pagination
@@ -73,29 +74,12 @@ const ProductListPage = ({
         />
       </div>
 
-      <div className="row g-3">
-        {paginatedProducts.length > 0 ? (
-          paginatedProducts.map((product) => (
-            <ProductCard
-              key={product.IdProducto}
-              product={product}
-              onClick={() => handleCardClick(product)}
-            />
-          ))
-        ) : (
-          <div className="col-12 text-center py-5">
-            <div className="alert alert-warning">
-              No hay productos en esta categoría
-            </div>
-          </div>
-        )}
-      </div>
-
-      <Pagination
-        currentPage={currentPage}
-        totalPages={totalPages}
-        onPageChange={handlePageChange}
+      <ProductGrid
+        products={paginatedProducts}
+        onCardClick={handleCardClick}
       />
+
+      <Pagination {...paginationProps} />
 
       {selectedProduct && (
         <ModalDetalles
@@ -104,9 +88,8 @@ const ProductListPage = ({
           onHide={() => setShowModal(false)}
         />
       )}
-      
-      <MobileBottomNav /> {/* Añadido el componente de navegación móvil */}
-      
+
+      <MobileBottomNav />
     </div>
   );
 };
