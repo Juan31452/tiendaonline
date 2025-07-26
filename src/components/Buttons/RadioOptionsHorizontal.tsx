@@ -1,19 +1,29 @@
 // src/components/RadioOptionsHorizontal.jsx
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, ChangeEvent } from 'react';
 import PropTypes from 'prop-types';
 import { productStates } from '../../constants/states';
 import '../../style/RadioOptionsHorizontal.css'; // Importamos estilos
 
-const RadioOptionsHorizontal = ({ onChange, defaultValue = '', activeStatus }) => {
-  const [selectedOption, setSelectedOption] = useState(defaultValue);
+interface RadioOptionsHorizontalProps {
+  onChange?: (value: string) => void;
+  defaultValue?: string;
+  activeStatus?: string;
+}
+
+const RadioOptionsHorizontal: React.FC<RadioOptionsHorizontalProps> = ({
+  onChange,
+  defaultValue = '',
+  activeStatus,
+}) => {
+  const [selectedOption, setSelectedOption] = useState<string>(defaultValue);
 
   useEffect(() => {
     if (activeStatus !== undefined && activeStatus !== selectedOption) {
       setSelectedOption(activeStatus);
     }
-  }, [activeStatus]);
+  }, [activeStatus, selectedOption]);
 
-  const handleOptionChange = (e) => {
+  const handleOptionChange = (e: ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
     setSelectedOption(value);
     if (onChange) {
@@ -24,7 +34,10 @@ const RadioOptionsHorizontal = ({ onChange, defaultValue = '', activeStatus }) =
   return (
     <div className="radio-options-container">
       {productStates.map((option) => (
-        <label key={option.value} className={`radio-option ${selectedOption === option.value ? 'selected' : ''}`}>
+        <label
+          key={option.value}
+          className={`radio-option ${selectedOption === option.value ? 'selected' : ''}`}
+        >
           <input
             type="radio"
             value={option.value}

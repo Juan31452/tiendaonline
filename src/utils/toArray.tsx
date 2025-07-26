@@ -1,5 +1,7 @@
 // Devuelve SIEMPRE un array plano de productos
-const toArray = (data) => {
+type Producto = Record<string, any>; // Puedes reemplazar esto por tu interfaz real
+
+const toArray = (data: any): Producto[] => {
   if (Array.isArray(data)) return data;                  // [ {...} ]
 
   if (Array.isArray(data?.productos)) return data.productos; // { productos:[...] }

@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, FormEvent, ChangeEvent } from 'react';
 
-const Login = () => {
-    const [user, setUser] = useState('');
-    const [password, setPassword] = useState('');
+const Login: React.FC = () => {
+    const [user, setUser] = useState<string>('');
+    const [password, setPassword] = useState<string>('');
 
-    const handleSubmit = (e) => {
+    const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         // Aquí puedes manejar la autenticación
         console.log('Usuario:', user, 'Contraseña:', password);
@@ -19,7 +19,7 @@ const Login = () => {
                     <input
                         type="text"
                         value={user}
-                        onChange={e => setUser(e.target.value)}
+                        onChange={(e: ChangeEvent<HTMLInputElement>) => setUser(e.target.value)}
                         required
                     />
                 </div>
@@ -28,7 +28,7 @@ const Login = () => {
                     <input
                         type="password"
                         value={password}
-                        onChange={e => setPassword(e.target.value)}
+                        onChange={(e: ChangeEvent<HTMLInputElement>) => setPassword(e.target.value)}
                         required
                     />
                 </div>

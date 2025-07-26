@@ -1,0 +1,4 @@
+export const Rutas = {
+    APIHOSTLocal: "http://localhost:4000",
+    APIHOSTRemote: "https://backendtienda-p6ac.onrender.com"
+};

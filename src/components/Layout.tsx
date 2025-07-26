@@ -1,10 +1,10 @@
 import React from 'react';
 import { Navbar, Nav, Container } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import WhatsAppFloatingButton from './Buttons/WhatsAppFloatingButton';
+//import WhatsAppFloatingButton from './Buttons/WhatsAppFloatingButton';
 
 
-const NavBar = () => {
+const NavBar: React.FC = () => {
   const isLocalhost = window.location.hostname === 'localhost';
 
   return (

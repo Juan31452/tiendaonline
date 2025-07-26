@@ -1,7 +1,26 @@
 import React from 'react';
 import './EstadisticasProductos.css';
 
-const EstadisticasProductos = ({ estadisticas, loading, error, activeCategory }) => {
+interface EstadisticasPorCategoria {
+  Categoria: string;
+  estados: {
+    [estado: string]: number;
+  };
+}
+
+interface EstadisticasProductosProps {
+  estadisticas: EstadisticasPorCategoria[];
+  loading: boolean;
+  error: string | null;
+  activeCategory?: string;
+}
+
+const EstadisticasProductos: React.FC<EstadisticasProductosProps> = ({
+  estadisticas,
+  loading,
+  error,
+  activeCategory,
+}) => {
   if (loading) return <p>Cargando estadísticas...</p>;
   if (error) return <p style={{ color: 'crimson' }}>{error}</p>;
   if (!estadisticas || estadisticas.length === 0) return <p>No hay estadísticas disponibles.</p>;
@@ -17,7 +36,9 @@ const EstadisticasProductos = ({ estadisticas, loading, error, activeCategory })
 
   return (
     <div className="estadisticas-container">
-      <h5>Estadísticas para: <strong>{categoriaActiva.Categoria}</strong></h5>
+      <h5>
+        Estadísticas para: <strong>{categoriaActiva.Categoria}</strong>
+      </h5>
       <ul className="estadisticas-list">
         <li>
           {categoriaActiva.estados

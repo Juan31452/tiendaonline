@@ -1,46 +1,52 @@
-import { useState, useEffect } from 'react';
-import { Modal, Button, Form, Row, Col } from 'react-bootstrap';
+import { useState, useEffect, ChangeEvent } from 'react';
+import { Modal, Button, Form, Row, Col, FormControlProps } from 'react-bootstrap';
 
-/**
- * Modal para editar un producto
- *
- * Props:
- *  - show (bool)            → visibilidad
- *  - onHide ()              → cerrar sin guardar
- *  - product (obj|null)     → producto a editar
- *  - onSave (obj)           → callback con el objeto actualizado
- */
-const EditProductModal = ({ show, onHide, product, onSave }) => {
-  // estado local del formulario
-  const [form, setForm] = useState({
-    IdProducto : '',
+interface ProductForm {
+  IdProducto: string;
+  Descripcion: string;
+  Imagen: string;
+  Precio: number;
+  Color: string;
+  Talla: string;
+  Categoria: string;
+  Cantidad: number;
+  Estado: string;
+}
+
+interface EditProductModalProps {
+  show: boolean;
+  onHide: () => void;
+  product: ProductForm | null;
+  onSave: (product: ProductForm) => void;
+}
+
+const EditProductModal: React.FC<EditProductModalProps> = ({ show, onHide, product, onSave }) => {
+  const [form, setForm] = useState<ProductForm>({
+    IdProducto: '',
     Descripcion: '',
-    Imagen     : '', // opcional, si no se edita se deja vacío
-    Precio     : 0,
-    Color      : '',
-    Talla      : '',
-    Categoria  : '',
-    Cantidad   : 0,
-    Estado     : '',
+    Imagen: '',
+    Precio: 0,
+    Color: '',
+    Talla: '',
+    Categoria: '',
+    Cantidad: 0,
+    Estado: '',
   });
 
-  /* cuando cambia 'product', precarga el form */
   useEffect(() => {
     if (product) setForm(product);
   }, [product]);
 
-  /* handler genérico */
-  const handleChange = (e) => {
+  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
-    setForm({ ...form, [name]: value });
+    setForm({ ...form, [name]: name === 'Precio' || name === 'Cantidad' ? Number(value) : value });
   };
 
-  /* guardar */
   const handleSubmit = () => {
-    onSave(form);   // delega la llamada API al padre
+    onSave(form);
   };
 
-  if (!product) return null; // no renderiza si no hay data
+  if (!product) return null;
 
   return (
     <Modal show={show} onHide={onHide} centered>
@@ -69,7 +75,7 @@ const EditProductModal = ({ show, onHide, product, onSave }) => {
               <Form.Group>
                 <Form.Label>Imagen</Form.Label>
                 <Form.Control
-                  name="Descripcion"
+                  name="Imagen"
                   value={form.Imagen}
                   onChange={handleChange}
                   placeholder="URL de la imagen (opcional)"

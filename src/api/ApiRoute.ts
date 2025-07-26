@@ -1,5 +1,5 @@
 
-import Rutas from '../config/Rutas';
+import {Rutas} from '../config/Rutas';
 
 const { APIHOSTRemote, APIHOSTLocal } = Rutas; // Extrae APIHOSTRemote fuera del objeto ApiRoutes
 
