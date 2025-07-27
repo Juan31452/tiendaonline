@@ -58,14 +58,14 @@ const CategoryFilterController = ({
   // ------------ efecto inicial ------------
   useEffect(() => {
     if (allProducts.length > 0) {
-    console.log('🧃 Productos recibidos en CategoryFilterController:', allProducts.length);
-    console.table(
-      allProducts.map(p => ({
-        Id: p.IdProducto,
-        Categoria: p.Categoria,
-        Descripcion: p.Descripcion?.slice(0, 50), // cortamos por si es muy larga
-      }))
-    );
+    //console.log('🧃 Productos recibidos en CategoryFilterController:', allProducts.length);
+    //console.table(
+      //allProducts.map(p => ({
+        //Id: p.IdProducto,
+        //Categoria: p.Categoria,
+        //Descripcion: p.Descripcion?.slice(0, 50), // cortamos por si es muy larga
+      //}))
+    //);
 
     applyFilter(selectedCategory); // filtro inicial
     onCategoryChange?.(selectedCategory);

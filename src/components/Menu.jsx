@@ -1,6 +1,6 @@
-import React from 'react'
+import React, {  useEffect} from 'react'
 import { Container } from 'react-bootstrap';
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, useLocation} from 'react-router-dom';
 import Home from '../pages/home';
 import Mynew from '../pages/new';
 import Offers from '../pages/offers';
@@ -16,6 +16,18 @@ import Layaut from './Layout';
 
 
 const Menu = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (document.startViewTransition) {
+      document.startViewTransition(() => {
+        // El cambio ya ocurrió, pero al menos forzamos la animación
+        // Si usas animaciones con ::view-transition-old y ::view-transition-new, esto dispara la transición
+      });
+    }
+  }, [location.pathname]);
+
+  // Componente que maneja las rutas y el diseño de la aplicación
     return (
       <Container>
         <div>
@@ -23,7 +35,7 @@ const Menu = () => {
         </div>
       
        
-      <Routes>
+      <Routes location={location}>
          <Route path="/" element={<Home />} />
          <Route path={PRIVATE1} element={<Products />} />
          <Route path={PRIVATE2} element={<Mynew/>} />

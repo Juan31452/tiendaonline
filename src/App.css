@@ -1,7 +1,4 @@
-* {
-  box-sizing: border-box;
-}
-
+/* ========== ESTILOS GENERALES ========== */
 html, body {
   margin: 0;
   padding: 0;
@@ -16,10 +13,44 @@ html, body {
   padding-bottom: 60px; /* ✅ deja espacio para el nav fijo abajo */
 }
 
+/* ========== VIEW TRANSITIONS ========== */
+
+
+::view-transition-group(*) {
+  animation-duration: 0.6s;
+}
+
+::view-transition-old(:root) {
+  animation: slide-out-to-left 0.8s forwards;
+}
+
+::view-transition-new(:root) {
+  animation: slide-in-from-right 0.8s forwards;
+}
+
+@keyframes slide-out-to-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes slide-in-from-right {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* ========== ESTILOS DEL MENÚ ========== */
 
 img {
-  display: block;      /* quita espacio bajo la imagen */
   max-width: 100%;
+  display: block;
 }
 
 npm in#root {

@@ -1,12 +1,14 @@
 import React from 'react';
 import Menu from './components/Menu';
-import './App.css'; // Assuming you have some styles in App.css
+import './App.css'; // estilos de la aplicación
 
 function App() {
+  // Componente principal de la aplicación
+
   return (
-    <div>
-     <Menu />
-    </div>
+    <>
+     <Menu/>
+    </>
   );
 }
 
