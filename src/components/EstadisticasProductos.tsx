@@ -1,5 +1,5 @@
 import React from 'react';
-import './EstadisticasProductos.css';
+import '../style/EstadisticasProductos.css';
 
 interface EstadisticasPorCategoria {
   Categoria: string;

@@ -1,10 +1,23 @@
 // components/ProductCard.jsx
 import React from 'react';
 
-const ProductCard = React.memo(({ product, onClick }) => {
-  const handleImageError = (e) =>
-    (e.target.src =
-      'https://via.placeholder.com/150?text=Imagen+no+disponible');
+type Product = {
+  IdProducto: string | number;
+  Imagen: string;
+  Descripcion: string;
+  Estado?: string;
+  Precio?: number;
+};
+
+type ProductCardProps = {
+  product: Product;
+  onClick: () => void;
+};
+
+const ProductCard: React.FC<ProductCardProps> = React.memo(({ product, onClick }) => {
+  const handleImageError = (e: React.SyntheticEvent<HTMLImageElement, Event>) => {
+    e.currentTarget.src = 'https://via.placeholder.com/150?text=Imagen+no+disponible';
+  };
 
   return (
     <div
@@ -16,32 +29,24 @@ const ProductCard = React.memo(({ product, onClick }) => {
     >
       {/* ─── Imagen ─── */}
       <div className="ratio ratio-1x1 bg-light overflow-hidden p-0">
-        {/* p-0 = cero padding → adiós franja */}
         <img
           src={product.Imagen}
           alt={product.Descripcion}
-          className="w-100 h-100 object-fit-cover" // llena y recorta
+          className="w-100 h-100 object-fit-cover"
           onError={handleImageError}
         />
       </div>
 
       {/* ─── Detalles ─── */}
       <div className="card-body p-2">
-        <small className="text-muted d-block">
-          ID: {product.IdProducto}
-        </small>
+        <small className="text-muted d-block">ID: {product.IdProducto}</small>
 
-        <h6
-          className="card-title text-truncate"
-          title={product.Descripcion}
-        >
+        <h6 className="card-title text-truncate" title={product.Descripcion}>
           {product.Descripcion}
         </h6>
 
         <div className="d-flex justify-content-between align-items-center">
-          <span className="badge bg-secondary">
-            {product.Estado || 'Sin estado'}
-          </span>
+          <span className="badge bg-secondary">{product.Estado || 'Sin estado'}</span>
           <span className="text-primary fw-bold">
             ${product.Precio?.toLocaleString()}
           </span>
@@ -51,8 +56,8 @@ const ProductCard = React.memo(({ product, onClick }) => {
   );
 }, areEqual);
 
-// 📌 Comparación personalizada para evitar renders innecesarios
-function areEqual(prevProps, nextProps) {
+// Comparación personalizada para evitar renders innecesarios
+function areEqual(prevProps: ProductCardProps, nextProps: ProductCardProps): boolean {
   return prevProps.product === nextProps.product;
 }
 

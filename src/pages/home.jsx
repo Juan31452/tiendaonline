@@ -21,7 +21,7 @@ const { loading, allProducts, filteredProducts, setFilteredProducts } = useProdu
       resumenEstados={['disponible']}
     />
 
-    <Footer />
+    <Footer message={`© ${new Date().getFullYear()} Variedades JM. Imágenes de productos cortesía de nuestros proveedores. Todos los derechos pertenecen a sus respectivas marcas.`} />
   </div>  
   );
 }; 
