@@ -305,7 +305,7 @@
     "IdProducto": "1.28",
     "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1749749069/pedido1/img25.webp",
     "Categoria": "Mujer",
-    "Estado": "Ofertas"
+    "Estado": "Separado"
   },
   {
     "Descripcion": "Camisón Sexy de Satén para Mujer, Vestido de Dormir con Cuello en V, Tirantes Cruzados en la Espalda, Bata de Noche Cómoda",
@@ -519,13 +519,13 @@
   {
     "Descripcion": "Blusa estampada de flores con escote en V, Blusa elegante de mangas ondeadas para primavera y verano, Ropa de mujer",
     "Cantidad": 1,
-    "Precio": 26000,
+    "Precio": 22000,
     "Color": "Multicolor",
     "Talla": "M",
     "IdProducto": "1.48",
     "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1749827817/pedido1/img39.webp",
     "Categoria": "Mujer",
-    "Estado": "Separado"
+    "Estado": "Vendido"
   },
   {
     "Descripcion": "Top corto con encaje de contraste, top sexy ajustado sin mangas con abertura para primavera y verano, ropa de mujer.",
@@ -628,18 +628,18 @@
   },
   {
     "Descripcion": "4pcs Bragas de Encaje y Malla Sexy para Mujer - Cintura Baja, Mezcla de Nylon Transpirable, Lavables a Máquina, precio por unidad 6000 c/u",
-    "Cantidad": 1,
-    "Precio": 21000,
-    "Color": "Juego de 4 piezas",
+    "Cantidad": 2,
+    "Precio": 6000,
+    "Color": "Juego de 2 piezas",
     "Talla": "M",
     "IdProducto": "1.58",
     "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1749828800/pedido1/img46.webp",
     "Categoria": "Mujer",
-    "Estado": "Separado"
+    "Estado": "Disponible"
   },
   {
-    "Descripcion": "4 Piezas Bragas Cortas De Encaje Floral, Bragas Suaves Y Cómodas Con Ribete Festoneado, Lencería Y Ropa Interior Para Mujer, precio por unidad 5500 c/u",
-    "Cantidad": 1,
+    "Descripcion": "2 Piezas Bragas Cortas De Encaje Floral, Bragas Suaves Y Cómodas Con Ribete Festoneado, Lencería Y Ropa Interior Para Mujer, precio por unidad 5500 c/u",
+    "Cantidad": 2,
     "Precio": 20000,
     "Color": "Color mezclado B",
     "Talla": "L",
