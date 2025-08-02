@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+
 import useConsultas from '../hooks/useConsultas';
 import useEditProduct from '../hooks/useEditProduct';
 import useEstadisticasProductos from '../hooks/useEstadisticasProductos';
@@ -11,18 +12,12 @@ import EditProductModal from '../components/Modals/EditProductModal';
 import RadioOptionsHorizontal from '../components/Buttons/RadioOptionsHorizontal';
 import EstadisticasProductos from '../components/EstadisticasProductos';
 
-// Puedes definir una interfaz para Producto si la tienes
-// interface Producto { ... }
-
 const ProductListView: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState<string>('todos');
   const [activeEstado, setActiveEstado] = useState<string>('Disponible');
-  const { estadisticas, loading: loadingEstadisticas, error: errorEstadisticas } = useEstadisticasProductos();
-
-  /* ---------- paginación ---------- */
   const [page, setPage] = useState<number>(1);
 
-  /* Consultas */
+  /** Consultas de productos paginados **/
   const {
     productos,
     pagination,
@@ -31,7 +26,14 @@ const ProductListView: React.FC = () => {
     fetchPage
   } = useConsultas();
 
-  /* ---------- edición ---------- */
+  /** Estadísticas agrupadas por categoría **/
+  const {
+    estadisticas,
+    loading: loadingEstadisticas,
+    error: errorEstadisticas
+  } = useEstadisticasProductos();
+
+  /** Manejo de edición de productos **/
   const {
     productSel,
     showModal,
@@ -42,11 +44,12 @@ const ProductListView: React.FC = () => {
     saveChanges,
   } = useEditProduct();
 
-  // Ejecutar cada vez que cambie categoría o estado
+  /** Disparar consulta al cambiar filtros */
   useEffect(() => {
     fetchPage(1, 100, activeCategory, activeEstado);
   }, [activeCategory, activeEstado]);
 
+  /** Handlers */
   const handleCategoryChange = (newCategory: string) => {
     setActiveCategory(newCategory);
     console.log("Desde ProductListView", newCategory);
@@ -60,7 +63,7 @@ const ProductListView: React.FC = () => {
     console.log('Ver producto', product);
   };
 
-  /* -------- handlers de paginación -------- */
+  /** Paginación */
   const prev = () => page > 1 && (fetchPage(page - 1), setPage(page - 1));
   const next = () => page < pagination.totalPages && (fetchPage(page + 1), setPage(page + 1));
   const first = () => page !== 1 && (fetchPage(1), setPage(1));
@@ -72,19 +75,18 @@ const ProductListView: React.FC = () => {
     <div className="container mt-4" style={{ paddingTop: '80px' }}>
       <h2 className="text-center mb-2">Lista de Productos</h2>
 
+      {/* Loaders y errores generales */}
       {loadingList && <Loading text="Cargando productos" />}
       {saving && <Loading text="Guardando cambios" fullScreen />}
       {error && <p style={{ color: 'crimson' }}>{error}</p>}
       {saveError && <p style={{ color: 'crimson' }}>{saveError}</p>}
 
-      {/* Filtro por categoría */}
+      {/* Filtros */}
       <Category
         activeCategory={activeCategory}
         onSelect={handleCategoryChange}
-        products={productos}
       />
 
-      {/* Filtro por estado horizontal */}
       <div className="my-3">
         <RadioOptionsHorizontal
           activeStatus={activeEstado}
@@ -92,7 +94,7 @@ const ProductListView: React.FC = () => {
         />
       </div>
 
-      {/* Estadísticas de productos */}
+      {/* Estadísticas agrupadas */}
       <EstadisticasProductos
         estadisticas={estadisticas}
         loading={loadingEstadisticas}
@@ -100,7 +102,7 @@ const ProductListView: React.FC = () => {
         activeCategory={activeCategory}
       />
 
-      {/* Grilla de productos */}
+      {/* Lista de productos */}
       <div className="row g-2">
         {productos.map((p: any) => (
           <ProductCard
@@ -112,7 +114,7 @@ const ProductListView: React.FC = () => {
         ))}
       </div>
 
-      {/* Modal de edición */}
+      {/* Modal para editar producto */}
       <EditProductModal
         show={showModal}
         product={productSel}
@@ -120,7 +122,7 @@ const ProductListView: React.FC = () => {
         onSave={(upd: any) => saveChanges(upd, refresh)}
       />
 
-      {/* Paginador */}
+      {/* Controles de paginación */}
       <PaginationControls
         page={page}
         totalPages={pagination.totalPages}

@@ -30,7 +30,7 @@
     "IdProducto": "29.3",
     "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1751612438/pedido29/img3.webp",
     "Categoria": "Mujer",
-    "Estado": "Separado"
+    "Estado": "Vendido"
   },
   {
     "Descripcion": "Conjunto de pijama sin mangas para mujer, estampado de amor, temporada global",
@@ -74,7 +74,7 @@
     "IdProducto": "29.7",
     "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1751612439/pedido29/img7.webp",
     "Categoria": "Variedades",
-    "Estado": "Separado"
+    "Estado": "Vendido"
   },
   {
     "Descripcion": "1 Unidad, Paño Protector Para Planchar, Almohadilla Para Planchar Resistente Al Calor: Protege La Ropa Y La Tabla De Planchar Con Una Almohadilla Para Planchar A Vapor De Tela De Malla",

@@ -1,5 +1,9 @@
 import { useState, useEffect, ChangeEvent } from 'react';
-import { Modal, Button, Form, Row, Col, FormControlProps } from 'react-bootstrap';
+import { Modal, Button, Form, Row, Col } from 'react-bootstrap';
+import { CategoryId,EstadoProducto } from '../Types'; 
+
+// Estado del producto como enum
+//export type EstadoProducto = 'Disponible' | 'Vendido' | 'Separado' | 'Oferta';
 
 interface ProductForm {
   IdProducto: string;
@@ -8,9 +12,9 @@ interface ProductForm {
   Precio: number;
   Color: string;
   Talla: string;
-  Categoria: string;
+  Categoria: CategoryId;
   Cantidad: number;
-  Estado: string;
+  Estado: EstadoProducto;
 }
 
 interface EditProductModalProps {
@@ -20,7 +24,12 @@ interface EditProductModalProps {
   onSave: (product: ProductForm) => void;
 }
 
-const EditProductModal: React.FC<EditProductModalProps> = ({ show, onHide, product, onSave }) => {
+const EditProductModal: React.FC<EditProductModalProps> = ({
+  show,
+  onHide,
+  product,
+  onSave,
+}) => {
   const [form, setForm] = useState<ProductForm>({
     IdProducto: '',
     Descripcion: '',
@@ -28,18 +37,25 @@ const EditProductModal: React.FC<EditProductModalProps> = ({ show, onHide, produ
     Precio: 0,
     Color: '',
     Talla: '',
-    Categoria: '',
+    Categoria: 'Hombre',
     Cantidad: 0,
-    Estado: '',
+    Estado: 'Disponible',
   });
 
   useEffect(() => {
     if (product) setForm(product);
   }, [product]);
 
-  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
+  ) => {
     const { name, value } = e.target;
-    setForm({ ...form, [name]: name === 'Precio' || name === 'Cantidad' ? Number(value) : value });
+
+    if (name === 'Precio' || name === 'Cantidad') {
+      setForm((prev) => ({ ...prev, [name]: Number(value) }));
+    } else {
+      setForm((prev) => ({ ...prev, [name]: value }));
+    }
   };
 
   const handleSubmit = () => {
@@ -141,11 +157,19 @@ const EditProductModal: React.FC<EditProductModalProps> = ({ show, onHide, produ
             <Col md={6}>
               <Form.Group>
                 <Form.Label>Categoría</Form.Label>
-                <Form.Control
+                <Form.Select
                   name="Categoria"
                   value={form.Categoria}
                   onChange={handleChange}
-                />
+                >
+                  {(['Hombre', 'Mujer', 'Niños', 'Tecnología', 'Hogar', 'Variedades'] as CategoryId[]).map(
+                    (cat) => (
+                      <option key={cat} value={cat}>
+                        {cat}
+                      </option>
+                    )
+                  )}
+                </Form.Select>
               </Form.Group>
             </Col>
 
@@ -157,12 +181,11 @@ const EditProductModal: React.FC<EditProductModalProps> = ({ show, onHide, produ
                   value={form.Estado}
                   onChange={handleChange}
                 >
-                  <option value="">-- Selecciona --</option>
-                  <option value="Disponible">Disponible</option>
-                  <option value="Vendido">Vendido</option>
-                  <option value="Separado">Separado</option>
-                  <option value="Oferta">Oferta</option>
-                  {/* añade más estados si los usas */}
+                  {(['Disponible', 'Vendido', 'Separado', 'Oferta'] as EstadoProducto[]).map((estado) => (
+                    <option key={estado} value={estado}>
+                      {estado}
+                    </option>
+                  ))}
                 </Form.Select>
               </Form.Group>
             </Col>
@@ -183,3 +206,4 @@ const EditProductModal: React.FC<EditProductModalProps> = ({ show, onHide, produ
 };
 
 export default EditProductModal;
+

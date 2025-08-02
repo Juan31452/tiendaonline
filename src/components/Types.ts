@@ -8,6 +8,12 @@ export type CategoryId =
   | 'Variedades'
   | 'todos';
 
+export type EstadoProducto = 
+  | 'Disponible' 
+  | 'Vendido' 
+  | 'Separado' 
+  | 'Oferta';
+
 export type Product = {
   IdProducto: string;
   Descripcion: string;

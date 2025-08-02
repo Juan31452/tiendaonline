@@ -1,28 +1,20 @@
 import { useState, useCallback } from 'react';
 import axios from 'axios';
 import ApiRoutes from '../api/ApiRoute';
+import { Product } from '../components/Types'; // Ajusta esta ruta según dónde esté tu tipo
 
 /**
  * Hook para gestionar edición de productos
- *
- * Devuelve:
- *   productSel  -> producto seleccionado o null
- *   showModal   -> bool (visibilidad)
- *   loading     -> bool (true mientras hace PUT)
- *   error       -> string (error al guardar)
- *   openModal(p)-> abre modal con producto p
- *   closeModal() -> cierra modal
- *   saveChanges(updated, cb) -> PUT y callback cb() al terminar
  */
 export default function useEditProduct() {
   /* ---------- estado ---------- */
-  const [productSel, setProductSel] = useState(null);
-  const [showModal,  setShowModal]  = useState(false);
-  const [loading,    setLoading]    = useState(false);
-  const [error,      setError]      = useState('');
+  const [productSel, setProductSel] = useState<Product | null>(null);
+  const [showModal, setShowModal] = useState<boolean>(false);
+  const [loading, setLoading] = useState<boolean>(false);
+  const [error, setError] = useState<string>('');
 
   /* ---------- abrir / cerrar ---------- */
-  const openModal = useCallback((prod) => {
+  const openModal = useCallback((prod: Product) => {
     setProductSel(prod);
     setShowModal(true);
     setError('');
@@ -36,7 +28,7 @@ export default function useEditProduct() {
 
   /* ---------- guardar cambios ---------- */
   const saveChanges = useCallback(
-    async (updatedObj, onDone = () => {}) => {
+    async (updatedObj: Product, onDone: () => void = () => {}) => {
       setLoading(true);
       setError('');
 
@@ -47,9 +39,9 @@ export default function useEditProduct() {
           { headers: { 'Content-Type': 'application/json' } }
         );
 
-        onDone();     // refresca la lista o lo que necesites
+        onDone();     // refresca la lista
         closeModal(); // cierra el modal
-      } catch (err) {
+      } catch (err: any) {
         console.error('❌ PUT producto:', err);
         setError(err.response?.data?.error || 'Error al guardar');
       } finally {
