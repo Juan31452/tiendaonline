@@ -1,47 +1,38 @@
+// src/utils/agruparPorCategoria.ts
+import { EstadisticaProducto, EstadisticasPorCategoria } from '@/types/Estadisticas';
+import { CategoryId, EstadoProducto } from '@/types/Categoria';
 
-import { CategoryId, EstadoProducto } from '@/types';
-import { Product } from '@/types/Producto';
+const categoriasValidas: CategoryId[] = [
+  'Hombre',
+  'Mujer',
+  'Ninos',
+  'Tecnologia',
+  'Hogar',
+  'Variedades',
+  'todos',
+];
 
-function agruparPorCategoria(productos: Product[]) {
-  const resultado: {
-    [categoria in CategoryId]?: Record<EstadoProducto, number>;
-  } = {};
+const estadosValidos: EstadoProducto[] = ['Disponible', 'Vendido', 'Separado', 'Oferta'];
 
-  productos.forEach((p) => {
-    const categoria = p.Categoria as CategoryId;
-    const estado = p.Estado as EstadoProducto;
+const agruparPorCategoria = (
+  datos: EstadisticaProducto[]
+): EstadisticasPorCategoria[] => {
+  return datos
+    .filter(({ Categoria }) => categoriasValidas.includes(Categoria as CategoryId))
+    .map(({ Categoria, estados }) => {
+      const estadosFiltrados: Partial<Record<EstadoProducto, number>> = {};
 
-    if (!categoria || !(categoria in resultado || categoria in CategoryIdMap)) {
-      console.warn("Producto sin categoría válida:", p);
-      return; // ❌ Salta si no hay categoría válida
-    }
+      for (const [estado, cantidad] of Object.entries(estados)) {
+        if (estadosValidos.includes(estado as EstadoProducto)) {
+          estadosFiltrados[estado as EstadoProducto] = cantidad;
+        }
+      }
 
-    if (!resultado[categoria]) {
-      resultado[categoria] = {
-        Disponible: 0,
-        Vendido: 0,
-        Separado: 0,
-        Oferta: 0,
+      return {
+        Categoria: Categoria as CategoryId,
+        estados: estadosFiltrados,
       };
-    }
-
-    if (estado in resultado[categoria]!) {
-      resultado[categoria]![estado]++;
-    }
-  });
-
-  return resultado;
-}
-
-const CategoryIdMap = {
-  Hombre: true,
-  Mujer: true,
-  Ninos: true,
-  Tecnologia: true,
-  Hogar: true,
-  Variedades: true,
-  todos: true,
+    });
 };
+
 export default agruparPorCategoria;
-// Asegúrate de que CategoryIdMap contenga todas las categorías válidas
-// y que coincida con las definidas en tu enum o tipo CategoryId.

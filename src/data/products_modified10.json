@@ -35,7 +35,7 @@
   {
     "Descripcion": "Estilo Nuevo Primavera y Verano 2025, Vestido Sexy de Encaje y Patchwork Estilo Vacaciones, Pantalones con Tirantes Moldeadores para Mujer",
     "Cantidad": 1,
-    "Precio": 50000,
+    "Precio": 51000,
     "Color": "Negro",
     "Talla": "M",
     "IdProducto": "10.4",
@@ -140,7 +140,7 @@
     "IdProducto": "10.13",
     "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750789146/pedido10/img13.webp",
     "Categoria": "Mujer",
-    "Estado": "Separado"
+    "Estado": "Vendido"
   },
   {
     "Descripcion": "Pantalones cortos casuales de color sólido para mujer con botones falsos y bolsillos - Tejido de poliéster, ligero 145 g/m² para primavera/verano/otoño",
@@ -151,7 +151,7 @@
     "IdProducto": "10.14",
     "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1750789146/pedido10/img14.webp",
     "Categoria": "Mujer",
-    "Estado": "Separado"
+    "Estado": "Vendido"
   },
   {
     "Descripcion": "1pieza SOKI Reloj de Moda Casual Redondo Digital de Cuero Falso para Mujeres, con 4pcs Conjunto de Joyería de Collar, Pendientes y Pulsera para Mujeres",

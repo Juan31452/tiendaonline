@@ -28,6 +28,12 @@ const useEstadisticasProductos = () => {
         });
 
         if (response.data.success) {
+          console.log('Respuesta de la API:', response.data);
+          // Verificar que la respuesta contenga las estadísticas
+          if (!response.data.estadisticas || !Array.isArray(response.data.estadisticas)) {
+            throw new Error('Datos de estadísticas no válidos');
+          }
+          // Agrupar las estadísticas por categoría
           const agrupadas = agruparPorCategoria(response.data.estadisticas);
           setEstadisticas(agrupadas);
           console.log('¿Es array?', Array.isArray(agrupadas));

@@ -4,14 +4,11 @@
 import { CategoryId, EstadoProducto } from './';
 
 export interface EstadisticaProducto {
-  categoria: CategoryId;
-  estado: EstadoProducto;
-  cantidad: number;
+  Categoria: string;
+  estados: Record<string, number>
 }
 
 export interface EstadisticasPorCategoria {
   Categoria: CategoryId;
-  estados: {
-    [estado in EstadoProducto]?: number;
-  };
-}
+  estados: Partial<Record<EstadoProducto, number>>;
+};
