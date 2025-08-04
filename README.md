@@ -1,65 +1,111 @@
-# Tienda Online MERN
+🛒 Tienda Online MERN
 
-Este proyecto es una tienda online construida con React (frontend) y Node.js/MongoDB (backend). Permite listar, buscar, editar y ver detalles de productos.
+Este proyecto es una tienda online creada con el stack MERN (MongoDB, Express, React, Node.js), enfocada inicialmente en el frontend con datos mockeados y progresivamente migrada a una arquitectura completa con backend y autenticación.
 
-Primera Fase : se construyo solo el Front , donde los datos vienen de un archivo json, esta fase actualmente sigue vigente , pero los componentes mas adelante seran obsoletos.
+✨ Características
 
-Segunda Fase : aqui se esta implementado el backend tambien en una fase temprana , donde esta creada para ingreso ,edicion y visualizacion de productos, se sigue actualizando componentes.
+Vista de productos por categoría.
 
-Tercera fase : Se crearan usuarios en Backend y seguridad con token
+Estadísticas de stock agrupadas por estado.
 
-## Estructura principal
+Filtro dinámico por categoría y búsqueda.
 
-- **src/components/**: Componentes reutilizables (botones, tablas, modales, etc).
-- **src/pages/**: Vistas principales de la aplicación.
-- **src/utils/**: Utilidades y componentes auxiliares.
-- **src/hooks/**: Hooks personalizados para lógica de negocio.
+Modal de edición de productos.
 
-## Funcionalidades
+Gestión visual con animaciones y diseño responsive.
 
-- **Listado de productos** con paginación.
-- **Búsqueda** por ID de producto.
-- **Estadísticas de producto** para visualizar métricas relevantes.
-- **Visualización de detalles** de producto en un modal.
-- **Botón de WhatsApp** para contacto rápido.
-- **Paginación** con controles de navegación.
 
-## Componentes destacados
-### Backend
+🚧 Fases del Proyecto
 
-El backend está desarrollado con Node.js, Express y MongoDB. Expone una API RESTful para gestionar productos y proximamente usuarios.
+Frontend con datos estáticos:
 
-- `routes/productos.js`: Rutas para operaciones CRUD de productos.
-- `routes/usuarios.js`: Rutas para registro y autenticación de usuarios.
-- `models/Producto.js`: Modelo Mongoose para productos.
-- `models/Usuario.js`: Modelo Mongoose para usuarios.
-- `middleware/auth.js`: Middleware para autenticación con JWT.
-- `controllers/`: Lógica de negocio para productos y usuarios.
+Estructura inicial con React + Vite.
 
-Incluye validación de datos, manejo de errores y proximamente autenticación basada en tokens JWT.
-- `ProductosTable`: Muestra los productos en una tabla con botones de editar y ver.
-- `EditProductModal`: Modal para editar productos.
-- `ModalDetalles`: Modal para ver detalles de un producto.
-- `PaginationControls`: Navegación entre páginas.
-- `EditButton`: Botón reutilizable para acciones.
+Mock de productos (JSON local).
 
-## Cómo ejecutar
 
-1. Clona el repositorio.
-2. Instala dependencias:
-   ```bash
-   npm install
-   ```
-3. Inicia la app:
-   ```bash
-   npm start
-   ```
+Conexión con Backend:
 
-## Personalización
+CRUD de productos con Node.js y MongoDB.
 
-Puedes modificar los componentes en `src/components` y las vistas en `src/pages` para adaptar la tienda a tus necesidades.
+API REST para obtener productos reales.
 
----
+Migración completa:
 
-**Autor:** [Juan Carlos Salazar]  
-**Licencia:** MIT
+Migrar datos y lógica a servidor propio.
+
+Control de estados y stock desde backend.
+
+Usuarios y Autenticación (JWT):
+
+Registro e inicio de sesión con tokens.
+
+Gestión de usuarios, roles y permisos.
+
+
+🧱 Estructura del Proyecto
+
+ItemdaOnline/
+├── dist/                         # Carpeta de construcción (output de producción)
+├── node_modules/                 # Dependencias instaladas
+├── public/                       # Assets públicos
+│   ├── assets/                   # Recursos estáticos (imágenes, fuentes, etc.)
+│   ├── icons/                    # Íconos de la aplicación
+│   │   ├── react.svg             # Ícono de React
+│   │   ├── vite.svg              # Ícono de Vite
+│   └── _redirects                # Configuración de redirecciones (para despliegue)
+│
+├── src/                          # Código fuente principal
+│   ├── api/                      # Llamadas a APIs (servicios)
+│   ├── components/               # Componentes reutilizables
+│   ├── config/                   # Configuraciones globales
+│   ├── constants/                # Constantes de la aplicación
+│   ├── data/                     # Datos estáticos/mocks
+│   ├── hooks/                    # Custom Hooks de React
+│   ├── models/                   # Modelos de datos/TypeScript
+│   ├── pages/                    # Componentes de páginas/rutas
+│   ├── style/                    # Estilos globales/theming
+│   ├── types/                    # Tipos globales de TypeScript
+│   ├── utils/                    # Funciones utilitarias
+│   ├── App.css                   # Estilos principales
+│   ├── App.tsx                   # Componente raíz de React
+│   ├── index.css                 # Estilos globales
+│   └── main.tsx                  # Punto de entrada de la aplicación
+│
+├── backend/                      # Juan31452/BackendTienda
+│
+├── .gitignore                    # Archivos ignorados por Git
+├── eslint.config.js              # Configuración de ESLint
+├── index.html                    # Plantilla HTML principal
+├── package-lock.json             # Versiones exactas de dependencias
+├── package.json                  # Configuración del proyecto y dependencias
+├── README.md                     # Documentación del proyecto
+├── tsconfig.json                 # Configuración de TypeScript
+└── vite.config.js                # Configuración de Vite
+
+🚀 Scripts Disponibles
+
+npm run dev       # Inicia el servidor de desarrollo
+npm run build     # Compila para producción
+npm run preview   # Sirve el build generado
+
+📦 Dependencias principales
+
+React + TypeScript
+
+Vite
+
+Bootstrap / CSS personalizado
+
+MongoDB (planeado)
+
+Express / Node.js (en backend)
+
+💡 Por hacer
+
+
+
+📬 Autor
+
+Desarrollado por Juan Carlos Salazar🚀
+
