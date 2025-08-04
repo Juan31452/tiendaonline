@@ -1,17 +1,26 @@
-// components/ProductListPage.jsx
-import React, { useCallback, useMemo } from 'react';
-import { useState } from 'react';
+// components/ProductListPage.tsx
+import React, { useCallback, useMemo, useState } from 'react';
 import useProductPagination from '../hooks/useProductPagination';
 import CategoryFilterController from '../components/CategoryFilterController';
 import ModalDetalles from '../components/Modals/ModalDetalles';
-//import ProductCard  from '../components/ProductCard';
 import ProductGrid from '../components/ProductGrid';
 import EstadoResumen from '../components/EstadoResumen';
 import Pagination from '../components/Pagination';
-import MobileBottomNav from '../components/Buttons/MobileBottomNav';  
+import MobileBottomNav from '../components/Buttons/MobileBottomNav';
 
+import { Product } from '../types/Producto';
+import { EstadoProducto } from '../types/Categoria';
 
-const ProductListPage = ({ 
+interface ProductListPageProps {
+  title: string;
+  allProducts: Product[];
+  filteredProducts: Product[];
+  setFilteredProducts: React.Dispatch<React.SetStateAction<Product[]>>;
+  filterFn: (product: Product) => boolean;
+  resumenEstados?: EstadoProducto[];
+}
+
+const ProductListPage: React.FC<ProductListPageProps> = ({
   title,
   allProducts,
   filteredProducts,
@@ -19,12 +28,11 @@ const ProductListPage = ({
   filterFn,
   resumenEstados = []
 }) => {
-  const [selectedProduct, setSelectedProduct] = useState(null);
+  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
   const [showModal, setShowModal] = useState(false);
-  //const [currentPage, setCurrentPage] = useState(1);
-  const [selectedCategory, setSelectedCategory] = useState('todos');
+  const [selectedCategory, setSelectedCategory] = useState<string>('todos');
   const itemsPerPage = 32;
-  
+
   const {
     currentPage,
     setCurrentPage,
@@ -32,12 +40,12 @@ const ProductListPage = ({
     totalPages
   } = useProductPagination(filteredProducts, itemsPerPage, filterFn);
 
-  const handleCardClick = useCallback((product) => {
+  const handleCardClick = useCallback((product: Product) => {
     setSelectedProduct(product);
     setShowModal(true);
- }, []);
+  }, []);
 
-  const handlePageChange = (pageNum) => {
+  const handlePageChange = (pageNum: number) => {
     setCurrentPage(pageNum);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -49,7 +57,7 @@ const ProductListPage = ({
   };
 
   const resumenProducts = useMemo(() => {
-   return selectedCategory === 'todos' ? allProducts : filteredProducts;
+    return selectedCategory === 'todos' ? allProducts : filteredProducts;
   }, [selectedCategory, allProducts, filteredProducts]);
 
   return (
@@ -61,17 +69,13 @@ const ProductListPage = ({
         estados={resumenEstados}
       />
 
-      <Pagination
-        currentPage={currentPage}
-        totalPages={totalPages}
-        onPageChange={handlePageChange}
-      />
+      <Pagination {...paginationProps} />
 
       <div className="sticky-top bg-transparent pt-2 pb-3 z-index-1020" style={{ top: 0 }}>
         <CategoryFilterController
           allProducts={allProducts}
           setFilteredProducts={setFilteredProducts}
-          onCategoryChange={setSelectedCategory}  // ✅ recibe la categoría
+          onCategoryChange={setSelectedCategory}
         />
       </div>
 

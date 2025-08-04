@@ -1,8 +1,20 @@
 // hooks/useProductPagination.js
 import { useState, useEffect } from 'react';
+import { Product } from '@/types/Producto'; 
 
-const useProductPagination = (products, itemsPerPage, filterFn) => {
-  const [currentPage, setCurrentPage] = useState(1);
+type UseProductPaginationReturn = {
+  currentPage: number;
+  setCurrentPage: (page: number) => void;
+  paginatedProducts: Product[];
+  totalPages: number;
+};
+
+const useProductPagination = (
+  products: Product[],
+  itemsPerPage: number,
+  filterFn: (product: Product) => boolean
+): UseProductPaginationReturn => {
+  const [currentPage, setCurrentPage] = useState<number>(1);
 
   const filtered = products.filter(filterFn);
   const totalPages = Math.ceil(filtered.length / itemsPerPage);

@@ -1,12 +1,19 @@
-import React from 'react';
+import React, { ReactNode, ButtonHTMLAttributes } from 'react';
 import '../../style/EditButton.css';
 
-const EditButton = ({
+interface EditButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+  onClick: () => void;
+  className?: string;
+  children?: ReactNode;
+  label?: string;
+}
+
+const EditButton: React.FC<EditButtonProps> = ({
   onClick,
   className = '',
-  children, // 👈 permite contenido personalizado
-  label = 'Editar', // fallback si no hay children
-  ...props // permite pasar más props (ej: disabled, style)
+  children,
+  label = 'Editar',
+  ...props
 }) => (
   <button
     type="button"

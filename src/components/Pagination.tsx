@@ -1,9 +1,15 @@
 import React from 'react';
 
-const Pagination = ({ currentPage, totalPages, onPageChange }) => {
+interface PaginationProps {
+  currentPage: number;
+  totalPages: number;
+  onPageChange: (page: number) => void;
+}
+
+const Pagination: React.FC<PaginationProps> = ({ currentPage, totalPages, onPageChange }) => {
   if (totalPages <= 1) return null;
 
-  const handleClick = (page) => {
+  const handleClick = (page: number) => {
     if (page >= 1 && page <= totalPages) {
       onPageChange(page);
     }
@@ -15,7 +21,6 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
         className="btn btn-outline-light btn-sm"
         onClick={() => handleClick(currentPage - 1)}
         disabled={currentPage === 1}
-      
       >
         ← Anterior
       </button>

@@ -1,13 +1,8 @@
-// components/ProductCard.jsx
+// components/ProductCard.tsx
 import React from 'react';
+import { Product } from '../types/Producto';
 
-type Product = {
-  IdProducto: string | number;
-  Imagen: string;
-  Descripcion: string;
-  Estado?: string;
-  Precio?: number;
-};
+
 
 type ProductCardProps = {
   product: Product;

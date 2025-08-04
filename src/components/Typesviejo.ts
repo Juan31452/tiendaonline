@@ -18,6 +18,7 @@ export type Product = {
   IdProducto: string;
   Descripcion: string;
   Precio: number;
+  Cantidad: number;
   Imagen?: string;
   Estado?: string;
   Categoria: CategoryId;

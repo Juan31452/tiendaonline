@@ -1,12 +1,13 @@
-// components/MobileBottomNav.jsx
-import {myicons} from '../../constants/myicons'; // Importa los iconos desde el archivo de constantes
-import '../../style/mobile-nav.css'; // estilos para la navegación móvil
+// components/MobileBottomNav.tsx
+import React from 'react';
+import { myicons } from '../../constants/myicons';
+import '../../style/mobile-nav.css';
 
-const MobileBottomNav = () => {
+const MobileBottomNav: React.FC = () => {
   return (
     <nav className="mobile-bottom-nav">
       <a href="/" className="nav-item">
-        <img src={myicons.HOME}  alt="Home" />
+        <img src={myicons.HOME} alt="Home" />
         <span>Home</span>
       </a>
       <a href="/new" className="nav-item">
@@ -22,3 +23,4 @@ const MobileBottomNav = () => {
 };
 
 export default MobileBottomNav;
+

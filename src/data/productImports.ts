@@ -1,4 +1,6 @@
-// src/data/imports/productImports.js
+// src/data/imports/productImports.ts
+import { Product } from '../types/Producto';
+import { normalizeProducts } from '../utils/normalizeProduct';
 import productos1 from "./products_modified1.json";
 import productos2 from "./products_modified2.json";
 import productos3 from "./products_modified3.json";
@@ -34,40 +36,39 @@ import productos32   from "./products_modified32.json";
 
 
 // Exporta como objeto nombrado
-export const productImports = {
-  productos1,
-  productos2,
-  productos3,
-  productos4,
-  productos5,
-  productos6,
-  productos7,
-  productos8,
-  productos9,
-  productos10,
-  productos11,
-  productos12,
-  productos13,
-  productos14,
-  productos15,
-  productos16,
-  productos17,
-  productos18,
-  productos19,
-  productos20,
-  productos21,
-  productos22,
-  productos23,
-  productos24,
-  productos25,
-  productos26,
-  productos27,
-  productos28,
-  productos29,
-  productos30,
-  productos31,
-  productos32
-
+export const productImports: Record<string, Product[]> = {
+  productos1: normalizeProducts(productos1),
+  productos2: normalizeProducts(productos2),
+  productos: normalizeProducts(productos3),
+  productos4: normalizeProducts(productos4),
+  productos5: normalizeProducts(productos5),
+  productos6: normalizeProducts(productos6),
+  productos7: normalizeProducts(productos7),
+  productos8: normalizeProducts(productos8),
+  productos9: normalizeProducts(productos9),
+  productos10: normalizeProducts(productos10),
+  productos11: normalizeProducts(productos11),
+  productos12: normalizeProducts(productos12),
+  productos13: normalizeProducts(productos13),
+  productos14: normalizeProducts(productos14),
+  productos15: normalizeProducts(productos15),
+  productos16: normalizeProducts(productos16),
+  productos17: normalizeProducts(productos17),
+  productos18: normalizeProducts(productos18),
+  productos19: normalizeProducts(productos19),
+  productos20: normalizeProducts(productos20),
+  productos21: normalizeProducts(productos21),
+  productos22: normalizeProducts(productos22),
+  productos23: normalizeProducts(productos23),
+  productos24: normalizeProducts(productos24),
+  productos25: normalizeProducts(productos25),
+  productos26: normalizeProducts(productos26),
+  productos27: normalizeProducts(productos27),
+  productos28: normalizeProducts(productos28),
+  productos29: normalizeProducts(productos29),
+  productos30: normalizeProducts(productos30),
+  productos31: normalizeProducts(productos31),
+  productos32: normalizeProducts(productos32),
   
 };
 
