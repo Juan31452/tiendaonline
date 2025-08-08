@@ -3,7 +3,6 @@
 export const ROUTES = {
   PRIVATE: {
     PRODUCTS: '/products',
-    NEW: '/new',
     UPLOAD_IMAGE: '/uploadimage',
     UPLOAD_JSON: '/uploadjson',
     LIST_PRODUCTS: '/listproducts',
@@ -11,6 +10,7 @@ export const ROUTES = {
   },
   PUBLIC: {
     USER: '/user',
+    NEW: '/new',
     OFFERS: '/offers',
   },
   ROOT: '/',

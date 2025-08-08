@@ -24,7 +24,7 @@ const Menu: React.FC = () => {
   <Routes>
     <Route path={ROUTES.ROOT} element={<Home />} />
     <Route path={ROUTES.PRIVATE.PRODUCTS} element={<Products />} />
-    <Route path={ROUTES.PRIVATE.NEW} element={<Mynew />} />
+    <Route path={ROUTES.PUBLIC.NEW} element={<Mynew />} />
     <Route path={ROUTES.PRIVATE.UPLOAD_IMAGE} element={<Uploadimage />} />
     <Route path={ROUTES.PRIVATE.UPLOAD_JSON} element={<UploadJson />} />
     <Route path={ROUTES.PRIVATE.LIST_PRODUCTS} element={<ListProducts />} />

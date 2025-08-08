@@ -27,6 +27,7 @@ const ProductListPage: React.FC<ProductListPageProps> = ({
   setFilteredProducts,
   filterFn,
   resumenEstados = []
+  
 }) => {
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
   const [showModal, setShowModal] = useState(false);
