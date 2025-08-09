@@ -8,7 +8,8 @@
     "IdProducto": "32.1",
     "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1753089268/pedido32/img1.jpg",
     "Categoria": "Mujer",
-    "Estado": "Disponible"
+    "Estado": "Separado"
+    
   },
   {
     "Descripcion": "Sujetadores push-up con relleno sin costuras, sujetadores inalámbricos para mujeres, soporte ligero para el pecho, lencería para mujer",
@@ -74,7 +75,7 @@
     "IdProducto": "32.7",
     "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1753089268/pedido32/img5.jpg",
     "Categoria": "Mujer",
-    "Estado": "Disponible"
+    "Estado": "Separado"
 }
 
   
