@@ -14,4 +14,4 @@ export type EstadoProducto =
   | 'Vendido'
   | 'Separado'
   | 'Oferta'
-  | 'Nuevo'
+  | 'Nuevo';
