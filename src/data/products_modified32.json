@@ -20,7 +20,7 @@
     "IdProducto": "32.2",
     "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1753089268/pedido32/img1.jpg",
     "Categoria": "Mujer",
-    "Estado": "Disponible"
+    "Estado": "Separado"
   },
   {
     "Descripcion": "Sostén sujetador de apoyo para el pecho, suave y sin costuras, sujetador ligero para mujer. Sujetador push-up que levanta y da forma al busto.",
@@ -31,7 +31,7 @@
     "IdProducto": "32.3",
     "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1753089268/pedido32/img2.jpg",
     "Categoria": "Mujer",
-    "Estado": "Disponible"
+    "Estado": "Separado"
   },
   {
     "Descripcion": "Sujetador ligero de soporte para el pecho, sujetador con soporte suave y sin costuras, sujetador ligero para mujeres, sujetador push-up, sujetador moldeador de pechos.",
@@ -42,7 +42,7 @@
     "IdProducto": "32.4",
     "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1753089268/pedido32/img3.jpg",
     "Categoria": "Mujer",
-    "Estado": "Disponible"
+    "Estado": "Separado"
 },
 {
     "Descripcion": "SHEIN Sport Studio Camiseta deportiva de manga larga minimalista de color sólido, sin costuras/con agujero para el pulgar.",
@@ -53,7 +53,7 @@
     "IdProducto": "32.5",
     "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1753089268/pedido32/img4.jpg",
     "Categoria": "Mujer",
-    "Estado": "Disponible"
+    "Estado": "Separado"
 },
 {
     "Descripcion": "Set de 4 pantalones cortos de seguridad sin costuras para mujer, ropa interior cómoda,Precio Unidad $11.000.",
@@ -64,7 +64,7 @@
     "IdProducto": "32.6",
     "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1753089268/pedido32/img5.jpg",
     "Categoria": "Mujer",
-    "Estado": "Disponible"
+    "Estado": "Separado"
 },
 {
     "Descripcion": "Set de 4 pantalones cortos de seguridad sin costuras para mujer, ropa interior cómoda,Precio Unidad $11.000.",
