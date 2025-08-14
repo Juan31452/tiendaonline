@@ -1,0 +1,112 @@
+[
+  {
+    "Descripcion": "Juego de Sábanas de 3 Piezas de Alta Gama, Felpa Suave y Cómoda, Diseño Floral y Geométrico de Plantas, Suministros para el Hogar y Hoteles, 1 Sábana + 2 Fundas de Almohada Sin Relleno",
+    "Cantidad": 1,
+    "Precio": 60000,
+    "Color": "140cm*200cm",
+    "Talla": "Ojo De Gato",
+    "IdProducto": "33.1",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1755199572/pedido33/img1.webp",
+    "Categoria": "Hogar",
+    "Estado": "Nuevo"
+  },
+  {
+    "Descripcion": "1 pieza de bolsa organizadora de herramientas de tela verde de alta resistencia con correa de hombro ajustable, múltiples compartimentos y cierre con cremallera - Tela Oxford duradera, antiarrugas y impermeable, ideal para herramientas manuales y artículos pequeños, bolsa de herramientas, almacenamiento de herramientas, diseño elegante, construcción sólida",
+    "Cantidad": 1,
+    "Precio": 0,
+    "Color": "Paquete Verde",
+    "Talla": "Sin talla",
+    "IdProducto": "33.2",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1755199572/pedido33/img2.webp",
+    "Categoria": "Sin categoría",
+    "Estado": "Nuevo"
+  },
+  {
+    "Descripcion": "Pantalones deportivos reflectantes para hombre, moda urbana, cómodos y rectos, ideales para primavera y otoño",
+    "Cantidad": 1,
+    "Precio": 0,
+    "Color": "gris",
+    "Talla": "Asian XXL",
+    "IdProducto": "33.3",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1755199572/pedido33/img3.webp",
+    "Categoria": "Hombre",
+    "Estado": "Nuevo"
+  },
+  {
+    "Descripcion": "Bandolera para Mujer - Bolso de Hombro Bicolor con Cremalleras Doradas, Correa Desmontable y Forro de Poliéster - Versátil para Casual, Citas o Universidad - Amarillo Claro, Verde, Azul,",
+    "Cantidad": 1,
+    "Precio": 0,
+    "Color": "Amarillo",
+    "Talla": "talla única",
+    "IdProducto": "33.4",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1755199571/pedido33/img4.webp",
+    "Categoria": "Mujer",
+    "Estado": "Nuevo"
+  },
+  {
+    "Descripcion": "1 pza. elegante bolso bandolera para mujer en verde oliva y blanco con detalles en marrón, costuras decorativas, correa ancha, cierre con solapa, ideal para fiestas, citas, escuela y actividades al aire libre, duradero, con cierre de cremallera, accesorio elegante, detalles de costura, cierre con cremallera",
+    "Cantidad": 1,
+    "Precio": 0,
+    "Color": "verde 1",
+    "Talla": "Sin talla",
+    "IdProducto": "33.5",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1755199571/pedido33/img5.webp",
+    "Categoria": "Mujer",
+    "Estado": "Nuevo"
+  },
+  {
+    "Descripcion": "Jeans de Cintura Alta para Mujer con Estampado Denim/Imitación - Leggings Elásticos No Transparentes, Lavables a Máquina para Todo el Año y Atuendos Diarios o Formales - Aspecto Jeans Sin Mantenimiento, Moda Moderna, Ajuste Cómodo",
+    "Cantidad": 1,
+    "Precio": 0,
+    "Color": "Azul",
+    "Talla": "L",
+    "IdProducto": "33.6",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1755199571/pedido33/img6.webp",
+    "Categoria": "Mujer",
+    "Estado": "Nuevo"
+  },
+  {
+    "Descripcion": "12 piezas de horquillas de metal estilo barroco antideslizantes para mujeres - Accesorios para el cabello elegantes en negro con sujeción segura para ocasiones casuales y formales, horquillas bonitas, diseño de clip delgado",
+    "Cantidad": 2,
+    "Precio": 0,
+    "Color": "Negro",
+    "Talla": "Sin talla",
+    "IdProducto": "33.7",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1755199571/pedido33/img7.webp",
+    "Categoria": "Mujer",
+    "Estado": "Nuevo"
+  },
+  {
+    "Descripcion": "Conjunto de 3 piezas de sujetador sin costuras y transpirable para mujer",
+    "Cantidad": 1,
+    "Precio": 0,
+    "Color": "Mixto",
+    "Talla": "XL",
+    "IdProducto": "33.8",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1755201481/pedido33/img8.jpg",
+    "Categoria": "Mujer",
+    "Estado": "Nuevo"
+  },
+  {
+    "Descripcion": "Conjunto de 2 sostenes sin costuras e inalámbricos para mujer, cómodos, con cobertura total, soporte ajustable en tirantes y diseño de cierre trasero, sin forro",
+    "Cantidad": 1,
+    "Precio": 0,
+    "Color": "Mixto",
+    "Talla": "L",
+    "IdProducto": "33.9",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1755201481/pedido33/img9.jpg",
+    "Categoria": "Mujer",
+    "Estado": "Nuevo"
+  },
+  {
+    "Descripcion": "Juego de sábanas con estampado geométrico, 3 piezas, elegante, clásico, popular, suave y cómodo, ideal para habitación o cuarto de invitados, incluye 1 sábana ajustable + 2 fundas de almohada, sin núcleo",
+    "Cantidad": 1,
+    "Precio": 60000,
+    "Color": "gris",
+    "Talla": "140cm*200cm",
+    "IdProducto": "33.10",
+    "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1755200662/pedido33/img10.jpg",
+    "Categoria": "Mujer",
+    "Estado": "Nuevo"
+  }
+]
