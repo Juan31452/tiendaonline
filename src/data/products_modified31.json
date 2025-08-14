@@ -19,7 +19,7 @@
     "IdProducto": "31.2",
     "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1752696926/pedido31/img2.webp",
     "Categoria": "Mujer",
-    "Estado": "Disponible"
+    "Estado": "Separado"
   },
   {
     "Descripcion": "Pantalones Reflectantes Nocturnos para Hombres de Primavera y Otoño, Moda Urbana, Pantalones Casuales Rectos Iluminados",
@@ -30,7 +30,7 @@
     "IdProducto": "31.3",
     "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1752696926/pedido31/img3.webp",
     "Categoria": "Hombre",
-    "Estado": "Disponible"
+    "Estado": "Separado"
   },
   {
     "Descripcion": "Chaqueta de softshell con capucha para hombres - 100% poliéster, estilo deportivo, tela de color sólido no elástico, manga regular, detalle de cremallera, ropa casual y al aire libre para correr, senderismo, ciclismo - primavera/otoño, ajuste universal",
@@ -63,7 +63,7 @@
     "IdProducto": "31.6",
     "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1752696927/pedido31/img6.webp",
     "Categoria": "Hombre",
-    "Estado": "Disponible"
+    "Estado": "Separado"
   },
   {
     "Descripcion": "Chaqueta Reflectante a Prueba de Viento para Hombre - Abrigo con Capucha y Cremallera, Mangas Largas, Ropa Urbana para Correr Nocturno, Baile o Desplazamientos Diarios - Lavado Fácil a Mano, Impermeable Duradero, Moda Hip Hop, Chaqueta de Alta Calidad para Exteriores",
@@ -74,7 +74,7 @@
     "IdProducto": "31.7",
     "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1752696927/pedido31/img6.webp",
     "Categoria": "Hombre",
-    "Estado": "Disponible"
+    "Estado": "Separado"
   },
   {
     "Descripcion": "Chaqueta con Capucha Gris Plata Reflectante para Hombre - A Prueba de Viento, Estilo Hip-Hop Elegante, Ideal para Montar Nocturno en Primavera/Otoño",
@@ -85,6 +85,6 @@
     "IdProducto": "31.8",
     "Imagen": "https://res.cloudinary.com/dgplca5we/image/upload/v1752696926/pedido31/img7.webp",
     "Categoria": "Hombre",
-    "Estado": "Disponible"
+    "Estado": "Separado"
   }
 ]
