@@ -1,12 +1,12 @@
 .new-messages {
-background: linear-gradient(90deg, #ff9800, #ff5722);
+background: linear-gradient(90deg, #997f58, #ff5722);
   color: white;
   padding: 0.1rem;
   font-weight: bold;
   text-align: center;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   font-size: 0.9rem;
-  top: 3px;
+  border-radius: 0.5rem;
 }
 
 .new-messages span {
