@@ -9,7 +9,7 @@ import ProductGrid from '../components/ProductGrid';
 import EstadoResumen from '../components/EstadoResumen';
 import Pagination from '../components/Pagination';
 import MobileBottomNav from '../components/Buttons/MobileBottomNav';  
-
+import NewMessages from '../components/Newmessages'; // Asegúrate de que la ruta sea correcta
 
 const ProductListPage = ({ 
   title,
@@ -52,10 +52,20 @@ const ProductListPage = ({
    return selectedCategory === 'todos' ? allProducts : filteredProducts;
   }, [selectedCategory, allProducts, filteredProducts]);
 
+   const nuevosCount = allProducts.filter(
+    (p) => p.Estado?.trim().toLowerCase() === 'nuevo'
+  ).length;
+  
+  console.log("estado",filterFn)
   return (
     <div className="container mt-4" style={{ paddingTop: '80px' }}>
+      
+      {/* Mostrar solo si no se está filtrando por "Nuevo" */}
+      {title == 'Nuestros Productos' && <NewMessages cantidad={nuevosCount} />}
+
       <h2 className="text-center mb-2">{title}</h2>
 
+      
       <EstadoResumen
         products={resumenProducts}
         estados={resumenEstados}

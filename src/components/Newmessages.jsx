@@ -1,11 +1,7 @@
 import React from 'react';
 import '../style/newmensagess.css';
 
-interface NewmessagesProps {
-  cantidad: number;
-}
-
-const Newmessages: React.FC<NewmessagesProps> = ({ cantidad }) => {
+const Newmessages = ({ cantidad }) => {
   if (cantidad <= 0) return null;
 
   return (
@@ -16,3 +12,4 @@ const Newmessages: React.FC<NewmessagesProps> = ({ cantidad }) => {
 };
 
 export default Newmessages;
+

@@ -1,6 +1,5 @@
 import useProductLoader from '../hooks/useProductLoader';
 import ProductListPage from './ProductListPage';
-import Newmessages from '../components/newmessages';
 import Footer from '../components/Footer';
 
 const Home = () => {
@@ -11,16 +10,12 @@ const Home = () => {
   const filterFn = (product) =>
     ['disponible'].includes(product.Estado?.toLowerCase());
 
-// Calcular cuántos nuevos hay
-  const nuevosCount = allProducts.filter(
-    (p) => p.Estado?.trim().toLowerCase() === 'nuevo'
-  ).length;
+
 
  
   return (
     <div className="container pt-3" style={{ paddingTop: '4px' }}>
-       <Newmessages cantidad={nuevosCount} />
-
+      
       <ProductListPage
         title="Nuestros Productos"
         allProducts={allProducts}
