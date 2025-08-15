@@ -1,0 +1,26 @@
+.new-messages {
+ position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(90deg, #ff9800, #ff5722);
+  color: white;
+  padding: 12px;
+  font-weight: bold;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-size: 1.1rem;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.new-messages span {
+  font-size: 1.3rem;
+}
+
+.new-messages button:hover {
+  color: #ffe0b2;
+}
