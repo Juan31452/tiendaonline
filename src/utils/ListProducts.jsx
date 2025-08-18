@@ -59,7 +59,7 @@ const handleCloseDetalle = () => {
 
   /* -------- UI -------- */
   return (
-    <div style={{ padding: 80 }}>
+    <div style={{ padding: 10 }}>
       <h2>Productos — página {page}/{pagination.totalPages}</h2>
        
       {loadingList && <Loading text="Cargando productos" />}

@@ -1,38 +1,64 @@
 /* ProductsTable.css */
 .tabla-wrapper {
-  overflow-x: auto;          /* scroll horizontal en pantallas pequeñas */
+  overflow-x: auto; /* scroll horizontal en pantallas pequeñas */
 }
 
+/* ===== Estilo base (desktop-first) ===== */
 .tabla-productos {
   width: 100%;
   border-collapse: collapse;
   font-size: 0.9rem;
-  color:  #000
+  color: #000;
 }
 
-/* ── Encabezados ─────────────────────────────────────────── */
+/* ── Encabezados ───────────────────────── */
 .tabla-productos thead th {
-  position: sticky;          /* se queda pegado al hacer scroll */
+  position: sticky;
   top: 0;
-  background: rgba(0, 0, 0, 0.35); /* translucido: deja ver tu gradiente ⬇ */
-  backdrop-filter: blur(4px);      /* difumina lo de atrás */
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(4px);
   padding: 0.75rem 0.5rem;
   text-align: left;
   border-bottom: 2px solid rgba(255, 255, 255, 0.25);
 }
 
-/* ── Celdas ──────────────────────────────────────────────── */
+/* ── Celdas ───────────────────────────── */
 .tabla-productos td {
   padding: 0.65rem 0.5rem;
   border: 1px solid rgba(255, 255, 255, 0.12);
-  white-space: nowrap;       /* evita que “explote” en columnas largas */
+  white-space: nowrap;
 }
 
-/* ── Zebra + hover ───────────────────────────────────────── */
+/* ── Zebra + hover ───────────────────── */
 .tabla-productos tbody tr:nth-child(odd) {
   background: rgba(255, 255, 255, 0.05);
 }
-
 .tabla-productos tbody tr:hover {
   background: rgba(70, 47, 122, 0.1);
+}
+
+/* ===== Responsive para móviles ===== */
+@media (max-width: 768px) {
+  .tabla-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch; /* scroll suave en iOS */
+  }
+
+  .tabla-productos {
+    font-size: 0.8rem;   /* texto un poco más pequeño */
+    min-width: 600px;    /* evita que las columnas se aplasten demasiado */
+  }
+
+  .tabla-productos td,
+  .tabla-productos th {
+    padding: 0.5rem 0.35rem; /* reduce padding */
+  }
+}
+
+/* ===== Responsive ultra (pantallas < 480px) ===== */
+@media (max-width: 480px) {
+  .tabla-productos {
+    font-size: 0.75rem;
+    min-width: 500px; 
+  }
 }
