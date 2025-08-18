@@ -6,7 +6,7 @@ const Newmessages = ({ cantidad }) => {
 
   return (
     <div className="new-messages">
-      <span>🆕</span> {cantidad} {cantidad === 1 ? 'artículo nuevo' : 'artículos nuevos'} disponibles
+      <span>🆕</span> {cantidad} {cantidad === 1 ? 'artículo nuevo' : 'artículos nuevos'} 
     </div>
   );
 };

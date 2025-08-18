@@ -11,7 +11,7 @@ import ListProducts from '../utils/ListProducts';
 import ProductsListView from '../pages/ProductListView';
 import Login from '../pages/Login';
 
-import { PRIVATE1,PRIVATE2,PRIVATE3,PRIVATE4,PRIVATE5,PRIVATE6,PUBLIC1, PUBLIC3} from './Path';
+import { PRIVATE1,PRIVATE3,PRIVATE4,PRIVATE5,PRIVATE6,PUBLIC1,PUBLIC2, PUBLIC3} from './Path';
 import Layaut from './Layout';
 
 
@@ -38,7 +38,7 @@ const Menu = () => {
       <Routes location={location}>
          <Route path="/" element={<Home />} />
          <Route path={PRIVATE1} element={<Products />} />
-         <Route path={PRIVATE2} element={<Mynew/>} />
+         <Route path={PUBLIC2} element={<Mynew/>} />
           <Route path={PRIVATE3} element={<Uploadimage />} />
           <Route path={PRIVATE4} element={<UploadJson />} />
           <Route path={PRIVATE5} element={<ListProducts />} />

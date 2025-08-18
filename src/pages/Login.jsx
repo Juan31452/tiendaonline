@@ -1,41 +1,54 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { useLogin } from '../hooks/useLogin';
+import { AuthContext } from '../components/Context/AuthContext';
+import '../style/Login.css';
 
 const Login = () => {
-    const [user, setUser] = useState('');
-    const [password, setPassword] = useState('');
+  const { login: loginHook, loading, error } = useLogin();
+  const { login } = useContext(AuthContext); // para actualizar estado global
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const navigate = useNavigate();
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        // Aquí puedes manejar la autenticación
-        console.log('Usuario:', user, 'Contraseña:', password);
-    };
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const data = await loginHook(email, password);
+    if (data?.token) {
+      login(data.token); // actualiza AuthContext
+      navigate('/'); // redirige al home
+    }
+  };
 
-    return (
-        <div style={{ maxWidth: 400, margin: '0 auto', padding: 20 }}>
-            <h2>Iniciar Sesión</h2>
-            <form onSubmit={handleSubmit}>
-                <div>
-                    <label>Usuario:</label>
-                    <input
-                        type="text"
-                        value={user}
-                        onChange={e => setUser(e.target.value)}
-                        required
-                    />
-                </div>
-                <div>
-                    <label>Contraseña:</label>
-                    <input
-                        type="password"
-                        value={password}
-                        onChange={e => setPassword(e.target.value)}
-                        required
-                    />
-                </div>
-                <button type="submit">Ingresar</button>
-            </form>
-        </div>
-    );
+  return (
+    <div className="login-container">
+      <form className="login-form" onSubmit={handleSubmit}>
+        <h2 className="login-title">Iniciar Sesión</h2>
+
+        {error && <p className="error-msg">{error}</p>}
+
+        <input
+          type="email"
+          placeholder="Correo electrónico"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          required
+        />
+
+        <input
+          type="password"
+          placeholder="Contraseña"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          required
+        />
+
+        <button type="submit" disabled={loading}>
+          {loading ? 'Cargando...' : 'Entrar'}
+        </button>
+      </form>
+    </div>
+  );
 };
 
 export default Login;

@@ -1,46 +1,48 @@
-import React from 'react';
+import React, { useContext} from 'react';
 import { Navbar, Nav, Container } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
-import WhatsAppFloatingButton from './Buttons/WhatsAppFloatingButton';
-
+import { Link, useNavigate } from 'react-router-dom';
+import { AuthContext } from '../components/Context/AuthContext';
 
 const NavBar = () => {
-  const isLocalhost = window.location.hostname === 'localhost';
+  const { isAuthenticated, logout } = useContext(AuthContext);
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    logout();
+    navigate('/');
+  };
 
   return (
-    <>
-      <Navbar 
-        collapseOnSelect 
-        expand="lg" 
-        bg="light" 
-        variant="light"
-        fixed="top"
-        style={{ zIndex: 1030, boxShadow: '0 2px 4px rgba(0,0,0,0.1)' }}
-      >
-        <Container>
-          <Navbar.Brand as={Link} to="/">Variedades JM</Navbar.Brand>
-          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-          <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav className="me-auto">
-              <Nav.Link as={Link} to="/" eventKey="1">Inicio</Nav.Link>
-              {isLocalhost && (
-                <>
-                  <Nav.Link as={Link} to="/products" eventKey="4">Productos</Nav.Link>
-                  <Nav.Link as={Link} to="/uploadimage" eventKey="5">Nuevas Imagens</Nav.Link>
-                  <Nav.Link as={Link} to="/uploadjson" eventKey="6">Nuevos JSON</Nav.Link>
-                  <Nav.Link as={Link} to="/listproducts" eventKey="7">Listar Productos</Nav.Link>
-                  <Nav.Link as={Link} to="/verproductos" eventKey="8">Backend</Nav.Link>
-                </>
-              )}
-              <Nav.Link as={Link} to="/offers" eventKey="2">Ofertas</Nav.Link>
-              <Nav.Link as={Link} to="/new" eventKey="3">Nuevos</Nav.Link>
-            </Nav>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
+    <Navbar collapseOnSelect expand="lg" bg="light" variant="light" fixed="top" style={{ zIndex: 1030, boxShadow: '0 2px 4px rgba(0,0,0,0.1)' }}>
+      <Container>
+        <Navbar.Brand as={Link} to="/">Variedades JM</Navbar.Brand>
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Collapse id="responsive-navbar-nav">
+          <Nav className="me-auto">
+            <Nav.Link as={Link} to="/">Inicio</Nav.Link>
 
-      
-    </>
+            {isAuthenticated && (
+              <>
+                <Nav.Link as={Link} to="/products">Productos</Nav.Link>
+                <Nav.Link as={Link} to="/uploadimage">Nuevas Imágenes</Nav.Link>
+                <Nav.Link as={Link} to="/uploadjson">Nuevos JSON</Nav.Link>
+                <Nav.Link as={Link} to="/listproducts">Listar Productos</Nav.Link>
+                <Nav.Link as={Link} to="/verproductos">Backend</Nav.Link>
+              </>
+            )}
+
+            <Nav.Link as={Link} to="/offers">Ofertas</Nav.Link>
+            <Nav.Link as={Link} to="/new">Nuevos</Nav.Link>
+
+            {!isAuthenticated ? (
+              <Nav.Link as={Link} to="/login">Login</Nav.Link>
+            ) : (
+              <Nav.Link onClick={handleLogout}>Cerrar sesión</Nav.Link>
+            )}
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
 };
 

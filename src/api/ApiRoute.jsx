@@ -13,6 +13,8 @@ const ApiRoutes = {
    EditarProducto: `${APIHOSTRemote}/api/productos`, 
    ConsultaCategoria: `${APIHOSTRemote}/api/productos`,
    EstadisticasProductos: `${APIHOSTRemote}/api/productos/estadisticas`,
+   Login: `${APIHOSTRemote}/api/users/login`,
+   
    // Puedes agregar más rutas según las necesidades de tu aplicación
 };
  
