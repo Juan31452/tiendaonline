@@ -14,10 +14,12 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const data = await loginHook(email, password);
-    if (data?.token) {
-      login(data.token); // actualiza AuthContext
+    console.log("Respuesta loginHook:", data); // <--- VERIFICAR
+    if (data?.token && data?.role) {
+      login(data.token, data.role); // actualiza AuthContext con token y rol
+      console.log("Navegando al home...");
       navigate('/'); // redirige al home
-    }
+   }
   };
 
   return (

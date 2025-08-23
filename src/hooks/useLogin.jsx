@@ -12,14 +12,20 @@ export function useLogin() {
     setError(null);
 
     try {
-      // 👇 con axios el login se hace con post
       const response = await axios.post(ApiRoutes.Login, { email, password });
 
       console.log("Ruta de inicio de sesión:", ApiRoutes.Login);
       console.log("Respuesta del servidor:", response.data);
 
-      // Guardar token en localStorage
-      localStorage.setItem("token", response.data.token);
+      const token = response.data.token;
+      const role = response.data.user.role; // 🔹 aquí está realmente
+      console.log("Token recibido en useLogin:", token);
+      console.log("Role recibido en useLogin:", role);
+      // role debería venir del backend: "admin" o "vendedor"
+
+      // Guardar token y rol en localStorage
+      localStorage.setItem("token", token);
+      localStorage.setItem("role", role);
 
       return response.data;
     } catch (err) {
@@ -29,15 +35,20 @@ export function useLogin() {
     } finally {
       setLoading(false);
     }
- };
+  };
 
   const logout = () => {
     localStorage.removeItem('token');
+    localStorage.removeItem('role');
   };
 
   const getToken = () => {
     return localStorage.getItem('token');
   };
 
-  return { login, logout, getToken, loading, error };
+  const getUserRole = () => {
+    return localStorage.getItem('role');
+  };
+
+  return { login, logout, getToken, getUserRole, loading, error };
 }

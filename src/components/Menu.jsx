@@ -1,4 +1,4 @@
-import React, {  useEffect} from 'react'
+import React, {  useContext} from 'react'
 import { Container } from 'react-bootstrap';
 import { Route, Routes, useLocation} from 'react-router-dom';
 import Home from '../pages/home';
@@ -10,45 +10,72 @@ import UploadJson from '../utils/UploadJson';
 import ListProducts from '../utils/ListProducts';
 import ProductsListView from '../pages/ProductListView';
 import Login from '../pages/Login';
-
+import { AuthContext } from './Context/AuthContext';
+import PrivateRoute from './PrivateRoute';
 import { PRIVATE1,PRIVATE3,PRIVATE4,PRIVATE5,PRIVATE6,PUBLIC1,PUBLIC2, PUBLIC3} from './Path';
 import Layaut from './Layout';
 
 
+
 const Menu = () => {
-  const location = useLocation();
+  const location = useLocation(); 
+  const { role } = useContext(AuthContext);
+  console.log("Rol actual:", role);
+  return (
+    <Container>
+      <Layaut />
 
-  useEffect(() => {
-    if (document.startViewTransition) {
-      document.startViewTransition(() => {
-        // El cambio ya ocurrió, pero al menos forzamos la animación
-        // Si usas animaciones con ::view-transition-old y ::view-transition-new, esto dispara la transición
-      });
-    }
-  }, [location.pathname]);
-
-  // Componente que maneja las rutas y el diseño de la aplicación
-    return (
-      <Container>
-        <div>
-           <Layaut/>
-        </div>
-      
-       
       <Routes location={location}>
-         <Route path="/" element={<Home />} />
-         <Route path={PRIVATE1} element={<Products />} />
-         <Route path={PUBLIC2} element={<Mynew/>} />
-          <Route path={PRIVATE3} element={<Uploadimage />} />
-          <Route path={PRIVATE4} element={<UploadJson />} />
-          <Route path={PRIVATE5} element={<ListProducts />} />
-          <Route path={PRIVATE6} element={< ProductsListView />} />
-          <Route path={PUBLIC1} element={< Login/>} />
-          <Route path={PUBLIC3} element={<Offers />} />
+        {/* Rutas públicas */}
+        <Route path="/" element={<Home />} />
+        <Route path={PUBLIC1} element={<Login />} />
+        <Route path={PUBLIC2} element={<Mynew />} />
+        <Route path={PUBLIC3} element={<Offers />} />
+
+        {/* Rutas privadas */}
+        <Route
+          path={PRIVATE6}
+          element={
+            <PrivateRoute allowedRoles={['admin', 'vendedor']}>
+              <ProductsListView />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path={PRIVATE1}
+          element={
+            <PrivateRoute allowedRoles={['admin']}>
+              <Products />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path={PRIVATE3}
+          element={
+            <PrivateRoute allowedRoles={['admin']}>
+              <Uploadimage />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path={PRIVATE4}
+          element={
+            <PrivateRoute allowedRoles={['admin']}>
+              <UploadJson />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path={PRIVATE5}
+          element={
+            <PrivateRoute allowedRoles={['admin']}>
+              <ListProducts />
+            </PrivateRoute>
+          }
+        />
       </Routes>
-      </Container>
-    );
-    
-  }
-  
-  export default Menu
+    </Container>
+  );
+};
+
+export default Menu;

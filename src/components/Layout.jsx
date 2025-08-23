@@ -4,7 +4,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../components/Context/AuthContext';
 
 const NavBar = () => {
-  const { isAuthenticated, logout } = useContext(AuthContext);
+  const { isAuthenticated,role, logout } = useContext(AuthContext);
   const [expanded, setExpanded] = useState(false);
   const navigate = useNavigate();
 
@@ -36,7 +36,7 @@ const NavBar = () => {
           >
             <Nav.Link as={Link} to="/">Inicio</Nav.Link>
 
-            {isAuthenticated && (
+            {isAuthenticated && role === 'admin' && (
               <>
                 <Nav.Link as={Link} to="/products">Productos</Nav.Link>
                 <Nav.Link as={Link} to="/uploadimage">Nuevas Imágenes</Nav.Link>
@@ -45,7 +45,9 @@ const NavBar = () => {
                 <Nav.Link as={Link} to="/verproductos">Backend</Nav.Link>
               </>
             )}
-
+          {isAuthenticated && ['admin','vendedor'].includes(role) && (
+            <Nav.Link as={Link} to="/verproductos">Backend</Nav.Link>
+      )}
             <Nav.Link as={Link} to="/offers">Ofertas</Nav.Link>
             <Nav.Link as={Link} to="/new">Nuevos</Nav.Link>
 
