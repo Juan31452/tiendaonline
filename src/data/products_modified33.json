@@ -77,9 +77,9 @@
     "Estado": "Nuevo"
   },
   {
-    "Descripcion": "Conjunto de 3 piezas de sujetador sin costuras y transpirable para mujer",
-    "Cantidad": 1,
-    "Precio": 0,
+    "Descripcion": "Conjunto de 3 piezas de sujetador sin costuras y transpirable para mujer, precio unidad",
+    "Cantidad": 3,
+    "Precio": 25000,
     "Color": "Mixto",
     "Talla": "XL",
     "IdProducto": "33.8",
@@ -88,9 +88,9 @@
     "Estado": "Nuevo"
   },
   {
-    "Descripcion": "Conjunto de 2 sostenes sin costuras e inalámbricos para mujer, cómodos, con cobertura total, soporte ajustable en tirantes y diseño de cierre trasero, sin forro",
-    "Cantidad": 1,
-    "Precio": 0,
+    "Descripcion": "Conjunto de 2 sostenes sin costuras e inalámbricos para mujer, cómodos, con cobertura total, soporte ajustable en tirantes y diseño de cierre trasero, sin forro, precio unidad",
+    "Cantidad": 2,
+    "Precio": 25000,
     "Color": "Mixto",
     "Talla": "L",
     "IdProducto": "33.9",

@@ -5,7 +5,7 @@ import { categories } from '../../constants/categories'; // Importa las categorÃ
 const CategorySelector = ({ onSelectCategory, activeCategory }) => {
   return (
       // Ajusta la altura para dejar espacio debajo del navbar
-     <div className="fixed-top bg-white" style={{ top: '56px' }}> 
+     <div className="fixed-top bg-white" style={{ top: '60px' }}> 
       <div className="container-fluid">
         <div className="d-flex overflow-auto gap-2 py-2">
           {categories.map(category => (

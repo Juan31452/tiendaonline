@@ -1,14 +1,40 @@
-.navbar-user-name {
-  color: black !important;  /* fuerza el color sobre Bootstrap */
+/* navBar.css */
+
+.custom-navbar {
+  padding: 0.8rem 1rem;
+  background-color: #f8f9fa;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.custom-navbar .navbar-brand {
   font-weight: bold;
+  font-size: 1.3rem;
+  color: #333 !important;
+}
+
+.custom-navbar .user-name {
+  margin-left: 12px;
+  font-size: 1rem;
+  color: #444;
+  font-weight: 500;
+}
+
+.custom-navbar .nav-link {
+  font-size: 0.95rem;
+  color: #333 !important;
   margin-right: 10px;
 }
 
-.navbar-custom {
-  background-color: #f8f9fa; /* Color de fondo claro */
+.custom-navbar .nav-link:hover {
+  color: #007bff !important;
 }
 
-.navbar-collapse .navbar-user-name {
-  white-space: nowrap; /* evita que el texto se parta en varias líneas */
-  overflow: visible;
+@media (max-width: 576px) {
+  .custom-navbar .navbar-brand {
+    font-size: 1.1rem;
+  }
+
+  .custom-navbar .nav-link {
+    font-size: 0.9rem;
+  }
 }

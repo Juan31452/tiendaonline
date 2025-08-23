@@ -13,8 +13,11 @@ export const AuthProvider = ({ children }) => {
   useEffect(() => {
   const token = getToken();
   const userRole = getUserRole();
+  const userName = localStorage.getItem('name'); // 🔹 Recupera el nombre también
+
   setIsAuthenticated(!!token);
   setRole(userRole);
+  setName(userName); // 🔹 Esto mantiene el nombre en el contexto
   setLoadingAuth(false);
 }, []);
 
