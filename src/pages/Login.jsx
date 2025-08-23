@@ -16,7 +16,7 @@ const Login = () => {
     const data = await loginHook(email, password);
     console.log("Respuesta loginHook:", data); // <--- VERIFICAR
     if (data?.token && data?.user?.role) {
-      login(data.token, data.user.role); // pasa el rol correcto al contexto
+      login(data.token, data.user.role,data.user.name); // pasa el rol correcto al contexto
       console.log("Navegando al home..."); // ahora sí se ejecuta
       navigate('/');
     }

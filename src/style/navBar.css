@@ -1,0 +1,14 @@
+.navbar-user-name {
+  color: black !important;  /* fuerza el color sobre Bootstrap */
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.navbar-custom {
+  background-color: #f8f9fa; /* Color de fondo claro */
+}
+
+.navbar-collapse .navbar-user-name {
+  white-space: nowrap; /* evita que el texto se parta en varias líneas */
+  overflow: visible;
+}
