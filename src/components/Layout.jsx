@@ -1,24 +1,39 @@
-import React, { useContext} from 'react';
+import React, { useContext, useState} from 'react';
 import { Navbar, Nav, Container } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../components/Context/AuthContext';
 
 const NavBar = () => {
   const { isAuthenticated, logout } = useContext(AuthContext);
+  const [expanded, setExpanded] = useState(false);
   const navigate = useNavigate();
 
   const handleLogout = () => {
     logout();
     navigate('/');
+    setExpanded(false); // ← también cerrar el menú al cerrar sesión
   };
 
   return (
-    <Navbar collapseOnSelect expand="lg" bg="light" variant="light" fixed="top" style={{ zIndex: 1030, boxShadow: '0 2px 4px rgba(0,0,0,0.1)' }}>
+    <Navbar
+      expanded={expanded}
+      onToggle={() => setExpanded(!expanded)}
+      collapseOnSelect
+      expand="lg"
+      bg="light"
+      variant="light"
+      fixed="top"
+      style={{ zIndex: 1030, boxShadow: '0 2px 4px rgba(0,0,0,0.1)' }}
+    >
       <Container>
         <Navbar.Brand as={Link} to="/">Variedades JM</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="me-auto">
+          {/* AQUI va el Nav con el evento */}
+          <Nav
+            className="me-auto"
+            onSelect={() => setExpanded(false)} // ← esto cierra el menú al seleccionar
+          >
             <Nav.Link as={Link} to="/">Inicio</Nav.Link>
 
             {isAuthenticated && (

@@ -1,5 +1,5 @@
 import React from 'react';
-import './EstadisticasProductos.css';
+import '../style/EstadisticasProductos.css';
 
 const EstadisticasProductos = ({ estadisticas, loading, error, activeCategory }) => {
   if (loading) return <p>Cargando estadísticas...</p>;

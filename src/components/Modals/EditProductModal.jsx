@@ -69,7 +69,7 @@ const EditProductModal = ({ show, onHide, product, onSave }) => {
               <Form.Group>
                 <Form.Label>Imagen</Form.Label>
                 <Form.Control
-                  name="Descripcion"
+                  name="Imagen"
                   value={form.Imagen}
                   onChange={handleChange}
                   placeholder="URL de la imagen (opcional)"

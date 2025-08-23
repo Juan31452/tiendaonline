@@ -3,13 +3,29 @@
   display: flex;
   gap: 20px;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;          /* Forzamos horizontal */
+  overflow-x: auto;           /* Activa scroll horizontal */
+  padding-bottom: 6px;        /* Espacio para no cortar sombra */
+  scrollbar-width: thin;      /* Scroll más fino en Firefox */
+  scrollbar-color: #ccc transparent;
+}
+
+/* Estilo scroll en navegadores WebKit (Chrome, Edge, Safari) */
+.radio-options-container::-webkit-scrollbar {
+  height: 6px;
+}
+.radio-options-container::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 10px;
+}
+.radio-options-container::-webkit-scrollbar-track {
+  background: transparent;
 }
 
 .radio-option {
+  flex: 0 0 auto;             /* No se encogen, scrolla */
   display: flex;
   align-items: center;
-  position: relative;
   cursor: pointer;
   padding: 6px 12px;
   border: 2px solid transparent;
@@ -44,4 +60,14 @@
 .radio-label {
   font-size: 14px;
   color: #333;
+}
+
+/* Pequeño ajuste en móviles */
+@media (max-width: 480px) {
+  .radio-options-container {
+    gap: 12px;
+  }
+  .radio-option {
+    padding: 6px 10px;
+  }
 }
