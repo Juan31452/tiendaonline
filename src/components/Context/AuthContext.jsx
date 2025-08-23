@@ -11,12 +11,11 @@ export const AuthProvider = ({ children }) => {
 
   useEffect(() => {
   const token = getToken();
-  const userRole = getUserRole();  // <-- aquí lee el rol
-  console.log("AuthProvider carga inicial:", { token, userRole });
+  const userRole = getUserRole();
   setIsAuthenticated(!!token);
-  setRole(userRole);               // <-- setea el rol
+  setRole(userRole);
   setLoadingAuth(false);
-}, [getToken, getUserRole]);
+}, []);
 
 
   const loginContext = (token, userRole) => {
@@ -36,7 +35,7 @@ export const AuthProvider = ({ children }) => {
 
   return (
     <AuthContext.Provider value={{ isAuthenticated, role, login: loginContext, logout: logoutContext }}>
-      {children}
+      {!loadingAuth && children} 
     </AuthContext.Provider>
   );
 };

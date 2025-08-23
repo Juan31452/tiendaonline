@@ -15,11 +15,11 @@ const Login = () => {
     e.preventDefault();
     const data = await loginHook(email, password);
     console.log("Respuesta loginHook:", data); // <--- VERIFICAR
-    if (data?.token && data?.role) {
-      login(data.token, data.role); // actualiza AuthContext con token y rol
-      console.log("Navegando al home...");
-      navigate('/'); // redirige al home
-   }
+    if (data?.token && data?.user?.role) {
+      login(data.token, data.user.role); // pasa el rol correcto al contexto
+      console.log("Navegando al home..."); // ahora sí se ejecuta
+      navigate('/');
+    }
   };
 
   return (

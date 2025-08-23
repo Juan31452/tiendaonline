@@ -1,17 +1,16 @@
 import React, { useContext, useState} from 'react';
 import { Navbar, Nav, Container } from 'react-bootstrap';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { AuthContext } from '../components/Context/AuthContext';
 
 const NavBar = () => {
   const { isAuthenticated,role, logout } = useContext(AuthContext);
   const [expanded, setExpanded] = useState(false);
-  const navigate = useNavigate();
+
 
   const handleLogout = () => {
-    logout();
-    navigate('/');
-    setExpanded(false); // ← también cerrar el menú al cerrar sesión
+    logout(); // esto limpia token y rol, y actualiza estado
+    setExpanded(false); // opcional: cerrar navbar en móvil
   };
 
   return (
