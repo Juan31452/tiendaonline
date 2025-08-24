@@ -50,11 +50,12 @@ const NavBar = () => {
             <Nav.Link as={Link} to="/uploadimage" onClick={handleClose}>Nuevas Imágenes</Nav.Link>
             <Nav.Link as={Link} to="/uploadjson" onClick={handleClose}>Nuevos JSON</Nav.Link>
             <Nav.Link as={Link} to="/listproducts" onClick={handleClose}>Listar Productos</Nav.Link>
+            <Nav.Link as={Link} to="/verproductos" onClick={handleClose}>Backend</Nav.Link>
           </>
         )}
 
         {isAuthenticated && ['admin','vendedor'].includes(role) && (
-          <Nav.Link as={Link} to="/verproductos" onClick={handleClose}>Backend</Nav.Link>
+          <Nav.Link as={Link} to="/products" onClick={handleClose}>Productos</Nav.Link>          
         )}
 
         <Nav.Link as={Link} to="/offers" onClick={handleClose}>Ofertas</Nav.Link>
