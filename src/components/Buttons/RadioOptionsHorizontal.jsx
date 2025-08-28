@@ -8,10 +8,11 @@ const RadioOptionsHorizontal = ({ onChange, defaultValue = '', activeStatus }) =
   const [selectedOption, setSelectedOption] = useState(defaultValue);
 
   useEffect(() => {
-    if (activeStatus !== undefined && activeStatus !== selectedOption) {
-      setSelectedOption(activeStatus);
-    }
-  }, [activeStatus]);
+  if (activeStatus !== undefined && activeStatus !== selectedOption) {
+    setSelectedOption(activeStatus);
+  }
+}, [activeStatus, selectedOption]);
+
 
   const handleOptionChange = (e) => {
     const value = e.target.value;

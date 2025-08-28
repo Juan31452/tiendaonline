@@ -1,6 +1,7 @@
 import useProductLoader from '../hooks/useProductLoader';
 import ProductListPage from './ProductListPage';
 import WhatsAppFloatingButton from '../components/Buttons/WhatsAppFloatingButton';
+import RadioOptionsHorizontalLimited from '../components/Buttons/RadioOptionsHorizontalLimited';
 
 const Products= () => {
 const { loading, allProducts, filteredProducts, setFilteredProducts } = useProductLoader();
@@ -11,6 +12,7 @@ const { loading, allProducts, filteredProducts, setFilteredProducts } = useProdu
     ['separado','vendido'].includes(product.Estado?.toLowerCase());
 
   return (
+    
     <div>
       <ProductListPage
         title="Productos Fuera de Stock"
@@ -19,8 +21,9 @@ const { loading, allProducts, filteredProducts, setFilteredProducts } = useProdu
         setFilteredProducts={setFilteredProducts}
         filterFn={filterFn}
         resumenEstados={['separado', 'vendido']}
-
+  
       />
+     
 
       <WhatsAppFloatingButton 
           phone="34622229467" 
