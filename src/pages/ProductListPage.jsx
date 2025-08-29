@@ -83,13 +83,22 @@ const ProductListPage = ({
    const nuevosCount = allProducts.filter(
     (p) => p.Estado?.trim().toLowerCase() === 'nuevo'
   ).length;
+
+  const ofertasCount = allProducts.filter(
+    (p) => p.Estado?.trim().toLowerCase() === 'ofertas'
+  ).length;
   
   //console.log("estado",filterFn)
   return (
     <div className="container mt-4" style={{ paddingTop: '80px' }}>
       
-      {/* Mostrar solo si no se está filtrando por "Nuevo" */}
-      {title == 'Nuestros Productos' && <NewMessages cantidad={nuevosCount} />}
+      {/* Mensajes para productos nuevos y en oferta, solo en la página principal */}
+      {title === 'Nuestros Productos' && (
+        <div className="messages-wrapper">
+          <NewMessages cantidad={nuevosCount} estado="nuevo" />
+          <NewMessages cantidad={ofertasCount} estado="oferta" />
+        </div>
+      )}
 
       <h2 className="text-center mb-2">{title}</h2>
 
