@@ -1,14 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import '../../style/RadioOptionsHorizontal.css';
-
-// Estados reducidos
-const limitedStates = [
-  { value: 'Separado', label: 'Separado' },
-  { value: 'Vendido', label: 'Vendido' },
-];
+import { LIMITED_PRODUCT_STATES } from '../../constants/states';
 
 const RadioOptionsHorizontalLimited = ({ value, onChange }) => {
+  const limitedStates = LIMITED_PRODUCT_STATES;
+  
   const handleOptionChange = (e) => {
     if (onChange) onChange(e.target.value);
   };
