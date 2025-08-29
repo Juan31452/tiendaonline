@@ -84,7 +84,7 @@ const ProductListPage = ({
     (p) => p.Estado?.trim().toLowerCase() === 'nuevo'
   ).length;
   
-  console.log("estado",filterFn)
+  //console.log("estado",filterFn)
   return (
     <div className="container mt-4" style={{ paddingTop: '80px' }}>
       
