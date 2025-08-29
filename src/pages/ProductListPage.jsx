@@ -1,6 +1,5 @@
 // components/ProductListPage.jsx
-import React, { useCallback, useMemo } from 'react';
-import { useState } from 'react';
+import React, { useCallback, useMemo,useState } from 'react';
 import useProductPagination from '../hooks/useProductPagination';
 import CategoryFilterController from '../components/CategoryFilterController';
 import ModalDetalles from '../components/Modals/ModalDetalles';
@@ -10,6 +9,12 @@ import EstadoResumen from '../components/EstadoResumen';
 import Pagination from '../components/Pagination';
 import MobileBottomNav from '../components/Buttons/MobileBottomNav';  
 import NewMessages from '../components/Newmessages'; // Asegúrate de que la ruta sea correcta
+// 1. Importamos el componente genérico de radio buttons
+import RadioOptionsHorizontal from '../components/Buttons/RadioOptionsHorizontal';
+// 2. Importamos SOLAMENTE la lista de estados que necesitamos
+import { LIMITED_PRODUCT_STATES } from '../constants/states';
+
+
 
 const ProductListPage = ({ 
   title,
@@ -17,20 +22,43 @@ const ProductListPage = ({
   filteredProducts,
   setFilteredProducts,
   filterFn,
-  resumenEstados = []
+  resumenEstados = [],
+
 }) => {
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [showModal, setShowModal] = useState(false);
   //const [currentPage, setCurrentPage] = useState(1);
   const [selectedCategory, setSelectedCategory] = useState('todos');
-  const itemsPerPage = 32;
+  const itemsPerPage = 52;
+  const [selectedStatus, setSelectedStatus] = useState('todos');
   
+  // 2. Opciones para los radio buttons, incluyendo "Todos"
+  const statusOptions = useMemo(
+    () => [{ value: 'todos', label: 'Todos' }, ...LIMITED_PRODUCT_STATES],
+    []
+  );
+
+  
+
+  
+  // 3. Aplica el filtro de estado sobre los productos ya filtrados por categoría
+  const productsWithStatusFilter = useMemo(() => {
+    if (title !== 'Productos Fuera de Stock' || selectedStatus === 'todos') {
+      return filteredProducts;
+    }
+    return filteredProducts.filter(
+      (p) => p.Estado?.toLowerCase() === selectedStatus.toLowerCase()
+    );
+  }, [filteredProducts, selectedStatus, title]);
+
+
   const {
     currentPage,
     setCurrentPage,
     paginatedProducts,
     totalPages
-  } = useProductPagination(filteredProducts, itemsPerPage, filterFn);
+  } = useProductPagination(productsWithStatusFilter, itemsPerPage, filterFn); // 4. Usar la nueva lista filtrada
+
 
   const handleCardClick = useCallback((product) => {
     setSelectedProduct(product);
@@ -70,6 +98,19 @@ const ProductListPage = ({
         products={resumenProducts}
         estados={resumenEstados}
       />
+              
+      {/* 5. Renderizar condicionalmente los radio buttons */}
+        {title === 'Productos Fuera de Stock' && (
+          <div className="d-flex justify-content-center mt-3">
+            <RadioOptionsHorizontal
+              options={statusOptions}
+              name="statusFilter"
+              value={selectedStatus}
+              onChange={setSelectedStatus}
+            />
+          </div>
+        )}
+    
 
       <Pagination
         currentPage={currentPage}

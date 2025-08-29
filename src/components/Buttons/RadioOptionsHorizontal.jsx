@@ -1,35 +1,28 @@
-// src/components/RadioOptionsHorizontal.jsx
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
-import { productStates } from '../../constants/states';
-import '../../style/RadioOptionsHorizontal.css'; // Importamos estilos
+import '../../style/RadioOptionsHorizontal.css';
 
-const RadioOptionsHorizontal = ({ onChange, defaultValue = '', activeStatus }) => {
-  const [selectedOption, setSelectedOption] = useState(defaultValue);
-
-  useEffect(() => {
-  if (activeStatus !== undefined && activeStatus !== selectedOption) {
-    setSelectedOption(activeStatus);
-  }
-}, [activeStatus, selectedOption]);
-
-
+const RadioOptionsHorizontal = ({ options, name, activeStatus, onChange }) => {
   const handleOptionChange = (e) => {
-    const value = e.target.value;
-    setSelectedOption(value);
     if (onChange) {
-      onChange(value);
+      onChange(e.target.value);
     }
   };
 
   return (
     <div className="radio-options-container">
-      {productStates.map((option) => (
-        <label key={option.value} className={`radio-option ${selectedOption === option.value ? 'selected' : ''}`}>
+      {options.map((option) => (
+        <label
+          key={option.value}
+          htmlFor={`${name}-${option.value}`}
+          className={`radio-option ${activeStatus === option.value ? 'selected' : ''}`}
+        >
           <input
+            id={`${name}-${option.value}`}
             type="radio"
+            name={name}
             value={option.value}
-            checked={selectedOption === option.value}
+            checked={activeStatus === option.value}
             onChange={handleOptionChange}
           />
           <span className="custom-radio" />
@@ -41,9 +34,16 @@ const RadioOptionsHorizontal = ({ onChange, defaultValue = '', activeStatus }) =
 };
 
 RadioOptionsHorizontal.propTypes = {
-  onChange: PropTypes.func,
-  defaultValue: PropTypes.string,
-  activeStatus: PropTypes.string,
+  options: PropTypes.arrayOf(
+    PropTypes.shape({
+      value: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
+    })
+  ).isRequired,
+  name: PropTypes.string.isRequired,
+  value: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
 };
 
 export default RadioOptionsHorizontal;
+

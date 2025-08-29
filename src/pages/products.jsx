@@ -1,10 +1,10 @@
 import useProductLoader from '../hooks/useProductLoader';
 import ProductListPage from './ProductListPage';
 import WhatsAppFloatingButton from '../components/Buttons/WhatsAppFloatingButton';
-import RadioOptionsHorizontalLimited from '../components/Buttons/RadioOptionsHorizontalLimited';
 
 const Products= () => {
 const { loading, allProducts, filteredProducts, setFilteredProducts } = useProductLoader();
+
 
   if (loading) return <div className="text-center py-5">Cargando productos...</div>;
 
@@ -14,6 +14,7 @@ const { loading, allProducts, filteredProducts, setFilteredProducts } = useProdu
   return (
     
     <div>
+      
       <ProductListPage
         title="Productos Fuera de Stock"
         allProducts={allProducts}

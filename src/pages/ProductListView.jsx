@@ -9,6 +9,9 @@ import PaginationControls from '../components/Buttons/PaginationControls';
 import RadioOptionsHorizontal from '../components/Buttons/RadioOptionsHorizontal';
 import EstadisticasProductos from '../components/EstadisticasProductos';
 import ModalDetalles from '../components/Modals/ModalDetalles';
+// Usamos la lista de constantes que ya tienes
+import { productStates as ALL_PRODUCT_STATES } from '../constants/states';
+
 
 const ProductListView = () => {
   const [activeCategory, setActiveCategory] = useState('todos');
@@ -75,6 +78,11 @@ const ProductListView = () => {
       {/* Filtro por estado */}
       <div className="my-3">
         <RadioOptionsHorizontal
+          // 2. Pasamos la lista de opciones que queremos mostrar.
+          options={ALL_PRODUCT_STATES}
+          // 3. Damos un nombre al grupo de radio buttons.
+          name="productStatus"
+          // 4. Pasamos el valor actual y la función para cambiarlo.
           activeStatus={activeEstado}
           onChange={handleEstadoChange}
         />
