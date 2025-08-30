@@ -7,70 +7,70 @@ import '../style/navBar.css';
 const NavBar = () => {
   const { isAuthenticated, name, role, logout } = useContext(AuthContext);
   const [expanded, setExpanded] = useState(false);
+
   const handleClose = () => setExpanded(false);
+  const handleToggle = () => setExpanded(!expanded);
 
   const navigate = useNavigate();
 
   const handleLogout = () => {
     logout();
+    handleClose();
     navigate('/');
   };
 
-    console.log("Nombre desde contexto:", name);
-
   return (
-    <Navbar
-  expanded={expanded}
-  onToggle={() => setExpanded(!expanded)}
-  collapseOnSelect
-  expand="lg"
-  bg="light"
-  variant="light"
-  fixed="top"
-  className="custom-navbar"
->
-  <Container fluid className="d-flex align-items-center">
-    <div className="d-flex align-items-center me-4">
-      <Navbar.Brand as={Link} to="/" onClick={handleClose}>
-        Variedades JM
-      </Navbar.Brand>
-      {isAuthenticated && name && (
-        <span className="user-name">Hola, {name}!</span>
-      )}
-    </div>
+    <nav className="navbar-container">
+      <div className="navbar-content">
+        <div className="navbar-brand-group">
+          <Link to="/" className="navbar-brand" onClick={handleClose}>
+            Variedades JM
+          </Link>
+          {isAuthenticated && name && (
+            <span className="navbar-user-greeting">Hi, {name}!</span>
+          )}
+        </div>
 
-    <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-    <Navbar.Collapse id="responsive-navbar-nav">
-      <Nav className="me-auto">
-        <Nav.Link as={Link} to="/" onClick={handleClose}>Inicio</Nav.Link>
+        <button
+          className={`navbar-toggler ${expanded ? 'active' : ''}`}
+          type="button"
+          onClick={handleToggle}
+          aria-label="Toggle navigation"
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
 
-        {isAuthenticated && role === 'admin' && (
-          <>
-            <Nav.Link as={Link} to="/uploadimage" onClick={handleClose}>Nuevas Imágenes</Nav.Link>
-            <Nav.Link as={Link} to="/uploadjson" onClick={handleClose}>Nuevos JSON</Nav.Link>
-            <Nav.Link as={Link} to="/listproducts" onClick={handleClose}>Listar Productos</Nav.Link>
-            <Nav.Link as={Link} to="/verproductos" onClick={handleClose}>Backend</Nav.Link>
-          </>
-        )}
+        <div className={`navbar-links-container ${expanded ? 'show' : ''}`}>
+          <div className="navbar-links">
+            <Link to="/" className="nav-link" onClick={handleClose}>Inicio</Link>
 
-        {isAuthenticated && ['admin','vendedor'].includes(role) && (
-          <Nav.Link as={Link} to="/products" onClick={handleClose}>Productos</Nav.Link>          
-        )}
+            {isAuthenticated && role === 'admin' && (
+              <>
+                <Link to="/uploadimage" className="nav-link" onClick={handleClose}>Nuevas Imágenes</Link>
+                <Link to="/uploadjson" className="nav-link" onClick={handleClose}>Nuevos JSON</Link>
+                <Link to="/listproducts" className="nav-link" onClick={handleClose}>Listar Productos</Link>
+                <Link to="/verproductos" className="nav-link" onClick={handleClose}>Backend</Link>
+              </>
+            )}
 
-        <Nav.Link as={Link} to="/offers" onClick={handleClose}>Ofertas</Nav.Link>
-        <Nav.Link as={Link} to="/new" onClick={handleClose}>Nuevos</Nav.Link>
+            {isAuthenticated && ['admin', 'vendedor'].includes(role) && (
+              <Link to="/products" className="nav-link" onClick={handleClose}>Productos</Link>
+            )}
 
-        {!isAuthenticated ? (
-          <Nav.Link as={Link} to="/login" onClick={handleClose}>Login</Nav.Link>
-        ) : (
-          <Nav.Link onClick={() => { handleLogout(); handleClose(); }}>
-            Cerrar sesión
-          </Nav.Link>
-        )}
-      </Nav>
-    </Navbar.Collapse>
-  </Container>
-</Navbar>
+            <Link to="/offers" className="nav-link" onClick={handleClose}>Ofertas</Link>
+            <Link to="/new" className="nav-link" onClick={handleClose}>Nuevos</Link>
+
+            {!isAuthenticated ? (
+              <Link to="/login" className="nav-link" onClick={handleClose}>Login</Link>
+            ) : (
+              <button className="nav-link-button" onClick={handleLogout}>
+                Cerrar sesión
+              </button>
+            )}
+          </div>
+        </div>
+      </div>
+    </nav>
   );
 };
 

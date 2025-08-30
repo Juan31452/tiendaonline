@@ -1,70 +1,159 @@
 /* navBar.css */
 
-.custom-navbar {
-  padding: 0.8rem 1rem;
-  background-color: #f8f9fa;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+/* Variables y estilos base */
+:root {
+  --navbar-height: 60px;
+  --navbar-bg: #f8f9fa;
+  --navbar-text-color: #333;
+  --navbar-brand-color: #000;
+  --navbar-link-hover-color: #007bff;
+  --navbar-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --toggler-color: #333;
 }
 
-.custom-navbar .navbar-brand {
-  font-weight: bold;
-  font-size: 1.3rem;
-  color: #333 !important;
+body {
+  padding-top: var(--navbar-height); /* Evita que el contenido se oculte detrás del navbar fijo */
 }
 
-.custom-navbar .user-name {
-  margin-left: 12px;
-  font-size: 1rem;
-  color: #444;
+.navbar-container {
+  background-color: var(--navbar-bg);
+  height: var(--navbar-height);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1030;
+  box-shadow: var(--navbar-shadow);
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.navbar-content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Grupo de la marca y saludo */
+.navbar-brand-group {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--navbar-brand-color);
+  text-decoration: none;
+}
+
+.navbar-user-greeting {
+  font-size: 0.9rem;
+  color: #555;
+  display: inline; /* Mostrar en todos los dispositivos */
+}
+
+/* Botón de menú móvil (hamburguesa) */
+.navbar-toggler {
+  display: none; /* Oculto en desktop */
+  padding: 0.25rem 0.75rem;
+  font-size: 1.25rem;
+  line-height: 1;
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+.navbar-toggler-icon {
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  vertical-align: middle;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 0, 0, 0.55)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+
+/* Contenedor de enlaces */
+.navbar-links-container {
+  display: flex;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.nav-link, .nav-link-button {
+  color: var(--navbar-text-color);
+  text-decoration: none;
   font-weight: 500;
+  padding: 0.5rem 0;
+  transition: color 0.2s ease-in-out;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
 }
 
-.custom-navbar .nav-link {
-  font-size: 0.95rem;
-  color: #333 !important;
-  margin-right: 10px;
+.nav-link:hover, .nav-link-button:hover {
+  color: var(--navbar-link-hover-color);
 }
 
-.custom-navbar .nav-link:hover {
-  color: #007bff !important;
+/* --- Estilos para Móvil --- */
+@media (max-width: 991.98px) {
+  .navbar-content {
+    flex-wrap: wrap;
+  }
+
+  .navbar-toggler {
+    display: block; /* Mostrar en móvil */
+  }
+
+  .navbar-links-container {
+    position: absolute;
+    top: var(--navbar-height);
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: var(--navbar-bg);
+    box-shadow: var(--navbar-shadow);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease-in-out;
+  }
+
+  .navbar-links-container.show {
+    max-height: 100vh; /* Un valor suficientemente grande */
+  }
+
+  .navbar-links {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+    width: 100%;
+    gap: 0.5rem;
+  }
+
+  .nav-link, .nav-link-button {
+    width: 100%;
+    text-align: left;
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid #eee;
+  }
+
+  .nav-link:last-child, .nav-link-button:last-child {
+    border-bottom: none;
+  }
 }
 
-@media (max-width: 576px) {
-  .custom-navbar .navbar-brand {
-    font-size: 1.1rem;
-  }
-
-  .custom-navbar .nav-link {
-    font-size: 0.9rem;
-  }
-}
-
-@media (max-width: 420px) {
-  .custom-navbar {
-    padding: 0.5rem 0.75rem;
-  }
-
-  .custom-navbar .navbar-brand {
-    font-size: 1rem;
-  }
-
-  .custom-navbar .nav-link {
-    font-size: 0.85rem;
-    margin-right: 8px;
-  }
-}
-
-@media (max-width: 330px) {
-  .custom-navbar {
-    padding: 0.4rem 0.6rem;
-  }
-
-  .custom-navbar .navbar-brand {
-    font-size: 0.9rem;
-  }
-
-  .custom-navbar .nav-link {
-    font-size: 0.8rem;
-    margin-right: 5px;
-  }
+/* --- Estilos para Desktop --- */
+@media (min-width: 992px) {
 }
