@@ -94,7 +94,7 @@ const ProductListPage = ({
       
       {/* Mensajes para productos nuevos y en oferta, solo en la página principal */}
       {title === 'Nuestros Productos' && (
-        <div className="messages-wrapper">
+        <div className="d-flex justify-content-center flex-wrap gap-2 mb-3">
           <NewMessages cantidad={nuevosCount} estado="nuevo" />
           <NewMessages cantidad={ofertasCount} estado="oferta" />
         </div>

@@ -10,10 +10,10 @@ const Newmessages = ({ cantidad, estado }) => {
 
   if (estado === 'nuevo') {
     emoji = '🆕';
-    message = cantidad === 1 ? 'artículo nuevo' : 'artículos nuevos';
+    message = cantidad === 1 ? ' Nuevos' : 'Nuevos';
   } else if (estado === 'oferta') {
     emoji = '🔥';
-    message = cantidad === 1 ? 'artículo en oferta' : 'artículos en oferta';
+    message = cantidad === 1 ? 'En oferta' : 'En oferta';
     className += ' offer-messages'; // Clase para estilos diferentes
   } else {
     return null;
