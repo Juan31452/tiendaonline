@@ -127,7 +127,7 @@ const ProductListPage = ({
         onPageChange={handlePageChange}
       />
 
-      <div className="sticky-top bg-transparent pt-2 pb-3 z-index-1020" style={{ top: 0 }}>
+      <div className="sticky-top bg-transparent pt-2 pb-3 z-index-1020" style={{ top: 20 }}>
         <CategoryFilterController
           allProducts={allProducts}
           setFilteredProducts={setFilteredProducts}
