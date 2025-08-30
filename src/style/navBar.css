@@ -53,3 +53,18 @@
     margin-right: 8px;
   }
 }
+
+@media (max-width: 330px) {
+  .custom-navbar {
+    padding: 0.4rem 0.6rem;
+  }
+
+  .custom-navbar .navbar-brand {
+    font-size: 0.9rem;
+  }
+
+  .custom-navbar .nav-link {
+    font-size: 0.8rem;
+    margin-right: 5px;
+  }
+}
