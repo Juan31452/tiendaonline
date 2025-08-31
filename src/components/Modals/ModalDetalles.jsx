@@ -1,16 +1,28 @@
+import { useContext } from 'react';
 import { Modal } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import WhatsAppButton from '../Buttons/WhatsAppButton';
 import ButtonClose from '../Buttons/ButtonClose';
 import '../../style/EditButton.css'; // estilos para el botón 
+import { AuthContext } from '../Context/AuthContext';
 
 const ModalDetalles = ({ product, show, onHide}) => {
   
-  //const isLocalhost = window.location.hostname === 'localhost';
+  const { role } = useContext(AuthContext);
 
   if (!product) return null;
 
- 
+  // Determinar si el usuario tiene permisos para ver el precio real
+  const userRole = role?.toLowerCase();
+  const canViewPrice = userRole === 'admin' || userRole === 'vendedor';
+
+  const displayPrice = canViewPrice ? product.Precio : 0;
+
+  // Crear un objeto de producto para WhatsApp con el precio ajustado
+  const productForWhatsApp = {
+    ...product,
+    Precio: displayPrice,
+  };
 
   return (
     <Modal
@@ -27,7 +39,7 @@ const ModalDetalles = ({ product, show, onHide}) => {
       <Modal.Header closeButton>
         <Modal.Title>Detalles del Producto</Modal.Title>
       </Modal.Header>
-      <Modal.Body className="py-1 px-2 pb-5">
+      <Modal.Body className="py-1 px-2">
         <div className="row">
           <div className="col-md-6 text-center">
             <img
@@ -63,28 +75,19 @@ const ModalDetalles = ({ product, show, onHide}) => {
             </div>
 
              <h3 className="text-primary mb-2">
-               {typeof product.Precio === 'number'
-                ? `$${product.Precio.toLocaleString()}`
+               {typeof displayPrice === 'number'
+                ? `$${displayPrice.toLocaleString()}`
                 : 'Precio no disponible'}
               </h3>
           </div>
         </div>
-
-        <div className="d-flex flex-row justify-content-end align-items-center w-100 gap-2 mt-n2">
-            <div className="btn-custom-padding">
-              <WhatsAppButton product={product} />
-            </div>
-            <div className="btn-custom-padding">
-              <ButtonClose onClick={onHide} />
-            </div>
-          </div>
-
       </Modal.Body>
 
       {/* Footer con botón de WhatsApp y cerrar*/}
       <Modal.Footer className="py-1 px-2">
-
-        
+        {/* Se pasa el producto con el precio ajustado */}
+        <WhatsAppButton product={productForWhatsApp} />
+        <ButtonClose onClick={onHide} />
       </Modal.Footer>
     </Modal>
   );

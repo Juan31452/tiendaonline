@@ -63,8 +63,8 @@ const NavBar = () => {
 
             
             
-            <Link to="/new" className="nav-link" onClick={handleClose}>Nuevos</Link>
-            <Link to="/verproductos" className="nav-link" onClick={handleClose}>Productos</Link>
+            {/* <Link to="/new" className="nav-link" onClick={handleClose}>Nuevos</Link>
+            <Link to="/verproductos" className="nav-link" onClick={handleClose}>Productos</Link> */}
 
             {!isAuthenticated ? (
               <Link to="/login" className="nav-link" onClick={handleClose}>Login</Link>

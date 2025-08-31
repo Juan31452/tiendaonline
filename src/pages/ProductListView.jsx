@@ -12,6 +12,7 @@ import ModalDetalles from '../components/Modals/ModalDetalles';
 // Usamos la lista de constantes que ya tienes
 import { productStates as ALL_PRODUCT_STATES, GUEST_PRODUCT_STATES } from '../constants/states';
 import { AuthContext } from '../components/Context/AuthContext';
+import MobileBottomNav from '../components/Buttons/MobileBottomNav';
 
 // Constante para el tamaño de página
 const PAGE_SIZE = 100;
@@ -25,6 +26,12 @@ const ProductListView = () => {
   // Estado local para el modal
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [showModal, setShowModal] = useState(false);
+
+  // Determina si el usuario puede ver el precio real
+  const canViewPrice = useMemo(() => {
+    const userRole = role?.toLowerCase();
+    return userRole === 'admin' || userRole === 'vendedor';
+  }, [role]);
 
   // Determina los estados disponibles según el rol del usuario.
   // useMemo asegura que esta lógica solo se ejecute si `user` cambia.
@@ -128,7 +135,12 @@ const ProductListView = () => {
         {productos.map((p) => (
           <ProductCard
             key={p._id || p.IdProducto}
-            product={p}
+            product={{
+              ...p,
+              // Mostramos precio 0 si el usuario no tiene permisos
+              Precio: canViewPrice ? p.Precio : 0,
+            }}
+            // Al hacer clic, pasamos el producto original al modal
             onClick={() => handleCardClick(p)}
           />
         ))}
@@ -154,7 +166,9 @@ const ProductListView = () => {
         currentCount={productos.length}
         totalCount={pagination.totalItems}
       />
+      <MobileBottomNav />
     </div>
+    
   );
 };
 

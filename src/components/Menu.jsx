@@ -27,11 +27,12 @@ const Menu = () => {
 
       <Routes location={location}>
         {/* Rutas públicas */}
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<ProductsListView />} />
         <Route path={PUBLIC1} element={<Login />} />
         <Route path={PUBLIC2} element={<Mynew />} />
-         {/*}<Route path={PUBLIC3} element={<Offers />} />*/}
-        <Route path={PRIVATE6} element={<ProductsListView />} />   
+         {/*}<Route path={PUBLIC3} element={<Offers />} />
+        <Route path={PRIVATE6} element={<ProductsListView />} />   */}
+        
         {/* Rutas privadas */}
         <Route
           path={PRIVATE1}
