@@ -13,3 +13,10 @@ export const LIMITED_PRODUCT_STATES = productStates.filter(
     (state) => state.value === 'Separado' || state.value === 'Vendido'
 );
 
+/**
+ * Una lista filtrada para usuarios no autenticados o sin rol de admin/vendedor.
+ * Incluye solo los estados que son visibles para el público general.
+ */
+export const GUEST_PRODUCT_STATES = productStates.filter((state) =>
+    ['Disponible', 'Nuevo', 'Oferta'].includes(state.value)
+);

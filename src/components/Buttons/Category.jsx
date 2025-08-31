@@ -2,9 +2,7 @@ import PropTypes from 'prop-types';
 import { categories } from '../../constants/categories';
 
 
-const Category = ({ activeCategory, onSelect }) => {
-  
-  
+const Category = ({ activeCategory, onSelect }) => {  
   return (
     <div className="d-flex overflow-auto gap-2 py-1">
       {categories.map(({ id, name }) => (
@@ -27,12 +25,6 @@ const Category = ({ activeCategory, onSelect }) => {
 Category.propTypes = {
   activeCategory: PropTypes.string,
   onSelect: PropTypes.func.isRequired,
-  products: PropTypes.arrayOf(
-    PropTypes.shape({
-      Categoria: PropTypes.string.isRequired,
-      Estado: PropTypes.string.isRequired,
-    })
-  ).isRequired,
 };
 
 export default Category;

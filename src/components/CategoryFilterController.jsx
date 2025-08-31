@@ -29,7 +29,7 @@ const CategoryFilterController = ({
       case 'Mujer':
         setFilteredProducts(filterByKeywords(['mujer', 'femenino', 'dama']));
         break;
-      case 'Ninos':
+      case 'Niño':
         setFilteredProducts(filterByKeywords(['niño', 'nino', 'niña', 'nina', 'infantil']));
         break;
       case 'Tecnologia':

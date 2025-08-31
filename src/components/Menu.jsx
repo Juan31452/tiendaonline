@@ -30,25 +30,28 @@ const Menu = () => {
         <Route path="/" element={<Home />} />
         <Route path={PUBLIC1} element={<Login />} />
         <Route path={PUBLIC2} element={<Mynew />} />
-        <Route path={PUBLIC3} element={<Offers />} />
-
+         {/*}<Route path={PUBLIC3} element={<Offers />} />*/}
+        <Route path={PRIVATE6} element={<ProductsListView />} />   
         {/* Rutas privadas */}
-        <Route
-          path={PRIVATE6}
-          element={
-            <PrivateRoute allowedRoles={['admin']}>
-              <ProductsListView />
-            </PrivateRoute>
-          }
-        />
         <Route
           path={PRIVATE1}
           element={
-            <PrivateRoute allowedRoles={['admin', 'vendedor']}>
+            <PrivateRoute allowedRoles={['admin']}>
               <Products />
             </PrivateRoute>
           }
         />
+        {/*}
+        <Route
+          path={PRIVATE6}
+          element={
+            <PrivateRoute allowedRoles={['admin', 'vendedor']}>
+              <ProductsListView />
+            </PrivateRoute>
+          }
+        />
+        */}
+        
         <Route
           path={PRIVATE3}
           element={

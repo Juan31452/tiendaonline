@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext, useMemo } from 'react';
 import useConsultas from '../hooks/useConsultas';
 import useEstadisticasProductos from '../hooks/useEstadisticasProductos';
 
@@ -10,17 +10,42 @@ import RadioOptionsHorizontal from '../components/Buttons/RadioOptionsHorizontal
 import EstadisticasProductos from '../components/EstadisticasProductos';
 import ModalDetalles from '../components/Modals/ModalDetalles';
 // Usamos la lista de constantes que ya tienes
-import { productStates as ALL_PRODUCT_STATES } from '../constants/states';
+import { productStates as ALL_PRODUCT_STATES, GUEST_PRODUCT_STATES } from '../constants/states';
+import { AuthContext } from '../components/Context/AuthContext';
 
+// Constante para el tamaño de página
+const PAGE_SIZE = 100;
 
 const ProductListView = () => {
   const [activeCategory, setActiveCategory] = useState('todos');
   const [activeEstado, setActiveEstado] = useState('Disponible');
   const [page, setPage] = useState(1);
+  const { role } = useContext(AuthContext);
 
   // Estado local para el modal
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [showModal, setShowModal] = useState(false);
+
+  // Determina los estados disponibles según el rol del usuario.
+  // useMemo asegura que esta lógica solo se ejecute si `user` cambia.
+  const availableStates = useMemo(() => {
+    // Hacemos la comprobación insensible a mayúsculas para más robustez.
+    const userRole = role?.toLowerCase();
+
+    if (userRole === 'admin' || userRole === 'vendedor') {
+      return ALL_PRODUCT_STATES;
+    }
+    return GUEST_PRODUCT_STATES;
+  }, [role]);
+
+  // Efecto para resetear el estado si el actual ya no está disponible
+  // (por ejemplo, al cerrar sesión mientras se filtraba por "Vendido").
+  useEffect(() => {
+    if (!availableStates.some((state) => state.value === activeEstado)) {
+      setActiveEstado('Disponible');
+      
+    }
+  }, [availableStates, activeEstado]);
 
   const {
     estadisticas,
@@ -37,9 +62,9 @@ const ProductListView = () => {
   } = useConsultas();
 
   useEffect(() => {
-    fetchPage(1, 100, activeCategory, activeEstado);
+    fetchPage(1, PAGE_SIZE, activeCategory, activeEstado);
     setPage(1);
-  }, [activeCategory, activeEstado]);
+  }, [activeCategory, activeEstado, fetchPage]);
 
   const handleCategoryChange = (newCategory) => setActiveCategory(newCategory);
   const handleEstadoChange = (estado) => setActiveEstado(estado);
@@ -54,12 +79,14 @@ const ProductListView = () => {
     setSelectedProduct(null);
   };
 
-  /* -------- paginación -------- */
-  const prev = () => page > 1 && (fetchPage(page - 1), setPage(page - 1));
-  const next = () => page < pagination.totalPages && (fetchPage(page + 1), setPage(page + 1));
-  const first = () => page !== 1 && (fetchPage(1), setPage(1));
-  const last = () => page !== pagination.totalPages && (fetchPage(pagination.totalPages), setPage(pagination.totalPages));
-  const refresh = () => fetchPage(page);
+  const handlePageChange = (newPage) => {
+    if (newPage >= 1 && newPage <= pagination.totalPages && newPage !== page) {
+      fetchPage(newPage, PAGE_SIZE, activeCategory, activeEstado);
+      setPage(newPage);
+    }
+  };
+
+  const refresh = () => fetchPage(page, PAGE_SIZE, activeCategory, activeEstado);
 
   return (
     <div className="container mt-4" style={{ paddingTop: '80px' }}>
@@ -79,7 +106,7 @@ const ProductListView = () => {
       <div className="my-3">
         <RadioOptionsHorizontal
           // 2. Pasamos la lista de opciones que queremos mostrar.
-          options={ALL_PRODUCT_STATES}
+          options={availableStates}
           // 3. Damos un nombre al grupo de radio buttons.
           name="productStatus"
           // 4. Pasamos el valor actual y la función para cambiarlo.
@@ -119,10 +146,10 @@ const ProductListView = () => {
         page={page}
         totalPages={pagination.totalPages}
         loading={loadingList}
-        onFirst={first}
-        onPrev={prev}
-        onNext={next}
-        onLast={last}
+        onFirst={() => handlePageChange(1)}
+        onPrev={() => handlePageChange(page - 1)}
+        onNext={() => handlePageChange(page + 1)}
+        onLast={() => handlePageChange(pagination.totalPages)}
         onRefresh={refresh}
         currentCount={productos.length}
         totalCount={pagination.totalItems}

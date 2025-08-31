@@ -49,19 +49,26 @@ const NavBar = () => {
                 <Link to="/uploadimage" className="nav-link" onClick={handleClose}>Nuevas Imágenes</Link>
                 <Link to="/uploadjson" className="nav-link" onClick={handleClose}>Nuevos JSON</Link>
                 <Link to="/listproducts" className="nav-link" onClick={handleClose}>Listar Productos</Link>
-                <Link to="/verproductos" className="nav-link" onClick={handleClose}>Backend</Link>
+                <Link to="/products" className="nav-link" onClick={handleClose}>Productos1</Link>
+                { /*
+                <Link to="/offers" className="nav-link" onClick={handleClose}>Ofertas</Link> */}
               </>
             )}
 
+            {/*
             {isAuthenticated && ['admin', 'vendedor'].includes(role) && (
-              <Link to="/products" className="nav-link" onClick={handleClose}>Productos</Link>
+              <Link to="/verproductos" className="nav-link" onClick={handleClose}>Productos</Link>
             )}
+            */}
 
-            <Link to="/offers" className="nav-link" onClick={handleClose}>Ofertas</Link>
+            
+            
             <Link to="/new" className="nav-link" onClick={handleClose}>Nuevos</Link>
+            <Link to="/verproductos" className="nav-link" onClick={handleClose}>Productos</Link>
 
             {!isAuthenticated ? (
               <Link to="/login" className="nav-link" onClick={handleClose}>Login</Link>
+              
             ) : (
               <button className="nav-link-button" onClick={handleLogout}>
                 Cerrar sesión

@@ -13,8 +13,8 @@ const MobileBottomNav = () => {
         <img src={myicons.NEWS} alt="Usuario" />
         <span>Nuevo</span>
       </a>
-      <a href="/offers" className="nav-item">
-        <img src={myicons.OFFERS} alt="Oferta" />
+      <a href="/verproductos" className="nav-item">
+        <img src={myicons.OFFERS} alt="Productos" />
         <span>Oferta</span>
       </a>
       <a href="/login" className="nav-item">
