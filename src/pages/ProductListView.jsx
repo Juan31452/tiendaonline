@@ -19,7 +19,7 @@ const PAGE_SIZE = 100;
 const ProductListView = () => {
   const { role } = useContext(AuthContext);
 
-  // Usamos el nuevo hook para manejar los filtros y la paginación.
+  // Usamos  hook para manejar los filtros y la paginación.
   const {
     activeCategory, activeEstado, page, availableStates,
     handleCategoryChange, handleEstadoChange, setPage,
@@ -58,8 +58,13 @@ const ProductListView = () => {
   } = useConsultas();
 
   useEffect(() => {
+    // Evitar la carga inicial si el estado del filtro no es válido todavía.
+    // El otro useEffect se encargará de corregirlo y disparará una nueva carga.
+    if (!availableStates.some((state) => state.value === activeEstado)) {
+      return;
+    }
     fetchPage(page, PAGE_SIZE, activeCategory, activeEstado);
-  }, [page, activeCategory, activeEstado, fetchPage]);
+  }, [page, activeCategory, activeEstado, fetchPage, availableStates]);
 
   const handleCardClick = (product) => {
     setSelectedProduct(product);
