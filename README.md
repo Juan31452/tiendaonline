@@ -1,63 +1,80 @@
-# Tienda Online MERN
+# 🛍️ Tienda Online MERN
 
-Este proyecto es una tienda online construida con React (frontend) y Node.js/MongoDB (backend). Permite listar, buscar, editar y ver detalles de productos.
+Este proyecto es una aplicación completa de comercio electrónico construida con el stack **MERN (MongoDB, Express, React, Node.js)**. La aplicación cuenta con un frontend moderno y reactivo y un backend robusto que gestiona productos, usuarios y autenticación.
 
-Primera Fase : se construyo solo el Front , donde los datos vienen de un archivo json, esta fase actualmente sigue vigente , pero los componentes mas adelante seran obsoletos.
+## Fases del Proyecto
 
-Segunda Fase : aqui se esta implementado el backend tambien en una fase temprana , donde esta creada para ingreso ,edicion y visualizacion de productos, se sigue actualizando componentes.
+*   **Fase 1 (Completada):** Se construyó el frontend inicial con React, utilizando datos estáticos desde archivos JSON para simular la API.
+*   **Fase 2 (En progreso):** Implementación del backend con Node.js, Express y MongoDB. Se ha creado la API para el CRUD de productos y se está migrando el frontend para consumir esta API.
+*   **Fase 3 (En progreso):** Creación del sistema de usuarios y seguridad. Se ha implementado la autenticación basada en **JSON Web Tokens (JWT)**, incluyendo registro, login y manejo de expiración de tokens.
 
-Tercera fase : Se crearan usuarios en Backend y seguridad con token
+## 🚀 Funcionalidades Clave
 
-## Estructura principal
+- **Gestión de Productos:** Listado de productos con filtros dinámicos (categoría, estado) y paginación.
+- **Búsqueda y Edición:** Búsqueda de productos por ID y edición a través de un modal interactivo.
+- **Autenticación Segura:** Sistema de login y registro de usuarios utilizando JWT.
+- **Manejo de Sesión:** Detección automática de tokens expirados con redirección al login.
+- **Roles de Usuario:** Lógica para diferenciar las vistas y permisos entre `admin`, `vendedor` e invitados.
+- **Estadísticas de Inventario:** Visualización de métricas relevantes sobre los productos.
+- **Diseño Responsivo:** Interfaz adaptable a dispositivos móviles y de escritorio.
 
-- **src/components/**: Componentes reutilizables (botones, tablas, modales, etc).
-- **src/pages/**: Vistas principales de la aplicación.
-- **src/utils/**: Utilidades y componentes auxiliares.
-- **src/hooks/**: Hooks personalizados para lógica de negocio.
+## 🏗️ Estructura del Proyecto
 
-## Funcionalidades
+```
+/
+├── backend/                 # Código del servidor Node.js
+│   ├── controllers/         # Lógica de negocio (controladores)
+│   ├── middleware/          # Middlewares (ej. auth.js para JWT)
+│   ├── models/              # Modelos de datos de Mongoose
+│   └── routes/              # Definición de las rutas de la API
+└── src/                     # Código del cliente React
+    ├── api/                 # Configuración centralizada de Axios
+    ├── components/          # Componentes de UI reutilizables
+    ├── constants/           # Constantes de la aplicación (rutas, estados)
+    ├── hooks/               # Hooks personalizados (useProductFilters, etc.)
+    ├── pages/               # Componentes de página (vistas)
+    └── utils/               # Funciones de utilidad
+```
 
-- **Listado de productos** con paginación.
-- **Búsqueda** por ID de producto.
-- **Estadísticas de producto** para visualizar métricas relevantes.
-- **Visualización de detalles** de producto en un modal.
-- **Botón de WhatsApp** para contacto rápido.
-- **Paginación** con controles de navegación.
+## ✨ Arquitectura y Componentes Destacados
 
-## Componentes destacados
+La arquitectura del frontend se basa en la **composición de componentes y la extracción de lógica a hooks personalizados** para mantener el código limpio y escalable.
+
+- **`apiAxios.js`**: Instancia centralizada de Axios que utiliza **interceptores** para:
+  - Adjuntar automáticamente el token de autenticación a todas las peticiones protegidas.
+  - Capturar globalmente las respuestas `401 Unauthorized` del backend, limpiar la sesión y redirigir al login.
+- **`useProductFilters`**: Hook personalizado que encapsula toda la lógica de estado para los filtros de productos (categoría, estado) y la paginación.
+- **`useConsultas`**: Hook encargado de realizar las peticiones a la API para obtener los productos, utilizando `apiAxios`.
+- **`ProductListView.jsx`**: Actúa como un **componente orquestador**, utilizando los hooks para manejar la lógica y pasando los datos a los componentes de presentación.
+- **Componentes de Presentación**: `ProductCard`, `ModalDetalles`, `PaginationControls`, etc., son componentes "tontos" que solo se encargan de renderizar la UI.
+
 ### Backend
 
 El backend está desarrollado con Node.js, Express y MongoDB. Expone una API RESTful para gestionar productos y proximamente usuarios.
 
-- `routes/productos.js`: Rutas para operaciones CRUD de productos.
-- `routes/usuarios.js`: Rutas para registro y autenticación de usuarios.
-- `models/Producto.js`: Modelo Mongoose para productos.
-- `models/Usuario.js`: Modelo Mongoose para usuarios.
-- `middleware/auth.js`: Middleware para autenticación con JWT.
-- `controllers/`: Lógica de negocio para productos y usuarios.
+- **Rutas:** `routes/productos.js` y `routes/usuarios.js` definen los endpoints de la API.
+- **Modelos:** `models/Producto.js` y `models/Usuario.js` definen los esquemas de datos con Mongoose.
+- **Controladores:** La carpeta `controllers/` contiene la lógica de negocio para cada ruta.
+- **Seguridad:** El middleware `middleware/auth.js` protege las rutas verificando la validez de los tokens JWT en cada petición.
 
-Incluye validación de datos, manejo de errores y proximamente autenticación basada en tokens JWT.
-- `ProductosTable`: Muestra los productos en una tabla con botones de editar y ver.
-- `EditProductModal`: Modal para editar productos.
-- `ModalDetalles`: Modal para ver detalles de un producto.
-- `PaginationControls`: Navegación entre páginas.
-- `EditButton`: Botón reutilizable para acciones.
+## 🛠️ Cómo Ejecutar el Proyecto
 
-## Cómo ejecutar
+### Prerrequisitos
+- Node.js
+- MongoDB (una instancia local o una URI de MongoDB Atlas)
 
-1. Clona el repositorio.
-2. Instala dependencias:
-   ```bash
-   npm install
-   ```
-3. Inicia la app:
-   ```bash
-   npm start
-   ```
+### Backend
+1.  Navega a la carpeta `backend`: `cd backend`
+2.  Instala las dependencias: `npm install`
+3.  Crea un archivo `.env` en la raíz de `backend/` y añade tus variables de entorno (ej. `MONGO_URI`, `JWT_SECRET`).
+4.  Inicia el servidor de desarrollo: `npm run dev`
 
-## Personalización
+### Frontend
+1.  En una nueva terminal, navega a la raíz del proyecto.
+2.  Instala las dependencias: `npm install`
+3.  Inicia la aplicación de React: `npm run dev`
 
-Puedes modificar los componentes en `src/components` y las vistas en `src/pages` para adaptar la tienda a tus necesidades.
+La aplicación estará disponible en `http://localhost:5173` (o el puerto que Vite asigne).
 
 ---
 
