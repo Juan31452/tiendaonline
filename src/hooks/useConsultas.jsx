@@ -1,7 +1,7 @@
 import { useState, useCallback } from 'react';
-import axios from 'axios';
-import ApiRoutes from '../api/ApiRoute';
+import apiAxios from '../api/apiAxios'; // 1. Importa la instancia de Axios configurada
 import toArray from '../utils/toArray';
+import ApiRoutes from '../api/ApiRoute';
 
 const useConsultas = () => {
   const [productos, setProductos] = useState([]);
@@ -19,7 +19,8 @@ const useConsultas = () => {
     setError('');
 
     try {
-      const response = await axios.get(ApiRoutes.ConsultaCategoria, {
+      const response = await apiAxios.get(ApiRoutes.ConsultaCategoria, { // 2. Usa la instancia 'apiAxios' y una ruta relativa
+        
         params: {
           ...(categoria && categoria !== 'todos' ? { categoria } : {}),
           ...(estado ? { estado } : {}),
@@ -29,6 +30,7 @@ const useConsultas = () => {
         headers: { Accept: 'application/json' },
       });
         console.log('Consultando con categoría:', categoria);
+        console.log('URL de la API:', ApiRoutes.ConsultaCategoria);
       const data = response.data;
       console.log('Productos en Data', data);
 
