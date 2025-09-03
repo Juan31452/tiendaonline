@@ -1,9 +1,9 @@
 import { useContext } from 'react';
 import { Modal } from 'react-bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import WhatsAppButton from '../Buttons/WhatsAppButton';
 import ButtonClose from '../Buttons/ButtonClose';
-import '../../style/EditButton.css'; // estilos para el botón 
+// Importamos los nuevos estilos para el modal
+import '../../style/ModalDetalles.css'; 
 import { AuthContext } from '../Context/AuthContext';
 
 const ModalDetalles = ({ product, show, onHide}) => {
@@ -30,7 +30,20 @@ const ModalDetalles = ({ product, show, onHide}) => {
     zIndex: 1060
   };
 
-  const dialogClassName = product.Estado === 'Separado' ? 'modal-separado' : '';
+  // Clases para el diálogo del modal
+  const dialogClassName = [
+    'modal-detalles-dialog',
+    product.Estado === 'Separado' ? 'modal-separado' : ''
+  ].join(' ').trim();
+
+  // Función para obtener la clase del badge según el estado
+  const getBadgeClass = (estado) => {
+    const estadoLower = estado?.toLowerCase();
+    if (estadoLower === 'disponible') return 'badge-estado-disponible';
+    if (estadoLower === 'separado') return 'badge-estado-separado';
+    if (estadoLower === 'vendido') return 'badge-estado-vendido';
+    return 'badge-estado-otro';
+  };
 
   return (
     <Modal
@@ -41,21 +54,16 @@ const ModalDetalles = ({ product, show, onHide}) => {
       style={modalStyle}
       dialogClassName={dialogClassName}
     >
-      <Modal.Header closeButton>
+      <Modal.Header closeButton className="modal-detalles-header">
         <Modal.Title>Detalles del Producto</Modal.Title>
       </Modal.Header>
-      <Modal.Body className="py-1 px-2">
-        <div className="row">
-          <div className="col-md-6 text-center">
+      <Modal.Body className="modal-detalles-body">
+        <div className="modal-detalles-content">
+          <div className="modal-detalles-image-col">
             <img
               src={product.Imagen}
               alt={product.Descripcion}
-              className="img-fluid rounded mb-3"
-              style={{
-                maxHeight: '350px',
-                width: 'auto',
-                objectFit: 'contain'
-              }}
+              className="modal-detalles-image"
               onError={(e) => {
                 e.target.onerror = null;
                 e.target.src = 'https://via.placeholder.com/400x400?text=Imagen+no+disponible';
@@ -63,23 +71,19 @@ const ModalDetalles = ({ product, show, onHide}) => {
               }}
             />
           </div>
-          <div className="col-md-6">
-            <h4 className="text-muted mb-3">{product.IdProducto}</h4>
-            <h3 className="mb-2">{product.Descripcion}</h3>
+          <div className="modal-detalles-info-col">
+            <h4 className="modal-detalles-id">{product.IdProducto}</h4>
+            <h3 className="modal-detalles-descripcion">{product.Descripcion}</h3>
 
-            <div className="mb-2 d-flex flex-wrap gap-2">
-              <span className="badge bg-primary p-2">Talla: {product.Talla}</span>
-              <span className="badge bg-success p-2">Disponibles: {product.Cantidad}</span>
-              <span className={`badge p-2 ${
-                product.Estado === 'Disponible' ? 'bg-success' :
-                product.Estado === 'Separado' ? 'bg-danger bg-opacity-25 text-dark' :
-                'bg-warning bg-opacity-50'
-              }`}>
+            <div className="modal-detalles-badges">
+              <span className="badge modal-detalles-badge bg-primary">Talla: {product.Talla}</span>
+              <span className="badge modal-detalles-badge bg-success">Disponibles: {product.Cantidad}</span>
+              <span className={`badge modal-detalles-badge ${getBadgeClass(product.Estado)}`}>
                 Estado: {product.Estado}
               </span>
             </div>
 
-             <h3 className="text-primary mb-2">
+             <h3 className="modal-detalles-precio">
                {typeof displayPrice === 'number'
                 ? `$${displayPrice.toLocaleString()}`
                 : 'Precio no disponible'}
@@ -88,9 +92,7 @@ const ModalDetalles = ({ product, show, onHide}) => {
         </div>
       </Modal.Body>
 
-      {/* Footer con botón de WhatsApp y cerrar*/}
-      <Modal.Footer className="py-1 px-2">
-        {/* Se pasa el producto con el precio ajustado */}
+      <Modal.Footer className="modal-detalles-footer">
         <WhatsAppButton product={productForWhatsApp} />
         <ButtonClose onClick={onHide} />
       </Modal.Footer>
