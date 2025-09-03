@@ -24,17 +24,22 @@ const ModalDetalles = ({ product, show, onHide}) => {
     Precio: displayPrice,
   };
 
+  // Aumentar el z-index para que el modal se muestre sobre otros elementos fijos como la barra de navegación inferior.
+  // El valor por defecto de Bootstrap es 1055. Ajústalo si es necesario.
+  const modalStyle = {
+    zIndex: 1060
+  };
+
+  const dialogClassName = product.Estado === 'Separado' ? 'modal-separado' : '';
+
   return (
     <Modal
       show={show}
       onHide={onHide}
       size="lg"
       centered
-      style={{
-        boxShadow: product.Estado === 'Separado'
-          ? '0 4px 8px rgba(219, 143, 143, 0.2)'
-          : 'none'
-      }}
+      style={modalStyle}
+      dialogClassName={dialogClassName}
     >
       <Modal.Header closeButton>
         <Modal.Title>Detalles del Producto</Modal.Title>
