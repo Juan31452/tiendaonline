@@ -1,7 +1,7 @@
-import { useState, useEffect, useContext, useMemo } from 'react';
-import useConsultas from '../hooks/useConsultas';
+import { useContext, useMemo } from 'react';
 import useEstadisticasProductos from '../hooks/useEstadisticasProductos';
-import useProductFilters from '../hooks/useProductFilters';
+import useProductModal from '../hooks/useProductModal';
+import useProductData from '../hooks/useProductData';
 
 import Category from '../components/Buttons/Category';
 import ProductCard from '../components/ProductCard';
@@ -13,21 +13,29 @@ import ModalDetalles from '../components/Modals/ModalDetalles';
 import { AuthContext } from '../components/Context/AuthContext';
 import MobileBottomNav from '../components/Buttons/MobileBottomNav';
 
-// Constante para el tamaño de página
-const PAGE_SIZE = 100;
-
 const ProductListView = () => {
   const { role } = useContext(AuthContext);
 
-  // Usamos  hook para manejar los filtros y la paginación.
+  // Hook que encapsula la data, filtros y paginación
   const {
-    activeCategory, activeEstado, page, availableStates,
-    handleCategoryChange, handleEstadoChange, setPage,
-  } = useProductFilters(role);
+    productos,
+    pagination,
+    loading: loadingList,
+    error,
+    page,
+    activeCategory,
+    activeEstado,
+    availableStates,
+    handleCategoryChange,
+    handleEstadoChange,
+    goToPage,
+    refreshData,
+  } = useProductData(role);
 
-  // Estado local para el modal
-  const [selectedProduct, setSelectedProduct] = useState(null);
-  const [showModal, setShowModal] = useState(false);
+  // Usamos el hook para manejar el estado y la lógica del modal.
+  const {
+    isModalOpen, selectedProduct, openModal, closeModal,
+  } = useProductModal();
 
   // Determina si el usuario puede ver el precio real
   const canViewPrice = useMemo(() => {
@@ -35,54 +43,11 @@ const ProductListView = () => {
     return userRole === 'admin' || userRole === 'vendedor';
   }, [role]);
 
-  // Efecto para resetear el estado si el actual ya no está disponible
-  // (por ejemplo, al cerrar sesión mientras se filtraba por "Vendido").
-  useEffect(() => {
-    if (!availableStates.some((state) => state.value === activeEstado)) {
-      handleEstadoChange('Disponible');
-    }
-  }, [availableStates, activeEstado, handleEstadoChange]);
-
   const {
     estadisticas,
     loading: loadingEstadisticas,
     error: errorEstadisticas,
   } = useEstadisticasProductos();
-
-  const {
-    productos,
-    pagination,
-    loading: loadingList,
-    error,
-    fetchPage,
-  } = useConsultas();
-
-  useEffect(() => {
-    // Evitar la carga inicial si el estado del filtro no es válido todavía.
-    // El otro useEffect se encargará de corregirlo y disparará una nueva carga.
-    if (!availableStates.some((state) => state.value === activeEstado)) {
-      return;
-    }
-    fetchPage(page, PAGE_SIZE, activeCategory, activeEstado);
-  }, [page, activeCategory, activeEstado, fetchPage, availableStates]);
-
-  const handleCardClick = (product) => {
-    setSelectedProduct(product);
-    setShowModal(true);
-  };
-
-  const closeModal = () => {
-    setShowModal(false);
-    setSelectedProduct(null);
-  };
-
-  const handlePageChange = (newPage) => {
-    if (newPage >= 1 && newPage <= pagination.totalPages && newPage !== page) {
-      setPage(newPage);
-    }
-  };
-
-  const refresh = () => fetchPage(page, PAGE_SIZE, activeCategory, activeEstado);
 
   return (
     <div className="container mt-4" style={{ paddingTop: '80px' }}>
@@ -130,14 +95,14 @@ const ProductListView = () => {
               Precio: canViewPrice ? p.Precio : 0,
             }}
             // Al hacer clic, pasamos el producto original al modal
-            onClick={() => handleCardClick(p)}
+            onClick={() => openModal(p)}
           />
         ))}
       </div>
 
       {/* Modal detalles */}
       <ModalDetalles
-        show={showModal}
+        show={isModalOpen}
         product={selectedProduct}
         onHide={closeModal}
       />
@@ -147,11 +112,11 @@ const ProductListView = () => {
         page={page}
         totalPages={pagination.totalPages}
         loading={loadingList}
-        onFirst={() => handlePageChange(1)}
-        onPrev={() => handlePageChange(page - 1)}
-        onNext={() => handlePageChange(page + 1)}
-        onLast={() => handlePageChange(pagination.totalPages)}
-        onRefresh={refresh}
+        onFirst={() => goToPage(1)}
+        onPrev={() => goToPage(page - 1)}
+        onNext={() => goToPage(page + 1)}
+        onLast={() => goToPage(pagination.totalPages)}
+        onRefresh={refreshData}
         currentCount={productos.length}
         totalCount={pagination.totalItems}
       />
