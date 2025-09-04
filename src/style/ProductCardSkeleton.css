@@ -1,0 +1,40 @@
+.skeleton-card {
+  background-color: #f0f0f0;
+  border-radius: .375rem; /* Bootstrap's default border-radius */
+  overflow: hidden;
+  border: 1px solid #e0e0e0;
+}
+
+.skeleton-image {
+  width: 100%;
+  padding-top: 100%; /* 1:1 Aspect Ratio */
+}
+
+.skeleton-body {
+  padding: 0.75rem;
+}
+
+.skeleton-line {
+  height: 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: .25rem;
+}
+
+.skeleton-line:last-child {
+  margin-bottom: 0;
+}
+
+.skeleton-animation {
+  background: linear-gradient(90deg, #e9ecef 25%, #f8f9fa 50%, #e9ecef 75%);
+  background-size: 200% 100%;
+  animation: skeleton-loading 1.5s infinite linear;
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
