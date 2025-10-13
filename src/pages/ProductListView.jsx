@@ -42,11 +42,13 @@ const ProductListView = () => {
     return userRole === 'admin' || userRole === 'vendedor';
   }, [role]);
 
+  // ✅ Llamamos al hook de estadísticas SOLO si el rol es el adecuado.
+  // Esto evita hacer una llamada a la API que sabemos que va a fallar.
   const {
     estadisticas,
     loading: loadingEstadisticas,
     error: errorEstadisticas,
-  } = useEstadisticasProductos();
+  } = useEstadisticasProductos({ enabled: canViewPrice });
 
   return (
     <div className="container mt-4" style={{ paddingTop: '80px' }}>

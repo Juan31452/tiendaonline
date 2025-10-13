@@ -1,27 +1,32 @@
 // src/hooks/useEstadisticasProductos.js
 import { useState, useEffect } from 'react';
-import axios from 'axios';
 import ApiRoutes from '../api/ApiRoute';
+import apiAxios from '../api/apiAxios';
 
-const useEstadisticasProductos = () => {
+const useEstadisticasProductos = ({ enabled = true } = {}) => {
   const [estadisticas, setEstadisticas] = useState([]);
   const [totalProductos, setTotalProductos] = useState(0);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
   useEffect(() => {
+    if (!enabled) {
+      // Si el hook no está habilitado, no hacemos nada.
+      return;
+    }
     // AbortController para cancelar la petición si el componente se desmonta
     const controller = new AbortController();
     const { signal } = controller;
-
+    
     const fetchEstadisticas = async () => {
       setLoading(true);
       setError(null);
 
       try {
-        const { data } = await axios.get(ApiRoutes.EstadisticasProductos, {
-          headers: { Accept: 'application/json' },
-          signal, // Asociar la señal al request
+        // ✅ Usamos la instancia de apiAxios que ya tiene los interceptores
+        const { data } = await apiAxios.get(ApiRoutes.EstadisticasProductos, {
+          // El token se añade automáticamente gracias al interceptor
+          signal,
         });
 
         if (data.success) {
@@ -32,7 +37,7 @@ const useEstadisticasProductos = () => {
           setError(data.message || 'Error al cargar estadísticas');
         }
       } catch (err) {
-        if (axios.isCancel(err)) {
+        if (apiAxios.isCancel(err)) {
           // Si la petición fue cancelada, no hacemos nada.
           console.log('Petición cancelada:', err.message);
           return;
@@ -51,7 +56,7 @@ const useEstadisticasProductos = () => {
     return () => {
       controller.abort();
     };
-  }, []); // El array vacío asegura que se ejecute solo una vez al montar
+  }, [enabled]); // Se ejecutará cuando 'enabled' cambie
 
   return {
     estadisticas,
