@@ -11,7 +11,11 @@ const useEstadisticasProductos = ({ enabled = true } = {}) => {
 
   useEffect(() => {
     if (!enabled) {
-      // Si el hook no está habilitado, no hacemos nada.
+      // Si el hook no está habilitado, limpiamos el estado y no hacemos nada.
+      setEstadisticas([]);
+      setTotalProductos(0);
+      setLoading(false);
+      setError(null);
       return;
     }
     // AbortController para cancelar la petición si el componente se desmonta
@@ -56,7 +60,7 @@ const useEstadisticasProductos = ({ enabled = true } = {}) => {
     return () => {
       controller.abort();
     };
-  }, [enabled]); // Se ejecutará cuando 'enabled' cambie
+  }, [enabled]);
 
   return {
     estadisticas,
