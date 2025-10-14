@@ -33,3 +33,26 @@
   font-size: 0.95em;
   font-weight: 500;
 }
+
+/* --- Colores específicos para cada estado del badge --- */
+
+.estado-badge-disponible {
+  background-color: #d1e7dd; /* Verde claro */
+  color: #0f5132;
+}
+.estado-badge-vendido {
+  background-color: #fff3cd; /* Amarillo claro */
+  color: #664d03;
+}
+.estado-badge-separado {
+  background-color: #f8d7da; /* Rojo claro */
+  color: #842029;
+}
+.estado-badge-nuevo {
+  background-color: #cff4fc; /* Azul claro */
+  color: #055160;
+}
+.estado-badge-oferta {
+  background-color: #e2d9f3; /* Púrpura claro */
+  color: #49257a;
+}

@@ -1,0 +1,37 @@
+/* Contenedor principal que oculta el desbordamiento */
+.scrolling-stats-container {
+  display: flex;
+  white-space: nowrap;
+  overflow: hidden; /* Ocultamos el contenido que se sale */
+  position: relative;
+}
+
+/* 2. Aplicamos la animación al nuevo contenedor 'track' */
+.scrolling-stats-track {
+  display: flex; /* Asegura que los items internos se alineen en una fila */
+  /* Animación: nombre, duración, tipo de curva, retardo, iteraciones, dirección */
+  animation: scroll-horizontal 20s linear infinite;
+}
+
+/* 3. Pausamos la animación al hacer hover sobre el contenedor principal */
+.scrolling-stats-container:hover .scrolling-stats-track {
+  animation-play-state: paused; /* Pausamos la animación al pasar el ratón por encima */
+}
+
+/* Definición de la animación */
+@keyframes scroll-horizontal {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    /* Movemos el contenido hacia la izquierda por la mitad de su ancho total.
+       Como el contenido está duplicado, esto crea un bucle perfecto. */
+    transform: translateX(-50%);
+  }
+}
+
+/* Estilo para cada item individual */
+.scrolling-stats-item {
+  display: inline-block; /* Asegura que los items se comporten como bloques en línea */
+  margin-right: 12px; /* Espacio entre los badges */
+}

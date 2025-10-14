@@ -1,8 +1,6 @@
 import React from 'react';
 import '../style/EstadisticasProductos.css';
-
-// Definimos los estados que queremos mostrar y su orden
-const ESTADOS_A_MOSTRAR = ['Disponible', 'Vendido', 'Separado', 'Nuevo', 'Oferta'];
+import ScrollingStats from './ScrollingStats'; // 1. Importamos el nuevo componente
 
 const EstadisticasProductos = ({ estadisticas, loading, error, activeCategory }) => {
   if (loading) return <p>Cargando estadísticas...</p>;
@@ -23,20 +21,8 @@ const EstadisticasProductos = ({ estadisticas, loading, error, activeCategory })
     <div className="estadisticas-container">
       <h5>Estadísticas para: <strong>{categoriaActiva.Categoria}</strong></h5>
       <ul className="estadisticas-list">
-        <li>
-          {categoriaActiva.estados ? (
-            ESTADOS_A_MOSTRAR.map((estado) => {
-              const total = categoriaActiva.estados[estado];
-              // Solo mostramos el badge si el estado existe en los datos y tiene un total
-              if (total) {
-                return (
-                  <span key={estado} className="estado-badge">{`${estado}: ${total}`}</span>
-                );
-              }
-              return null;
-            })
-          ) : ( <span>Sin estados disponibles.</span> )}
-        </li>
+        {/* 2. Reemplazamos la lógica anterior por el nuevo componente */}
+        <ScrollingStats estados={categoriaActiva.estados} />
       </ul>
     </div>
   );
