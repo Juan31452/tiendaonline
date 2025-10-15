@@ -54,15 +54,23 @@ const ProductListView = () => {
   // Lógica para el banner de anuncios
   const totalStats = estadisticas.find(e => e.Categoria === 'Todos');
   const ofertaCount = totalStats?.estados?.Oferta || 0;
+  const nuevoCount = totalStats?.estados?.Nuevo || 0;
 
   return (
-    <div className="container mt-4" style={{ paddingTop: '80px' }}>
+    <div className="container mt-4" style={{ paddingTop: '35px' }}>
       <h2 className="text-center mb-2">Lista de Productos</h2>
 
-      {/* Mostramos el banner si hay productos en oferta */}
+      {/* 1. Banner de ofertas (aparece primero) */}
       {ofertaCount > 0 && (
         <AnnouncementBanner storageKey="ofertas-banner-2023-11">
           ¡Atención! Tenemos <strong>{ofertaCount} productos en oferta</strong>. ¡No te los pierdas!
+        </AnnouncementBanner>
+      )}
+
+      {/* 2. Banner de productos nuevos (aparece después) */}
+      {nuevoCount > 0 && (
+        <AnnouncementBanner storageKey="nuevos-banner-2023-11" icon="✨">
+          ¡Novedades! Hay <strong>{nuevoCount} productos nuevos</strong> esperando por ti.
         </AnnouncementBanner>
       )}
 

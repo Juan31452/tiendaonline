@@ -12,6 +12,11 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   font-size: 0.95rem;
   animation: fadeInDown 0.5s ease-out;
+  /* Propiedades para la transición de cierre suave */
+  overflow: hidden;
+  max-height: 100px; /* Altura inicial suficiente para el contenido */
+  transition: opacity 0.5s ease-out, max-height 0.5s ease-out, margin 0.5s ease-out, padding 0.5s ease-out;
+
 }
 
 .announcement-icon {
@@ -38,6 +43,16 @@
 
 .announcement-close-btn:hover {
   opacity: 1;
+}
+
+/* Estado de cierre: se desvanece y colapsa */
+.announcement-banner.closing {
+  opacity: 0;
+  max-height: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  border-width: 0;
 }
 
 /* Animaciones */
