@@ -1,5 +1,5 @@
 import { useState, useCallback } from 'react';
-import axios from 'axios';
+import apiAxios from '../api/apiAxios'; // ✅ Importamos la instancia configurada
 import ApiRoutes from '../api/ApiRoute';
 
 /**
@@ -41,7 +41,8 @@ export default function useEditProduct() {
       setError('');
 
       try {
-        await axios.put(
+        // ✅ Usamos apiAxios para que el token de autorización se envíe automáticamente
+        await apiAxios.put(
           `${ApiRoutes.EditarProducto}/${updatedObj.IdProducto}`,
           updatedObj,
           { headers: { 'Content-Type': 'application/json' } }
