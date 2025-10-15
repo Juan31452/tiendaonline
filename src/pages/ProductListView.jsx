@@ -11,6 +11,7 @@ import ModalDetalles from '../components/Modals/ModalDetalles';
 import { AuthContext } from '../components/Context/AuthContext';
 import MobileBottomNav from '../components/Buttons/MobileBottomNav';
 import ProductCardSkeleton from '../components/Skeletons/ProductCardSkeleton';
+import AnnouncementBanner from '../components/AnnouncementBanner';
 
 const ProductListView = () => {
   const { role } = useContext(AuthContext);
@@ -50,9 +51,21 @@ const ProductListView = () => {
     error: errorEstadisticas,
   } = useEstadisticasProductos({ enabled: canViewPrice }); // <-- Esta es la corrección clave
 
+  // Lógica para el banner de anuncios
+  const totalStats = estadisticas.find(e => e.Categoria === 'Todos');
+  const ofertaCount = totalStats?.estados?.Oferta || 0;
+
   return (
     <div className="container mt-4" style={{ paddingTop: '80px' }}>
       <h2 className="text-center mb-2">Lista de Productos</h2>
+
+      {/* Mostramos el banner si hay productos en oferta */}
+      {ofertaCount > 0 && (
+        <AnnouncementBanner storageKey="ofertas-banner-2023-11">
+          ¡Atención! Tenemos <strong>{ofertaCount} productos en oferta</strong>. ¡No te los pierdas!
+        </AnnouncementBanner>
+      )}
+
       {error && <p style={{ color: 'crimson' }}>{error}</p>}
 
       {/* Filtro por categoría */}

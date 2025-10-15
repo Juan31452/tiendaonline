@@ -1,0 +1,48 @@
+/* src/style/AnnouncementBanner.css */
+
+.announcement-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+  background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
+  color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  font-size: 0.95rem;
+  animation: fadeInDown 0.5s ease-out;
+}
+
+.announcement-icon {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+  animation: tada 1.5s ease-in-out 2s; /* Pequeña animación para llamar la atención */
+}
+
+.announcement-content {
+  flex-grow: 1;
+}
+
+.announcement-close-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.75rem;
+  line-height: 1;
+  cursor: pointer;
+  opacity: 0.8;
+  padding: 0 0.5rem;
+  transition: opacity 0.2s;
+}
+
+.announcement-close-btn:hover {
+  opacity: 1;
+}
+
+/* Animaciones */
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes tada { 0%{transform:scaleX(1)}10%,20%{transform:scale3d(.9,.9,.9) rotate(-3deg)}30%,50%,70%,90%{transform:scale3d(1.1,1.1,1.1) rotate(3deg)}40%,60%,80%{transform:scale3d(1.1,1.1,1.1) rotate(-3deg)}to{transform:scaleX(1)} }
