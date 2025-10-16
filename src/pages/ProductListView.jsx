@@ -57,7 +57,7 @@ const ProductListView = () => {
   const nuevoCount = totalStats?.estados?.Nuevo || 0;
 
   return (
-    <div className="container mt-4" style={{ paddingTop: '35px' }}>
+    <div className="container mt-4" style={{ paddingTop: '36px' }}>
       <h2 className="text-center mb-2">Lista de Productos</h2>
 
       {/* 1. Banner de ofertas (aparece primero) */}
