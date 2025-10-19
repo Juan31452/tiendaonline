@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import axios from 'axios';
+import apiAxios from '../api/apiAxios';
 import ApiRoutes from '../api/ApiRoute';
 import toArray from '../utils/toArray';
 
@@ -16,7 +16,10 @@ const useBuscarProductoPorId = () => {
     setResultado(null);
 
     try {
-      const { data } = await axios.get(`${ApiRoutes.BuscarporId}/${id.trim()}`);
+      // Usamos apiAxios, que ya incluye el token y la URL base
+      const { data } = await apiAxios.get(
+        `${ApiRoutes.BuscarporId}/${id.trim()}`
+      );
       const arr = toArray(data);
       const obj = arr[0] ?? null;
 

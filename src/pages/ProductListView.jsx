@@ -37,11 +37,10 @@ const ProductListView = () => {
     isModalOpen, selectedProduct, openModal, closeModal,
   } = useProductModal();
 
-  // Determina si el usuario puede ver el precio real
-  const canViewPrice = useMemo(() => {
-    const userRole = role?.toLowerCase();
-    return userRole === 'admin' || userRole === 'vendedor';
-  }, [role]);
+  // El backend ya determina si el precio debe ser visible según el rol.
+  // Si el usuario es admin/vendedor, el campo 'Precio' vendrá en la respuesta.
+  // Si es invitado, el campo 'Precio' será undefined.
+  const canFetchStats = useMemo(() => role === 'admin' || role === 'vendedor', [role]);
 
   // ✅ Llamamos al hook de estadísticas SOLO si el usuario tiene el rol adecuado.
   // Esto evita hacer una llamada a la API que sabemos que va a fallar para invitados.
@@ -49,7 +48,7 @@ const ProductListView = () => {
     estadisticas,
     loading: loadingEstadisticas,
     error: errorEstadisticas,
-  } = useEstadisticasProductos({ enabled: canViewPrice }); // <-- Esta es la corrección clave
+  } = useEstadisticasProductos({ enabled: canFetchStats }); 
 
   // Lógica para el banner de anuncios
   const totalStats = estadisticas.find(e => e.Categoria === 'Todos');
@@ -117,12 +116,7 @@ const ProductListView = () => {
           productos.map((p) => (
             <ProductCard
               key={p._id || p.IdProducto}
-              product={{
-                ...p,
-                // Mostramos precio 0 si el usuario no tiene permisos
-                Precio: canViewPrice ? p.Precio : 0,
-              }}
-              // Al hacer clic, pasamos el producto original al modal
+              product={p}
               onClick={() => openModal(p)}
             />
           ))

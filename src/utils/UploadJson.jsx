@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import axios from 'axios';
+import apiAxios from '../api/apiAxios'; // ✅ Usamos la instancia centralizada de Axios
 import ApiRoutes from '../api/ApiRoute';
 import ProductosTable from '../components/ProductosTable';
 import ModalMensaje from '../components/Modals/ModalMensaje';
@@ -52,14 +52,10 @@ const CargarJsonDesdeArchivos = () => {
   try {
     console.log('📦 Productos a enviar:', productos);
 
-    const { data } = await axios.post(
+    // Usamos apiAxios, que ya incluye el token y la configuración base
+    const { data } = await apiAxios.post(
       ApiRoutes.NewsProductsRemote,
-      productos, // 👈 ENVÍA ARRAY DIRECTO
-      {
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      }
+      productos // 👈 ENVÍA ARRAY DIRECTO
     );
 
     console.log('✅ OK:', data);

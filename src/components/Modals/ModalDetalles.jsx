@@ -1,22 +1,15 @@
-import { useContext } from 'react';
 import { Modal } from 'react-bootstrap';
 import WhatsAppButton from '../Buttons/WhatsAppButton';
 import ButtonClose from '../Buttons/ButtonClose';
 // Importamos los nuevos estilos para el modal
 import '../../style/ModalDetalles.css'; 
-import { AuthContext } from '../Context/AuthContext';
 
 const ModalDetalles = ({ product, show, onHide}) => {
   
-  const { role } = useContext(AuthContext);
-
   if (!product) return null;
 
-  // Determinar si el usuario tiene permisos para ver el precio real
-  const userRole = role?.toLowerCase();
-  const canViewPrice = userRole === 'admin' || userRole === 'vendedor';
-
-  const displayPrice = canViewPrice ? product.Precio : 0;
+  // El backend ya se encarga de enviar el precio solo a los roles autorizados.
+  const displayPrice = product.Precio;
 
   // Crear un objeto de producto para WhatsApp con el precio ajustado
   const productForWhatsApp = {
@@ -84,7 +77,7 @@ const ModalDetalles = ({ product, show, onHide}) => {
             </div>
 
              <h3 className="modal-detalles-precio">
-               {typeof displayPrice === 'number'
+               {displayPrice !== undefined && typeof displayPrice === 'number'
                 ? `$${displayPrice.toLocaleString()}`
                 : 'Precio no disponible'}
               </h3>
