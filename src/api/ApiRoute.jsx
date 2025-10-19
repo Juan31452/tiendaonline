@@ -14,7 +14,7 @@ const ApiRoutes = {
    ConsultaCategoria: `${APIHOSTRemote}/api/productos`,
    EstadisticasProductos: `${APIHOSTRemote}/api/productos/estadisticas`,
    Login: `${APIHOSTRemote}/api/users/login`,
-   
+   BusquedaPersonalizada : `${APIHOSTRemote}/api/productos/`,
    // Puedes agregar más rutas según las necesidades de tu aplicación
 };
  

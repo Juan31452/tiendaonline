@@ -1,4 +1,4 @@
-import { useContext, useMemo } from 'react';
+import { useContext, useMemo, useState, useEffect } from 'react';
 import useEstadisticasProductos from '../hooks/useEstadisticasProductos';
 import useProductModal from '../hooks/useProductModal';
 import useProductData from '../hooks/useProductData';
@@ -12,9 +12,18 @@ import { AuthContext } from '../components/Context/AuthContext';
 import MobileBottomNav from '../components/Buttons/MobileBottomNav';
 import ProductCardSkeleton from '../components/Skeletons/ProductCardSkeleton';
 import AnnouncementBanner from '../components/AnnouncementBanner';
+import BusquedaSemantica from '../components/BusquedaSemantica';
+import useBusquedaSemantica from '../hooks/useBusquedaSemantica'; // 1. Importamos el hook de búsqueda
 
 const ProductListView = () => {
   const { role } = useContext(AuthContext);
+
+  // --- ✅ Lógica de Búsqueda Semántica (Estado levantado) ---
+  const [terminoBusqueda, setTerminoBusqueda] = useState('');
+  const { resultados, loading: loadingBusqueda, error: errorBusqueda, buscar, limpiarResultados } = useBusquedaSemantica();
+
+  // Determina si la búsqueda está activa (para ocultar la lista principal)
+  const isBusquedaActiva = terminoBusqueda.trim() !== '';
 
   // Hook que encapsula la data, filtros y paginación
   const {
@@ -55,9 +64,38 @@ const ProductListView = () => {
   const ofertaCount = totalStats?.estados?.Oferta || 0;
   const nuevoCount = totalStats?.estados?.Nuevo || 0;
 
+  // --- ✅ Lógica de Debounce para la búsqueda ---
+  useEffect(() => {
+    if (!isBusquedaActiva) {
+      limpiarResultados();
+      return;
+    }
+    const timerId = setTimeout(() => {
+      buscar(terminoBusqueda);
+    }, 500); // Espera 500ms
+
+    return () => clearTimeout(timerId);
+  }, [terminoBusqueda, buscar, limpiarResultados, isBusquedaActiva]);
+
+  // Función para limpiar completamente la búsqueda
+  const limpiarBusquedaCompleta = () => {
+    setTerminoBusqueda('');
+    limpiarResultados();
+  };
+
   return (
     <div className="container mt-4" style={{ paddingTop: '36px' }}>
       <h2 className="text-center mb-2">Lista de Productos</h2>
+
+      {/* Componente de búsqueda ahora recibe estado y funciones como props */}
+      <BusquedaSemantica
+        termino={terminoBusqueda}
+        setTermino={setTerminoBusqueda}
+        resultados={resultados}
+        loading={loadingBusqueda}
+        error={errorBusqueda}
+        limpiarBusqueda={limpiarBusquedaCompleta}
+      />
 
       {/* 1. Banner de ofertas (aparece primero) */}
       {ofertaCount > 0 && (
@@ -73,55 +111,71 @@ const ProductListView = () => {
         </AnnouncementBanner>
       )}
 
-      {error && <p style={{ color: 'crimson' }}>{error}</p>}
+      {/* --- ✅ Renderizado Condicional --- */}
+      {/* Si la búsqueda NO está activa, mostramos los filtros y la lista principal */}
+      {!isBusquedaActiva && (
+        <>
+          {error && <p style={{ color: 'crimson' }}>{error}</p>}
 
-      {/* Filtro por categoría */}
-      <Category
-        activeCategory={activeCategory}
-        onSelect={handleCategoryChange}
-        products={productos}
-      />
+          {/* Filtro por categoría */}
+          <Category
+            activeCategory={activeCategory}
+            onSelect={handleCategoryChange}
+            products={productos}
+          />
 
-      {/* Filtro por estado */}
-      <div className="my-3">
-        <RadioOptionsHorizontal
-          // 2. Pasamos la lista de opciones que queremos mostrar.
-          options={availableStates}
-          // 3. Damos un nombre al grupo de radio buttons.
-          name="productStatus"
-          // 4. Pasamos el valor actual y la función para cambiarlo.
-          activeStatus={activeEstado}
-          onChange={handleEstadoChange}
-        />
-      </div>
-
-      {/* Estadísticas */}
-      {role && (
-        <EstadisticasProductos
-          estadisticas={estadisticas}
-          loading={loadingEstadisticas} // <-- Pasar el estado de carga
-          error={errorEstadisticas}     // <-- Pasar el estado de error
-          activeCategory={activeCategory}
-        />
-      )}
-
-      {/* Grilla de productos */}
-      <div className="row g-2">
-        {loadingList ? (
-          // Mostramos 8 esqueletos de carga mientras los datos se obtienen
-          Array.from({ length: 8 }).map((_, index) => (
-            <ProductCardSkeleton key={index} />
-          ))
-        ) : (
-          productos.map((p) => (
-            <ProductCard
-              key={p._id || p.IdProducto}
-              product={p}
-              onClick={() => openModal(p)}
+          {/* Filtro por estado */}
+          <div className="my-3">
+            <RadioOptionsHorizontal
+              options={availableStates}
+              name="productStatus"
+              activeStatus={activeEstado}
+              onChange={handleEstadoChange}
             />
-          ))
-        )}
-      </div>
+          </div>
+
+          {/* Estadísticas */}
+          {role && (
+            <EstadisticasProductos
+              estadisticas={estadisticas}
+              loading={loadingEstadisticas}
+              error={errorEstadisticas}
+              activeCategory={activeCategory}
+            />
+          )}
+
+          {/* Grilla de productos */}
+          <div className="row g-2">
+            {loadingList ? (
+              Array.from({ length: 8 }).map((_, index) => (
+                <ProductCardSkeleton key={index} />
+              ))
+            ) : (
+              productos.map((p) => (
+                <ProductCard
+                  key={p._id || p.IdProducto}
+                  product={p}
+                  onClick={() => openModal(p)}
+                />
+              ))
+            )}
+          </div>
+
+          {/* Paginación */}
+          <PaginationControls
+            page={page}
+            totalPages={pagination.totalPages}
+            loading={loadingList}
+            onFirst={() => goToPage(1)}
+            onPrev={() => goToPage(page - 1)}
+            onNext={() => goToPage(page + 1)}
+            onLast={() => goToPage(pagination.totalPages)}
+            onRefresh={refreshData}
+            currentCount={productos.length}
+            totalCount={pagination.totalItems}
+          />
+        </>
+      )}
 
       {/* Modal detalles */}
       <ModalDetalles
@@ -130,19 +184,6 @@ const ProductListView = () => {
         onHide={closeModal}
       />
 
-      {/* Paginación */}
-      <PaginationControls
-        page={page}
-        totalPages={pagination.totalPages}
-        loading={loadingList}
-        onFirst={() => goToPage(1)}
-        onPrev={() => goToPage(page - 1)}
-        onNext={() => goToPage(page + 1)}
-        onLast={() => goToPage(pagination.totalPages)}
-        onRefresh={refreshData}
-        currentCount={productos.length}
-        totalCount={pagination.totalItems}
-      />
       <MobileBottomNav />
     </div>
     
