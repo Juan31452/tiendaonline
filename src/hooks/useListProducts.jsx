@@ -1,8 +1,8 @@
 // src/hooks/useListProducts.js
 import { useState, useCallback } from 'react';
-import axios from 'axios';
 import ApiRoutes from '../api/ApiRoute';
 import toArray from '../utils/toArray';
+import apiAxios from '../api/apiAxios';
 
 const useListProducts = () => {
   const [productos, setProductos] = useState([]);
@@ -15,18 +15,19 @@ const useListProducts = () => {
     setError('');
 
     try {
-      const { data } = await axios.get(ApiRoutes.listproductsRemote, {
-        params: { 
+      // Usamos la instancia apiAxios que ya gestiona la URL base y los tokens
+      const { data } = await apiAxios.get(ApiRoutes.listproductsRemote, {
+        params: {
           categoria,
           estado,
           page: pagina,
         },
-        headers: { Accept: 'application/json' },
       });
 
-      setProductos(toArray(data));
+      // La respuesta del backend parece tener los productos dentro de un objeto
+      setProductos(toArray(data.productos || []));
       setPagination(
-        data.pagination ?? { totalPages: 1, totalItems: data.length }
+        data.pagination ?? { totalPages: 1, totalItems: data.productos?.length || 0 }
       );
     } catch (err) {
       console.error('❌ GET productos:', err);

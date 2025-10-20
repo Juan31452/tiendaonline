@@ -36,26 +36,28 @@ const ListProducts = () => {
     saveChanges,
   } = useEditProduct();
 
-  /* carga inicial */
+  // Efecto para cargar los productos cuando la página cambia.
+  // También se encarga de la carga inicial.
   useEffect(() => {
-    fetchPage(1);
-  }, [fetchPage]);
-  // Ejecutar cada vez que cambie la página
+    fetchPage(page);
+  }, [page, fetchPage]); // Se ejecuta cada vez que 'page' cambia.
+
   const handleView = (producto) => {
-  setProductoDetalle(producto);
-  setShowDetalle(true);
-};
-const handleCloseDetalle = () => {
-  setShowDetalle(false);
-  setProductoDetalle(null);
-};
+    setProductoDetalle(producto);
+    setShowDetalle(true);
+  };
+  const handleCloseDetalle = () => {
+    setShowDetalle(false);
+    setProductoDetalle(null);
+  };
+
   /* -------- handlers de paginación -------- */
-  const prev     = () => page > 1 && (fetchPage(page - 1), setPage(page - 1));
-  const next     = () => page < pagination.totalPages && (fetchPage(page + 1), setPage(page + 1));
-  const first    = () => page !== 1 && (fetchPage(1), setPage(1));
-  const last     = () => page !== pagination.totalPages &&
-                        (fetchPage(pagination.totalPages), setPage(pagination.totalPages));
-  const refresh  = () => fetchPage(page);
+  // Ahora los handlers solo actualizan el estado 'page'.
+  const prev = () => page > 1 && setPage(page - 1);
+  const next = () => page < pagination.totalPages && setPage(page + 1);
+  const first = () => page !== 1 && setPage(1);
+  const last = () => page !== pagination.totalPages && setPage(pagination.totalPages);
+  const refresh = () => fetchPage(page); // Refresh sigue llamando directamente a fetchPage.
 
   /* -------- UI -------- */
   return (

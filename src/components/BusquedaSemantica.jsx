@@ -1,5 +1,5 @@
 //import React, { useState, useEffect } from 'react';
-import useBusquedaSemantica from '../hooks/useBusquedaSemantica';
+//import useBusquedaSemantica from '../hooks/useBusquedaSemantica';
 import Loading from './Loading';
 import ProductCard from './ProductCard';
 import ModalDetalles from './Modals/ModalDetalles';
