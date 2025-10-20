@@ -1,0 +1,38 @@
+/* Estilos para el componente ProductCard */
+
+.product-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+  overflow: hidden; /* Asegura que el contenido no se salga de los bordes redondeados */
+  background-color: white; /* Fondo blanco para la tarjeta */
+}
+
+.product-card:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+}
+
+.product-card .card-img-top {
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+.product-card .card-body {
+  padding: 0.75rem;
+}
+
+.card-title {
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: black;
+  /* No se especifica color, por lo que tomará el color por defecto (negro/gris oscuro) */
+  /* La línea problemática "color: white;" ha sido eliminada. */
+}
+
+.card-footer {
+  background-color: #f8f9fa;
+  border-top: 1px solid #e0e0e0;
+  padding: 0.5rem 0.75rem;
+}

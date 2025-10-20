@@ -1,10 +1,10 @@
-//import React, { useState, useEffect } from 'react';
-//import useBusquedaSemantica from '../hooks/useBusquedaSemantica';
+import { useCallback } from 'react';
 import Loading from './Loading';
 import ProductCard from './ProductCard';
 import ModalDetalles from './Modals/ModalDetalles';
 import useProductModal from '../hooks/useProductModal';
 import '../style/BusquedaSemantica.css'; // 1. Importamos los nuevos estilos
+
 
 const BusquedaSemantica = ({
   termino,
@@ -18,15 +18,20 @@ const BusquedaSemantica = ({
   const { isModalOpen, selectedProduct, openModal, closeModal } =
     useProductModal();
 
+  // Usamos useCallback para optimizar la función
+  const handleSelect = useCallback((producto) => {
+    // Aquí nos aseguramos de pasar el objeto completo al modal
+    openModal(producto);
+  }, [openModal]);
+
   const handleClear = () => {
-    // Usamos la función que nos pasan desde el padre
     limpiarBusqueda();
-    closeModal(); // También cerramos el modal si está abierto
+    closeModal();
   };
 
   return (
     <div className="busqueda-semantica-container">
-      <h4 className="busqueda-semantica-header">Búsqueda Inteligente</h4>
+      <h4 className="busqueda-semantica-title">Búsqueda Rapida</h4>
       <div className="d-flex gap-2 mb-3"> {/* Mantenemos d-flex para el layout */}
         <input
           type="search"
@@ -55,13 +60,17 @@ const BusquedaSemantica = ({
         <div>
           <h5 className="busqueda-semantica-results-header">Resultados de la búsqueda ({resultados.length})</h5>
           <div className="row g-2 busqueda-semantica-results-grid">
-            {resultados.map((p) => (
-              <ProductCard
-                key={p._id || p.IdProducto}
-                product={p}
-                onClick={() => openModal(p)}
-              />
-            ))}
+            {resultados.map((p) => {
+              // ✅ Aquí está el console.log que pediste.
+              console.log('Datos del producto `p` en BusquedaSemantica:', p);
+              return (
+                <ProductCard
+                  key={p._id || p.IdProducto}
+                  product={p}
+                  onClick={() => handleSelect(p)}
+                />
+              );
+            })}
           </div>
         </div>
       )}

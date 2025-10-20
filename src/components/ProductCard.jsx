@@ -1,5 +1,6 @@
 // components/ProductCard.jsx
 import React from 'react';
+import '../style/ProductCard.css'; // Aplicamos los nuevos estilos
 
 const ProductCard = React.memo(({ product, onClick }) => {
   const handleImageError = (e) =>
@@ -11,8 +12,8 @@ const ProductCard = React.memo(({ product, onClick }) => {
       className="col-6 col-md-4 col-lg-3 mb-3"
       role="button"
       tabIndex={0}
-      onClick={onClick}
-      onKeyDown={(e) => e.key === 'Enter' && onClick()}
+      onClick={() => onClick(product)} // ✅ CORRECCIÓN: Pasa el producto al hacer clic
+      onKeyDown={(e) => e.key === 'Enter' && onClick(product)} // ✅ CORRECCIÓN: También aquí
     >
       {/* ─── Imagen ─── */}
       <div className="ratio ratio-1x1 bg-light overflow-hidden p-0">
