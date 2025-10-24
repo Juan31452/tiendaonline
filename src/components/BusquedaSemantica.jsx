@@ -42,9 +42,11 @@ const BusquedaSemantica = ({
           aria-label="Término de búsqueda"
         />
         {/* El botón de buscar ya no es necesario */}
-        <button type="button" onClick={handleClear} className="btn btn-secondary">
-          Limpiar
-        </button>
+        {termino.trim() !== '' && (
+          <button type="button" onClick={handleClear} className="btn btn-secondary">
+            Limpiar
+          </button>
+        )}
       </div>
 
       {loading && <Loading text="Buscando productos" />}
