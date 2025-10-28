@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import ApiRoutes from '../api/ApiRoute';
-import axios from 'axios';
+import apiAxios from '../api/apiAxios'; // 1. Importamos la instancia correcta
 
 
 export function useLogin() {
@@ -12,7 +12,7 @@ export function useLogin() {
     setError(null);
 
     try {
-      const response = await axios.post(ApiRoutes.Login, { email, password });
+      const response = await apiAxios.post('/users/login', { email, password }); // 2. Usamos apiAxios y una ruta relativa
 
       console.log("Ruta de inicio de sesión:", ApiRoutes.Login);
       console.log("Respuesta del servidor:", response.data);

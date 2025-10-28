@@ -38,6 +38,7 @@ export const AuthProvider = ({ children }) => {
   const logoutContext = () => {
     logoutHook();
     setIsAuthenticated(false);
+    localStorage.removeItem('name'); // Aseguramos limpiar el nombre también
      setRole(null);
      setName(null);
   };
