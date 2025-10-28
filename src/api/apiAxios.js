@@ -32,8 +32,8 @@ apiAxios.interceptors.request.use(
 apiAxios.interceptors.response.use(
   (response) => response, // Si la respuesta es exitosa (2xx), no hace nada.
   (error) => {
-    // Si la respuesta es un error 401 (No autorizado)
-    if (error.response && error.response.status === 401) {
+    // Si la respuesta es un error 401 (No autorizado) o 403 (Prohibido por token inválido)
+    if (error.response && (error.response.status === 401 || error.response.status === 403)) {
       // 1. Limpia el token del almacenamiento local
       localStorage.removeItem('token');
       // 2. Redirige al usuario a la página de login
