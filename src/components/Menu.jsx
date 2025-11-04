@@ -13,17 +13,17 @@ import Login from '../pages/Login';
 import { AuthContext } from './Context/AuthContext';
 import PrivateRoute from './PrivateRoute';
 import { PRIVATE1,PRIVATE3,PRIVATE4,PRIVATE5,PRIVATE6,PUBLIC1,PUBLIC2, PUBLIC3} from './Path';
-import Layaut from './Layout';
-
-
+import Layout from './Layout';
+import PWAInstall from './PWAInstall'; // 1. Importamos el nuevo componente
 
 const Menu = () => {
   const location = useLocation(); 
   const { role } = useContext(AuthContext);
   console.log("Rol actual:", role);
   return (
-    <Container>
-      <Layaut />
+    <Container> 
+      <Layout />
+      <PWAInstall /> {/* 2. Usamos el componente aquí */}
 
       <Routes location={location}>
         {/* Rutas públicas */}
