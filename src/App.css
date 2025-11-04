@@ -140,7 +140,7 @@ npm in#root {
 /* --- Estilos para el botón de instalación de PWA --- */
 .pwa-install-button {
   position: fixed; /* Posición fija en la pantalla */
-  top: 70px;       /* Debajo de la barra de navegación */
+  top: 95px;       /* Debajo de la barra de navegación */
   left: 50%;       /* Centrado horizontalmente */
   transform: translateX(-50%); /* Ajuste fino para centrar */
   z-index: 1040;   /* Por encima de la mayoría de los elementos, pero debajo de los modales (1050) */

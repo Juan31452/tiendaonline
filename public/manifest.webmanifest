@@ -1,0 +1,23 @@
+{
+  "short_name": "TiendaJM",
+  "name": "Tienda Online JM",
+  "description": "Tu tienda online de confianza con los mejores productos.",
+  "icons": [
+    {
+      "src": "/assets/icons/icon-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/icons/icon-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#9fc77a",
+  "background_color": "#a1a49c"
+}

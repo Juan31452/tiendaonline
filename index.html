@@ -8,10 +8,30 @@
 
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- ✅ 1. ENLAZAR EL MANIFIESTO DE LA PWA -->
+    <link rel="manifest" href="/manifest.webmanifest" />
+
+    <!-- (Opcional pero recomendado) Color para la barra de estado en móviles -->
+    <meta name="theme-color" content="#9fc77a" />
+
     <title>Tienda Online JM</title>
   </head>
   <body >
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+
+    <!-- ✅ 2. REGISTRAR EL SERVICE WORKER -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js').then(registration => {
+            console.log('[SW] Service Worker registrado con éxito:', registration.scope);
+          }).catch(error => {
+            console.log('[SW] Fallo en el registro del Service Worker:', error);
+          });
+        });
+      }
+    </script>
   </body>
 </html>

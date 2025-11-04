@@ -10,15 +10,23 @@ const PWAInstall = () => {
   // Usamos el hook para obtener el estado y la función de instalación
   const { canInstall, triggerInstall } = usePWAInstall();
 
-  // Si la app no se puede instalar, no renderizamos nada.
-  if (!canInstall) {
-    return null;
+  // --- Lógica de Depuración ---
+  // En modo desarrollo, siempre mostramos el botón para tener feedback visual.
+  // En producción, podrías volver a la versión anterior: if (!canInstall) return null;
+  const isDevelopment = import.meta.env.MODE === 'development';
+
+  if (!isDevelopment && !canInstall) {
+    return null; // En producción, no mostrar nada si no se puede instalar.
   }
 
-  // Si se puede instalar, mostramos el botón.
   return (
-    <button className="btn btn-success pwa-install-button" onClick={triggerInstall}>
-      📥 Instalar App
+    <button
+      className={`btn pwa-install-button ${canInstall ? 'btn-success' : 'btn-secondary'}`}
+      onClick={triggerInstall}
+      disabled={!canInstall}
+      title={canInstall ? 'Instalar la aplicación en tu dispositivo' : 'La aplicación no está lista para ser instalada. (Revisa la consola y la pestaña Application en DevTools)'}
+    >
+      {canInstall ? '📥 Instalar App' : '⏳ App no instalable'}
     </button>
   );
 };
