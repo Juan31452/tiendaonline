@@ -14,6 +14,7 @@ import ProductCardSkeleton from '../components/Skeletons/ProductCardSkeleton';
 import AnnouncementBanner from '../components/AnnouncementBanner';
 import BusquedaSemantica from '../components/BusquedaSemantica';
 import useBusquedaSemantica from '../hooks/useBusquedaSemantica'; // 1. Importamos el hook de búsqueda
+import usePWAInstall from '../hooks/usePWAInstall'; // Importamos el hook de PWA
 
 const ProductListView = () => {
   const { role } = useContext(AuthContext);
@@ -24,6 +25,9 @@ const ProductListView = () => {
 
   // Determina si la búsqueda está activa (para ocultar la lista principal)
   const isBusquedaActiva = terminoBusqueda.trim() !== '';
+
+  // Hook para la instalación de la PWA
+  const { canInstall, triggerInstall } = usePWAInstall();
 
   // Hook que encapsula la data, filtros y paginación
   const {
@@ -86,6 +90,15 @@ const ProductListView = () => {
   return (
     <div className="container mt-4" style={{ paddingTop: '36px' }}>
       <h2 className="text-center mb-2">Lista de Productos</h2>
+
+      {/* Botón para instalar la PWA */}
+      {canInstall && (
+        <div className="d-grid gap-2 mb-3">
+          <button className="btn btn-success" onClick={triggerInstall}>
+            📥 Instalar Aplicación
+          </button>
+        </div>
+      )}
 
       {/* Componente de búsqueda ahora recibe estado y funciones como props */}
       <BusquedaSemantica
