@@ -1,40 +1,58 @@
 // sw.js
 
-const CACHE_NAME = 'tienda-online-cache-v1';
-// Lista de archivos que componen el "App Shell" y que queremos cachear.
+const CACHE_NAME = 'tienda-online-cache-v4'; // Incrementa la versión para forzar la actualización
 const urlsToCache = [
-  '/', // La página principal (index.html)
-  '/index.html',
-  '/manifest.webmanifest',
-  // Aquí deberías añadir tus archivos JS y CSS principales.
-  // Las herramientas como Vite generan nombres con hashes, lo cual complica el cacheo manual.
-  // Por ahora, nos enfocaremos en lo básico para que sea instalable y funcione.
-  // También tus iconos principales:
-  '/assets/icons/icon-192x192.png',
-  '/assets/icons/icon-512x512.png'
+  './', // Cachear la página principal (index.html)
 ];
 
-// Evento 'install': Se dispara cuando el Service Worker se instala por primera vez.
-self.addEventListener('install', (event) => {
-  console.log('[SW] Instalando Service Worker...');
-  // Esperamos a que la promesa de abrir la caché y añadir los archivos se complete.
+// Instalación: El SW se instala pero no cachea nada de antemano.
+self.addEventListener('install', event => {
   event.waitUntil(
     caches.open(CACHE_NAME)
-      .then((cache) => {
-        console.log('[SW] Abriendo caché y guardando el App Shell');
-        return cache.addAll(urlsToCache);
-      })
+      .then(cache => cache.addAll(urlsToCache))
+      .then(() => self.skipWaiting()) // Activa el nuevo SW inmediatamente.
+  );
+  console.log('[SW] Service Worker instalado (v4)');
+});
+
+// Activación: Limpia cachés antiguas.
+self.addEventListener('activate', event => {
+  event.waitUntil(
+    caches.keys().then(cacheNames => {
+      return Promise.all(
+        cacheNames.map(cache => {
+          if (cache !== CACHE_NAME) {
+            console.log('[SW] Limpiando caché antigua:', cache);
+            return caches.delete(cache);
+          }
+        })
+      );
+    }).then(() => self.clients.claim()) // ✅ CORRECCIÓN: Usa self.clients para tomar control.
   );
 });
 
-// Evento 'fetch': Se dispara cada vez que la aplicación hace una petición de red.
-self.addEventListener('fetch', (event) => {
-  // Estrategia: Cache-First (Primero busca en caché, si no, va a la red)
+// Fetch: Estrategia Network-First con fallback a caché.
+self.addEventListener('fetch', event => {
+  const { request } = event;
+
+  // Para navegación, siempre intenta la red primero.
+  if (request.mode === 'navigate') {
+    event.respondWith(
+      fetch(request).catch(() => caches.match('./'))
+    );
+    return;
+  }
+
+  // Para otros recursos (assets), usa Stale-While-Revalidate.
   event.respondWith(
-    caches.match(event.request)
-      .then((response) => {
-        // Si encontramos una respuesta en la caché, la devolvemos.
-        return response || fetch(event.request);
-      })
+    caches.open(CACHE_NAME).then(cache => {
+      return cache.match(request).then(cachedResponse => {
+        const fetchPromise = fetch(request).then(networkResponse => {
+          cache.put(request, networkResponse.clone());
+          return networkResponse;
+        });
+        return cachedResponse || fetchPromise;
+      });
+    })
   );
 });

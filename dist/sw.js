@@ -1,50 +1,58 @@
 // sw.js
 
-const CACHE_NAME = 'app-cache-v1';
+const CACHE_NAME = 'tienda-online-cache-v4'; // Incrementa la versión para forzar la actualización
+const urlsToCache = [
+  './', // Cachear la página principal (index.html)
+];
 
-// ✅ Extensiones típicas del build de Vite
-const ASSET_REGEX = /\.(css|js|woff2?|json|png|jpg|jpeg|svg|webp|ico)$/;
-
-// ✅ Caché al instalar
-self.addEventListener('install', (event) => {
-  self.skipWaiting();
+// Instalación: El SW se instala pero no cachea nada de antemano.
+self.addEventListener('install', event => {
+  event.waitUntil(
+    caches.open(CACHE_NAME)
+      .then(cache => cache.addAll(urlsToCache))
+      .then(() => self.skipWaiting()) // Activa el nuevo SW inmediatamente.
+  );
+  console.log('[SW] Service Worker instalado (v4)');
 });
 
-// ✅ Activación inmediata
-self.addEventListener('activate', (event) => {
-  event.waitUntil(clients.claim());
+// Activación: Limpia cachés antiguas.
+self.addEventListener('activate', event => {
+  event.waitUntil(
+    caches.keys().then(cacheNames => {
+      return Promise.all(
+        cacheNames.map(cache => {
+          if (cache !== CACHE_NAME) {
+            console.log('[SW] Limpiando caché antigua:', cache);
+            return caches.delete(cache);
+          }
+        })
+      );
+    }).then(() => self.clients.claim()) // ✅ CORRECCIÓN: Usa self.clients para tomar control.
+  );
 });
 
-// ✅ Estrategia híbrida:
-// - Para navegación React SPA → network-first con fallback
-// - Para assets (CSS/JS/IMG generados por Vite) → cache-first
-self.addEventListener('fetch', (event) => {
-  const req = event.request;
-  const url = new URL(req.url);
+// Fetch: Estrategia Network-First con fallback a caché.
+self.addEventListener('fetch', event => {
+  const { request } = event;
 
-  // ✅ 1. Si es navegación (React, rutas de SPA)
-  if (req.mode === 'navigate') {
-    return event.respondWith(
-      fetch(req).catch(() => caches.match('/index.html'))
+  // Para navegación, siempre intenta la red primero.
+  if (request.mode === 'navigate') {
+    event.respondWith(
+      fetch(request).catch(() => caches.match('./'))
     );
+    return;
   }
 
-  // ✅ 2. Si es asset del build (main-xxxx.js, style-xxxx.css, imágenes, etc.)
-  if (ASSET_REGEX.test(url.pathname)) {
-    return event.respondWith(
-      caches.match(req).then(cacheRes => {
-        return cacheRes || fetch(req).then(networkRes => {
-          return caches.open(CACHE_NAME).then(cache => {
-            cache.put(req, networkRes.clone());
-            return networkRes;
-          });
-        });
-      })
-    );
-  }
-
-  // ✅ 3. Para cualquier otro recurso → network-first con fallback caché
+  // Para otros recursos (assets), usa Stale-While-Revalidate.
   event.respondWith(
-    fetch(req).catch(() => caches.match(req))
+    caches.open(CACHE_NAME).then(cache => {
+      return cache.match(request).then(cachedResponse => {
+        const fetchPromise = fetch(request).then(networkResponse => {
+          cache.put(request, networkResponse.clone());
+          return networkResponse;
+        });
+        return cachedResponse || fetchPromise;
+      });
+    })
   );
 });
