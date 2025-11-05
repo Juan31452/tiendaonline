@@ -1,1 +1,10 @@
 @import 'bootstrap/dist/css/bootstrap.min.css';
+body {
+  background: linear-gradient(to bottom, #9fc77a, #e9f5db);
+  /* Asegúrate de que el fondo cubra toda la pantalla */
+  min-height: 100vh;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Arial', sans-serif;
+  color: #2c3e50;
+}
