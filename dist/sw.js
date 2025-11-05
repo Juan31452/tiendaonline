@@ -1,40 +1,50 @@
 // sw.js
 
-const CACHE_NAME = 'tienda-online-cache-v1';
-// Lista de archivos que componen el "App Shell" y que queremos cachear.
-const urlsToCache = [
-  '/', // La página principal (index.html)
-  '/index.html',
-  '/manifest.webmanifest',
-  // Aquí deberías añadir tus archivos JS y CSS principales.
-  // Las herramientas como Vite generan nombres con hashes, lo cual complica el cacheo manual.
-  // Por ahora, nos enfocaremos en lo básico para que sea instalable y funcione.
-  // También tus iconos principales:
-  '/assets/icons/icon-192x192.png',
-  '/assets/icons/icon-512x512.png'
-];
+const CACHE_NAME = 'app-cache-v1';
 
-// Evento 'install': Se dispara cuando el Service Worker se instala por primera vez.
+// ✅ Extensiones típicas del build de Vite
+const ASSET_REGEX = /\.(css|js|woff2?|json|png|jpg|jpeg|svg|webp|ico)$/;
+
+// ✅ Caché al instalar
 self.addEventListener('install', (event) => {
-  console.log('[SW] Instalando Service Worker...');
-  // Esperamos a que la promesa de abrir la caché y añadir los archivos se complete.
-  event.waitUntil(
-    caches.open(CACHE_NAME)
-      .then((cache) => {
-        console.log('[SW] Abriendo caché y guardando el App Shell');
-        return cache.addAll(urlsToCache);
-      })
-  );
+  self.skipWaiting();
 });
 
-// Evento 'fetch': Se dispara cada vez que la aplicación hace una petición de red.
+// ✅ Activación inmediata
+self.addEventListener('activate', (event) => {
+  event.waitUntil(clients.claim());
+});
+
+// ✅ Estrategia híbrida:
+// - Para navegación React SPA → network-first con fallback
+// - Para assets (CSS/JS/IMG generados por Vite) → cache-first
 self.addEventListener('fetch', (event) => {
-  // Estrategia: Cache-First (Primero busca en caché, si no, va a la red)
-  event.respondWith(
-    caches.match(event.request)
-      .then((response) => {
-        // Si encontramos una respuesta en la caché, la devolvemos.
-        return response || fetch(event.request);
+  const req = event.request;
+  const url = new URL(req.url);
+
+  // ✅ 1. Si es navegación (React, rutas de SPA)
+  if (req.mode === 'navigate') {
+    return event.respondWith(
+      fetch(req).catch(() => caches.match('/index.html'))
+    );
+  }
+
+  // ✅ 2. Si es asset del build (main-xxxx.js, style-xxxx.css, imágenes, etc.)
+  if (ASSET_REGEX.test(url.pathname)) {
+    return event.respondWith(
+      caches.match(req).then(cacheRes => {
+        return cacheRes || fetch(req).then(networkRes => {
+          return caches.open(CACHE_NAME).then(cache => {
+            cache.put(req, networkRes.clone());
+            return networkRes;
+          });
+        });
       })
+    );
+  }
+
+  // ✅ 3. Para cualquier otro recurso → network-first con fallback caché
+  event.respondWith(
+    fetch(req).catch(() => caches.match(req))
   );
 });
