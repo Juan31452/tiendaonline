@@ -14,16 +14,18 @@ const useConsultas = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
 
-  const fetchPage = useCallback(async (page = 1, limit = 100, categoria = '',  estado = '') => {
+  // 1. Añadimos 'sort' como parámetro a la función.
+  const fetchPage = useCallback(async (page = 1, limit = 100, categoria = '',  estado = '', sort = 'default') => {
     setLoading(true);
     setError('');
 
     try {
       const response = await apiAxios.get(ApiRoutes.ConsultaCategoria, { // 2. Usa la instancia 'apiAxios' y una ruta relativa
-        
         params: {
           ...(categoria && categoria !== 'todos' ? { categoria } : {}),
           ...(estado ? { estado } : {}),
+          // 2. Si 'sort' no es el valor por defecto, lo añadimos a los parámetros de la petición.
+          ...(sort && sort !== 'default' ? { sort } : {}),
           page,
           limit
         },

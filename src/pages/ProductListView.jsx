@@ -14,6 +14,7 @@ import ProductCardSkeleton from '../components/Skeletons/ProductCardSkeleton';
 import AnnouncementBanner from '../components/AnnouncementBanner';
 import BusquedaSemantica from '../components/BusquedaSemantica';
 import useBusquedaSemantica from '../hooks/useBusquedaSemantica'; // 1. Importamos el hook de búsqueda
+import SortOptions from '../components/SortOptions';
 
 const ProductListView = () => {
   const { role } = useContext(AuthContext);
@@ -35,8 +36,10 @@ const ProductListView = () => {
     activeCategory,
     activeEstado,
     availableStates,
+    activeSort, // <-- 1. Recibimos el estado de ordenación activo
     handleCategoryChange,
     handleEstadoChange,
+    handleSortChange, // <-- 2. Recibimos el manejador para cambiar la ordenación
     goToPage,
     refreshData,
   } = useProductData(role);
@@ -133,6 +136,12 @@ const ProductListView = () => {
               onChange={handleEstadoChange}
             />
           </div>
+
+          {/* Componente de ordenación */}
+          <SortOptions
+            activeSort={activeSort}
+            onSortChange={handleSortChange}
+          />
 
           {/* Estadísticas */}
           {role && (
