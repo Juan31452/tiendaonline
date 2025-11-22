@@ -27,7 +27,9 @@ const useConsultas = () => {
           // 2. Si 'sort' no es el valor por defecto, lo añadimos a los parámetros de la petición.
           ...(sort && sort !== 'default' ? { sort } : {}),
           page,
-          limit
+          limit,
+          // ✅ SOLUCIÓN: Añadimos un "cache buster" para evitar el caché del navegador.
+          '_': new Date().getTime()
         },
         headers: { Accept: 'application/json' },
       });
