@@ -46,12 +46,12 @@ export const useProductData = (role) => {
       return;
     }
     // 2. Pasamos el estado de ordenación a la función que obtiene los datos.
-    fetchPage(page, PAGE_SIZE, activeCategory, activeEstado, activeSort);
-  }, [page, activeCategory, activeEstado, activeSort, fetchPage, availableStates]);
+    fetchPage(page, PAGE_SIZE, activeCategory, activeEstado, activeSort, role);
+  }, [page, activeCategory, activeEstado, activeSort, fetchPage, availableStates, role]);
 
   const refreshData = useCallback(() => {
     // 3. También incluimos la ordenación al refrescar los datos.
-    fetchPage(page, PAGE_SIZE, activeCategory, activeEstado, activeSort);
+    fetchPage(page, PAGE_SIZE, activeCategory, activeEstado, activeSort, role);
   }, [page, activeCategory, activeEstado, activeSort, fetchPage]);
 
   // 4. Creamos un manejador para cambiar la ordenación que también resetea la página a 1.
