@@ -4,10 +4,8 @@ import RadioOptionsHorizontal from './Buttons/RadioOptionsHorizontal';
 
 // Las opciones de ordenación se definen aquí, en un solo lugar.
 const sortOptions = [
-  { value: 'default', label: 'Por Defecto' },
   { value: 'newest', label: 'Más Nuevos' },
   { value: 'oldest', label: 'Más Antiguos' },
-  { value: 'id_desc', label: 'ID Descendente' },
 ];
 
 /**

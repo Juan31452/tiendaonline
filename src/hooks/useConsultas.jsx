@@ -15,7 +15,7 @@ const useConsultas = () => {
   const [error, setError] = useState('');
 
   // 1. Añadimos 'sort' como parámetro a la función.
-  const fetchPage = useCallback(async (page = 1, limit = 100, categoria = '',  estado = '', sort = 'default') => {
+  const fetchPage = useCallback(async (page = 1, limit = 100, categoria = '',  estado = '', sort = 'newest') => {
     setLoading(true);
     setError('');
 
@@ -24,8 +24,8 @@ const useConsultas = () => {
         params: {
           ...(categoria && categoria !== 'todos' ? { categoria } : {}),
           ...(estado ? { estado } : {}),
-          // 2. Si 'sort' no es el valor por defecto, lo añadimos a los parámetros de la petición.
-          ...(sort && sort !== 'default' ? { sort } : {}),
+          // Si 'sort' no es 'newest' (el nuevo default), lo enviamos. El backend ya asume 'newest' si no se especifica.
+          ...(sort && sort !== 'newest' ? { sort } : {}),
           page,
           limit,
           // ✅ SOLUCIÓN: Añadimos un "cache buster" para evitar el caché del navegador.
