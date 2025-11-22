@@ -1,29 +1,30 @@
 /* RadioOptionsHorizontal.css */
 .radio-options-container {
   display: flex;
-  gap: 20px;
-  align-items: center;
-  flex-wrap: nowrap;          /* Forzamos horizontal */
-  overflow-x: auto;           /* Activa scroll horizontal */
-  padding-bottom: 6px;        /* Espacio para no cortar sombra */
-  scrollbar-width: thin;      /* Scroll más fino en Firefox */
-  scrollbar-color: #ccc transparent;
+  gap: 0.1rem; /* Espacio aún más reducido entre botones */
+  padding: 0.5rem 0; /* Espacio vertical para que no se vea apretado */
+
+  /* --- ✅ SOLUCIÓN PARA MÓVILES --- */
+  /* 1. Permite el scroll horizontal cuando el contenido se desborde */
+  overflow-x: auto;
+
+  /* 2. Asegura que los elementos no salten a la siguiente línea */
+  flex-wrap: nowrap;
+
+  /* 3. Mejora la experiencia de scroll en iOS */
+  -webkit-overflow-scrolling: touch;
+
+  /* 4. Oculta la barra de scroll en navegadores modernos (Firefox) */
+  scrollbar-width: none;
 }
 
-/* Estilo scroll en navegadores WebKit (Chrome, Edge, Safari) */
+/* 5. Oculta la barra de scroll en navegadores WebKit (Chrome, Safari) */
 .radio-options-container::-webkit-scrollbar {
-  height: 6px;
-}
-.radio-options-container::-webkit-scrollbar-thumb {
-  background: #ccc;
-  border-radius: 10px;
-}
-.radio-options-container::-webkit-scrollbar-track {
-  background: transparent;
+  display: none;
 }
 
 .radio-option {
-  flex: 0 0 auto;             /* No se encogen, scrolla */
+  flex-shrink: 0; /* Evita que los botones se encojan */
   display: flex;
   align-items: center;
   cursor: pointer;
@@ -58,14 +59,14 @@
 }
 
 .radio-label {
-  font-size: 14px;
+  font-size: 13px;
   color: #333;
 }
 
 /* Pequeño ajuste en móviles */
 @media (max-width: 480px) {
   .radio-options-container {
-    gap: 12px;
+    gap: 6px; /* Espacio reducido también en móviles */
   }
   .radio-option {
     padding: 6px 10px;

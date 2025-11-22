@@ -15,7 +15,7 @@ export const useProductData = (role) => {
   const { page, setPage, goToPage } = usePagination(1);
 
   // 1. Añadimos el estado para la ordenación. 'default' es el valor inicial.
-  const [activeSort, setActiveSort] = useState('default');
+  const [activeSort, setActiveSort] = useState('newest');
 
   const {
     activeCategory,
