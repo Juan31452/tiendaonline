@@ -193,7 +193,10 @@ const ProductListView = () => {
         onHide={closeModal}
       />
 
-      <MobileBottomNav />
+      <MobileBottomNav
+        // Le pasamos la función que, al ser llamada desde el botón, activará el filtro "Nuevo".
+        onNewClick={() => handleEstadoChange('Nuevo')} 
+      />
     </div>
     
   );
