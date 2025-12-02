@@ -5,15 +5,15 @@ import { AuthContext } from '../Context/AuthContext.jsx'; // 👈 2. Importa tu 
 import {myicons} from '../../constants/myicons'; // Importa los iconos desde el archivo de constantes
 import '../../style/mobile-nav.css'; // estilos para la navegación móvil
 
-const MobileBottomNav = ({ onNewClick }) => { // 1. Recibimos la función como prop
+const MobileBottomNav = ({ onNewClick, onHomeClick }) => { // 1. Recibimos ambas funciones como props
   const { isAuthenticated, name, role } = useContext(AuthContext); // 👈 3. Obtiene los datos del contexto
 
   return (
     <nav className="mobile-bottom-nav">
-      <NavLink to="/" className="nav-item" end> {/* 'end' asegura que solo esté activo en la ruta exacta "/" */}
+      <button type="button" onClick={onHomeClick} className="nav-item">
         <img src={myicons.HOME}  alt="Home" />
         <span>Home</span>
-      </NavLink>
+      </button>
 
       <button type="button" onClick={onNewClick} className="nav-item"> {/* 2. Usamos un botón que llama a la función */}
         <img src={myicons.NEWS} alt="Nuevo" />
