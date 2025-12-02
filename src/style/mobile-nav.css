@@ -32,6 +32,13 @@
   margin-bottom: 4px;
 }
 
+/* Ajustes para pantallas muy pequeñas */
+@media (max-width: 350px) {
+  .mobile-bottom-nav {
+    gap: 20px; /* Reduce el espacio entre ítems */
+  }
+}
+
 /* ⛔️ OCULTAR en pantallas grandes */
 @media (min-width: 768px) {
   .mobile-bottom-nav {
