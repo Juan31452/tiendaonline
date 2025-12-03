@@ -5,7 +5,7 @@ import { AuthContext } from '../Context/AuthContext.jsx'; // 👈 2. Importa tu 
 import {myicons} from '../../constants/myicons'; // Importa los iconos desde el archivo de constantes
 import '../../style/mobile-nav.css'; // estilos para la navegación móvil
 
-const MobileBottomNav = ({ onNewClick, onHomeClick }) => { // 1. Recibimos ambas funciones como props
+const MobileBottomNav = ({ onNewClick, onHomeClick,onOfferClick, onProfileClick }) => { // 1. Recibimos las funciones como props
   const { isAuthenticated, name, role } = useContext(AuthContext); // 👈 3. Obtiene los datos del contexto
 
   return (
@@ -19,20 +19,19 @@ const MobileBottomNav = ({ onNewClick, onHomeClick }) => { // 1. Recibimos ambas
         <img src={myicons.NEWS} alt="Nuevo" />
         <span>Nuevo</span>
       </button>
-      
-      {/*  
-      <a href="/verproductos" className="nav-item">
-        <img src={myicons.OFFERS} alt="Productos" />
-        <span>Lista</span> 
-      </a> */}
-      
+
+      <button type="button" onClick={onOfferClick} className="nav-item"> {/* 3. Botón para ofertas */}
+        <img src={myicons.OFFERS} alt="Oferta" />
+        <span>Oferta</span>
+      </button>
+              
       {/* 4. Renderizado condicional */}
       {isAuthenticated ? (
         // Si hay un agrega , muestra su nombre y rol
-        <div className="nav-item">
+        <button type="button" onClick={onProfileClick} className="nav-item">
           <img src={myicons.USERS} alt="Usuario" />
           <span style={{ fontSize: '10px', whiteSpace: 'nowrap' }}>{name} ({role})</span>
-        </div>
+        </button>
       ) : (
         // Si no hay usuario, muestra el enlace de Login
         <NavLink to="/login" className="nav-item">

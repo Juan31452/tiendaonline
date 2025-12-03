@@ -194,9 +194,11 @@ const ProductListView = () => {
       />
 
       <MobileBottomNav
-        // Le pasamos la función que, al ser llamada desde el botón, activará el filtro "Nuevo".
+        // Le pasamos la función que, al ser llamada desde el botón, activará el filtro "Nuevo-Disponible,Oferta y perfil".
         onNewClick={() => handleEstadoChange('Nuevo')}
         onHomeClick={() => handleEstadoChange('Disponible')}
+        onProfileClick={() => {}}
+        onOfferClick={() => handleEstadoChange('Oferta')}
       />
     </div>
     
