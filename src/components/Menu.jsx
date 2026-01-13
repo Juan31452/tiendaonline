@@ -34,14 +34,15 @@ const Menu = () => {
         <Route path={PRIVATE6} element={<ProductsListView />} />   */}
         
         {/* Rutas privadas */}
-        <Route
+        {/*<Route
           path={PRIVATE1}
           element={
             <PrivateRoute allowedRoles={['admin']}>
               <Products />
             </PrivateRoute>
           }
-        />
+        />*/}
+        
         {/*}
         <Route
           path={PRIVATE6}
