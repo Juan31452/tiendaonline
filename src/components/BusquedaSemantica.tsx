@@ -1,12 +1,31 @@
-import { useCallback } from 'react';
+import React, { useCallback } from 'react';
 import Loading from './Loading';
 import ProductCard from './ProductCard';
 import ModalDetalles from './Modals/ModalDetalles';
 import useProductModal from '../hooks/useProductModal';
 import '../style/BusquedaSemantica.css'; // 1. Importamos los nuevos estilos
 
+// 1. Definimos la interfaz para un producto para garantizar la consistencia de los datos.
+interface Product {
+  _id?: string;
+  IdProducto: string | number;
+  Imagen: string;
+  Descripcion: string;
+  Estado?: string;
+  Precio?: number;
+}
 
-const BusquedaSemantica = ({
+// 2. Definimos la interfaz para las props del componente, mejorando la legibilidad y seguridad.
+interface BusquedaSemanticaProps {
+  termino: string;
+  setTermino: (value: string) => void;
+  resultados: Product[];
+  loading: boolean;
+  error: string | null;
+  limpiarBusqueda: () => void;
+}
+
+const BusquedaSemantica: React.FC<BusquedaSemanticaProps> = ({
   termino,
   setTermino,
   resultados,
@@ -18,8 +37,8 @@ const BusquedaSemantica = ({
   const { isModalOpen, selectedProduct, openModal, closeModal } =
     useProductModal();
 
-  // Usamos useCallback para optimizar la función
-  const handleSelect = useCallback((producto) => {
+  // Usamos useCallback para optimizar la función y tipamos el parámetro.
+  const handleSelect = useCallback((producto: Product) => {
     // Aquí nos aseguramos de pasar el objeto completo al modal
     openModal(producto);
   }, [openModal]);
@@ -38,7 +57,7 @@ const BusquedaSemantica = ({
           className="form-control"
           placeholder="Escribe para buscar automáticamente..."
           value={termino}
-          onChange={(e) => setTermino(e.target.value)}
+          onChange={(e: React.ChangeEvent<HTMLInputElement>) => setTermino(e.target.value)}
           aria-label="Término de búsqueda"
         />
         {/* El botón de buscar ya no es necesario */}
@@ -62,17 +81,13 @@ const BusquedaSemantica = ({
         <div>
           <h5 className="busqueda-semantica-results-header">Resultados de la búsqueda ({resultados.length})</h5>
           <div className="row g-2 busqueda-semantica-results-grid">
-            {resultados.map((p) => {
-              // ✅ Aquí está el console.log que pediste.
-              console.log('Datos del producto `p` en BusquedaSemantica:', p);
-              return (
-                <ProductCard
-                  key={p._id || p.IdProducto}
-                  product={p}
-                  onClick={() => handleSelect(p)}
-                />
-              );
-            })}
+            {resultados.map((p) => (
+              <ProductCard
+                key={p._id || p.IdProducto}
+                product={p}
+                onClick={() => handleSelect(p)}
+              />
+            ))}
           </div>
         </div>
       )}

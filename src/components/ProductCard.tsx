@@ -1,10 +1,25 @@
-// components/ProductCard.jsx
+// components/ProductCard.tsx
 import React from 'react';
 import '../style/ProductCard.css'; // Aplicamos los nuevos estilos
 
-const ProductCard = React.memo(({ product, onClick }) => {
-  const handleImageError = (e) =>
-    (e.target.src =
+// Definimos la interfaz para el producto
+export interface Product {
+  _id?: string;
+  IdProducto: string | number;
+  Imagen: string;
+  Descripcion: string;
+  Estado?: string;
+  Precio?: number;
+}
+
+interface ProductCardProps {
+  product: Product;
+  onClick: (product: Product) => void;
+}
+
+const ProductCard = React.memo<ProductCardProps>(({ product, onClick }) => {
+  const handleImageError = (e: React.SyntheticEvent<HTMLImageElement, Event>) =>
+    (e.currentTarget.src =
       'https://via.placeholder.com/150?text=Imagen+no+disponible');
 
   return (
@@ -53,10 +68,8 @@ const ProductCard = React.memo(({ product, onClick }) => {
 }, areEqual);
 
 // 📌 Comparación personalizada para evitar renders innecesarios
-function areEqual(prevProps, nextProps) {
+function areEqual(prevProps: Readonly<ProductCardProps>, nextProps: Readonly<ProductCardProps>) {
   return prevProps.product === nextProps.product;
 }
 
 export default ProductCard;
-// Este componente muestra una tarjeta de producto con imagen, descripción, estado y precio.
-// Permite hacer clic para ver más detalles del producto.

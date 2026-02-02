@@ -1,8 +1,13 @@
-import PropTypes from 'prop-types';
+import React from 'react';
 import { categories } from '../../constants/categories';
 
+interface CategoryProps {
+  activeCategory: string;
+  onSelect: (id: string) => void;
+  products?: any[]; // Se pasa desde el padre en algunos casos, aunque no se use internamente aquí.
+}
 
-const Category = ({ activeCategory, onSelect }) => {  
+const Category: React.FC<CategoryProps> = ({ activeCategory, onSelect }) => {
   return (
     <div className="d-flex overflow-auto gap-2 py-1">
       {categories.map(({ id, name }) => (
@@ -20,11 +25,6 @@ const Category = ({ activeCategory, onSelect }) => {
       ))}
     </div>
   );
-};
-
-Category.propTypes = {
-  activeCategory: PropTypes.string,
-  onSelect: PropTypes.func.isRequired,
 };
 
 export default Category;
