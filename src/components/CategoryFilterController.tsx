@@ -1,6 +1,7 @@
 // components/CategoryFilterController.jsx
 import React, { useState, useEffect, useCallback } from 'react';
 import CategorySelector from './Buttons/CategorySelector';
+import { categories as CATEGORIES } from '../constants/categories';
 
 interface Product {
   IdProducto: string | number;
@@ -14,17 +15,6 @@ interface CategoryFilterControllerProps {
   setFilteredProducts: (products: Product[]) => void;
   onCategoryChange?: (categoryId: string) => void;
 }
-
-// Lista compacta de categorías con sus keywords
-const CATEGORIES = [
-  { id: 'todos', keywords: [] },
-  { id: 'Hombre', keywords: ['hombre', 'masculino', 'caballero'] },
-  { id: 'Mujer', keywords: ['mujer', 'femenino', 'dama'] },
-  { id: 'Niño', keywords: ['niño', 'nino', 'niña', 'nina', 'infantil'] },
-  { id: 'Tecnologia', keywords: ['tecnolog', 'electron', 'digital', 'smart'] },
-  { id: 'Variedades', keywords: ['variedade', 'variedad', 'otros', 'general'] },
-  { id: 'Hogar', keywords: ['hoga', 'casa', 'hogar', 'cocina', 'muebles'] },
-];
 
 const CategoryFilterController: React.FC<CategoryFilterControllerProps> = ({
   allProducts,
