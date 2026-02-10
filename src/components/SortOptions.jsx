@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import RadioOptionsHorizontal from './Buttons/RadioOptionsHorizontal';
+import RadioOptionsHorizontal from './Buttons/RadioOptionsHorizontal1';
 
 // Las opciones de ordenación se definen aquí, en un solo lugar.
 const sortOptions = [

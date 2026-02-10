@@ -4,18 +4,8 @@ import ProductCard from './ProductCard';
 import ModalDetalles from './Modals/ModalDetalles';
 import useProductModal from '../hooks/useProductModal';
 import '../style/BusquedaSemantica.css'; // 1. Importamos los nuevos estilos
+import { Product } from '../components/types'; // 1. Importamos la interfaz GLOBAL para el producto.
 
-// 1. Definimos la interfaz para un producto para garantizar la consistencia de los datos.
-interface Product {
-  _id?: string;
-  IdProducto: string | number;
-  Imagen: string;
-  Descripcion: string;
-  Estado?: string;
-  Precio?: number;
-}
-
-// 2. Definimos la interfaz para las props del componente, mejorando la legibilidad y seguridad.
 interface BusquedaSemanticaProps {
   termino: string;
   setTermino: (value: string) => void;
@@ -80,13 +70,14 @@ const BusquedaSemantica: React.FC<BusquedaSemanticaProps> = ({
       {resultados.length > 0 && (
         <div>
           <h5 className="busqueda-semantica-results-header">Resultados de la búsqueda ({resultados.length})</h5>
-          <div className="row g-2 busqueda-semantica-results-grid">
+          <div className="row g-2">
             {resultados.map((p) => (
-              <ProductCard
-                key={p._id || p.IdProducto}
-                product={p}
-                onClick={() => handleSelect(p)}
-              />
+              <div className="col-6 col-md-4 col-lg-3" key={p._id || p.IdProducto}>
+                <ProductCard
+                  product={p}
+                  onClick={() => handleSelect(p)}
+                />
+              </div>
             ))}
           </div>
         </div>

@@ -1,12 +1,11 @@
-import React, { useContext, useState} from 'react';
-import { Navbar, Nav, Container } from 'react-bootstrap';
+import React, { useContext, useState, FC } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../components/Context/AuthContext';
 import '../style/navBar.css';
 
-const NavBar = () => {
-  const { isAuthenticated, name, role, logout } = useContext(AuthContext);
-  const [expanded, setExpanded] = useState(false);
+const Layout: FC = () => {
+  const { isAuthenticated, name, role, logout } = useContext(AuthContext); // Asumiendo que AuthContext provee un valor tipado
+  const [expanded, setExpanded] = useState<boolean>(false);
 
   const handleClose = () => setExpanded(false);
   const handleToggle = () => setExpanded(!expanded);
@@ -81,4 +80,4 @@ const NavBar = () => {
   );
 };
 
-export default NavBar;
+export default Layout;

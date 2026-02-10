@@ -1,17 +1,9 @@
 // components/ProductCard.tsx
 import React from 'react';
+import { Product } from '../components/types'; // 👈 1. Importamos la interfaz global
 import '../style/ProductCard.css'; // Aplicamos los nuevos estilos
 
-// Definimos la interfaz para el producto
-export interface Product {
-  _id?: string;
-  IdProducto: string | number;
-  Imagen: string;
-  Descripcion: string;
-  Estado?: string;
-  Precio?: number;
-}
-
+// 2. La interfaz de props ahora usa el tipo Product importado.
 interface ProductCardProps {
   product: Product;
   onClick: (product: Product) => void;
@@ -24,17 +16,17 @@ const ProductCard = React.memo<ProductCardProps>(({ product, onClick }) => {
 
   return (
     <div
-      className="col-6 col-md-4 col-lg-3 mb-3"
+      className="product-card"
       role="button"
       tabIndex={0}
-      onClick={() => onClick(product)} // ✅ CORRECCIÓN: Pasa el producto al hacer clic
-      onKeyDown={(e) => e.key === 'Enter' && onClick(product)} // ✅ CORRECCIÓN: También aquí
+      onClick={() => onClick(product)}
+      onKeyDown={(e) => e.key === 'Enter' && onClick(product)}
     >
       {/* ─── Imagen ─── */}
       <div className="ratio ratio-1x1 bg-light overflow-hidden p-0">
         {/* p-0 = cero padding → adiós franja */}
         <img
-          src={product.Imagen}
+          src={product.Imagen || 'https://via.placeholder.com/150?text=Imagen+no+disponible'} // 4. Fallback para imagen
           alt={product.Descripcion}
           className="w-100 h-100 object-fit-cover" // llena y recorta
           onError={handleImageError}
@@ -58,9 +50,11 @@ const ProductCard = React.memo<ProductCardProps>(({ product, onClick }) => {
           <span className="badge bg-secondary">
             {product.Estado || 'Sin estado'}
           </span>
-          <span className="text-primary fw-bold">
-            ${product.Precio?.toLocaleString()}
-          </span>
+          {product.Precio !== undefined && ( // 5. Renderizado condicional del precio
+            <span className="text-primary fw-bold">
+              ${product.Precio.toLocaleString()}
+            </span>
+          )}
         </div>
       </div>
     </div>
