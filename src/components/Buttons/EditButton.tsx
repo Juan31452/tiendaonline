@@ -1,7 +1,11 @@
 import React from 'react';
 import '../../style/EditButton.css';
 
-const EditButton = ({
+interface EditButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  label?: string;
+}
+
+const EditButton: React.FC<EditButtonProps> = ({
   onClick,
   className = '',
   children, // 👈 permite contenido personalizado

@@ -1,6 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import RadioOptionsHorizontal from './Buttons/RadioOptionsHorizontal1';
+import RadioOptionsHorizontal from './Buttons/RadioOptionsHorizontal';
 
 // Las opciones de ordenación se definen aquí, en un solo lugar.
 const sortOptions = [
@@ -8,10 +7,15 @@ const sortOptions = [
   { value: 'oldest', label: 'Más Antiguos' },
 ];
 
+interface SortOptionsProps {
+  activeSort: string;
+  onSortChange: (value: string) => void;
+}
+
 /**
  * Componente que renderiza las opciones para ordenar la lista de productos.
  */
-const SortOptions = ({ activeSort, onSortChange }) => (
+const SortOptions: React.FC<SortOptionsProps> = ({ activeSort, onSortChange }) => (
   <div className="my-3">
     <RadioOptionsHorizontal
       options={sortOptions}
@@ -21,10 +25,5 @@ const SortOptions = ({ activeSort, onSortChange }) => (
     />
   </div>
 );
-
-SortOptions.propTypes = {
-  activeSort: PropTypes.string.isRequired,
-  onSortChange: PropTypes.func.isRequired,
-};
 
 export default SortOptions;

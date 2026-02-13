@@ -1,8 +1,21 @@
 import React from 'react';
 import { FaWhatsapp } from 'react-icons/fa';
 
+interface Product {
+  IdProducto: string | number;
+  Imagen?: string;
+  Precio?: number | string;
+  Descripcion?: string;
+  Talla?: string | number;
+  [key: string]: any;
+}
 
-const WhatsAppButton = ({ product, className = '' }) => {
+interface WhatsAppButtonProps {
+  product: Product | null;
+  className?: string;
+}
+
+const WhatsAppButton: React.FC<WhatsAppButtonProps> = ({ product, className = '' }) => {
   if (!product) return null;
 
   // ✅ Imagen segura
@@ -14,10 +27,11 @@ const WhatsAppButton = ({ product, className = '' }) => {
 
   // ✅ Truncar descripción si es demasiado larga
   const MAX_DESC_LENGTH = 50;
+  const descripcion = product.Descripcion || '';
   const descripcionCorta =
-    product.Descripcion?.length > MAX_DESC_LENGTH
-      ? product.Descripcion.slice(0, MAX_DESC_LENGTH) + '...'
-      : product.Descripcion;
+    descripcion.length > MAX_DESC_LENGTH
+      ? descripcion.slice(0, MAX_DESC_LENGTH) + '...'
+      : descripcion;
 
   const message = `¡Hola! Mira este producto:
 ID: ${product.IdProducto}
@@ -39,10 +53,7 @@ ID: ${product.IdProducto}
         <FaWhatsapp />
         Enviar por WhatsApp
     </a>
-
   );
 };
 
 export default WhatsAppButton;
-// Nota: Este botón es para enviar mensajes de WhatsApp con detalles del producto.
-// Si no hay producto, no renderiza nada.
