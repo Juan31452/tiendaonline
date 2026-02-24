@@ -4,21 +4,8 @@ import WhatsAppButton from '../Buttons/WhatsAppButton';
 import ButtonClose from '../Buttons/ButtonClose';
 // Importamos los nuevos estilos para el modal
 import '../../style/ModalDetalles.css';
+import { Product } from '../types'; // Usamos el tipo global de producto
 
-/**
- * Interfaz para el producto
- */
-interface Product {
-  IdProducto: string;
-  Descripcion: string;
-  Imagen: string;
-  Precio: number;
-  Color: string;
-  Talla: string;
-  Categoria: string;
-  Cantidad: number;
-  Estado: string;
-}
 
 /**
  * Props del componente ModalDetalles
@@ -59,7 +46,7 @@ const ModalDetalles: FC<ModalDetallesProps> = ({ product, show, onHide }) => {
     .trim();
 
   // Función para obtener la clase del badge según el estado
-  const getBadgeClass = (estado?: string): string => {
+  const getBadgeClass = (estado?: string | null): string => {
     const estadoLower = estado?.toLowerCase();
     if (estadoLower === 'disponible') return 'badge-estado-disponible';
     if (estadoLower === 'separado') return 'badge-estado-separado';
@@ -92,8 +79,8 @@ const ModalDetalles: FC<ModalDetallesProps> = ({ product, show, onHide }) => {
         <div className="modal-detalles-content">
           <div className="modal-detalles-image-col">
             <img
-              src={product.Imagen}
-              alt={product.Descripcion}
+              src={product.Imagen || 'https://via.placeholder.com/400x400?text=Imagen+no+disponible'}
+              alt={product.Descripcion || 'Descripción del producto'}
               className="modal-detalles-image"
               onError={handleImageError}
             />
@@ -116,7 +103,7 @@ const ModalDetalles: FC<ModalDetallesProps> = ({ product, show, onHide }) => {
                   product.Estado
                 )}`}
               >
-                Estado: {product.Estado}
+                Estado: {product.Estado || 'Sin estado'}
               </span>
             </div>
 
@@ -130,7 +117,7 @@ const ModalDetalles: FC<ModalDetallesProps> = ({ product, show, onHide }) => {
       </Modal.Body>
 
       <Modal.Footer className="modal-detalles-footer">
-        <WhatsAppButton product={productForWhatsApp} />
+        <WhatsAppButton product={productForWhatsApp as any} />
         <ButtonClose onClick={onHide} />
       </Modal.Footer>
     </Modal>

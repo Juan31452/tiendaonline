@@ -1,19 +1,5 @@
 import { useState, useCallback } from 'react';
-
-/**
- * Interfaz para el producto
- */
-interface Product {
-  IdProducto: string;
-  Descripcion: string;
-  Imagen: string;
-  Precio: number;
-  Color: string;
-  Talla: string;
-  Categoria: string;
-  Cantidad: number;
-  Estado: string;
-}
+import { Product } from '../components/types';
 
 /**
  * Interfaz para el retorno del hook

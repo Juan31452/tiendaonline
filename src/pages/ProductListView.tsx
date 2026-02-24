@@ -155,7 +155,7 @@ const ProductListView: FC = () => {
                 <div className="col-6 col-md-4 col-lg-3" key={p.IdProducto}>
                   <ProductCard
                     product={p}
-                    onClick={() => openModal(p as any)}
+                    onClick={() => openModal(p)}
                   />
                 </div>
               ))
