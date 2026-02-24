@@ -1,8 +1,13 @@
 import { useEffect, useRef } from 'react';
 import Modal from 'bootstrap/js/dist/modal';
 
-const ModalMensaje = ({ mensaje, onClose }) => {
-  const modalRef = useRef(null);
+interface ModalMensajeProps {
+  mensaje: string;
+  onClose: () => void;
+}
+
+const ModalMensaje = ({ mensaje, onClose }: ModalMensajeProps) => {
+  const modalRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (!modalRef.current) return;
@@ -18,15 +23,15 @@ const ModalMensaje = ({ mensaje, onClose }) => {
     modalRef.current.addEventListener('hidden.bs.modal', handleClose);
 
     return () => {
-        if (modalRef.current) {
-            modalRef.current.removeEventListener('hidden.bs.modal', handleClose);
-        }
-    modalInstance.hide();
+      if (modalRef.current) {
+        modalRef.current.removeEventListener('hidden.bs.modal', handleClose);
+        modalInstance.hide();
+      }
     };
   }, [onClose]);
 
   return (
-    <div className="modal fade" tabIndex="-1" ref={modalRef}>
+    <div className="modal fade" tabIndex={-1} ref={modalRef}>
       <div className="modal-dialog modal-dialog-centered">
         <div className="modal-content">
           <div className="modal-header">

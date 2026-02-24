@@ -1,11 +1,38 @@
+import { FC, ImgHTMLAttributes } from 'react';
 import { Modal } from 'react-bootstrap';
 import WhatsAppButton from '../Buttons/WhatsAppButton';
 import ButtonClose from '../Buttons/ButtonClose';
 // Importamos los nuevos estilos para el modal
-import '../../style/ModalDetalles.css'; 
+import '../../style/ModalDetalles.css';
 
-const ModalDetalles = ({ product, show, onHide}) => {
-  
+/**
+ * Interfaz para el producto
+ */
+interface Product {
+  IdProducto: string;
+  Descripcion: string;
+  Imagen: string;
+  Precio: number;
+  Color: string;
+  Talla: string;
+  Categoria: string;
+  Cantidad: number;
+  Estado: string;
+}
+
+/**
+ * Props del componente ModalDetalles
+ */
+interface ModalDetallesProps {
+  product: Product | null;
+  show: boolean;
+  onHide: () => void;
+}
+
+/**
+ * Modal para mostrar los detalles de un producto
+ */
+const ModalDetalles: FC<ModalDetallesProps> = ({ product, show, onHide }) => {
   if (!product) return null;
 
   // El backend ya se encarga de enviar el precio solo a los roles autorizados.
@@ -19,23 +46,34 @@ const ModalDetalles = ({ product, show, onHide}) => {
 
   // Aumentar el z-index para que el modal se muestre sobre otros elementos fijos como la barra de navegación inferior.
   // El valor por defecto de Bootstrap es 1055. Ajústalo si es necesario.
-  const modalStyle = {
-    zIndex: 1060
+  const modalStyle: React.CSSProperties = {
+    zIndex: 1060,
   };
 
   // Clases para el diálogo del modal
   const dialogClassName = [
     'modal-detalles-dialog',
-    product.Estado === 'Separado' ? 'modal-separado' : ''
-  ].join(' ').trim();
+    product.Estado === 'Separado' ? 'modal-separado' : '',
+  ]
+    .join(' ')
+    .trim();
 
   // Función para obtener la clase del badge según el estado
-  const getBadgeClass = (estado) => {
+  const getBadgeClass = (estado?: string): string => {
     const estadoLower = estado?.toLowerCase();
     if (estadoLower === 'disponible') return 'badge-estado-disponible';
     if (estadoLower === 'separado') return 'badge-estado-separado';
     if (estadoLower === 'vendido') return 'badge-estado-vendido';
     return 'badge-estado-otro';
+  };
+
+  const handleImageError = (
+    e: React.SyntheticEvent<HTMLImageElement, Event>
+  ) => {
+    const target = e.target as HTMLImageElement;
+    target.onerror = null;
+    target.src = 'https://via.placeholder.com/400x400?text=Imagen+no+disponible';
+    target.alt = 'Imagen no disponible';
   };
 
   return (
@@ -57,30 +95,36 @@ const ModalDetalles = ({ product, show, onHide}) => {
               src={product.Imagen}
               alt={product.Descripcion}
               className="modal-detalles-image"
-              onError={(e) => {
-                e.target.onerror = null;
-                e.target.src = 'https://via.placeholder.com/400x400?text=Imagen+no+disponible';
-                e.target.alt = 'Imagen no disponible';
-              }}
+              onError={handleImageError}
             />
           </div>
           <div className="modal-detalles-info-col">
             <h4 className="modal-detalles-id">{product.IdProducto}</h4>
-            <h3 className="modal-detalles-descripcion">{product.Descripcion}</h3>
+            <h3 className="modal-detalles-descripcion">
+              {product.Descripcion}
+            </h3>
 
             <div className="modal-detalles-badges">
-              <span className="badge modal-detalles-badge bg-primary">Talla: {product.Talla}</span>
-              <span className="badge modal-detalles-badge bg-success">Disponibles: {product.Cantidad}</span>
-              <span className={`badge modal-detalles-badge ${getBadgeClass(product.Estado)}`}>
+              <span className="badge modal-detalles-badge bg-primary">
+                Talla: {product.Talla}
+              </span>
+              <span className="badge modal-detalles-badge bg-success">
+                Disponibles: {product.Cantidad}
+              </span>
+              <span
+                className={`badge modal-detalles-badge ${getBadgeClass(
+                  product.Estado
+                )}`}
+              >
                 Estado: {product.Estado}
               </span>
             </div>
 
-             <h3 className="modal-detalles-precio">
-               {displayPrice !== undefined && typeof displayPrice === 'number'
+            <h3 className="modal-detalles-precio">
+              {displayPrice !== undefined && typeof displayPrice === 'number'
                 ? `$${displayPrice.toLocaleString()}`
                 : 'Precio no disponible'}
-              </h3>
+            </h3>
           </div>
         </div>
       </Modal.Body>

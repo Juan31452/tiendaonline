@@ -27,7 +27,7 @@ self.addEventListener('activate', event => {
           }
         })
       );
-    }).then(() => self.clients.claim()) // ✅ CORRECCIÓN: Usa self.clients para tomar control.
+    }).then(() => self.clients.claim()) // ✅  self.clients para tomar control.
   );
 });
 

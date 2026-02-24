@@ -1,11 +1,8 @@
 import React from 'react';
 import '../style/EstadisticasProductos.css';
 import ScrollingStats from './ScrollingStats'; // 1. Importamos el nuevo componente
+import { Estadistica } from './types';
 
-interface Estadistica {
-  Categoria: string;
-  estados: { [key: string]: number };
-}
 
 interface EstadisticasProductosProps {
   estadisticas: Estadistica[] | null;

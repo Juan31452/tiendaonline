@@ -1,6 +1,6 @@
 // components/ProductCard.tsx
 import React from 'react';
-import { Product } from '../components/types'; // 👈 1. Importamos la interfaz global
+import { Product } from './types' // Importamos el tipo global de producto
 import '../style/ProductCard.css'; // Aplicamos los nuevos estilos
 
 // 2. La interfaz de props ahora usa el tipo Product importado.

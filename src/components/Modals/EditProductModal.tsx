@@ -1,27 +1,51 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, FC, ChangeEvent } from 'react';
 import { Modal, Button, Form, Row, Col } from 'react-bootstrap';
 
 /**
- * Modal para editar un producto
- *
- * Props:
- *  - show (bool)            → visibilidad
- *  - onHide ()              → cerrar sin guardar
- *  - product (obj|null)     → producto a editar
- *  - onSave (obj)           → callback con el objeto actualizado
+ * Interfaz para el producto
  */
-const EditProductModal = ({ show, onHide, product, onSave }) => {
+interface Product {
+  IdProducto: string;
+  Descripcion: string;
+  Imagen: string;
+  Precio: number;
+  Color: string;
+  Talla: string;
+  Categoria: string;
+  Cantidad: number;
+  Estado: string;
+}
+
+/**
+ * Props del componente EditProductModal
+ */
+interface EditProductModalProps {
+  show: boolean;
+  onHide: () => void;
+  product: Product | null;
+  onSave: (product: Product) => void;
+}
+
+/**
+ * Modal para editar un producto
+ */
+const EditProductModal: FC<EditProductModalProps> = ({
+  show,
+  onHide,
+  product,
+  onSave,
+}) => {
   // estado local del formulario
-  const [form, setForm] = useState({
-    IdProducto : '',
+  const [form, setForm] = useState<Product>({
+    IdProducto: '',
     Descripcion: '',
-    Imagen     : '', // opcional, si no se edita se deja vacío
-    Precio     : 0,
-    Color      : '',
-    Talla      : '',
-    Categoria  : '',
-    Cantidad   : 0,
-    Estado     : '',
+    Imagen: '', // opcional, si no se edita se deja vacío
+    Precio: 0,
+    Color: '',
+    Talla: '',
+    Categoria: '',
+    Cantidad: 0,
+    Estado: '',
   });
 
   /* cuando cambia 'product', precarga el form */
@@ -30,14 +54,21 @@ const EditProductModal = ({ show, onHide, product, onSave }) => {
   }, [product]);
 
   /* handler genérico */
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setForm({ ...form, [name]: value });
+  const handleChange = (
+    e: ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value, type } = e.target;
+
+    setForm((prev) => ({
+      ...prev,
+      // Si el input es de tipo número, convertimos el valor. Si está vacío, asignamos 0.
+      [name as keyof Product]: type === 'number' ? (value === '' ? 0 : parseFloat(value)) : value,
+    }));
   };
 
   /* guardar */
-  const handleSubmit = () => {
-    onSave(form);   // delega la llamada API al padre
+  const handleSubmit = (): void => {
+    onSave(form); // delega la llamada API al padre
   };
 
   if (!product) return null; // no renderiza si no hay data
@@ -153,6 +184,7 @@ const EditProductModal = ({ show, onHide, product, onSave }) => {
                 >
                   <option value="">-- Selecciona --</option>
                   <option value="Disponible">Disponible</option>
+                  <option value="Nuevo">Nuevo</option>
                   <option value="Vendido">Vendido</option>
                   <option value="Separado">Separado</option>
                   <option value="Oferta">Oferta</option>

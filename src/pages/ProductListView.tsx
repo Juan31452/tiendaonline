@@ -61,15 +61,11 @@ const ProductListView: FC = () => {
     estadisticas,
     loading: loadingEstadisticas,
     error: errorEstadisticas,
-  } = useEstadisticasProductos({ enabled: canFetchStats }) as {
-    estadisticas: Estadistica[];
-    loading: boolean;
-    error: string | null;
-    totalProductos: number;
-  };
+  } = useEstadisticasProductos({ enabled: canFetchStats });
 
   // --- Banner de Anuncios ---
-  const totalStats = estadisticas.find(e => e.Categoria === 'Todos');
+  // Cast a 'any' para evitar errores si la interfaz Estadistica no define explícitamente 'estados'
+  const totalStats = estadisticas?.find(e => e.Categoria === 'Todos') as any;
   const ofertaCount = totalStats?.estados?.Oferta || 0;
   const nuevoCount = totalStats?.estados?.Nuevo || 0;
 
@@ -121,7 +117,7 @@ const ProductListView: FC = () => {
           {error && <p style={{ color: 'crimson' }}>{error}</p>}
 
           <Category
-            activeCategory={activeCategory}
+            activeCategory={activeCategory || 'Todos'}
             onSelect={handleCategoryChange}
             products={productos}
           />
@@ -130,22 +126,22 @@ const ProductListView: FC = () => {
             <RadioOptionsHorizontal
               options={availableStates}
             name="productStatus"
-            activeStatus={activeEstado}
+            activeStatus={activeEstado || 'Todos'}
             onChange={handleEstadoChange}
             />
           </div>
 
           <SortOptions
-            activeSort={activeSort}
+            activeSort={activeSort || 'newest'}
             onSortChange={handleSortChange}
           />
 
           {role && (
             <EstadisticasProductos
-              estadisticas={estadisticas}
-              loading={loadingEstadisticas}
-              error={errorEstadisticas}
-              activeCategory={activeCategory}
+              estadisticas={estadisticas || null}
+              loading={loadingEstadisticas || false}
+              error={errorEstadisticas || null}
+              activeCategory={activeCategory || 'Todos'}
             />
           )}
 
@@ -156,10 +152,10 @@ const ProductListView: FC = () => {
               ))
             ) : (
               productos.map((p) => (
-                <div className="col-6 col-md-4 col-lg-3" key={p._id}>
+                <div className="col-6 col-md-4 col-lg-3" key={p.IdProducto}>
                   <ProductCard
                     product={p}
-                    onClick={openModal}
+                    onClick={() => openModal(p as any)}
                   />
                 </div>
               ))
@@ -167,13 +163,13 @@ const ProductListView: FC = () => {
           </div>
 
           <PaginationControls
-            page={pagination.currentPage}
+            page={pagination.currentPage || 1}
             totalPages={pagination.totalPages || 1}
             loading={loadingList}
             onFirst={() => goToPage(1)}
-            onPrev={() => goToPage(pagination.currentPage - 1)}
-            onNext={() => goToPage(pagination.currentPage + 1)}
-            onLast={() => goToPage(pagination.totalPages)}
+            onPrev={() => goToPage((pagination.currentPage || 1) - 1)}
+            onNext={() => goToPage((pagination.currentPage || 1) + 1)}
+            onLast={() => goToPage(pagination.totalPages || 1)}
             onRefresh={refreshData}
             currentCount={productos.length}
             totalCount={pagination.totalItems}

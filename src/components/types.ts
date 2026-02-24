@@ -7,6 +7,8 @@ export interface Product {
   Descripcion: string;
   Imagen: string;
   Precio?: number; // Es opcional porque solo admins/vendedores lo ven.
+  Talla?: string | null;
+  Color?: string | null;
   Estado?: string | null;
   Categoria?: string | null;
   vendedor?: string; // El ID del vendedor.
