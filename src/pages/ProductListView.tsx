@@ -17,7 +17,8 @@ import ProductCardSkeleton from '../components/Skeletons/ProductCardSkeleton';
 import AnnouncementBanner from '../components/AnnouncementBanner';
 import BusquedaSemantica from '../components/BusquedaSemantica';
 import SortOptions from '../components/SortOptions';
-import MobileBottomNav from '../components/Buttons/MobileBottomNav';
+// import MobileBottomNav from '../components/Buttons/MobileBottomNav';
+import VirtualDressingRoom from '../components/VirtualDressingRoom'; // Importar el nuevo componente
 
 // Context & Types
 import { AuthContext } from '../components/Context/AuthContext';
@@ -31,6 +32,9 @@ const ProductListView: FC = () => {
   const { resultados, loading: loadingBusqueda, error: errorBusqueda, buscar, limpiarResultados } = useBusquedaSemantica();
 
   const isBusquedaActiva = terminoBusqueda.trim() !== '';
+
+  // --- Estado para el Probador Virtual ---
+  const [showDressingRoom, setShowDressingRoom] = useState(false);
 
   // --- Datos, Filtros y Paginación ---
   const {
@@ -112,6 +116,16 @@ const ProductListView: FC = () => {
         </AnnouncementBanner>
       )}
 
+      {/* Botón para abrir el Probador Virtual
+      <div className="d-flex justify-content-center my-3">
+        <button 
+          className="btn btn-dark d-flex align-items-center gap-2 shadow-sm px-4 py-2"
+          onClick={() => setShowDressingRoom(true)}
+        >
+          <span>👔</span> Probar Combinaciones (Beta)
+        </button> 
+      </div>*/}
+
       {!isBusquedaActiva && (
         <>
           {error && <p style={{ color: 'crimson' }}>{error}</p>}
@@ -183,12 +197,19 @@ const ProductListView: FC = () => {
         onHide={closeModal}
       />
 
-      <MobileBottomNav
+      {/* Modal del Probador Virtual
+      <VirtualDressingRoom 
+        show={showDressingRoom} 
+        onHide={() => setShowDressingRoom(false)} 
+        products={productos} // Le pasamos todos los productos cargados
+      />
+
+      {/* <MobileBottomNav
         onNewClick={() => handleEstadoChange('Nuevo')}
         onHomeClick={() => handleEstadoChange('Disponible')}
         onProfileClick={() => {}}
         onOfferClick={() => handleEstadoChange('Oferta')}
-      />
+      /> */}
     </div>
   );
 };

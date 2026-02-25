@@ -1,0 +1,125 @@
+/* --- Contenedor Principal --- */
+.dressing-room-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 10px;
+  height: 90vh; /* Para que quepa en la pantalla del móvil */
+}
+
+@media (min-width: 768px) {
+  .dressing-room-container {
+    flex-direction: row;
+    height: 700px; 
+  }
+}
+
+/* --- Área del Modelo (Izquierda) --- */
+.model-area {
+  flex: 1.2; /* Le damos un poco más de espacio al modelo */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle, #f8fafc 0%, #e2e8f0 100%);
+  border-radius: 16px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #cbd5e1;
+}
+
+/* El secreto: Contenedor con relación de aspecto fija */
+.mannequin-wrapper {
+  position: relative;
+  height: 100%;       /* Prioridad a la altura para que quepa en móviles */
+  width: auto;        /* El ancho se calcula según el aspect-ratio */
+  max-width: 100%;    /* Evita desbordamiento horizontal */
+  aspect-ratio: 9 / 19; /* Proporción vertical estándar */
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.layer-image {
+  position: absolute;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: none; /* Evita que las imágenes interfieran con clicks */
+}
+
+.layer-base {
+  z-index: 1;
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Ajustes Proporcionales (Usa % para que escale con el wrapper) */
+.layer-pants {
+  z-index: 2;
+  top: 46%;    
+  height: 48%; 
+  width: 80%; /* Ajusta según el ancho de tu PNG de pantalón */
+  filter: drop-shadow(0 4px 4px rgba(0,0,0,0.15));
+}
+
+.layer-shirt {
+  z-index: 3;
+  top: 10%;    
+  height: 42%; 
+  width: 90%; /* Ajusta según el ancho de tu PNG de camisa */
+  filter: drop-shadow(0 4px 6px rgba(0,0,0,0.2));
+}
+
+/* --- Área de Controles (Derecha) --- */
+.controls-area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  overflow-y: auto;
+}
+
+/* Scrollbar elegante para móviles */
+.controls-area::-webkit-scrollbar {
+  width: 6px;
+}
+.controls-area::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 10px;
+}
+
+.items-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+  gap: 12px;
+}
+
+.item-thumb {
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  cursor: pointer;
+  border: 2px solid #f1f5f9;
+  border-radius: 10px;
+  padding: 5px;
+  transition: all 0.2s ease;
+}
+
+.item-thumb.selected {
+  border-color: #3b82f6;
+  background-color: #eff6ff;
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(59, 130, 246, 0.2);
+}
+
+/* Ajustes para móviles pequeños */
+@media (max-width: 480px) {
+  .model-area {
+    min-height: 300px;
+  }
+  .mannequin-wrapper {
+    max-width: 250px;
+  }
+}

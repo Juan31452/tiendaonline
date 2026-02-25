@@ -16,7 +16,7 @@ interface WhatsAppButtonProps {
  */
 const WhatsAppButton: FC<WhatsAppButtonProps> = ({
   product,
-  phoneNumber = '34622229467', // Reemplaza con tu número por defecto
+  phoneNumber,
 }) => {
   // 2. Construimos el mensaje base
   let message = `¡Hola! Estoy interesado en el producto:\n\n`;
@@ -31,10 +31,17 @@ const WhatsAppButton: FC<WhatsAppButtonProps> = ({
     message += `\nQuisiera consultar el precio y la disponibilidad.`;
   }
 
+  // Añadimos el enlace de la imagen si existe
+  if (product.Imagen) {
+    message += `\n*Imagen:* ${product.Imagen}`;
+  }
+
   // 4. Codificamos el mensaje para que sea seguro en una URL
   const encodedMessage = encodeURIComponent(message);
 
-  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+  const whatsappUrl = phoneNumber
+    ? `https://wa.me/${phoneNumber}?text=${encodedMessage}`
+    : `https://wa.me/?text=${encodedMessage}`;
 
   return (
     <a
