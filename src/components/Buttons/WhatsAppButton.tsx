@@ -20,7 +20,14 @@ const WhatsAppButton: FC<WhatsAppButtonProps> = ({
 }) => {
   // 2. Construimos el mensaje base
   let message = `¡Hola! Estoy interesado en el producto:\n\n`;
-  message += `*Producto:* ${product.Descripcion || 'Descripción no disponible'}\n`;
+
+  // Truncamos la descripción si es muy larga para el mensaje
+  const fullDescription = product.Descripcion || 'Descripción no disponible';
+  const truncatedDescription = fullDescription.length > 20
+    ? `${fullDescription.substring(0, 20)}...`
+    : fullDescription;
+
+  message += `*Producto:* ${truncatedDescription}\n`;
   message += `*ID:* ${product.IdProducto}\n`;
 
   // 3. Añadimos el precio al mensaje SOLO si existe y es un número
