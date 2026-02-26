@@ -1,46 +1,79 @@
-// components/MobileBottomNav.jsx
-import React, { useContext } from 'react'; // 👈 1. Importa useContext
-import { NavLink } from 'react-router-dom'; // Importa NavLink
-import { AuthContext } from '../Context/AuthContext'; // 👈 2. Importa tu AuthContext
-import {myicons} from '../../constants/myicons'; // Importa los iconos desde el archivo de constantes
-import '../../style/mobile-nav.css'; // estilos para la navegación móvil
+// components/MobileBottomNav.tsx
+import React, { useContext } from 'react';
+import { NavLink } from 'react-router-dom';
+import { AuthContext } from '../Context/AuthContext';
+import '../../style/mobile-nav.css';
+
+// --- Iconos ---
+// El problema de que los iconos no carguen se debe casi siempre a que la ruta o el nombre del archivo aquí no coincide
+// con el archivo real en la carpeta `public`.
+
+// PASO 1: Abre tu navegador, ve a la página y abre las "Herramientas de desarrollador" (F12 o clic derecho -> Inspeccionar).
+// PASO 2: Ve a la pestaña "Consola" o "Red (Network)". Verás errores 404 (Not Found) para los iconos.
+//          La URL que falla te dirá la ruta exacta que está buscando el navegador.
+// PASO 3: Corrige las rutas o nombres de archivo a continuación para que coincidan con tus archivos reales.
+
+const ICONS_BASE_PATH = '/assets/icons/'; // <- Asegúrate que esta carpeta exista en `public`
+
+const myicons = {
+  HOME: `${ICONS_BASE_PATH}home-solid.svg`,      // <- ¿Es .png o .svg? ¿Se llama 'home' o 'home-icon'?
+  NEWS: `${ICONS_BASE_PATH}thumbs-up-outline.svg`,      // <- Revisa el nombre y la extensión.
+  OFFERS: `${ICONS_BASE_PATH}star-outline.svg`,    // <- Revisa el nombre y la extensión.
+  USERS: `${ICONS_BASE_PATH}user-solid.svg`,       // <- Revisa el nombre y la extensión.
+};
+
+// 1. Define los posibles filtros que este componente puede manejar.
+// Esto hace que el código sea más seguro y fácil de entender.
+export type NavFilter = 'home' | 'new' | 'offer';
 
 interface MobileBottomNavProps {
-  onNewClick?: () => void;
-  onHomeClick?: () => void;
-  onOfferClick?: () => void;
+  activeFilter: NavFilter;
+  onFilterChange: (filter: NavFilter) => void;
   onProfileClick?: () => void;
 }
 
-const MobileBottomNav: React.FC<MobileBottomNavProps> = ({ onNewClick, onHomeClick, onOfferClick, onProfileClick }) => { // 1. Recibimos las funciones como props
-  const { isAuthenticated, name, role } = useContext(AuthContext); // 👈 3. Obtiene los datos del contexto
+const MobileBottomNav: React.FC<MobileBottomNavProps> = ({
+  activeFilter,
+  onFilterChange,
+  onProfileClick,
+}) => {
+  const { isAuthenticated, name, role } = useContext(AuthContext);
+
+  // 2. Helper para crear botones de filtro y evitar repetición.
+  // También se encarga de aplicar la clase 'active' al botón correspondiente.
+  const renderFilterButton = (
+    filter: NavFilter,
+    icon: string,
+    label: string
+  ) => {
+    const isActive = activeFilter === filter;
+    return (
+      <button
+        type="button"
+        onClick={() => onFilterChange(filter)}
+        className={`nav-item ${isActive ? 'active' : ''}`} // 3. Se añade la clase 'active' si el filtro coincide
+        aria-pressed={isActive}
+      >
+        <img src={icon} alt={label} />
+        <span>{label}</span>
+      </button>
+    );
+  };
 
   return (
     <nav className="mobile-bottom-nav">
-      <button type="button" onClick={onHomeClick} className="nav-item">
-        <img src={myicons.HOME}  alt="Home" />
-        <span>Home</span>
-      </button>
+      {renderFilterButton('home', myicons.HOME, 'Home')}
+      {renderFilterButton('new', myicons.NEWS, 'Nuevo')}
+      {renderFilterButton('offer', myicons.OFFERS, 'Oferta')}
 
-      <button type="button" onClick={onNewClick} className="nav-item"> {/* 2. Usamos un botón que llama a la función */}
-        <img src={myicons.NEWS} alt="Nuevo" />
-        <span>Nuevo</span>
-      </button>
-
-      <button type="button" onClick={onOfferClick} className="nav-item"> {/* 3. Botón para ofertas */}
-        <img src={myicons.OFFERS} alt="Oferta" />
-        <span>Oferta</span>
-      </button>
-              
-      {/* 4. Renderizado condicional */}
       {isAuthenticated ? (
-        // Si hay un agrega , muestra su nombre y rol
         <button type="button" onClick={onProfileClick} className="nav-item">
           <img src={myicons.USERS} alt="Usuario" />
-          <span style={{ fontSize: '10px', whiteSpace: 'nowrap' }}>{name} ({role})</span>
+          <span style={{ fontSize: '10px', whiteSpace: 'nowrap' }}>
+            {name} ({role})
+          </span>
         </button>
       ) : (
-        // Si no hay usuario, muestra el enlace de Login
         <NavLink to="/login" className="nav-item">
           <img src={myicons.USERS} alt="Login" />
           <span>Usuario</span>

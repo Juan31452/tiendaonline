@@ -17,8 +17,8 @@ import ProductCardSkeleton from '../components/Skeletons/ProductCardSkeleton';
 import AnnouncementBanner from '../components/AnnouncementBanner';
 import BusquedaSemantica from '../components/BusquedaSemantica';
 import SortOptions from '../components/SortOptions';
-// import MobileBottomNav from '../components/Buttons/MobileBottomNav';
-import VirtualDressingRoom from '../components/VirtualDressingRoom'; // Importar el nuevo componente
+import MobileBottomNav, { NavFilter } from '../components/Buttons/MobileBottomNav';
+//import VirtualDressingRoom from '../components/VirtualDressingRoom'; // Importar el nuevo componente
 
 // Context & Types
 import { AuthContext } from '../components/Context/AuthContext';
@@ -89,6 +89,31 @@ const ProductListView: FC = () => {
   const limpiarBusquedaCompleta = () => {
     setTerminoBusqueda('');
     limpiarResultados();
+  };
+
+  // --- Lógica para MobileBottomNav ---
+  // 1. Mapea el estado del filtro de productos ('disponible', 'Nuevo') al estado del nav ('home', 'new').
+  //    Usamos `useMemo` para que este cálculo solo se rehaga cuando `activeEstado` cambie.
+  const navActiveFilter = useMemo((): NavFilter => {
+    switch (activeEstado) {
+      case 'Nuevo':
+        return 'new';
+      case 'Oferta':
+        return 'offer';
+      // 'disponible' y cualquier otro estado se consideran 'home' por defecto.
+      default:
+        return 'home';
+    }
+  }, [activeEstado]);
+
+  // 2. Maneja los clics en el nav y los traduce a acciones de filtrado de productos.
+  const handleNavFilterChange = (filter: NavFilter) => {
+    const estadoMap: Record<NavFilter, string> = {
+      home: 'disponible',
+      new: 'Nuevo',
+      offer: 'Oferta',
+    };
+    handleEstadoChange(estadoMap[filter] || 'disponible');
   };
 
   return (
@@ -202,14 +227,13 @@ const ProductListView: FC = () => {
         show={showDressingRoom} 
         onHide={() => setShowDressingRoom(false)} 
         products={productos} // Le pasamos todos los productos cargados
-      />
+      />*/}
 
-      {/* <MobileBottomNav
-        onNewClick={() => handleEstadoChange('Nuevo')}
-        onHomeClick={() => handleEstadoChange('Disponible')}
+      <MobileBottomNav
+        activeFilter={navActiveFilter}
+        onFilterChange={handleNavFilterChange}
         onProfileClick={() => {}}
-        onOfferClick={() => handleEstadoChange('Oferta')}
-      /> */}
+      />
     </div>
   );
 };
