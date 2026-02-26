@@ -5,21 +5,13 @@ import { AuthContext } from '../Context/AuthContext';
 import '../../style/mobile-nav.css';
 
 // --- Iconos ---
-// El problema de que los iconos no carguen se debe casi siempre a que la ruta o el nombre del archivo aquí no coincide
-// con el archivo real en la carpeta `public`.
-
-// PASO 1: Abre tu navegador, ve a la página y abre las "Herramientas de desarrollador" (F12 o clic derecho -> Inspeccionar).
-// PASO 2: Ve a la pestaña "Consola" o "Red (Network)". Verás errores 404 (Not Found) para los iconos.
-//          La URL que falla te dirá la ruta exacta que está buscando el navegador.
-// PASO 3: Corrige las rutas o nombres de archivo a continuación para que coincidan con tus archivos reales.
-
-const ICONS_BASE_PATH = '/assets/icons/'; // <- Asegúrate que esta carpeta exista en `public`
+const ICONS_BASE_PATH = '/assets/icons/'; // <- carpeta `public`
 
 const myicons = {
   HOME: `${ICONS_BASE_PATH}home-solid.svg`,      // <- ¿Es .png o .svg? ¿Se llama 'home' o 'home-icon'?
-  NEWS: `${ICONS_BASE_PATH}thumbs-up-outline.svg`,      // <- Revisa el nombre y la extensión.
-  OFFERS: `${ICONS_BASE_PATH}star-outline.svg`,    // <- Revisa el nombre y la extensión.
-  USERS: `${ICONS_BASE_PATH}user-solid.svg`,       // <- Revisa el nombre y la extensión.
+  NEWS: `${ICONS_BASE_PATH}thumbs-up-outline.svg`,      // <- nuevo icono para 'nuevo'
+  OFFERS: `${ICONS_BASE_PATH}star-outline.svg`,    // <- ofertas, promociones, etc.
+  USERS: `${ICONS_BASE_PATH}user-solid.svg`,       // <- usuario o profile, y la extensión correcta.
 };
 
 // 1. Define los posibles filtros que este componente puede manejar.
