@@ -8,10 +8,10 @@ import '../../style/mobile-nav.css';
 const ICONS_BASE_PATH = '/assets/icons/'; // <- carpeta `public`
 
 const myicons = {
-  HOME: `${ICONS_BASE_PATH}home-solid.svg`,      // <- ¿Es .png o .svg? ¿Se llama 'home' o 'home-icon'?
+  HOME: `${ICONS_BASE_PATH}home-outline.svg`,      // <- ¿Es .png o .svg? ¿Se llama 'home' o 'home-icon'?
   NEWS: `${ICONS_BASE_PATH}thumbs-up-outline.svg`,      // <- nuevo icono para 'nuevo'
   OFFERS: `${ICONS_BASE_PATH}star-outline.svg`,    // <- ofertas, promociones, etc.
-  USERS: `${ICONS_BASE_PATH}user-solid.svg`,       // <- usuario o profile, y la extensión correcta.
+  USERS: `${ICONS_BASE_PATH}user-outline.svg`,       // <- usuario o profile, y la extensión correcta.
 };
 
 // 1. Define los posibles filtros que este componente puede manejar.
