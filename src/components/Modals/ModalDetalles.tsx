@@ -72,8 +72,9 @@ const ModalDetalles: FC<ModalDetallesProps> = ({ product, show, onHide }) => {
       style={modalStyle}
       dialogClassName={dialogClassName}
     >
-      <Modal.Header closeButton className="modal-detalles-header">
+      <Modal.Header className="modal-detalles-header">
         <Modal.Title>Detalles del Producto</Modal.Title>
+        <ButtonClose onClick={onHide} />
       </Modal.Header>
       <Modal.Body className="modal-detalles-body">
         <div className="modal-detalles-content">
@@ -117,8 +118,7 @@ const ModalDetalles: FC<ModalDetallesProps> = ({ product, show, onHide }) => {
       </Modal.Body>
 
       <Modal.Footer className="modal-detalles-footer">
-        <WhatsAppButton product={productForWhatsApp as any} />
-        <ButtonClose onClick={onHide} />
+        <WhatsAppButton product={productForWhatsApp} />
       </Modal.Footer>
     </Modal>
   );

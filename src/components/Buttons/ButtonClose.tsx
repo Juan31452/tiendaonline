@@ -1,24 +1,26 @@
-import React, { useState } from 'react';
+import React from 'react';
+import '../../style/ButtonClose.css';
 
-interface ButtonCloseProps {
-    onClick: React.MouseEventHandler<HTMLButtonElement>;
+interface ButtonCloseProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  // Permite pasar cualquier prop de botón estándar, como `onClick` o `className`.
 }
 
-const ButtonClose: React.FC<ButtonCloseProps> = ({ onClick }) => {
-    const [isHovered, setIsHovered] = useState(false);
-
-    return (
-        <button
-            onClick={onClick}
-            aria-label="Cerrar"
-            className="button-close"
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
-            style={{ color: isHovered ? 'crimson' : undefined }}
-        >
-            &times;
-        </button>
-    );
+const ButtonClose: React.FC<ButtonCloseProps> = ({
+  onClick,
+  className = '',
+  ...props
+}) => {
+  return (
+    <button
+      type="button" // Buena práctica para evitar envíos de formulario accidentales
+      onClick={onClick}
+      aria-label="Cerrar"
+      className={`button-close ${className}`}
+      {...props}
+    >
+      &times;
+    </button>
+  );
 };
 
 export default ButtonClose;
