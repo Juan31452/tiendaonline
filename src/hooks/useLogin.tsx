@@ -8,6 +8,12 @@ interface UserData {
   // Añade otras propiedades del usuario si las hay
 }
 
+// 1. Definimos una interfaz genérica para todas las respuestas de la API
+interface ApiResponse<T> {
+  success: boolean;
+  data: T;
+}
+
 interface LoginResponse {
   token: string;
   user: UserData;
@@ -23,14 +29,14 @@ export const useLogin = () => {
     setError(null);
 
     try {
-      const response = await apiAxios.post<any>('/users/login', { email, password });
+      // 2. Usamos la interfaz genérica en la petición de Axios
+      const response = await apiAxios.post<ApiResponse<LoginResponse>>('/users/login', { email, password });
 
       console.log("Ruta de inicio de sesión:", ApiRoutes.Login);
       const result = response.data;
       console.log("Respuesta del servidor:", result);
 
-      // Extraemos el contenido real (si viene envuelto en result.data lo usamos, si no, el result directo)
-      const actualData = result.data || result;
+      const actualData = result.data;
 
       if (actualData?.token) localStorage.setItem("token", actualData.token);
       
