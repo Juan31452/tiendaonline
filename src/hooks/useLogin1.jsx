@@ -29,7 +29,7 @@ export function useLogin() {
 
       return response.data;
     } catch (err) {
-      console.error("Error en login:", err.response?.data || err.message);
+      console.error("Error en login:", err.response?.data || err.message, err); // Log the full error object
       setError(err.response?.data?.message || "Error al iniciar sesión");
       return null;
     } finally {

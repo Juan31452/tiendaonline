@@ -1,25 +1,17 @@
-import React, { useState, useContext, FormEvent } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { useLogin } from '../hooks/useLogin';
-import { AuthContext } from '../components/Context/AuthContext';
+import React, { useState, FormEvent } from 'react';
+import { useAuth } from '../components/Context/AuthContext';
 import '../style/Login.css';
 
 const Login: React.FC = () => {
-  const { login: loginHook, loading, error } = useLogin();
-  // Se usa 'as any' temporalmente si AuthContext no está tipado aún
-  const { login } = useContext(AuthContext) as any; 
+  // Usamos useAuth para obtener el método login y los estados de carga/error centralizados
+  const { login, loading, error } = useAuth();
   const [email, setEmail] = useState<string>('');
   const [password, setPassword] = useState<string>('');
-  const navigate = useNavigate();
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const data = await loginHook(email, password);
-    console.log("Respuesta loginHook:", data); // <--- VERIFICAR
-    if (data?.token && data?.user?.role) {
-      login(data.token, data.user.role, data.user.name); // pasa el rol correcto al contexto
-      navigate('/', { replace: true });
-    }
+    // El método login del contexto ya llama internamente a la API, actualiza el estado y redirige.
+    await login(email, password);
   };
 
   return (
