@@ -20,11 +20,11 @@ html, body {
   animation-duration: 0.6s;
 }
 
-::view-transition-old(:root) {
+::view-transition-old(root) {
   animation: slide-out-to-left 0.8s forwards;
 }
 
-::view-transition-new(:root) {
+::view-transition-new(root) {
   animation: slide-in-from-right 0.8s forwards;
 }
 
@@ -149,4 +149,3 @@ npm in#root {
   padding: 8px 16px;
   font-weight: bold;
 }
-
